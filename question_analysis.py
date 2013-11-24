@@ -94,10 +94,7 @@ class QuestionAnalysis:
 
     def __init__(self, questions = []):
         self.questions = questions;
-        
 
-parser = Parser();
-questions = parser.parseFile(qFilePath, qParsedFilePath);
-
+analyzer = QuestionAnalysis(Parser().parseFile(qFilePath, qParsedFilePath))
 
 
