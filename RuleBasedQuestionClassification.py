@@ -207,13 +207,13 @@ class RuleBasedQuestionClassification:
         self.finalCategory = [];
         
         for question in self.questions:
-            scores1 = [len([1 for item in question.questionParts if self.exactMatch(ruleClass.qxnWords, item[1]) == True])*2 for ruleClass in self.ruleClasses];
-            scores2 = [len([1 for item in question.questionParts if self.containMatch1(ruleClass.qxnWords, item[1]) == True])*1 for ruleClass in self.ruleClasses];
-            scores3 = [len([1 for item in question.questionParts if self.containMatch2(ruleClass.qxnWords, item[1]) == True])*1 for ruleClass in self.ruleClasses];
+            scores1 = [len([1 for item in question.questionParts if self.exactMatch(ruleClass.qxnWords, item[1]) == True]) * 2 for ruleClass in self.ruleClasses];
+            scores2 = [len([1 for item in question.questionParts if self.containMatch1(ruleClass.qxnWords, item[1]) == True]) * 1 for ruleClass in self.ruleClasses];
+            scores3 = [len([1 for item in question.questionParts if self.containMatch2(ruleClass.qxnWords, item[1]) == True]) * 1 for ruleClass in self.ruleClasses];
             
-            scores4 = [len([1 for item in question.questionParts if self.exactMatch(ruleClass.keywords, item[1]) == True])*4 for ruleClass in self.ruleClasses];
-            scores5 = [len([1 for item in question.questionParts if self.containMatch1(ruleClass.keywords, item[1]) == True])*2 for ruleClass in self.ruleClasses];
-            scores6 = [len([1 for item in question.questionParts if self.containMatch2(ruleClass.keywords, item[1]) == True])*2 for ruleClass in self.ruleClasses];
+            scores4 = [len([1 for item in question.questionParts if self.exactMatch(ruleClass.keywords, item[1]) == True]) * 4 for ruleClass in self.ruleClasses];
+            scores5 = [len([1 for item in question.questionParts if self.containMatch1(ruleClass.keywords, item[1]) == True]) * 2 for ruleClass in self.ruleClasses];
+            scores6 = [len([1 for item in question.questionParts if self.containMatch2(ruleClass.keywords, item[1]) == True]) * 2 for ruleClass in self.ruleClasses];
 
             totalScores = [scores1[i] + scores2[i] + scores3[i] + scores4[i] + scores5[i] + scores6[i] for i in range(len(scores1))];
 
