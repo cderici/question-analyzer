@@ -1,7 +1,7 @@
 import codecs
 
 def produceVisualPage(parts):
-    with open('visual.html', 'w+') as f:
+    with codecs.open('d3/visual.html', 'w+', 'utf-8') as f:
         f.write(htmlTextSingleQuestion(parts))
 
 # takes the question parts as array
