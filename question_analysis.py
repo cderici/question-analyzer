@@ -78,7 +78,7 @@ class Question:
         else:
             self.root = None;
 
-    def findChilds(self, node):
+    def findChildren(self, node):
         return [part for part in self.questionParts if part[6] == node[0]];
 
     def findParent(self, node):
@@ -88,6 +88,9 @@ class Question:
             return temp[0];
         else:
             return None;
+
+    def findRelations(self, relationText):
+        return [part for part in self.questionParts if part[7] == relationText];
 
 class QuestionAnalysis:
     questions = [];
