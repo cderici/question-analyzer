@@ -48,6 +48,25 @@ class Parser:
 
         return self.questions;
 
+class QPart:
+    depID = '';
+    partText = '';
+    depTag = '';
+
+
+    morphRoot = '';
+    POStag = '';
+    POSextra = '';
+    morphDetail = '';
+    rootID = '';
+    
+    children = []
+
+    
+    
+    
+
+
 class Question:
     ##Raw question text
     questionText = '';
