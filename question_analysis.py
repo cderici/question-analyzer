@@ -1,3 +1,4 @@
+import questionVisualizer
 
 import codecs;
 
@@ -109,11 +110,18 @@ class Question:
         return [part for part in self.questionParts if part[7] == relationText];
 
 class QuestionAnalysis:
-    questions = [];
+    question = None;
 
-    def __init__(self, questions = []):
-        self.questions = questions;
+    def __init__(self, question = None):
+        self.question = question;
 
-analyzer = QuestionAnalysis(Parser().parseFile(qFilePath, qParsedFilePath))
+    def visualizeQuestion(self):
+        questionVisualizer.produceVisualPage(self.question.questionParts)
 
+
+ourQuestions = Parser().parseFile(qFilePath, qParsedFilePath)
+
+analyzer = QuestionAnalysis(ourQuestions[0])
+
+analyzer.visualizeQuestion()
 
