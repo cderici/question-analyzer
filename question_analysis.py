@@ -60,13 +60,10 @@ class QPart:
     morphDetail = '';
     rootID = '';
     
-    children = []
+    children = [];
 
+    ##Test
     
-    
-    
-
-
 class Question:
     ##Raw question text
     questionText = '';
