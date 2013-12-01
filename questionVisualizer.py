@@ -1,7 +1,7 @@
 import codecs
 
 def produceVisualPage(parts):
-    with open('visual.html', 'w+') as f:
+    with codecs.open('d3/visual.html', 'w+', 'utf-8') as f:
         f.write(htmlTextSingleQuestion(parts))
 
 # takes the question parts as array
@@ -30,9 +30,12 @@ def scriptTextSingleQuestion(parts):
 
         partDepTag = part[7] # like SUBJECT
 
+        if part[1] == ".":
+            continue
+
         scriptStr += "g.addEdge(null," + partID + "," + partRoot + "," + "{label: \"" + partDepTag + "\"});"
 
-        scriptStr += """
+    scriptStr += """
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
