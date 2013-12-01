@@ -1,0 +1,65 @@
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(189, {label: "Suyun",nodeclass: "type-TK"});g.addNode(190, {label: "kinetik",nodeclass: "type-TK"});g.addNode(191, {label: "enerjinden",nodeclass: "type-TK"});g.addNode(192, {label: "yarar",nodeclass: "type-TK"});g.addNode(193, {label: "_",nodeclass: "type-TK"});g.addNode(194, {label: "_",nodeclass: "type-TK"});g.addNode(195, {label: "yararlanılarak",nodeclass: "type-TK"});g.addNode(196, {label: "elektrik",nodeclass: "type-TK"});g.addNode(197, {label: "üretimi",nodeclass: "type-TK"});g.addNode(198, {label: "yap",nodeclass: "type-TK"});g.addNode(199, {label: "_",nodeclass: "type-TK"});g.addNode(200, {label: "yapılan",nodeclass: "type-TK"});g.addNode(201, {label: "santrallere",nodeclass: "type-TK"});g.addNode(202, {label: "ne",nodeclass: "type-TK"});g.addNode(203, {label: "ad",nodeclass: "type-TK"});g.addNode(204, {label: "ver",nodeclass: "type-TK"});g.addNode(205, {label: "verilir",nodeclass: "type-TK"});g.addNode(206, {label: ".",nodeclass: "type-TK"});g.addEdge(null,189,191,{label: "POSSESSOR"});g.addEdge(null,190,191,{label: "MODIFIER"});g.addEdge(null,191,205,{label: "SUBJECT"});g.addEdge(null,192,193,{label: "DERIV"});g.addEdge(null,193,194,{label: "DERIV"});g.addEdge(null,194,195,{label: "DERIV"});g.addEdge(null,195,199,{label: "MODIFIER"});g.addEdge(null,196,197,{label: "CLASSIFIER"});g.addEdge(null,197,199,{label: "SUBJECT"});g.addEdge(null,198,199,{label: "DERIV"});g.addEdge(null,199,200,{label: "DERIV"});g.addEdge(null,200,201,{label: "MODIFIER"});g.addEdge(null,201,205,{label: "DATIVE.ADJUNCT"});g.addEdge(null,202,203,{label: "MODIFIER"});g.addEdge(null,203,205,{label: "SUBJECT"});g.addEdge(null,204,205,{label: "DERIV"});g.addEdge(null,205,206,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

@@ -1,0 +1,65 @@
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(787, {label: "Türkiye’nin",nodeclass: "type-TK"});g.addNode(788, {label: "en",nodeclass: "type-TK"});g.addNode(789, {label: "geniş",nodeclass: "type-TK"});g.addNode(790, {label: "kapalı",nodeclass: "type-TK"});g.addNode(791, {label: "havzası",nodeclass: "type-TK"});g.addNode(792, {label: "hangi",nodeclass: "type-TK"});g.addNode(793, {label: "bölge",nodeclass: "type-TK"});g.addNode(794, {label: "bölgemizdedir",nodeclass: "type-TK"});g.addNode(795, {label: ".",nodeclass: "type-TK"});g.addEdge(null,787,794,{label: "SUBJECT"});g.addEdge(null,788,789,{label: "MODIFIER"});g.addEdge(null,789,791,{label: "MODIFIER"});g.addEdge(null,790,791,{label: "MODIFIER"});g.addEdge(null,791,794,{label: "OBJECT"});g.addEdge(null,792,793,{label: "MODIFIER"});g.addEdge(null,793,794,{label: "DERIV"});g.addEdge(null,794,795,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

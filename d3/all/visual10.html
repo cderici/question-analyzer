@@ -1,0 +1,65 @@
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(110, {label: "İç",nodeclass: "type-TK"});g.addNode(111, {label: "kuvvetlerin",nodeclass: "type-TK"});g.addNode(112, {label: "etkisiyle",nodeclass: "type-TK"});g.addNode(113, {label: "yeryüzünde",nodeclass: "type-TK"});g.addNode(114, {label: "oluş",nodeclass: "type-TK"});g.addNode(115, {label: "oluşan",nodeclass: "type-TK"});g.addNode(116, {label: "hareketlerin",nodeclass: "type-TK"});g.addNode(117, {label: "adı",nodeclass: "type-TK"});g.addNode(118, {label: "ne",nodeclass: "type-TK"});g.addNode(119, {label: "nedir",nodeclass: "type-TK"});g.addNode(120, {label: ".",nodeclass: "type-TK"});g.addEdge(null,110,111,{label: "MODIFIER"});g.addEdge(null,111,112,{label: "POSSESSOR"});g.addEdge(null,112,119,{label: "INSTRUMENTAL.ADJUNCT"});g.addEdge(null,113,114,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,114,115,{label: "DERIV"});g.addEdge(null,115,116,{label: "MODIFIER"});g.addEdge(null,116,117,{label: "POSSESSOR"});g.addEdge(null,117,118,{label: "SUBJECT"});g.addEdge(null,118,119,{label: "DERIV"});g.addEdge(null,119,120,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>
