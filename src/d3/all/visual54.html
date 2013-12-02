@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Bofor ölçeği neyin şiddetinin ölçülmesinde kullanılır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(587, {label: "Bofor",nodeclass: "type-TK"});g.addNode(588, {label: "ölçeği",nodeclass: "type-TK"});g.addNode(589, {label: "neyin",nodeclass: "type-TK"});g.addNode(590, {label: "şiddetinin",nodeclass: "type-TK"});g.addNode(591, {label: "ölç",nodeclass: "type-TK"});g.addNode(592, {label: "_",nodeclass: "type-TK"});g.addNode(593, {label: "ölçülmesinde",nodeclass: "type-TK"});g.addNode(594, {label: "kullan",nodeclass: "type-TK"});g.addNode(595, {label: "kullanılır",nodeclass: "type-TK"});g.addNode(596, {label: ".",nodeclass: "type-TK"});g.addEdge(null,587,588,{label: "CLASSIFIER"});g.addEdge(null,588,595,{label: "SUBJECT"});g.addEdge(null,589,590,{label: "POSSESSOR"});g.addEdge(null,590,592,{label: "SUBJECT"});g.addEdge(null,591,592,{label: "DERIV"});g.addEdge(null,592,593,{label: "DERIV"});g.addEdge(null,593,595,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,594,595,{label: "DERIV"});g.addEdge(null,595,596,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

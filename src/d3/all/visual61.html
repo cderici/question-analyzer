@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Türkiye’de Çayır ve otlakların en fazla olduğu bölge hangisidir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(655, {label: "Türkiye’de",nodeclass: "type-TK"});g.addNode(656, {label: "Çayır",nodeclass: "type-TK"});g.addNode(657, {label: "ve",nodeclass: "type-TK"});g.addNode(658, {label: "otlakların",nodeclass: "type-TK"});g.addNode(659, {label: "en",nodeclass: "type-TK"});g.addNode(660, {label: "fazla",nodeclass: "type-TK"});g.addNode(661, {label: "ol",nodeclass: "type-TK"});g.addNode(662, {label: "olduğu",nodeclass: "type-TK"});g.addNode(663, {label: "bölge",nodeclass: "type-TK"});g.addNode(664, {label: "hangi",nodeclass: "type-TK"});g.addNode(665, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(666, {label: ".",nodeclass: "type-TK"});g.addEdge(null,655,665,{label: "SUBJECT"});g.addEdge(null,656,657,{label: "OBJECT"});g.addEdge(null,657,658,{label: "COORDINATION"});g.addEdge(null,658,661,{label: "SUBJECT"});g.addEdge(null,659,660,{label: "MODIFIER"});g.addEdge(null,660,661,{label: "MODIFIER"});g.addEdge(null,661,662,{label: "DERIV"});g.addEdge(null,662,663,{label: "MODIFIER"});g.addEdge(null,663,665,{label: "SUBJECT"});g.addEdge(null,664,665,{label: "DERIV"});g.addEdge(null,665,666,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

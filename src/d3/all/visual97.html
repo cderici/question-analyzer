@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ege Denizi hangi jeolojik zamanda oluşmuştur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1010, {label: "Ege",nodeclass: "type-TK"});g.addNode(1011, {label: "Denizi",nodeclass: "type-TK"});g.addNode(1012, {label: "hangi",nodeclass: "type-TK"});g.addNode(1013, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(1014, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(1015, {label: "zamanda",nodeclass: "type-TK"});g.addNode(1016, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(1017, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1010,1011,{label: "CLASSIFIER"});g.addEdge(null,1011,1016,{label: "SUBJECT"});g.addEdge(null,1012,1014,{label: "MODIFIER"});g.addEdge(null,1013,1014,{label: "DERIV"});g.addEdge(null,1014,1015,{label: "MODIFIER"});g.addEdge(null,1015,1016,{label: "MODIFIER"});g.addEdge(null,1016,1017,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>
