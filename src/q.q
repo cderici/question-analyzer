@@ -8,7 +8,6 @@ Mendereslerde biriktirme kısmına ne ad verilir
 Yerkürenin hemen üzerinde yer alan atmosfer tabakasının adı nedir
 Bitki ve hayvan topluluklarını inceleyen bilim dalı nedir
 İç kuvvetlerin etkisiyle yeryüzünde oluşan hareketlerin adı nedir
-Biyosfer ’in diğer adı nedir
 Yer şekillerini gösteren haritalar haritaların adı nedir
 Haritaların küçültme oranına ne denir
 Türkiye’nin kuzeybatısından esen yerel rüzgârın adı nedir
@@ -105,3 +104,4 @@ Yeryüzündeki kayaçlar kaç ana grupta sınıflandırılır
 Göçlerin en önemli nedeni nedir
 Ümit Burnuna ilk kez ulaşan denizci kimdir
 Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir
+Biyosfer’in diğer adı nedir
