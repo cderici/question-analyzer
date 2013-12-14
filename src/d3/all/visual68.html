@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Çarşamba deltasını oluşturan akarsu hangisidir</p>
+<p>Tortum çayı hangi akarsuyun bir koludur</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(735, {label: "Çarşamba",nodeclass: "type-TK"});g.addNode(736, {label: "deltasını",nodeclass: "type-TK"});g.addNode(737, {label: "oluş",nodeclass: "type-TK"});g.addNode(738, {label: "_",nodeclass: "type-TK"});g.addNode(739, {label: "oluşturan",nodeclass: "type-TK"});g.addNode(740, {label: "akarsu",nodeclass: "type-TK"});g.addNode(741, {label: "hangi",nodeclass: "type-TK"});g.addNode(742, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(743, {label: ".",nodeclass: "type-TK"});g.addEdge(null,735,736,{label: "CLASSIFIER"});g.addEdge(null,736,738,{label: "OBJECT"});g.addEdge(null,737,738,{label: "DERIV"});g.addEdge(null,738,739,{label: "DERIV"});g.addEdge(null,739,740,{label: "MODIFIER"});g.addEdge(null,740,741,{label: "SUBJECT"});g.addEdge(null,741,742,{label: "DERIV"});g.addEdge(null,742,743,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(725, {label: "Tortum",nodeclass: "type-TK"});g.addNode(726, {label: "çayı",nodeclass: "type-TK"});g.addNode(727, {label: "hangi",nodeclass: "type-TK"});g.addNode(728, {label: "akarsuyun",nodeclass: "type-TK"});g.addNode(729, {label: "bir",nodeclass: "type-TK"});g.addNode(730, {label: "kol",nodeclass: "type-TK"});g.addNode(731, {label: "koludur",nodeclass: "type-TK"});g.addNode(732, {label: ".",nodeclass: "type-TK"});g.addEdge(null,725,726,{label: "CLASSIFIER"});g.addEdge(null,726,730,{label: "SUBJECT"});g.addEdge(null,727,728,{label: "MODIFIER"});g.addEdge(null,728,730,{label: "POSSESSOR"});g.addEdge(null,729,730,{label: "DETERMINER"});g.addEdge(null,730,731,{label: "DERIV"});g.addEdge(null,731,732,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

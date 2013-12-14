@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’de en az insan nüfusuna sahip olan şehir hangisidir</p>
+<p>Türkiye’de Çayır ve otlakların en fazla olduğu bölge hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(643, {label: "Türkiye’de",nodeclass: "type-TK"});g.addNode(644, {label: "en",nodeclass: "type-TK"});g.addNode(645, {label: "az",nodeclass: "type-TK"});g.addNode(646, {label: "insan",nodeclass: "type-TK"});g.addNode(647, {label: "nüfusuna",nodeclass: "type-TK"});g.addNode(648, {label: "sahip",nodeclass: "type-TK"});g.addNode(649, {label: "ol",nodeclass: "type-TK"});g.addNode(650, {label: "olan",nodeclass: "type-TK"});g.addNode(651, {label: "şehir",nodeclass: "type-TK"});g.addNode(652, {label: "hangi",nodeclass: "type-TK"});g.addNode(653, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(654, {label: ".",nodeclass: "type-TK"});g.addEdge(null,643,653,{label: "SUBJECT"});g.addEdge(null,644,645,{label: "MODIFIER"});g.addEdge(null,645,646,{label: "MODIFIER"});g.addEdge(null,646,647,{label: "CLASSIFIER"});g.addEdge(null,647,649,{label: "DATIVE.ADJUNCT"});g.addEdge(null,648,649,{label: "OBJECT"});g.addEdge(null,649,650,{label: "DERIV"});g.addEdge(null,650,651,{label: "MODIFIER"});g.addEdge(null,651,653,{label: "SUBJECT"});g.addEdge(null,652,653,{label: "DERIV"});g.addEdge(null,653,654,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(636, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(637, {label: "Çayır",nodeclass: "type-TK"});g.addNode(638, {label: "ve",nodeclass: "type-TK"});g.addNode(639, {label: "otlakların",nodeclass: "type-TK"});g.addNode(640, {label: "en",nodeclass: "type-TK"});g.addNode(641, {label: "fazla",nodeclass: "type-TK"});g.addNode(642, {label: "ol",nodeclass: "type-TK"});g.addNode(643, {label: "olduğu",nodeclass: "type-TK"});g.addNode(644, {label: "bölge",nodeclass: "type-TK"});g.addNode(645, {label: "hangi",nodeclass: "type-TK"});g.addNode(646, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(647, {label: ".",nodeclass: "type-TK"});g.addEdge(null,636,646,{label: "SUBJECT"});g.addEdge(null,637,638,{label: "OBJECT"});g.addEdge(null,638,639,{label: "COORDINATION"});g.addEdge(null,639,642,{label: "SUBJECT"});g.addEdge(null,640,641,{label: "MODIFIER"});g.addEdge(null,641,642,{label: "MODIFIER"});g.addEdge(null,642,643,{label: "DERIV"});g.addEdge(null,643,644,{label: "MODIFIER"});g.addEdge(null,644,646,{label: "SUBJECT"});g.addEdge(null,645,646,{label: "DERIV"});g.addEdge(null,646,647,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Ülke sınırlarını gösteren haritalara hangileridir</p>
+<p>Sıcak su kaynaklarından yararlanılarak elektrik enerjisi üreten santraller hangileridir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(496, {label: "Ülke",nodeclass: "type-TK"});g.addNode(497, {label: "sınırlarını",nodeclass: "type-TK"});g.addNode(498, {label: "göster",nodeclass: "type-TK"});g.addNode(499, {label: "gösteren",nodeclass: "type-TK"});g.addNode(500, {label: "haritalara",nodeclass: "type-TK"});g.addNode(501, {label: "hangi",nodeclass: "type-TK"});g.addNode(502, {label: "hangileridir",nodeclass: "type-TK"});g.addNode(503, {label: ".",nodeclass: "type-TK"});g.addEdge(null,496,497,{label: "CLASSIFIER"});g.addEdge(null,497,498,{label: "OBJECT"});g.addEdge(null,498,499,{label: "DERIV"});g.addEdge(null,499,500,{label: "MODIFIER"});g.addEdge(null,500,502,{label: "DATIVE.ADJUNCT"});g.addEdge(null,501,502,{label: "DERIV"});g.addEdge(null,502,503,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(485, {label: "Sıcak",nodeclass: "type-TK"});g.addNode(486, {label: "su",nodeclass: "type-TK"});g.addNode(487, {label: "kaynaklarından",nodeclass: "type-TK"});g.addNode(488, {label: "yarar",nodeclass: "type-TK"});g.addNode(489, {label: "_",nodeclass: "type-TK"});g.addNode(490, {label: "_",nodeclass: "type-TK"});g.addNode(491, {label: "yararlanılarak",nodeclass: "type-TK"});g.addNode(492, {label: "elektrik",nodeclass: "type-TK"});g.addNode(493, {label: "enerjisi",nodeclass: "type-TK"});g.addNode(494, {label: "üre",nodeclass: "type-TK"});g.addNode(495, {label: "_",nodeclass: "type-TK"});g.addNode(496, {label: "üreten",nodeclass: "type-TK"});g.addNode(497, {label: "santraller",nodeclass: "type-TK"});g.addNode(498, {label: "hangi",nodeclass: "type-TK"});g.addNode(499, {label: "hangileridir",nodeclass: "type-TK"});g.addNode(500, {label: ".",nodeclass: "type-TK"});g.addEdge(null,485,486,{label: "MODIFIER"});g.addEdge(null,486,487,{label: "CLASSIFIER"});g.addEdge(null,487,490,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,488,489,{label: "DERIV"});g.addEdge(null,489,490,{label: "DERIV"});g.addEdge(null,490,491,{label: "DERIV"});g.addEdge(null,491,495,{label: "MODIFIER"});g.addEdge(null,492,493,{label: "CLASSIFIER"});g.addEdge(null,493,495,{label: "OBJECT"});g.addEdge(null,494,495,{label: "DERIV"});g.addEdge(null,495,496,{label: "DERIV"});g.addEdge(null,496,497,{label: "MODIFIER"});g.addEdge(null,497,499,{label: "SUBJECT"});g.addEdge(null,498,499,{label: "DERIV"});g.addEdge(null,499,500,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

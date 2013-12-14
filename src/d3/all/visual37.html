@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’ye batıdan esen sıcak nemli rüzgâr hangisidir</p>
+<p>Türkiye’de azonal(taşınmış) topraklar içinde en yaygın olanı hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(421, {label: "Türkiye’ye",nodeclass: "type-TK"});g.addNode(422, {label: "batıdan",nodeclass: "type-TK"});g.addNode(423, {label: "es",nodeclass: "type-TK"});g.addNode(424, {label: "esen",nodeclass: "type-TK"});g.addNode(425, {label: "sıcak",nodeclass: "type-TK"});g.addNode(426, {label: "nem",nodeclass: "type-TK"});g.addNode(427, {label: "nemli",nodeclass: "type-TK"});g.addNode(428, {label: "rüzg",nodeclass: "type-TK"});g.addNode(429, {label: "r",nodeclass: "type-TK"});g.addNode(430, {label: "hangi",nodeclass: "type-TK"});g.addNode(431, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(432, {label: ".",nodeclass: "type-TK"});g.addEdge(null,421,431,{label: "SUBJECT"});g.addEdge(null,422,423,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,423,424,{label: "DERIV"});g.addEdge(null,424,429,{label: "MODIFIER"});g.addEdge(null,425,426,{label: "MODIFIER"});g.addEdge(null,426,427,{label: "DERIV"});g.addEdge(null,427,429,{label: "MODIFIER"});g.addEdge(null,428,429,{label: "CLASSIFIER"});g.addEdge(null,429,431,{label: "SUBJECT"});g.addEdge(null,430,431,{label: "DERIV"});g.addEdge(null,431,432,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(413, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(414, {label: "azonal",nodeclass: "type-TK"});g.addNode(415, {label: "taşı",nodeclass: "type-TK"});g.addNode(416, {label: "taşınmış",nodeclass: "type-TK"});g.addNode(417, {label: "topraklar",nodeclass: "type-TK"});g.addNode(418, {label: "içinde",nodeclass: "type-TK"});g.addNode(419, {label: "en",nodeclass: "type-TK"});g.addNode(420, {label: "yaygın",nodeclass: "type-TK"});g.addNode(421, {label: "ol",nodeclass: "type-TK"});g.addNode(422, {label: "_",nodeclass: "type-TK"});g.addNode(423, {label: "olanı",nodeclass: "type-TK"});g.addNode(424, {label: "hangi",nodeclass: "type-TK"});g.addNode(425, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(426, {label: ".",nodeclass: "type-TK"});g.addEdge(null,413,425,{label: "SUBJECT"});g.addEdge(null,414,416,{label: "SUBJECT"});g.addEdge(null,415,416,{label: "DERIV"});g.addEdge(null,416,425,{label: "MODIFIER"});g.addEdge(null,417,418,{label: "OBJECT"});g.addEdge(null,418,425,{label: "MODIFIER"});g.addEdge(null,419,420,{label: "MODIFIER"});g.addEdge(null,420,421,{label: "MODIFIER"});g.addEdge(null,421,422,{label: "DERIV"});g.addEdge(null,422,423,{label: "DERIV"});g.addEdge(null,423,425,{label: "OBJECT"});g.addEdge(null,424,425,{label: "DERIV"});g.addEdge(null,425,426,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

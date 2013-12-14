@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Ege Denizi hangi jeolojik zamanda oluşmuştur</p>
+<p>Toros Dağları hangi jeolojik zamanda oluşmuştur</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1010, {label: "Ege",nodeclass: "type-TK"});g.addNode(1011, {label: "Denizi",nodeclass: "type-TK"});g.addNode(1012, {label: "hangi",nodeclass: "type-TK"});g.addNode(1013, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(1014, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(1015, {label: "zamanda",nodeclass: "type-TK"});g.addNode(1016, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(1017, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1010,1011,{label: "CLASSIFIER"});g.addEdge(null,1011,1016,{label: "SUBJECT"});g.addEdge(null,1012,1014,{label: "MODIFIER"});g.addEdge(null,1013,1014,{label: "DERIV"});g.addEdge(null,1014,1015,{label: "MODIFIER"});g.addEdge(null,1015,1016,{label: "MODIFIER"});g.addEdge(null,1016,1017,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(998, {label: "Toros",nodeclass: "type-TK"});g.addNode(999, {label: "Dağları",nodeclass: "type-TK"});g.addNode(1000, {label: "hangi",nodeclass: "type-TK"});g.addNode(1001, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(1002, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(1003, {label: "zamanda",nodeclass: "type-TK"});g.addNode(1004, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(1005, {label: ".",nodeclass: "type-TK"});g.addEdge(null,998,999,{label: "CLASSIFIER"});g.addEdge(null,999,1004,{label: "SUBJECT"});g.addEdge(null,1000,1001,{label: "MODIFIER"});g.addEdge(null,1001,1002,{label: "DERIV"});g.addEdge(null,1002,1003,{label: "MODIFIER"});g.addEdge(null,1003,1004,{label: "MODIFIER"});g.addEdge(null,1004,1005,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

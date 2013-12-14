@@ -221,7 +221,7 @@ class RuleBasedQuestionClassification:
 
             self.finalCategory.append(self.ruleClasses[indexOfBestScore]);
             
-            print([self.ruleClasses[indexOfBestScore].coarseCategory, self.ruleClasses[indexOfBestScore].fineCategory]);
+            print(self.ruleClasses[indexOfBestScore].coarseCategory + '\t' + self.ruleClasses[indexOfBestScore].fineCategory);
         
 analyzer = QuestionAnalysis(Parser().parseFile(qFilePath, qParsedFilePath))
 rule = RuleBasedQuestionClassification(analyzer.questions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);

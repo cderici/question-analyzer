@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’nin doğusundan esen soğuk ve kuru rüzgâr hangisidir</p>
+<p>Türkiye’ye batıdan esen sıcak nemli rüzgâr hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(409, {label: "Türkiye’nin",nodeclass: "type-TK"});g.addNode(410, {label: "doğusundan",nodeclass: "type-TK"});g.addNode(411, {label: "es",nodeclass: "type-TK"});g.addNode(412, {label: "esen",nodeclass: "type-TK"});g.addNode(413, {label: "soğuk",nodeclass: "type-TK"});g.addNode(414, {label: "ve",nodeclass: "type-TK"});g.addNode(415, {label: "kuru",nodeclass: "type-TK"});g.addNode(416, {label: "rüzg",nodeclass: "type-TK"});g.addNode(417, {label: "r",nodeclass: "type-TK"});g.addNode(418, {label: "hangi",nodeclass: "type-TK"});g.addNode(419, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(420, {label: ".",nodeclass: "type-TK"});g.addEdge(null,409,410,{label: "CLASSIFIER"});g.addEdge(null,410,411,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,411,412,{label: "DERIV"});g.addEdge(null,412,416,{label: "MODIFIER"});g.addEdge(null,413,414,{label: "MODIFIER"});g.addEdge(null,414,415,{label: "COORDINATION"});g.addEdge(null,415,416,{label: "MODIFIER"});g.addEdge(null,416,419,{label: "SUBJECT"});g.addEdge(null,417,419,{label: "SUBJECT"});g.addEdge(null,418,419,{label: "DERIV"});g.addEdge(null,419,420,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(402, {label: "Türkiyeye",nodeclass: "type-TK"});g.addNode(403, {label: "batıdan",nodeclass: "type-TK"});g.addNode(404, {label: "es",nodeclass: "type-TK"});g.addNode(405, {label: "esen",nodeclass: "type-TK"});g.addNode(406, {label: "sıcak",nodeclass: "type-TK"});g.addNode(407, {label: "nem",nodeclass: "type-TK"});g.addNode(408, {label: "nemli",nodeclass: "type-TK"});g.addNode(409, {label: "rüzgâr",nodeclass: "type-TK"});g.addNode(410, {label: "hangi",nodeclass: "type-TK"});g.addNode(411, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(412, {label: ".",nodeclass: "type-TK"});g.addEdge(null,402,411,{label: "SUBJECT"});g.addEdge(null,403,404,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,404,405,{label: "DERIV"});g.addEdge(null,405,409,{label: "MODIFIER"});g.addEdge(null,406,407,{label: "MODIFIER"});g.addEdge(null,407,408,{label: "DERIV"});g.addEdge(null,408,409,{label: "MODIFIER"});g.addEdge(null,409,411,{label: "SUBJECT"});g.addEdge(null,410,411,{label: "DERIV"});g.addEdge(null,411,412,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

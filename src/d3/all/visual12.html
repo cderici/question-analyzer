@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Yer şekillerini gösteren haritalar haritaların adı nedir</p>
+<p>Haritaların küçültme oranına ne denir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(128, {label: "Yer",nodeclass: "type-TK"});g.addNode(129, {label: "şekillerini",nodeclass: "type-TK"});g.addNode(130, {label: "göster",nodeclass: "type-TK"});g.addNode(131, {label: "gösteren",nodeclass: "type-TK"});g.addNode(132, {label: "haritalar",nodeclass: "type-TK"});g.addNode(133, {label: "haritaların",nodeclass: "type-TK"});g.addNode(134, {label: "adı",nodeclass: "type-TK"});g.addNode(135, {label: "ne",nodeclass: "type-TK"});g.addNode(136, {label: "nedir",nodeclass: "type-TK"});g.addNode(137, {label: ".",nodeclass: "type-TK"});g.addEdge(null,128,129,{label: "CLASSIFIER"});g.addEdge(null,129,130,{label: "OBJECT"});g.addEdge(null,130,131,{label: "DERIV"});g.addEdge(null,131,132,{label: "MODIFIER"});g.addEdge(null,132,136,{label: "SUBJECT"});g.addEdge(null,133,134,{label: "POSSESSOR"});g.addEdge(null,134,135,{label: "SUBJECT"});g.addEdge(null,135,136,{label: "DERIV"});g.addEdge(null,136,137,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(131, {label: "Haritaların",nodeclass: "type-TK"});g.addNode(132, {label: "küçül",nodeclass: "type-TK"});g.addNode(133, {label: "_",nodeclass: "type-TK"});g.addNode(134, {label: "küçültme",nodeclass: "type-TK"});g.addNode(135, {label: "oranına",nodeclass: "type-TK"});g.addNode(136, {label: "ne",nodeclass: "type-TK"});g.addNode(137, {label: "de",nodeclass: "type-TK"});g.addNode(138, {label: "denir",nodeclass: "type-TK"});g.addNode(139, {label: ".",nodeclass: "type-TK"});g.addEdge(null,131,135,{label: "POSSESSOR"});g.addEdge(null,132,133,{label: "DERIV"});g.addEdge(null,133,134,{label: "DERIV"});g.addEdge(null,134,135,{label: "CLASSIFIER"});g.addEdge(null,135,138,{label: "DATIVE.ADJUNCT"});g.addEdge(null,136,138,{label: "MODIFIER"});g.addEdge(null,137,138,{label: "DERIV"});g.addEdge(null,138,139,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

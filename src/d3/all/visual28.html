@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>İki akarsu havzasını birbirinden ayıran sınıra ne ad verilir</p>
+<p>Akarsuyun denize döküldüğü yere ne denir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(317, {label: "İki",nodeclass: "type-TK"});g.addNode(318, {label: "akarsu",nodeclass: "type-TK"});g.addNode(319, {label: "havzasını",nodeclass: "type-TK"});g.addNode(320, {label: "birbirinden",nodeclass: "type-TK"});g.addNode(321, {label: "ayır",nodeclass: "type-TK"});g.addNode(322, {label: "ayıran",nodeclass: "type-TK"});g.addNode(323, {label: "sınıra",nodeclass: "type-TK"});g.addNode(324, {label: "ne",nodeclass: "type-TK"});g.addNode(325, {label: "ad",nodeclass: "type-TK"});g.addNode(326, {label: "ver",nodeclass: "type-TK"});g.addNode(327, {label: "verilir",nodeclass: "type-TK"});g.addNode(328, {label: ".",nodeclass: "type-TK"});g.addEdge(null,317,318,{label: "MODIFIER"});g.addEdge(null,318,319,{label: "CLASSIFIER"});g.addEdge(null,319,321,{label: "OBJECT"});g.addEdge(null,320,321,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,321,322,{label: "DERIV"});g.addEdge(null,322,323,{label: "MODIFIER"});g.addEdge(null,323,327,{label: "DATIVE.ADJUNCT"});g.addEdge(null,324,325,{label: "MODIFIER"});g.addEdge(null,325,327,{label: "SUBJECT"});g.addEdge(null,326,327,{label: "DERIV"});g.addEdge(null,327,328,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(314, {label: "Akarsuyun",nodeclass: "type-TK"});g.addNode(315, {label: "denize",nodeclass: "type-TK"});g.addNode(316, {label: "dök",nodeclass: "type-TK"});g.addNode(317, {label: "_",nodeclass: "type-TK"});g.addNode(318, {label: "döküldüğü",nodeclass: "type-TK"});g.addNode(319, {label: "yere",nodeclass: "type-TK"});g.addNode(320, {label: "ne",nodeclass: "type-TK"});g.addNode(321, {label: "de",nodeclass: "type-TK"});g.addNode(322, {label: "denir",nodeclass: "type-TK"});g.addNode(323, {label: ".",nodeclass: "type-TK"});g.addEdge(null,314,317,{label: "SUBJECT"});g.addEdge(null,315,317,{label: "DATIVE.ADJUNCT"});g.addEdge(null,316,317,{label: "DERIV"});g.addEdge(null,317,318,{label: "DERIV"});g.addEdge(null,318,319,{label: "MODIFIER"});g.addEdge(null,319,322,{label: "DATIVE.ADJUNCT"});g.addEdge(null,320,322,{label: "MODIFIER"});g.addEdge(null,321,322,{label: "DERIV"});g.addEdge(null,322,323,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

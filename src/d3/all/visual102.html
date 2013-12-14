@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Dünyanın nüfusu ne kadardır</p>
+<p>Türkiye’nin nüfusu ne kadardır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1057, {label: "Dünyanın",nodeclass: "type-TK"});g.addNode(1058, {label: "nüfusu",nodeclass: "type-TK"});g.addNode(1059, {label: "ne",nodeclass: "type-TK"});g.addNode(1060, {label: "kadar",nodeclass: "type-TK"});g.addNode(1061, {label: "kadardır",nodeclass: "type-TK"});g.addNode(1062, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1057,1058,{label: "POSSESSOR"});g.addEdge(null,1058,1061,{label: "SUBJECT"});g.addEdge(null,1059,1060,{label: "OBJECT"});g.addEdge(null,1060,1061,{label: "DERIV"});g.addEdge(null,1061,1062,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(1043, {label: "Türkiyenin",nodeclass: "type-TK"});g.addNode(1044, {label: "nüfusu",nodeclass: "type-TK"});g.addNode(1045, {label: "ne",nodeclass: "type-TK"});g.addNode(1046, {label: "kadar",nodeclass: "type-TK"});g.addNode(1047, {label: "kadardır",nodeclass: "type-TK"});g.addNode(1048, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1043,1044,{label: "CLASSIFIER"});g.addEdge(null,1044,1047,{label: "SUBJECT"});g.addEdge(null,1045,1046,{label: "OBJECT"});g.addEdge(null,1046,1047,{label: "DERIV"});g.addEdge(null,1047,1048,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

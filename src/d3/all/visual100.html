@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye arazisinin yüzde kaçı ormanlık alandır</p>
+<p>Türkiye’de Tarım alanları ülke arazisinin yüzde kaçını oluşturur</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1036, {label: "Türkiye",nodeclass: "type-TK"});g.addNode(1037, {label: "arazisinin",nodeclass: "type-TK"});g.addNode(1038, {label: "yüz",nodeclass: "type-TK"});g.addNode(1039, {label: "yüzde",nodeclass: "type-TK"});g.addNode(1040, {label: "kaçı",nodeclass: "type-TK"});g.addNode(1041, {label: "orman",nodeclass: "type-TK"});g.addNode(1042, {label: "ormanlık",nodeclass: "type-TK"});g.addNode(1043, {label: "alan",nodeclass: "type-TK"});g.addNode(1044, {label: "alandır",nodeclass: "type-TK"});g.addNode(1045, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1036,1037,{label: "CLASSIFIER"});g.addEdge(null,1037,1044,{label: "POSSESSOR"});g.addEdge(null,1038,1039,{label: "DERIV"});g.addEdge(null,1039,1044,{label: "MODIFIER"});g.addEdge(null,1040,1044,{label: "SUBJECT"});g.addEdge(null,1041,1042,{label: "DERIV"});g.addEdge(null,1042,1044,{label: "SUBJECT"});g.addEdge(null,1043,1044,{label: "DERIV"});g.addEdge(null,1044,1045,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(1026, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(1027, {label: "Tarım",nodeclass: "type-TK"});g.addNode(1028, {label: "alanları",nodeclass: "type-TK"});g.addNode(1029, {label: "ülke",nodeclass: "type-TK"});g.addNode(1030, {label: "arazisinin",nodeclass: "type-TK"});g.addNode(1031, {label: "yüz",nodeclass: "type-TK"});g.addNode(1032, {label: "yüzde",nodeclass: "type-TK"});g.addNode(1033, {label: "kaçını",nodeclass: "type-TK"});g.addNode(1034, {label: "oluş",nodeclass: "type-TK"});g.addNode(1035, {label: "oluşturur",nodeclass: "type-TK"});g.addNode(1036, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1026,1035,{label: "SUBJECT"});g.addEdge(null,1027,1028,{label: "CLASSIFIER"});g.addEdge(null,1028,1035,{label: "OBJECT"});g.addEdge(null,1029,1030,{label: "CLASSIFIER"});g.addEdge(null,1030,1035,{label: "SUBJECT"});g.addEdge(null,1031,1032,{label: "DERIV"});g.addEdge(null,1032,1035,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1033,1035,{label: "OBJECT"});g.addEdge(null,1034,1035,{label: "DERIV"});g.addEdge(null,1035,1036,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

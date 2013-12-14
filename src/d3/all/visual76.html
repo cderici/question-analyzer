@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Sanayi İnkılâbı ilk olarak hangi ülkede başlamıştır</p>
+<p>Türkiye en fazla hangi ülkeye işçi göçü vermiştir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(811, {label: "Sanayi",nodeclass: "type-TK"});g.addNode(812, {label: "İnkıl",nodeclass: "type-TK"});g.addNode(813, {label: "bı",nodeclass: "type-TK"});g.addNode(814, {label: "ilk",nodeclass: "type-TK"});g.addNode(815, {label: "ol",nodeclass: "type-TK"});g.addNode(816, {label: "olarak",nodeclass: "type-TK"});g.addNode(817, {label: "hangi",nodeclass: "type-TK"});g.addNode(818, {label: "ülkede",nodeclass: "type-TK"});g.addNode(819, {label: "başlamıştır",nodeclass: "type-TK"});g.addNode(820, {label: ".",nodeclass: "type-TK"});g.addEdge(null,811,812,{label: "CLASSIFIER"});g.addEdge(null,812,819,{label: "SUBJECT"});g.addEdge(null,813,819,{label: "SUBJECT"});g.addEdge(null,814,815,{label: "MODIFIER"});g.addEdge(null,815,816,{label: "DERIV"});g.addEdge(null,816,819,{label: "MODIFIER"});g.addEdge(null,817,818,{label: "MODIFIER"});g.addEdge(null,818,819,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,819,820,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(801, {label: "Türkiye",nodeclass: "type-TK"});g.addNode(802, {label: "en",nodeclass: "type-TK"});g.addNode(803, {label: "fazla",nodeclass: "type-TK"});g.addNode(804, {label: "hangi",nodeclass: "type-TK"});g.addNode(805, {label: "ülkeye",nodeclass: "type-TK"});g.addNode(806, {label: "işçi",nodeclass: "type-TK"});g.addNode(807, {label: "göçü",nodeclass: "type-TK"});g.addNode(808, {label: "vermiştir",nodeclass: "type-TK"});g.addNode(809, {label: ".",nodeclass: "type-TK"});g.addEdge(null,801,808,{label: "SUBJECT"});g.addEdge(null,802,803,{label: "MODIFIER"});g.addEdge(null,803,804,{label: "MODIFIER"});g.addEdge(null,804,805,{label: "MODIFIER"});g.addEdge(null,805,808,{label: "DATIVE.ADJUNCT"});g.addEdge(null,806,807,{label: "CLASSIFIER"});g.addEdge(null,807,808,{label: "OBJECT"});g.addEdge(null,808,809,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

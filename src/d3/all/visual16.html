@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’de Güneyden esen rüzgârın ismi nedir</p>
+<p>Türkiye’ye Kuzeyden esen rüzgâra ne denir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(169, {label: "Türkiye’de",nodeclass: "type-TK"});g.addNode(170, {label: "Güneyden",nodeclass: "type-TK"});g.addNode(171, {label: "es",nodeclass: "type-TK"});g.addNode(172, {label: "esen",nodeclass: "type-TK"});g.addNode(173, {label: "rüzg",nodeclass: "type-TK"});g.addNode(174, {label: "rın",nodeclass: "type-TK"});g.addNode(175, {label: "ismi",nodeclass: "type-TK"});g.addNode(176, {label: "ne",nodeclass: "type-TK"});g.addNode(177, {label: "nedir",nodeclass: "type-TK"});g.addNode(178, {label: ".",nodeclass: "type-TK"});g.addEdge(null,169,177,{label: "SUBJECT"});g.addEdge(null,170,171,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,171,172,{label: "DERIV"});g.addEdge(null,172,177,{label: "MODIFIER"});g.addEdge(null,173,177,{label: "SUBJECT"});g.addEdge(null,174,175,{label: "CLASSIFIER"});g.addEdge(null,175,177,{label: "SUBJECT"});g.addEdge(null,176,177,{label: "DERIV"});g.addEdge(null,177,178,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(167, {label: "Türkiyeye",nodeclass: "type-TK"});g.addNode(168, {label: "Kuzeyden",nodeclass: "type-TK"});g.addNode(169, {label: "esen",nodeclass: "type-TK"});g.addNode(170, {label: "rüzgâra",nodeclass: "type-TK"});g.addNode(171, {label: "ne",nodeclass: "type-TK"});g.addNode(172, {label: "de",nodeclass: "type-TK"});g.addNode(173, {label: "denir",nodeclass: "type-TK"});g.addNode(174, {label: ".",nodeclass: "type-TK"});g.addEdge(null,167,173,{label: "SUBJECT"});g.addEdge(null,168,173,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,169,170,{label: "MODIFIER"});g.addEdge(null,170,173,{label: "DATIVE.ADJUNCT"});g.addEdge(null,171,173,{label: "MODIFIER"});g.addEdge(null,172,173,{label: "DERIV"});g.addEdge(null,173,174,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

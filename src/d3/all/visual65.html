@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Yükselim yağışları Türkiye’de en çok hangi bölgede görülür</p>
+<p>Türkiye’de cephesel yağışlar en çok hangi bölgede görülür</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(705, {label: "Yükselim",nodeclass: "type-TK"});g.addNode(706, {label: "yağ",nodeclass: "type-TK"});g.addNode(707, {label: "yağışları",nodeclass: "type-TK"});g.addNode(708, {label: "Türkiye’de",nodeclass: "type-TK"});g.addNode(709, {label: "en",nodeclass: "type-TK"});g.addNode(710, {label: "çok",nodeclass: "type-TK"});g.addNode(711, {label: "hangi",nodeclass: "type-TK"});g.addNode(712, {label: "bölgede",nodeclass: "type-TK"});g.addNode(713, {label: "gör",nodeclass: "type-TK"});g.addNode(714, {label: "görülür",nodeclass: "type-TK"});g.addNode(715, {label: ".",nodeclass: "type-TK"});g.addEdge(null,705,706,{label: "OBJECT"});g.addEdge(null,706,707,{label: "DERIV"});g.addEdge(null,707,714,{label: "SUBJECT"});g.addEdge(null,708,714,{label: "SUBJECT"});g.addEdge(null,709,710,{label: "MODIFIER"});g.addEdge(null,710,711,{label: "MODIFIER"});g.addEdge(null,711,712,{label: "MODIFIER"});g.addEdge(null,712,714,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,713,714,{label: "DERIV"});g.addEdge(null,714,715,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(697, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(698, {label: "cephe",nodeclass: "type-TK"});g.addNode(699, {label: "cephesel",nodeclass: "type-TK"});g.addNode(700, {label: "yağ",nodeclass: "type-TK"});g.addNode(701, {label: "yağışlar",nodeclass: "type-TK"});g.addNode(702, {label: "en",nodeclass: "type-TK"});g.addNode(703, {label: "çok",nodeclass: "type-TK"});g.addNode(704, {label: "hangi",nodeclass: "type-TK"});g.addNode(705, {label: "bölgede",nodeclass: "type-TK"});g.addNode(706, {label: "gör",nodeclass: "type-TK"});g.addNode(707, {label: "görülür",nodeclass: "type-TK"});g.addNode(708, {label: ".",nodeclass: "type-TK"});g.addEdge(null,697,707,{label: "SUBJECT"});g.addEdge(null,698,699,{label: "DERIV"});g.addEdge(null,699,701,{label: "MODIFIER"});g.addEdge(null,700,701,{label: "DERIV"});g.addEdge(null,701,707,{label: "SUBJECT"});g.addEdge(null,702,703,{label: "MODIFIER"});g.addEdge(null,703,704,{label: "MODIFIER"});g.addEdge(null,704,705,{label: "MODIFIER"});g.addEdge(null,705,707,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,706,707,{label: "DERIV"});g.addEdge(null,707,708,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

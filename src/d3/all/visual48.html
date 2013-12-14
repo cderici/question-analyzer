@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Yerkürenin en kalın katmanı hangisidir</p>
+<p>Karstik mağaralarda oluşan sarkıt ve dikitler hangi kayaç türlerindendir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(527, {label: "Yerkürenin",nodeclass: "type-TK"});g.addNode(528, {label: "en",nodeclass: "type-TK"});g.addNode(529, {label: "kalın",nodeclass: "type-TK"});g.addNode(530, {label: "katmanı",nodeclass: "type-TK"});g.addNode(531, {label: "hangi",nodeclass: "type-TK"});g.addNode(532, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(533, {label: ".",nodeclass: "type-TK"});g.addEdge(null,527,530,{label: "POSSESSOR"});g.addEdge(null,528,529,{label: "MODIFIER"});g.addEdge(null,529,530,{label: "MODIFIER"});g.addEdge(null,530,532,{label: "SUBJECT"});g.addEdge(null,531,532,{label: "DERIV"});g.addEdge(null,532,533,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(515, {label: "Karstik",nodeclass: "type-TK"});g.addNode(516, {label: "mağaralarda",nodeclass: "type-TK"});g.addNode(517, {label: "oluş",nodeclass: "type-TK"});g.addNode(518, {label: "oluşan",nodeclass: "type-TK"});g.addNode(519, {label: "sarkıt",nodeclass: "type-TK"});g.addNode(520, {label: "ve",nodeclass: "type-TK"});g.addNode(521, {label: "dikitler",nodeclass: "type-TK"});g.addNode(522, {label: "hangi",nodeclass: "type-TK"});g.addNode(523, {label: "kayaç",nodeclass: "type-TK"});g.addNode(524, {label: "tür",nodeclass: "type-TK"});g.addNode(525, {label: "türlerindendir",nodeclass: "type-TK"});g.addNode(526, {label: ".",nodeclass: "type-TK"});g.addEdge(null,515,525,{label: "SUBJECT"});g.addEdge(null,516,517,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,517,518,{label: "DERIV"});g.addEdge(null,518,519,{label: "MODIFIER"});g.addEdge(null,519,520,{label: "OBJECT"});g.addEdge(null,520,521,{label: "COORDINATION"});g.addEdge(null,521,525,{label: "SUBJECT"});g.addEdge(null,522,523,{label: "MODIFIER"});g.addEdge(null,523,524,{label: "CLASSIFIER"});g.addEdge(null,524,525,{label: "DERIV"});g.addEdge(null,525,526,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

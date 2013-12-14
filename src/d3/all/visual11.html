@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Biyosfer ’in diğer adı nedir</p>
+<p>Yer şekillerini gösteren haritalar haritaların adı nedir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(121, {label: "Biyosfer",nodeclass: "type-TK"});g.addNode(122, {label: "’in",nodeclass: "type-TK"});g.addNode(123, {label: "diğer",nodeclass: "type-TK"});g.addNode(124, {label: "adı",nodeclass: "type-TK"});g.addNode(125, {label: "ne",nodeclass: "type-TK"});g.addNode(126, {label: "nedir",nodeclass: "type-TK"});g.addNode(127, {label: ".",nodeclass: "type-TK"});g.addEdge(null,121,122,{label: "CLASSIFIER"});g.addEdge(null,122,124,{label: "CLASSIFIER"});g.addEdge(null,123,124,{label: "MODIFIER"});g.addEdge(null,124,125,{label: "SUBJECT"});g.addEdge(null,125,126,{label: "DERIV"});g.addEdge(null,126,127,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(121, {label: "Yer",nodeclass: "type-TK"});g.addNode(122, {label: "şekillerini",nodeclass: "type-TK"});g.addNode(123, {label: "göster",nodeclass: "type-TK"});g.addNode(124, {label: "gösteren",nodeclass: "type-TK"});g.addNode(125, {label: "haritalar",nodeclass: "type-TK"});g.addNode(126, {label: "haritaların",nodeclass: "type-TK"});g.addNode(127, {label: "adı",nodeclass: "type-TK"});g.addNode(128, {label: "ne",nodeclass: "type-TK"});g.addNode(129, {label: "nedir",nodeclass: "type-TK"});g.addNode(130, {label: ".",nodeclass: "type-TK"});g.addEdge(null,121,122,{label: "CLASSIFIER"});g.addEdge(null,122,123,{label: "OBJECT"});g.addEdge(null,123,124,{label: "DERIV"});g.addEdge(null,124,125,{label: "MODIFIER"});g.addEdge(null,125,129,{label: "SUBJECT"});g.addEdge(null,126,127,{label: "POSSESSOR"});g.addEdge(null,127,128,{label: "SUBJECT"});g.addEdge(null,128,129,{label: "DERIV"});g.addEdge(null,129,130,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

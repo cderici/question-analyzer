@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Dünyada nüfusun en çok olduğu kıta hangisidir</p>
+<p>Çayır ve otlakların en fazla olduğu bölgemiz hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(607, {label: "Dünyada",nodeclass: "type-TK"});g.addNode(608, {label: "nüfusun",nodeclass: "type-TK"});g.addNode(609, {label: "en",nodeclass: "type-TK"});g.addNode(610, {label: "çok",nodeclass: "type-TK"});g.addNode(611, {label: "ol",nodeclass: "type-TK"});g.addNode(612, {label: "olduğu",nodeclass: "type-TK"});g.addNode(613, {label: "kıta",nodeclass: "type-TK"});g.addNode(614, {label: "hangi",nodeclass: "type-TK"});g.addNode(615, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(616, {label: ".",nodeclass: "type-TK"});g.addEdge(null,607,611,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,608,611,{label: "SUBJECT"});g.addEdge(null,609,610,{label: "MODIFIER"});g.addEdge(null,610,611,{label: "MODIFIER"});g.addEdge(null,611,612,{label: "DERIV"});g.addEdge(null,612,613,{label: "MODIFIER"});g.addEdge(null,613,614,{label: "SUBJECT"});g.addEdge(null,614,615,{label: "DERIV"});g.addEdge(null,615,616,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(598, {label: "Çayır",nodeclass: "type-TK"});g.addNode(599, {label: "ve",nodeclass: "type-TK"});g.addNode(600, {label: "otlakların",nodeclass: "type-TK"});g.addNode(601, {label: "en",nodeclass: "type-TK"});g.addNode(602, {label: "fazla",nodeclass: "type-TK"});g.addNode(603, {label: "ol",nodeclass: "type-TK"});g.addNode(604, {label: "olduğu",nodeclass: "type-TK"});g.addNode(605, {label: "bölgemiz",nodeclass: "type-TK"});g.addNode(606, {label: "hangi",nodeclass: "type-TK"});g.addNode(607, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(608, {label: ".",nodeclass: "type-TK"});g.addEdge(null,598,599,{label: "OBJECT"});g.addEdge(null,599,600,{label: "COORDINATION"});g.addEdge(null,600,603,{label: "SUBJECT"});g.addEdge(null,601,602,{label: "MODIFIER"});g.addEdge(null,602,603,{label: "MODIFIER"});g.addEdge(null,603,604,{label: "DERIV"});g.addEdge(null,604,605,{label: "CLASSIFIER"});g.addEdge(null,605,607,{label: "SUBJECT"});g.addEdge(null,606,607,{label: "DERIV"});g.addEdge(null,607,608,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Taşkömürü yatakları hangi jeolojik zamanda oluşmuştur</p>
+<p>Bakteriler ilk olarak hangi jeolojik zamanda ortaya çıkmıştır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(973, {label: "Taşkömürü",nodeclass: "type-TK"});g.addNode(974, {label: "yatakları",nodeclass: "type-TK"});g.addNode(975, {label: "hangi",nodeclass: "type-TK"});g.addNode(976, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(977, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(978, {label: "zamanda",nodeclass: "type-TK"});g.addNode(979, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(980, {label: ".",nodeclass: "type-TK"});g.addEdge(null,973,974,{label: "CLASSIFIER"});g.addEdge(null,974,979,{label: "SUBJECT"});g.addEdge(null,975,977,{label: "MODIFIER"});g.addEdge(null,976,977,{label: "DERIV"});g.addEdge(null,977,978,{label: "MODIFIER"});g.addEdge(null,978,979,{label: "MODIFIER"});g.addEdge(null,979,980,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(961, {label: "Bakteriler",nodeclass: "type-TK"});g.addNode(962, {label: "ilk",nodeclass: "type-TK"});g.addNode(963, {label: "ol",nodeclass: "type-TK"});g.addNode(964, {label: "olarak",nodeclass: "type-TK"});g.addNode(965, {label: "hangi",nodeclass: "type-TK"});g.addNode(966, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(967, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(968, {label: "zamanda",nodeclass: "type-TK"});g.addNode(969, {label: "ortaya",nodeclass: "type-TK"});g.addNode(970, {label: "çıkmıştır",nodeclass: "type-TK"});g.addNode(971, {label: ".",nodeclass: "type-TK"});g.addEdge(null,961,970,{label: "SUBJECT"});g.addEdge(null,962,963,{label: "MODIFIER"});g.addEdge(null,963,964,{label: "DERIV"});g.addEdge(null,964,970,{label: "MODIFIER"});g.addEdge(null,965,966,{label: "MODIFIER"});g.addEdge(null,966,967,{label: "DERIV"});g.addEdge(null,967,968,{label: "MODIFIER"});g.addEdge(null,968,970,{label: "MODIFIER"});g.addEdge(null,969,970,{label: "DATIVE.ADJUNCT"});g.addEdge(null,970,971,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

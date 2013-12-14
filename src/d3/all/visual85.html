@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir</p>
+<p>Ülkemizde Cumhuriyet öncesi ilk nüfus sayımı hangi tarihlerde yapılmıştır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(897, {label: "Türkiye’nin",nodeclass: "type-TK"});g.addNode(898, {label: "en",nodeclass: "type-TK"});g.addNode(899, {label: "geniş",nodeclass: "type-TK"});g.addNode(900, {label: "yüz",nodeclass: "type-TK"});g.addNode(901, {label: "ölçümüne",nodeclass: "type-TK"});g.addNode(902, {label: "sahip",nodeclass: "type-TK"});g.addNode(903, {label: "şehri",nodeclass: "type-TK"});g.addNode(904, {label: "nere",nodeclass: "type-TK"});g.addNode(905, {label: "neresidir",nodeclass: "type-TK"});g.addNode(906, {label: ".",nodeclass: "type-TK"});g.addEdge(null,897,905,{label: "SUBJECT"});g.addEdge(null,898,899,{label: "MODIFIER"});g.addEdge(null,899,900,{label: "MODIFIER"});g.addEdge(null,900,901,{label: "CLASSIFIER"});g.addEdge(null,901,905,{label: "DATIVE.ADJUNCT"});g.addEdge(null,902,903,{label: "CLASSIFIER"});g.addEdge(null,903,905,{label: "SUBJECT"});g.addEdge(null,904,905,{label: "DERIV"});g.addEdge(null,905,906,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(887, {label: "Ülkemizde",nodeclass: "type-TK"});g.addNode(888, {label: "Cumhuriyet",nodeclass: "type-TK"});g.addNode(889, {label: "önce",nodeclass: "type-TK"});g.addNode(890, {label: "öncesi",nodeclass: "type-TK"});g.addNode(891, {label: "ilk",nodeclass: "type-TK"});g.addNode(892, {label: "nüfus",nodeclass: "type-TK"});g.addNode(893, {label: "sayımı",nodeclass: "type-TK"});g.addNode(894, {label: "hangi",nodeclass: "type-TK"});g.addNode(895, {label: "tarihlerde",nodeclass: "type-TK"});g.addNode(896, {label: "yap",nodeclass: "type-TK"});g.addNode(897, {label: "yapılmıştır",nodeclass: "type-TK"});g.addNode(898, {label: ".",nodeclass: "type-TK"});g.addEdge(null,887,897,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,888,889,{label: "OBJECT"});g.addEdge(null,889,890,{label: "DERIV"});g.addEdge(null,890,897,{label: "SUBJECT"});g.addEdge(null,891,892,{label: "MODIFIER"});g.addEdge(null,892,893,{label: "CLASSIFIER"});g.addEdge(null,893,897,{label: "SUBJECT"});g.addEdge(null,894,895,{label: "MODIFIER"});g.addEdge(null,895,897,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,896,897,{label: "DERIV"});g.addEdge(null,897,898,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

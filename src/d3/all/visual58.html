@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’nin en büyük baraj gölü hangisidir</p>
+<p>Türkiye’nin en yüksek dağı hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(628, {label: "Türkiye’nin",nodeclass: "type-TK"});g.addNode(629, {label: "en",nodeclass: "type-TK"});g.addNode(630, {label: "büyük",nodeclass: "type-TK"});g.addNode(631, {label: "baraj",nodeclass: "type-TK"});g.addNode(632, {label: "gölü",nodeclass: "type-TK"});g.addNode(633, {label: "hangi",nodeclass: "type-TK"});g.addNode(634, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(635, {label: ".",nodeclass: "type-TK"});g.addEdge(null,628,634,{label: "SUBJECT"});g.addEdge(null,629,630,{label: "MODIFIER"});g.addEdge(null,630,631,{label: "MODIFIER"});g.addEdge(null,631,632,{label: "CLASSIFIER"});g.addEdge(null,632,634,{label: "SUBJECT"});g.addEdge(null,633,634,{label: "DERIV"});g.addEdge(null,634,635,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(617, {label: "Türkiyenin",nodeclass: "type-TK"});g.addNode(618, {label: "en",nodeclass: "type-TK"});g.addNode(619, {label: "yüksek",nodeclass: "type-TK"});g.addNode(620, {label: "dağı",nodeclass: "type-TK"});g.addNode(621, {label: "hangi",nodeclass: "type-TK"});g.addNode(622, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(623, {label: ".",nodeclass: "type-TK"});g.addEdge(null,617,622,{label: "SUBJECT"});g.addEdge(null,618,619,{label: "MODIFIER"});g.addEdge(null,619,620,{label: "MODIFIER"});g.addEdge(null,620,622,{label: "SUBJECT"});g.addEdge(null,621,622,{label: "DERIV"});g.addEdge(null,622,623,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
