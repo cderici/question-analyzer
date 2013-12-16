@@ -1,6 +1,7 @@
 import qVisualizer
 from maltImporter import MaltImporter
 from question import Question
+from distiller import Distiller
 
 import codecs;
 
@@ -20,6 +21,11 @@ class QuestionAnalysis:
     @staticmethod
     def visualizeAll(questions):
         qVisualizer.visualizeAllQuestions(questions)
+
+
+    def extractFocusLAT(self):
+        return Distiller(self.question).distillQuestion()
+        
 
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)

@@ -1,18 +1,37 @@
 class QPart:
-    depID = '';
-    partText = '';
-    depTag = '';
 
-
-    morphRoot = '';
-    POStag = '';
-    POSextra = '';
-    morphDetail = '';
-    rootID = '';
-    
     children = [];
 
-    ##Test
+    @staticmethod
+    def getPartPart(qPart, whichPart):
+
+        partIndex = 0
+
+        if whichPart == 'depenID':
+            partIndex = 0
+        elif whichPart == 'text':
+            partIndex = 1
+        elif whichPart == 'morphRoot':
+            partIndex = 2
+        elif whichPart == 'POStag':
+            partIndex = 3
+        elif whichPart == 'POSDetail':
+            partIndex = 4
+        elif whichPart == 'morphDetail':
+            partIndex = 5
+        elif whichPart == 'rootID':
+            partIndex = 6
+        elif whichPart == 'depenTag':
+            partIndex = 7
+        else:
+            partIndex = -1
+
+        if partIndex == -1:
+            print "Not understood"
+            return false
+
+        else:
+            return qPart[partIndex]
     
 class Question:
     ##Raw question text
