@@ -1,4 +1,4 @@
-import codecs
+import codecs, os
 
 
 def visualizeAllQuestions(questions):
@@ -21,6 +21,9 @@ def visualizeAllQuestions(questions):
 def produceVisualPage(parts, qText, qNumber = 1, qAll = False):
 
     if qAll:
+        if not os.path.exists('d3/all/'):
+            os.makedirs('d3/all/')
+
         dirPath = 'd3/all/'
     else:
         dirPath = 'd3/'
