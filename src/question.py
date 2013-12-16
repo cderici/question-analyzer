@@ -1,27 +1,30 @@
 class QPart:
 
+    # a part of the question is a list of 10 elements
+    # CAUTION: this class does NOT represent it
+
     children = [];
 
     @staticmethod
-    def getPartPart(qPart, whichPart):
+    def getPartField(qPart, whichField):
 
         partIndex = 0
 
-        if whichPart == 'depenID':
+        if whichField == 'depenID':
             partIndex = 0
-        elif whichPart == 'text':
+        elif whichField == 'text':
             partIndex = 1
-        elif whichPart == 'morphRoot':
+        elif whichField == 'morphRoot':
             partIndex = 2
-        elif whichPart == 'POStag':
+        elif whichField == 'POStag':
             partIndex = 3
-        elif whichPart == 'POSDetail':
+        elif whichField == 'POSDetail':
             partIndex = 4
-        elif whichPart == 'morphDetail':
+        elif whichField == 'morphDetail':
             partIndex = 5
-        elif whichPart == 'rootID':
+        elif whichField == 'rootID':
             partIndex = 6
-        elif whichPart == 'depenTag':
+        elif whichField == 'depenTag':
             partIndex = 7
         else:
             partIndex = -1
@@ -32,6 +35,17 @@ class QPart:
 
         else:
             return qPart[partIndex]
+
+    # getQuestionPart : question symbol -> part
+    @staticmethod
+    def getQPartWithField(questionParts, whichField, desiredFieldVal):
+
+        for part in questionParts:
+            if desiredFieldVal == getPartField(part, whichField):
+                return part # CAUTION: we are returning the whole part, not just a field
+
+        return False
+
     
 class Question:
     ##Raw question text
