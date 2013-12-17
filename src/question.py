@@ -40,8 +40,9 @@ class QPart:
     @staticmethod
     def getQPartWithField(questionParts, whichField, desiredFieldVal):
 
-        for part in questionParts:
-            if desiredFieldVal == getPartField(part, whichField):
+        # it should start from the end
+        for part in reversed(questionParts):
+            if desiredFieldVal == QPart.getPartField(part, whichField):
                 return part # CAUTION: we are returning the whole part, not just a field
 
         return False
@@ -77,8 +78,11 @@ class Question:
         else:
             self.root = None;
 
-    def findChildren(self, node):
-        return [part for part in self.questionParts if part[6] == node[0]];
+    # otherThan means that 'find parent of this EXCEPT ...'
+    # in case of more than one children:
+    # returns a list like [leftmost-item rightmost-item] in visualization
+    def findChildren(self, node, otherThan = False):
+        return [part for part in self.questionParts if (part[6] == node[0] and ((not otherThan) or part[7] != otherThan[7]))];
 
     def findParent(self, node):
         temp = [part for part in self.questionParts if part[0] == node[6]];
@@ -90,3 +94,34 @@ class Question:
 
     def findRelations(self, relationText):
         return [part for part in self.questionParts if part[7] == relationText];
+
+
+    def tracebackFrom(self, part):
+        # traces back from the given part, and returns a list of parts
+        # it resembles to moving upwards in visualized tree
+
+        # CAUTION: if the given part has more than one children, then
+        # it chooses to trace the rightmost one (in the visualization)
+        # TODO: add onlyRight parameter
+        currentChildren = self.findChildren(part)
+
+        if currentChildren == []:
+            return []
+        else:
+            lastChildIndex = len(currentChildren)-1
+
+            lastChild = currentChildren[lastChildIndex]
+
+            grandChildren = self.tracebackFrom(lastChild)
+
+            if grandChildren == None:
+                print lastChild
+                raise RuntimeError("Remember: lists and the functions operating on lists are MUTATIVE!!")
+
+
+            children = [lastChild]
+
+            children.extend(grandChildren)
+            
+            return children
+

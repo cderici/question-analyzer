@@ -1,6 +1,6 @@
 import qVisualizer
 from maltImporter import MaltImporter
-from question import Question
+from question import Question, QPart
 from distiller import Distiller
 
 import codecs;
@@ -34,4 +34,19 @@ analyzer = QuestionAnalysis(ourQuestions[0])
 
 # analyzer.visualizeQuestion()
 
-QuestionAnalysis.visualizeAll(ourQuestions)
+# QuestionAnalysis.visualizeAll(ourQuestions)
+
+focus, mod = analyzer.extractFocusLAT()
+
+focusText = ""
+
+for focusPart in reversed(focus):
+    focusText += QPart.getPartField(focusPart, 'text') + " "
+
+print ourQuestions[0].questionText + "\n"
+print "Focus: " + focusText
+# q = ourQuestions[0]
+
+# p = q.questionParts[4]
+
+# print q.tracebackFrom(p)

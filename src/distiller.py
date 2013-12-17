@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from question import Question, QPart
 
 import codecs
@@ -9,6 +11,7 @@ class Distiller():
 
     question = None
 
+    # focus is a list of ordered parts
     qFocus = None
 
     qFocusLexicalmods = None
@@ -18,16 +21,21 @@ class Distiller():
 
 
     def distillQuestion(self):
-        if not ruleBasedExtractor():
-            goForStatistics()
+        ruleBased = self.ruleBasedExtractor()
+
+        if not ruleBased:
+            return self.goForStatistics()
+        else:
+            return ruleBased
 
     def goForStatistics(self):
         self.qFocus = 'couldnt find '
         print(self.qFocus + "Not implemented yet: Statistical Approach")
+        return False
 
 
     # this should be general for all domains, maybe this whole class should be that way
-    def ruleBasedExtraction(self):
+    def ruleBasedExtractor(self):
 
         qParts = self.question.questionParts
 
@@ -48,16 +56,27 @@ class Distiller():
                 
                 SUBJtext = QPart.getPartField(SUBJ, 'text')
                 
-                if SUBJtext == 'adı' or SUBJtext == 'ismi' or SUBJtext == "nedeni":
+                if SUBJtext == u"adı" or SUBJtext == 'ismi' or SUBJtext == "nedeni":
                     # then we know that it should have a possessor
                     POSS = QPart.getQPartWithField(qParts, 'depenTag', 'POSSESSOR')
 
                     if not POSS:
                         raise RuntimeError("nedir SUBJECTS should have a possessor")
                     else:
-                        # TO BE CONTINUED :)
-                        return False
+                        focusList = [SUBJ, POSS]
+                        focusList.extend(self.question.tracebackFrom(POSS))
+                        self.qFocus = focusList
 
+                        otherChildrenList = self.question.findChildren(SUBJ, POSS)
+
+                        if otherChildrenList != []:
+                            rightMost = otherChildrenList[len(otherChildrenList)-1]
+                            self.qFocusLexicalmods = self.question.tracebackFrom(otherParent)
+
+                        return self.qFocus, self.qFocusLexicalmods
+
+        else:
+            return False
         # verilir
 
         # denir
