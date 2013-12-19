@@ -106,29 +106,28 @@ class Question:
         currentChildren = self.findChildren(part)
 
         if currentChildren == []:
-            return [], part
+            return []
 
         else:
-            tamlamaChild = None
+
+
+            tamlamaChildren = []
             for child in reversed(currentChildren):
                 if (QPart.getPartField(child, 'depenTag') == 'POSSESSOR' 
                     or 
                     QPart.getPartField(child, 'depenTag') == 'CLASSIFIER'):
-                    tamlamaChild = child
-                    break
+                    tamlamaChildren.append(child)
 
             children = []
 
-            lastChild = part
+            if tamlamaChildren != []:
+                for child in tamlamaChildren:
+                    childBranch = [child]
+                    childBranch.extend(self.tracebackFromFoldTamlama(child))
+                    
+                    children.extend(childBranch)
 
-            if tamlamaChild != None:
-                children.append(tamlamaChild)
-            
-                grandTamlamaChildren, lastChild = self.tracebackFromFoldTamlama(tamlamaChild)
-
-                children.extend(grandTamlamaChildren)
-
-            return children, lastChild
+            return children
 
     def tracebackFrom(self, part):
         """

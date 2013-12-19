@@ -12,12 +12,14 @@ class Distiller():
     question = None
 
     # focus is a list of ordered parts
-    qFocus = None
+    qFocus = []
 
-    qMods = None
+    qMods = []
 
     def __init__(self, question = None):
         self.question = question
+        self.qFocus = []
+        self.qMods = []
 
 
     def distillQuestion(self):
@@ -68,27 +70,31 @@ class Distiller():
                         raise RuntimeError("nedir SUBJECTS should have a possessor")
                     else:
                         focusList = [SUBJ, POSS]
-                        posRest, lastTamlayan = self.question.tracebackFromFoldTamlama(POSS)
+                        posRest = self.question.tracebackFromFoldTamlama(POSS)
                         focusList.extend(posRest)
                         
                         self.qFocus = focusList
+                        
 
                         """
-                        adding to mods the additional parts starting from the last possessor
+                        now we look for any MODIFIER which is a child of a focus part
+                        
+                        we take all modifiers in the question
                         """
-                        self.qMods = self.question.tracebackFrom(lastTamlayan)
+                        allModifiers = self.question.findRelations('MODIFIER')
 
-                        """
-                        checking if the subject has children other than POSS
-                        """
-                        otherChildrenList = self.question.findChildren(SUBJ, POSS)
+                        """ if there is some """
+                        if allModifiers != []:
+                            """then we look for ones that modifies a focus part"""
+                            for modifier in reversed(allModifiers):
+                                for fPart in self.qFocus:
+                                    """ if modifier is child of f-part"""
+                                    if QPart.getPartField(modifier, 'rootID') == QPart.getPartField(fPart, 'depenID'):
+                                        self.qMods.append(modifier)
+                                        self.qMods.extend(self.question.tracebackFrom(modifier))
 
-                        if otherChildrenList != []:
-                            rightMost = otherChildrenList[len(otherChildrenList)-1]
-                            self.qMods.append(rightMost)
-                            self.qMods.extend(self.question.tracebackFrom(rightMost))
 
-                        return self.qFocus, self.qMods
+                        return reversed(self.qFocus), reversed(self.qMods)
 
         else:
             return False, False

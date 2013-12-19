@@ -34,12 +34,12 @@ class QuestionAnalysis:
 
         if focus:
             focusText = ""
-            for focusPart in reversed(focus):
+            for focusPart in focus:
                 focusText += QPart.getPartField(focusPart, 'text') + " "
 
         if mod:
             modText = ""
-            for modPart in reversed(mod):
+            for modPart in mod:
                 modText += QPart.getPartField(modPart, 'text') + " "
 
         print(u"Q: {} || Focus: {} || Mod: {}".format(self.question.questionText, focusText, modText))
