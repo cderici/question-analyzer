@@ -96,13 +96,49 @@ class Question:
         return [part for part in self.questionParts if part[7] == relationText];
 
 
-    def tracebackFrom(self, part):
-        # traces back from the given part, and returns a list of parts
-        # it resembles to moving upwards in visualized tree
 
-        # CAUTION: if the given part has more than one children, then
-        # it chooses to trace the rightmost one (in the visualization)
-        # TODO: add onlyRight parameter
+    def tracebackFromFoldTamlama(self, part):
+        """
+        traces back from the given part, and continues only if it sees
+        parts with the same depenTag with the given part
+        """
+
+        currentChildren = self.findChildren(part)
+
+        if currentChildren == []:
+            return [], part
+
+        else:
+            tamlamaChild = None
+            for child in reversed(currentChildren):
+                if (QPart.getPartField(child, 'depenTag') == 'POSSESSOR' 
+                    or 
+                    QPart.getPartField(child, 'depenTag') == 'CLASSIFIER'):
+                    tamlamaChild = child
+                    break
+
+            children = []
+
+            lastChild = part
+
+            if tamlamaChild != None:
+                children.append(tamlamaChild)
+            
+                grandTamlamaChildren, lastChild = self.tracebackFromFoldTamlama(tamlamaChild)
+
+                children.extend(grandTamlamaChildren)
+
+            return children, lastChild
+
+    def tracebackFrom(self, part):
+        """
+        traces back from the given part, and returns a list of parts
+        it resembles to moving upwards in visualized tree
+
+        CAUTION: if the given part has more than one children, then
+        it chooses to trace the rightmost one (in the visualization)
+        TODO: add onlyRight parameter
+        """
         currentChildren = self.findChildren(part)
 
         if currentChildren == []:

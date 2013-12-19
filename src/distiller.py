@@ -14,7 +14,7 @@ class Distiller():
     # focus is a list of ordered parts
     qFocus = None
 
-    qFocusLexicalmods = None
+    qMods = None
 
     def __init__(self, question = None):
         self.question = question
@@ -47,36 +47,51 @@ class Distiller():
         if SENtext == 'nedir':
 
             SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
-
-            # we know that everyone in 'nedir' has subjects
-            # but nevertheless
+            """
+            we know that everyone in 'nedir' has subjects
+            but nevertheless
+            """
             if not SUBJ:
-                return False
+                return False, False
             else:
                 
                 SUBJtext = QPart.getPartField(SUBJ, 'text')
                 
                 if SUBJtext == u"adı" or SUBJtext == 'ismi' or SUBJtext == "nedeni":
-                    # then we know that it should have a possessor
+                    """
+                    then we know that it should have a possessor
+                    TODO : find the CORRECT POSSESSOR 
+                    """
                     POSS = QPart.getQPartWithField(qParts, 'depenTag', 'POSSESSOR')
 
                     if not POSS:
                         raise RuntimeError("nedir SUBJECTS should have a possessor")
                     else:
                         focusList = [SUBJ, POSS]
-                        focusList.extend(self.question.tracebackFrom(POSS))
+                        posRest, lastTamlayan = self.question.tracebackFromFoldTamlama(POSS)
+                        focusList.extend(posRest)
+                        
                         self.qFocus = focusList
 
+                        """
+                        adding to mods the additional parts starting from the last possessor
+                        """
+                        self.qMods = self.question.tracebackFrom(lastTamlayan)
+
+                        """
+                        checking if the subject has children other than POSS
+                        """
                         otherChildrenList = self.question.findChildren(SUBJ, POSS)
 
                         if otherChildrenList != []:
                             rightMost = otherChildrenList[len(otherChildrenList)-1]
-                            self.qFocusLexicalmods = self.question.tracebackFrom(otherParent)
+                            self.qMods.append(rightMost)
+                            self.qMods.extend(self.question.tracebackFrom(rightMost))
 
-                        return self.qFocus, self.qFocusLexicalmods
+                        return self.qFocus, self.qMods
 
         else:
-            return False
+            return False, False
         # verilir
 
         # denir
@@ -91,4 +106,4 @@ class Distiller():
 
         # kac/kaci/kacini/ne kadar
         
-        return False
+        return False, False
