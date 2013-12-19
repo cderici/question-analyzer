@@ -100,7 +100,7 @@ class Question:
     def tracebackFromFoldTamlama(self, part):
         """
         traces back from the given part, and continues only if it sees
-        parts with the same depenTag with the given part
+        parts with the depenTag POSSESSOR or CLASSIFIER
         """
 
         currentChildren = self.findChildren(part)
@@ -135,29 +135,26 @@ class Question:
         traces back from the given part, and returns a list of parts
         it resembles to moving upwards in visualized tree
 
-        CAUTION: if the given part has more than one children, then
-        it chooses to trace the rightmost one (in the visualization)
-        TODO: add onlyRight parameter
+        Remember: lists and the functions operating on lists are MUTATIVE!!
         """
         currentChildren = self.findChildren(part)
 
         if currentChildren == []:
             return []
         else:
-            lastChildIndex = len(currentChildren)-1
 
-            lastChild = currentChildren[lastChildIndex]
+            children = []
 
-            grandChildren = self.tracebackFrom(lastChild)
+            """ go for every possible child, and go upwards on each of
+            them, return the results as a single ordered list (from
+            left->right in visualization"""
+            for child in reversed(currentChildren):
 
-            if grandChildren == None:
-                print lastChild
-                raise RuntimeError("Remember: lists and the functions operating on lists are MUTATIVE!!")
-
-
-            children = [lastChild]
-
-            children.extend(grandChildren)
+                partsOnBranch = [child]
+                
+                partsOnBranch.extend(self.tracebackFrom(child))
+                
+                children.extend(partsOnBranch)
             
             return children
 
