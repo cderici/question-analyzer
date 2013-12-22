@@ -30,7 +30,7 @@ class QPart:
             partIndex = -1
 
         if partIndex == -1:
-            print "Not understood"
+            print("Not understood")
             return false
 
         else:
