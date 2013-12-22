@@ -47,6 +47,17 @@ class QPart:
 
         return False
 
+    @staticmethod
+    def getAllPartsWithField(questionParts, whichField, desiredFieldVal):
+        desiredParts = []
+
+        for part in reversed(questionParts):
+            if desiredFieldVal == QPart.getPartField(part, whichField):
+
+                desiredParts.append(part)
+
+        return desiredParts
+
     
 class Question:
     ##Raw question text
@@ -93,9 +104,9 @@ class Question:
         temp = [part for part in self.questionParts if part[0] == node[6]];
 
         if(len(temp) == 1):
-            return temp[0];
+            return temp;
         else:
-            return None;
+            return [];
 
     def findRelations(self, relationText):
         return [part for part in self.questionParts if part[7] == relationText];
@@ -105,11 +116,11 @@ class Question:
     TRACING STUFF
     """
 
-    def tracebackFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
-        return self.traceFromFoldTamlama('back', part, includePOSS, includeCLASS, includeMODIF)
+    def tracebackFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
+        return self.traceFromFoldTamlama('back', part, includePOSS, includeCLASS, includeMODIF, includeSEN)
 
-    def traceForwardFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
-        return self.traceFromFoldTamlama('forward', part, includePOSS, includeCLASS, includeMODIF)
+    def traceForwardFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
+        return self.traceFromFoldTamlama('forward', part, includePOSS, includeCLASS, includeMODIF, includeSEN)
 
     def tracebackFrom(self, part):
         return self.traceFrom('back', part)
@@ -118,7 +129,7 @@ class Question:
         return self.traceFrom('forward', part)
     
 
-    def traceFromFoldTamlama(self, direction, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
+    def traceFromFoldTamlama(self, direction, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
         """
         traces back from the given part, and continues only if it sees
         parts with the depenTag POSSESSOR or CLASSIFIER
@@ -137,15 +148,29 @@ class Question:
             """ TODO: below part can be refactored with findChildrenDepenTag """
             tamlamaChildren = []
             for child in reversed(currentChildren):
-
-                if includePOSS and QPart.getPartField(child, 'depenTag') == 'POSSESSOR':
+                
+                childTag = QPart.getPartField(child, 'depenTag')
+                
+                if includeSEN and childTag == 'SENTENCE':
                     tamlamaChildren.append(child)
+                    break
 
-                elif includeCLASS and QPart.getPartField(child, 'depenTag') == 'CLASSIFIER':
+                """ if it is DERIV, go on in any case """
+                if childTag == 'DERIV':
                     tamlamaChildren.append(child)
+                    continue
 
-                elif includeMODIF and QPart.getPartField(child, 'depenTag') == 'MODIFIER':
+                if includePOSS and childTag == 'POSSESSOR':
                     tamlamaChildren.append(child)
+                    continue
+
+                elif includeCLASS and childTag == 'CLASSIFIER':
+                    tamlamaChildren.append(child)
+                    continue
+
+                elif includeMODIF and childTag == 'MODIFIER':
+                    tamlamaChildren.append(child)
+                    continue
 
 
             children = []
@@ -153,7 +178,7 @@ class Question:
             if tamlamaChildren != []:
                 for child in tamlamaChildren:
                     childBranch = [child]
-                    childBranch.extend(self.traceFromFoldTamlama(direction, child, includePOSS, includeCLASS, includeMODIF))
+                    childBranch.extend(self.traceFromFoldTamlama(direction, child, includePOSS, includeCLASS, includeMODIF, includeSEN))
                     
                     children.extend(childBranch)
 

@@ -42,6 +42,10 @@ class Distiller():
 
         SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
 
+        if not SEN:
+            # raise RuntimeError("Something's REALLY wrong! Here's the question: " + self.question.questionText)
+            return False, False
+
         SENtext = QPart.getPartField(SEN, 'text')
 
         # nedir
@@ -58,6 +62,11 @@ class Distiller():
         elif SENtext == 'hangisidir' or SENtext == 'hangileridir':
 
             return handleHangiHangileri(self.question, qParts)
+
+        # ... hangi ...
+        elif self.checkForBetweenHangi(qParts):
+            
+            return handleBetweenHangi(self.question, qParts)
 
         else:
             return False, False
@@ -76,3 +85,11 @@ class Distiller():
         # kac/kaci/kacini/ne kadar
         
         return False, False
+
+
+    def checkForBetweenHangi(self, qParts):
+        hangiParts = QPart.getAllPartsWithField(qParts, 'text', 'hangi')
+
+        hangiFiltered = [part for part in hangiParts if (QPart.getPartField(part, 'depenTag') != 'DERIV')]
+
+        return hangiFiltered != []

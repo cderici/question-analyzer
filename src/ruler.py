@@ -153,7 +153,7 @@ def handleBetweenHangi(question, qParts):
     qFocus = []
     qMods = []
 
-    hangiParts = QPart.getQPartWithField(qParts, 'text', 'hangi')
+    hangiParts = QPart.getAllPartsWithField(qParts, 'text', 'hangi')
 
     """ eliminate the hangi parts which are DERIV """
     hangiFiltered=[ part for part in hangiParts if (QPart.getPartField(part, 'depenTag') != 'DERIV')]
@@ -170,14 +170,58 @@ def handleBetweenHangi(question, qParts):
 
     qFocus = [HANGI]
 
-    hangiParent = question.findParent(HANGI)
+    hangiParent = question.findParent(HANGI)[0]
+
+    if QPart.getPartField(hangiParent, 'depenTag') == 'DERIV':
+        while True:
+            hangiParent = question.findParent(hangiParent)[0]
+            if QPart.getPartField(hangiParent, 'depenTag') != 'DERIV':
+                break
 
     qFocus.append(hangiParent)
 
     if QPart.getPartField(hangiParent, 'depenTag') == 'CLASSIFIER':
-        qFocus.extend(question.traceForwardFromFoldTamlama(hangiParent, False, True, False))
+        qFocus.extend(question.traceForwardFromFoldTamlama(hangiParent, True, True, False, True))
         """                                                        No POSS, yes CLASS, no MODIF"""
 
     """ MOD EXTRACTION """
 
-    return reversed(qFocus), reversed(qMods)
+    """ Tricky...
+
+    there are USUALLY 2 kinds of mods here:
+    1) modifier of HANGI --- en çok hangi ...
+    2) subjects, adjuncts and other modifiers attached to SENTENCE
+
+
+    we dump all (2), then traverse upwards from HANGI for (1)
+    """
+
+    hangiMods = question.tracebackFromFoldTamlama(HANGI, False, False, True)
+
+    senChildren = question.findChildren(SEN)
+
+    for child in senChildren:
+        modCandidates = question.tracebackFrom(child)
+
+        """ excluding the branch ...."""
+        isHangiThere = False
+
+        for mod in modCandidates:
+            if QPart.getPartField(mod, 'text') == 'hangi':
+                isHangiThere = True
+
+        """ .... that has HANGI in it. So: 
+
+        if HANGI is not there, include the branch"""
+        if (not isHangiThere):
+            modBranch = question.tracebackFrom(child)
+            modBranch.reverse()
+            modBranch.append(child)
+
+            qMods.extend(modBranch)
+
+    """ Also, if SENTENCE is not included in Focus, include it at the end of qMods"""
+    if QPart.getPartField(qFocus[len(qFocus)-1], 'depenTag') != 'SENTENCE':
+        qMods.append(SEN)
+    
+    return qFocus, qMods

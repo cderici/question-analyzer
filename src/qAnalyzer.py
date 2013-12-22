@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import qVisualizer
 from maltImporter import MaltImporter
 from question import Question, QPart
@@ -57,14 +59,23 @@ class MassAnalyzer:
         filtered = []
 
         for q in self.questionSet:
-            PART = QPart.getQPartWithField(q.questionParts, tagType, tagName)
-            if PART:
-                if QPart.getPartField(PART, partType) == partValue:
-                    filtered.append(q)
+            if tagName == '*':
+                for part in q.questionParts:
+                    isDeriv = (QPart.getPartField(part, 'depenTag') != 'DERIV')
+
+                    if isDeriv and QPart.getPartField(part, partType) == partValue:
+                        filtered.append(q)
+                    else:
+                        continue
+            else:
+                PART = QPart.getQPartWithField(q.questionParts, tagType, tagName)
+                if PART:
+                    if QPart.getPartField(PART, partType) == partValue:
+                        filtered.append(q)
+                    else:
+                        continue
                 else:
                     continue
-            else:
-                continue
 
         return filtered
 
@@ -97,10 +108,12 @@ filteredHangisidir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'han
 
 filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangileridir'))
 
-"""
-for q in filteredHangisidir:
+filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
+
+
+for q in filteredHangiBetween:
     print "-" + q.questionText
-"""
+
 
 print("\n\n -- nedir -- \n\n")
 
@@ -113,3 +126,7 @@ MassAnalyzer.massShowFocusMod(filteredVerilir)
 print("\n\n -- hangisidir/hangileridir -- \n\n")
 
 MassAnalyzer.massShowFocusMod(filteredHangisidir)
+
+print("\n\n -- .... hangi .... -- \n\n")
+
+MassAnalyzer.massShowFocusMod(filteredHangiBetween)
