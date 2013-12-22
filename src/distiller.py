@@ -49,9 +49,14 @@ class Distiller():
 
             return handleNedir(self.question, qParts)
 
+        # verilir
+        elif SENtext == 'verilir':
+
+            return handleVerilir(self.question, qParts)
+
         else:
             return False, False
-        # verilir
+
 
         # denir
 

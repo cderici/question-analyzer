@@ -89,6 +89,14 @@ analyzer = QuestionAnalysis(ourQuestions[0])
 
 mass = MassAnalyzer(ourQuestions)
 
-filteredSet = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'nedir')
+filteredNedir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'nedir')
 
-MassAnalyzer.massShowFocusMod(filteredSet)
+filteredVerilir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'verilir')
+
+print("\n\n -- nedir -- \n\n")
+
+MassAnalyzer.massShowFocusMod(filteredNedir)
+
+print("\n\n -- verilir -- \n\n")
+
+MassAnalyzer.massShowFocusMod(filteredVerilir)

@@ -48,3 +48,51 @@ def handleNedir(question, qParts):
                         
         
         return reversed(qFocus), reversed(qMods)
+
+
+def handleVerilir(question, qParts):
+
+    qFocus = []
+    qMods = []
+
+    SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    
+    """ FOCUS EXTRACTION """
+
+    """ 
+    Assumptions: 
+
+    -- every 'verilir' question has DATIVE.ADJUNCT
+
+    -- if a DATIVE.ADJUNCT has more than one MODIFIER, the last one is its classifier
+    """
+
+    DativeADJ = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')[0]
+
+    qFocus.extend([SUBJ, DativeADJ])
+
+    dativeModChildren = question.findChildrenDepenTag(DativeADJ, 'MODIFIER')
+    dativeModChildren.extend(question.findChildrenDepenTag(DativeADJ, 'POSSESSOR'))
+    dativeModChildren.extend(question.findChildrenDepenTag(DativeADJ, 'CLASSIFIER'))
+                             
+
+    numOfModChildren = len(dativeModChildren)
+
+    if numOfModChildren > 1:
+        """ we take (and remove) the last modifier"""
+        focusChild = dativeModChildren.pop(numOfModChildren-1)
+        qFocus.append(focusChild)
+        qFocus.extend(question.tracebackFrom(focusChild))
+
+    
+    """ MOD EXTRACTION """
+
+    if dativeModChildren != []:
+        for modChild in dativeModChildren:
+            qMods.append(modChild)
+            qMods.extend(question.tracebackFrom(modChild))
+
+    return reversed(qFocus), reversed(qMods)
