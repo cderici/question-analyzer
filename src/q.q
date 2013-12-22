@@ -8,13 +8,14 @@ Mendereslerde biriktirme kısmına ne ad verilir
 Yerkürenin hemen üzerinde yer alan atmosfer tabakasının adı nedir
 Bitki ve hayvan topluluklarını inceleyen bilim dalı nedir
 İç kuvvetlerin etkisiyle yeryüzünde oluşan hareketlerin adı nedir
-Yer şekillerini gösteren haritalar haritaların adı nedir
+Biyosfer’in diğer adı nedir
+Yer şekillerini gösteren haritaların adı nedir
 Haritaların küçültme oranına ne denir
 Türkiye’nin kuzeybatısından esen yerel rüzgârın adı nedir
 İstanbul’da güneydoğudan esen rüzgâra ne ad verilir
-Türkiye’de Güneyden esen rüzgârın ismi nedir
+Türkiye’de güneyden esen rüzgârın ismi nedir
 Türkiye’ye Kuzeyden esen rüzgâra ne denir
-Suyun kinetik enerjinden yararlanılarak elektrik üretimi yapılan santrallere ne ad verilir
+Suyun kinetik enerjisinden yararlanılarak elektrik üretimi yapılan santrallere ne ad verilir
 Yüzeye çıkan lav ve tüfün oluşturduğu yer şeklinin adı nedir
 Kara ve denizlerde düşey doğrultudaki alçalma yükselme hareketlerine ne denir
 Volkanlardan çıkan akışkan maddelere ne ad verilir
@@ -38,7 +39,6 @@ Türkiye’de azonal(taşınmış) topraklar içinde en yaygın olanı hangisidi
 23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır
 Atmosferin en alt katmanında hangi tabaka vardır
 Ozon oluşum hangi katmanda oluşur
-Kavimler göçü hangi yıllar arasında olmuştur
 Canlıların üzerinde yaşadığı katman hangisidir
 Dev kazanın hangi dış güç tarafından oluşturulur
 Ülke sınırlarını gösteren haritalara hangileridir
@@ -84,6 +84,7 @@ Türkiye’de heyelan set göllerinin en fazla görüldüğü bölge neresidir
 Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir
 Ülkemizde Cumhuriyet öncesi ilk nüfus sayımı hangi tarihlerde yapılmıştır
 Cumhuriyetten Sonra ilk nüfus sayımı ne zaman yapılmıştır
+Kavimler göçü hangi yıllar arasında olmuştur
 Coğrafi keşifler hangi yüzyılda başlamıştır
 İlk para kullanımı hangi uygarlık döneminde olmuştur
 İmparatorluklar ilk olarak hangi çağda kurulmuştur
@@ -104,4 +105,3 @@ Yeryüzündeki kayaçlar kaç ana grupta sınıflandırılır
 Göçlerin en önemli nedeni nedir
 Ümit Burnuna ilk kez ulaşan denizci kimdir
 Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir
-Biyosfer’in diğer adı nedir

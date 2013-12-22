@@ -25,6 +25,12 @@ class QuestionParser:
         return self.questions;
 
     def tokenize(self, text):
+
+        p = re.findall('\(([^()]*)\)', text);
+
+        for p_item in p:
+            text = text.replace('(' + p_item + ')', ' ');
+        
         return re.findall('[0-9,a-z,ğ,ü,ş,ç,ö,ı,â,'',’,A-Z,Ğ,Ü,Ş,Ç,Ö,İ,Â]+', text.replace('i̇','i').replace('\'','').replace('’','')); 
     
     def tokenizeQuestions(self):
