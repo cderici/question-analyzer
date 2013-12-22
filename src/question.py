@@ -84,6 +84,11 @@ class Question:
     def findChildren(self, node, otherThan = False):
         return [part for part in self.questionParts if (part[6] == node[0] and ((not otherThan) or part[7] != otherThan[7]))];
 
+
+    """ find the children of node with depenTags tag"""
+    def findChildrenDepenTag(self, node, tag):
+        return [part for part in self.questionParts if (part[6] == node[0] and part[7] == tag)];
+
     def findParent(self, node):
         temp = [part for part in self.questionParts if part[0] == node[6]];
 
