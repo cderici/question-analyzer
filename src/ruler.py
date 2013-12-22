@@ -145,3 +145,39 @@ def handleHangiHangileri(question,qParts):
         qMods.extend(question.tracebackFrom(modChild))
 
     return reversed(qFocus), reversed(qMods)
+
+
+
+def handleBetweenHangi(question, qParts):
+
+    qFocus = []
+    qMods = []
+
+    hangiParts = QPart.getQPartWithField(qParts, 'text', 'hangi')
+
+    """ eliminate the hangi parts which are DERIV """
+    hangiFiltered=[ part for part in hangiParts if (QPart.getPartField(part, 'depenTag') != 'DERIV')]
+
+    if len(hangiFiltered) != 1:
+        raise RuntimeError("Confused with this question: " + question.questionText)
+
+    HANGI = hangiFiltered[0]
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+
+    """ FOCUS EXTRACTION """
+
+    qFocus = [HANGI]
+
+    hangiParent = question.findParent(HANGI)
+
+    qFocus.append(hangiParent)
+
+    if QPart.getPartField(hangiParent, 'depenTag') == 'CLASSIFIER':
+        qFocus.extend(question.traceForwardFromFoldTamlama(hangiParent, False, True, False))
+        """                                                        No POSS, yes CLASS, no MODIF"""
+
+    """ MOD EXTRACTION """
+
+    return reversed(qFocus), reversed(qMods)

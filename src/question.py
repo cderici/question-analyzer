@@ -101,50 +101,79 @@ class Question:
         return [part for part in self.questionParts if part[7] == relationText];
 
 
+    """
+    TRACING STUFF
+    """
 
-    def tracebackFromFoldTamlama(self, part, includeModifier=False):
+    def tracebackFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
+        return self.traceFromFoldTamlama('back', part, includePOSS, includeCLASS, includeMODIF)
+
+    def traceForwardFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
+        return self.traceFromFoldTamlama('forward', part, includePOSS, includeCLASS, includeMODIF)
+
+    def tracebackFrom(self, part):
+        return self.traceFrom('back', part)
+
+    def traceForwardFrom(self, part):
+        return self.traceFrom('forward', part)
+    
+
+    def traceFromFoldTamlama(self, direction, part, includePOSS=True, includeCLASS=True, includeMODIF=False):
         """
         traces back from the given part, and continues only if it sees
         parts with the depenTag POSSESSOR or CLASSIFIER
-        """
 
-        currentChildren = self.findChildren(part)
+        TODO REFACTOR the 'children' 'child', they may be parents
+        """
+        if direction == 'back':
+            currentChildren = self.findChildren(part)
+        elif direction == 'forward':
+            currentChildren = self.findParent(part)
 
         if currentChildren == []:
             return []
 
         else:
-
-
+            """ TODO: below part can be refactored with findChildrenDepenTag """
             tamlamaChildren = []
             for child in reversed(currentChildren):
-                if (QPart.getPartField(child, 'depenTag') == 'POSSESSOR' 
-                    or 
-                    QPart.getPartField(child, 'depenTag') == 'CLASSIFIER'):
+
+                if includePOSS and QPart.getPartField(child, 'depenTag') == 'POSSESSOR':
                     tamlamaChildren.append(child)
 
-                elif includeModifier and QPart.getPartField(child, 'depenTag') == 'MODIFIER':
+                elif includeCLASS and QPart.getPartField(child, 'depenTag') == 'CLASSIFIER':
                     tamlamaChildren.append(child)
+
+                elif includeMODIF and QPart.getPartField(child, 'depenTag') == 'MODIFIER':
+                    tamlamaChildren.append(child)
+
 
             children = []
 
             if tamlamaChildren != []:
                 for child in tamlamaChildren:
                     childBranch = [child]
-                    childBranch.extend(self.tracebackFromFoldTamlama(child))
+                    childBranch.extend(self.traceFromFoldTamlama(direction, child, includePOSS, includeCLASS, includeMODIF))
                     
                     children.extend(childBranch)
 
             return children
 
-    def tracebackFrom(self, part):
+    def traceFrom(self, direction, part):
         """
         traces back from the given part, and returns a list of parts
         it resembles to moving upwards in visualized tree
 
         Remember: lists and the functions operating on lists are MUTATIVE!!
+
+        TODO: REFACTOR 'children' 'child', they may be parents
         """
-        currentChildren = self.findChildren(part)
+
+        if direction == 'back':
+            currentChildren = self.findChildren(part)
+        elif direction == 'forward':
+            currentChildren = self.findParent(part)
+
 
         if currentChildren == []:
             return []
@@ -159,7 +188,7 @@ class Question:
 
                 partsOnBranch = [child]
                 
-                partsOnBranch.extend(self.tracebackFrom(child))
+                partsOnBranch.extend(self.traceFrom(direction, child))
                 
                 children.extend(partsOnBranch)
             
