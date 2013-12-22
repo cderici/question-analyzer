@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>İstanbul boğazı hangi jeolojik dönemde oluşmuştur</p>
+<p>Kıta bölünmeleri hangi jeolojik zamanda başlamıştır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(982, {label: "İstanbul",nodeclass: "type-TK"});g.addNode(983, {label: "boğazı",nodeclass: "type-TK"});g.addNode(984, {label: "hangi",nodeclass: "type-TK"});g.addNode(985, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(986, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(987, {label: "dönemde",nodeclass: "type-TK"});g.addNode(988, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(989, {label: ".",nodeclass: "type-TK"});g.addEdge(null,982,983,{label: "CLASSIFIER"});g.addEdge(null,983,988,{label: "SUBJECT"});g.addEdge(null,984,987,{label: "MODIFIER"});g.addEdge(null,985,986,{label: "DERIV"});g.addEdge(null,986,987,{label: "MODIFIER"});g.addEdge(null,987,988,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,988,989,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(975, {label: "Kıta",nodeclass: "type-TK"});g.addNode(976, {label: "böl",nodeclass: "type-TK"});g.addNode(977, {label: "_",nodeclass: "type-TK"});g.addNode(978, {label: "bölünmeleri",nodeclass: "type-TK"});g.addNode(979, {label: "hangi",nodeclass: "type-TK"});g.addNode(980, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(981, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(982, {label: "zamanda",nodeclass: "type-TK"});g.addNode(983, {label: "başlamıştır",nodeclass: "type-TK"});g.addNode(984, {label: ".",nodeclass: "type-TK"});g.addEdge(null,975,978,{label: "CLASSIFIER"});g.addEdge(null,976,977,{label: "DERIV"});g.addEdge(null,977,978,{label: "DERIV"});g.addEdge(null,978,983,{label: "SUBJECT"});g.addEdge(null,979,980,{label: "MODIFIER"});g.addEdge(null,980,981,{label: "DERIV"});g.addEdge(null,981,982,{label: "MODIFIER"});g.addEdge(null,982,983,{label: "MODIFIER"});g.addEdge(null,983,984,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

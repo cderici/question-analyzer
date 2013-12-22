@@ -30,7 +30,7 @@ class QPart:
             partIndex = -1
 
         if partIndex == -1:
-            print("Not understood")
+            print "Not understood"
             return false
 
         else:
@@ -102,7 +102,7 @@ class Question:
 
 
 
-    def tracebackFromFoldTamlama(self, part, includeModifier=False):
+    def tracebackFromFoldTamlama(self, part, includeMode = False):
         """
         traces back from the given part, and continues only if it sees
         parts with the depenTag POSSESSOR or CLASSIFIER
@@ -122,8 +122,7 @@ class Question:
                     or 
                     QPart.getPartField(child, 'depenTag') == 'CLASSIFIER'):
                     tamlamaChildren.append(child)
-
-                elif includeModifier and QPart.getPartField(child, 'depenTag') == 'MODIFIER':
+                elif includeMode and QPart.getPartField(child, 'depenTag') == 'MODIFIER':
                     tamlamaChildren.append(child)
 
             children = []

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>İstanbul’da güneydoğudan esen rüzgâra ne ad verilir</p>
+<p>Türkiye’nin kuzeybatısından esen yerel rüzgârın adı nedir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(150, {label: "İstanbulda",nodeclass: "type-TK"});g.addNode(151, {label: "güneydoğudan",nodeclass: "type-TK"});g.addNode(152, {label: "esen",nodeclass: "type-TK"});g.addNode(153, {label: "rüzgâra",nodeclass: "type-TK"});g.addNode(154, {label: "ne",nodeclass: "type-TK"});g.addNode(155, {label: "ad",nodeclass: "type-TK"});g.addNode(156, {label: "ver",nodeclass: "type-TK"});g.addNode(157, {label: "verilir",nodeclass: "type-TK"});g.addNode(158, {label: ".",nodeclass: "type-TK"});g.addEdge(null,150,157,{label: "SUBJECT"});g.addEdge(null,151,157,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,152,153,{label: "MODIFIER"});g.addEdge(null,153,157,{label: "DATIVE.ADJUNCT"});g.addEdge(null,154,155,{label: "MODIFIER"});g.addEdge(null,155,157,{label: "SUBJECT"});g.addEdge(null,156,157,{label: "DERIV"});g.addEdge(null,157,158,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(145, {label: "Türkiyenin",nodeclass: "type-TK"});g.addNode(146, {label: "kuzeybatısından",nodeclass: "type-TK"});g.addNode(147, {label: "es",nodeclass: "type-TK"});g.addNode(148, {label: "esen",nodeclass: "type-TK"});g.addNode(149, {label: "yerel",nodeclass: "type-TK"});g.addNode(150, {label: "rüzgârın",nodeclass: "type-TK"});g.addNode(151, {label: "adı",nodeclass: "type-TK"});g.addNode(152, {label: "ne",nodeclass: "type-TK"});g.addNode(153, {label: "nedir",nodeclass: "type-TK"});g.addNode(154, {label: ".",nodeclass: "type-TK"});g.addEdge(null,145,146,{label: "CLASSIFIER"});g.addEdge(null,146,147,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,147,148,{label: "DERIV"});g.addEdge(null,148,150,{label: "MODIFIER"});g.addEdge(null,149,150,{label: "MODIFIER"});g.addEdge(null,150,151,{label: "POSSESSOR"});g.addEdge(null,151,152,{label: "SUBJECT"});g.addEdge(null,152,153,{label: "DERIV"});g.addEdge(null,153,154,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

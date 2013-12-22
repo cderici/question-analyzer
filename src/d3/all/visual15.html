@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’de Güneyden esen rüzgârın ismi nedir</p>
+<p>İstanbul’da güneydoğudan esen rüzgâra ne ad verilir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(159, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(160, {label: "Güneyden",nodeclass: "type-TK"});g.addNode(161, {label: "esen",nodeclass: "type-TK"});g.addNode(162, {label: "rüzgârın",nodeclass: "type-TK"});g.addNode(163, {label: "ismi",nodeclass: "type-TK"});g.addNode(164, {label: "ne",nodeclass: "type-TK"});g.addNode(165, {label: "nedir",nodeclass: "type-TK"});g.addNode(166, {label: ".",nodeclass: "type-TK"});g.addEdge(null,159,165,{label: "SUBJECT"});g.addEdge(null,160,165,{label: "MODIFIER"});g.addEdge(null,161,162,{label: "MODIFIER"});g.addEdge(null,162,163,{label: "POSSESSOR"});g.addEdge(null,163,165,{label: "SUBJECT"});g.addEdge(null,164,165,{label: "DERIV"});g.addEdge(null,165,166,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(155, {label: "İstanbulda",nodeclass: "type-TK"});g.addNode(156, {label: "güneydoğudan",nodeclass: "type-TK"});g.addNode(157, {label: "esen",nodeclass: "type-TK"});g.addNode(158, {label: "rüzgâra",nodeclass: "type-TK"});g.addNode(159, {label: "ne",nodeclass: "type-TK"});g.addNode(160, {label: "ad",nodeclass: "type-TK"});g.addNode(161, {label: "ver",nodeclass: "type-TK"});g.addNode(162, {label: "verilir",nodeclass: "type-TK"});g.addNode(163, {label: ".",nodeclass: "type-TK"});g.addEdge(null,155,162,{label: "SUBJECT"});g.addEdge(null,156,162,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,157,158,{label: "MODIFIER"});g.addEdge(null,158,162,{label: "DATIVE.ADJUNCT"});g.addEdge(null,159,160,{label: "MODIFIER"});g.addEdge(null,160,162,{label: "SUBJECT"});g.addEdge(null,161,162,{label: "DERIV"});g.addEdge(null,162,163,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

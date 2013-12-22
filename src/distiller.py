@@ -54,14 +54,19 @@ class Distiller():
 
             return handleVerilir(self.question, qParts)
 
+        # hangisidir
+        elif SENtext == 'hangisidir' or SENtext == 'hangileridir':
+
+            return handleHangiHangileri(self.question, qParts)
+
         else:
             return False, False
 
 
+
+
+
         # denir
-
-        # hangisidir
-
         # .... hangi ....
 
         # neresidir/nerede

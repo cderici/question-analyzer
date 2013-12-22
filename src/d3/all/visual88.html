@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>İlk para kullanımı hangi uygarlık döneminde olmuştur</p>
+<p>Coğrafi keşifler hangi yüzyılda başlamıştır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(915, {label: "İlk",nodeclass: "type-TK"});g.addNode(916, {label: "para",nodeclass: "type-TK"});g.addNode(917, {label: "kullanımı",nodeclass: "type-TK"});g.addNode(918, {label: "hangi",nodeclass: "type-TK"});g.addNode(919, {label: "uygar",nodeclass: "type-TK"});g.addNode(920, {label: "uygarlık",nodeclass: "type-TK"});g.addNode(921, {label: "döneminde",nodeclass: "type-TK"});g.addNode(922, {label: "olmuştur",nodeclass: "type-TK"});g.addNode(923, {label: ".",nodeclass: "type-TK"});g.addEdge(null,915,916,{label: "MODIFIER"});g.addEdge(null,916,917,{label: "CLASSIFIER"});g.addEdge(null,917,922,{label: "SUBJECT"});g.addEdge(null,918,921,{label: "MODIFIER"});g.addEdge(null,919,920,{label: "DERIV"});g.addEdge(null,920,921,{label: "CLASSIFIER"});g.addEdge(null,921,922,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,922,923,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(912, {label: "Coğrafi",nodeclass: "type-TK"});g.addNode(913, {label: "keşifler",nodeclass: "type-TK"});g.addNode(914, {label: "hangi",nodeclass: "type-TK"});g.addNode(915, {label: "yüzyılda",nodeclass: "type-TK"});g.addNode(916, {label: "başlamıştır",nodeclass: "type-TK"});g.addNode(917, {label: ".",nodeclass: "type-TK"});g.addEdge(null,912,913,{label: "MODIFIER"});g.addEdge(null,913,916,{label: "SUBJECT"});g.addEdge(null,914,915,{label: "MODIFIER"});g.addEdge(null,915,916,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,916,917,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

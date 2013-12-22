@@ -93,6 +93,14 @@ filteredNedir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'nedir')
 
 filteredVerilir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'verilir')
 
+filteredHangisidir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangisidir')
+
+filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangileridir'))
+
+
+for q in filteredHangisidir:
+    print "-" + q.questionText
+
 print("\n\n -- nedir -- \n\n")
 
 MassAnalyzer.massShowFocusMod(filteredNedir)
@@ -100,3 +108,7 @@ MassAnalyzer.massShowFocusMod(filteredNedir)
 print("\n\n -- verilir -- \n\n")
 
 MassAnalyzer.massShowFocusMod(filteredVerilir)
+
+print("\n\n -- hangisidir/hangileridir -- \n\n")
+
+MassAnalyzer.massShowFocusMod(filteredHangisidir)

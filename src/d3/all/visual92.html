@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Taşkömürü yatakları hangi jeolojik zamanda oluşmuştur</p>
+<p>Tarım, hayvancılık ve ticari faaliyetler ilk kez hangi çağda başlamıştır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(953, {label: "Taşkömürü",nodeclass: "type-TK"});g.addNode(954, {label: "yatakları",nodeclass: "type-TK"});g.addNode(955, {label: "hangi",nodeclass: "type-TK"});g.addNode(956, {label: "jeoloji",nodeclass: "type-TK"});g.addNode(957, {label: "jeolojik",nodeclass: "type-TK"});g.addNode(958, {label: "zamanda",nodeclass: "type-TK"});g.addNode(959, {label: "oluşmuştur",nodeclass: "type-TK"});g.addNode(960, {label: ".",nodeclass: "type-TK"});g.addEdge(null,953,954,{label: "CLASSIFIER"});g.addEdge(null,954,959,{label: "SUBJECT"});g.addEdge(null,955,957,{label: "MODIFIER"});g.addEdge(null,956,957,{label: "DERIV"});g.addEdge(null,957,958,{label: "MODIFIER"});g.addEdge(null,958,959,{label: "MODIFIER"});g.addEdge(null,959,960,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(945, {label: "Tarım,",nodeclass: "type-TK"});g.addNode(946, {label: "hayvancılık",nodeclass: "type-TK"});g.addNode(947, {label: "ve",nodeclass: "type-TK"});g.addNode(948, {label: "ticari",nodeclass: "type-TK"});g.addNode(949, {label: "faaliyetler",nodeclass: "type-TK"});g.addNode(950, {label: "ilk",nodeclass: "type-TK"});g.addNode(951, {label: "kez",nodeclass: "type-TK"});g.addNode(952, {label: "hangi",nodeclass: "type-TK"});g.addNode(953, {label: "çağda",nodeclass: "type-TK"});g.addNode(954, {label: "başlamıştır",nodeclass: "type-TK"});g.addNode(955, {label: ".",nodeclass: "type-TK"});g.addEdge(null,945,954,{label: "SUBJECT"});g.addEdge(null,946,947,{label: "OBJECT"});g.addEdge(null,947,949,{label: "COORDINATION"});g.addEdge(null,948,949,{label: "MODIFIER"});g.addEdge(null,949,954,{label: "SUBJECT"});g.addEdge(null,950,951,{label: "MODIFIER"});g.addEdge(null,951,954,{label: "MODIFIER"});g.addEdge(null,952,953,{label: "MODIFIER"});g.addEdge(null,953,954,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,954,955,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

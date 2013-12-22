@@ -96,3 +96,52 @@ def handleVerilir(question, qParts):
             qMods.extend(question.tracebackFrom(modChild))
 
     return reversed(qFocus), reversed(qMods)
+
+
+def handleDenir(question, qParts):
+
+    qFocus = []
+    qMods = []
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    return reversed(qFocus), reversed(qMods)
+
+
+def handleHangiHangileri(question,qParts):
+    
+    qFocus = []
+    qMods = []
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    subjChildren = question.findChildrenDepenTag(SEN, 'SUBJECT')
+
+    if len(subjChildren)<=0:
+        """ this will get the subject which is nearest to the sentence """
+        SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
+        if not SUBJ:
+            return False,False
+    else:
+        SUBJ = subjChildren[len(subjChildren)-1]
+
+
+    """ FOCUS EXTRACTION """
+
+    qFocus.append(SUBJ)
+    qFocus.extend(question.tracebackFromFoldTamlama(SUBJ))
+    
+    """ MOD EXTRACTION """    
+
+    modChildren = []
+    
+    """extend the modChildren with the modifier children of the focus parts """
+    for focusPart in qFocus:
+        modChildren.extend(question.findChildrenDepenTag(focusPart, 'MODIFIER'))
+        
+    """ register the final mod parts"""
+    for modChild in modChildren:
+        qMods.append(modChild)
+        qMods.extend(question.tracebackFrom(modChild))
+
+    return reversed(qFocus), reversed(qMods)

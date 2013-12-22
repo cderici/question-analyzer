@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Ülkemize çölden esen rüzgâr hangisidir</p>
+<p>Türkiye’ye kuzeydoğudan esip genellikle soğuk getiren rüzgâr hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(384, {label: "Ülkemize",nodeclass: "type-TK"});g.addNode(385, {label: "çölden",nodeclass: "type-TK"});g.addNode(386, {label: "esen",nodeclass: "type-TK"});g.addNode(387, {label: "rüzgâr",nodeclass: "type-TK"});g.addNode(388, {label: "hangi",nodeclass: "type-TK"});g.addNode(389, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(390, {label: ".",nodeclass: "type-TK"});g.addEdge(null,384,389,{label: "DATIVE.ADJUNCT"});g.addEdge(null,385,389,{label: "MODIFIER"});g.addEdge(null,386,387,{label: "MODIFIER"});g.addEdge(null,387,389,{label: "SUBJECT"});g.addEdge(null,388,389,{label: "DERIV"});g.addEdge(null,389,390,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(377, {label: "Türkiyeye",nodeclass: "type-TK"});g.addNode(378, {label: "kuzeydoğudan",nodeclass: "type-TK"});g.addNode(379, {label: "es",nodeclass: "type-TK"});g.addNode(380, {label: "esip",nodeclass: "type-TK"});g.addNode(381, {label: "genellikle",nodeclass: "type-TK"});g.addNode(382, {label: "soğuk",nodeclass: "type-TK"});g.addNode(383, {label: "getir",nodeclass: "type-TK"});g.addNode(384, {label: "getiren",nodeclass: "type-TK"});g.addNode(385, {label: "rüzgâr",nodeclass: "type-TK"});g.addNode(386, {label: "hangi",nodeclass: "type-TK"});g.addNode(387, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(388, {label: ".",nodeclass: "type-TK"});g.addEdge(null,377,387,{label: "SUBJECT"});g.addEdge(null,378,379,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,379,380,{label: "DERIV"});g.addEdge(null,380,383,{label: "MODIFIER"});g.addEdge(null,381,383,{label: "MODIFIER"});g.addEdge(null,382,383,{label: "MODIFIER"});g.addEdge(null,383,384,{label: "DERIV"});g.addEdge(null,384,385,{label: "MODIFIER"});g.addEdge(null,385,387,{label: "SUBJECT"});g.addEdge(null,386,387,{label: "DERIV"});g.addEdge(null,387,388,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

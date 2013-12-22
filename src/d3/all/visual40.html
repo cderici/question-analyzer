@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Ozon oluşum hangi katmanda oluşur</p>
+<p>Atmosferin en alt katmanında hangi tabaka vardır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(446, {label: "Ozon",nodeclass: "type-TK"});g.addNode(447, {label: "oluşum",nodeclass: "type-TK"});g.addNode(448, {label: "hangi",nodeclass: "type-TK"});g.addNode(449, {label: "katmanda",nodeclass: "type-TK"});g.addNode(450, {label: "oluşur",nodeclass: "type-TK"});g.addNode(451, {label: ".",nodeclass: "type-TK"});g.addEdge(null,446,447,{label: "CLASSIFIER"});g.addEdge(null,447,450,{label: "SUBJECT"});g.addEdge(null,448,449,{label: "MODIFIER"});g.addEdge(null,449,450,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,450,451,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(440, {label: "Atmosferin",nodeclass: "type-TK"});g.addNode(441, {label: "en",nodeclass: "type-TK"});g.addNode(442, {label: "alt",nodeclass: "type-TK"});g.addNode(443, {label: "katmanında",nodeclass: "type-TK"});g.addNode(444, {label: "hangi",nodeclass: "type-TK"});g.addNode(445, {label: "tabaka",nodeclass: "type-TK"});g.addNode(446, {label: "var",nodeclass: "type-TK"});g.addNode(447, {label: "vardır",nodeclass: "type-TK"});g.addNode(448, {label: ".",nodeclass: "type-TK"});g.addEdge(null,440,443,{label: "POSSESSOR"});g.addEdge(null,441,443,{label: "MODIFIER"});g.addEdge(null,442,443,{label: "CLASSIFIER"});g.addEdge(null,443,447,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,444,445,{label: "MODIFIER"});g.addEdge(null,445,447,{label: "OBJECT"});g.addEdge(null,446,447,{label: "DERIV"});g.addEdge(null,447,448,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
