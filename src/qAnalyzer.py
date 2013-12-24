@@ -110,10 +110,10 @@ filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text',
 
 filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
 
-
+"""
 for q in filteredHangiBetween:
     print "-" + q.questionText
-
+"""
 
 print("\n\n -- nedir -- \n\n")
 
