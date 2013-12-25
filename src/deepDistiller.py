@@ -192,6 +192,7 @@ def handleBetweenHangi(question, qParts):
     1) modifier of HANGI --- en çok hangi ...
     2) subjects, adjuncts and other modifiers attached to SENTENCE
 
+    TODO 3) How about modifiers of focus parts other than HANGI -> ... hangi nadide ilin ....
 
     we dump all (2), then traverse upwards from HANGI for (1)
     """
