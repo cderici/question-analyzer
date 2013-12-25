@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from question import Question, QPart
-from ruler import *
+from deepDistiller import *
 import codecs
 
 # Distiller is for extracting the question focus and 
