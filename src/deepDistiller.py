@@ -170,20 +170,38 @@ def handleBetweenHangi(question, qParts):
 
     qFocus = [HANGI]
 
+    """ BEWARE: this part is highly mutative! """
+
+    """ we first concentrate on hangiParent """
     hangiParent = question.findParent(HANGI)[0]
 
+    """ UPWARDS TOWARDS SENTENCE """
     if QPart.getPartField(hangiParent, 'depenTag') == 'DERIV':
         while True:
             hangiParent = question.findParent(hangiParent)[0]
             if QPart.getPartField(hangiParent, 'depenTag') != 'DERIV':
                 break
 
+    if len(question.findChildren(hangiParent)) > 1:
+        allChildren = question.tracebackFromFoldTamlama(hangiParent, True, True, True, False)
+        """ eliminate child parts that are in focus"""
+        for child in allChildren:
+            if child in qFocus:
+                allChildren.remove(child)
+                continue
+
+        qFocus.extend(allChildren)
+
     qFocus.append(hangiParent)
 
     if QPart.getPartField(hangiParent, 'depenTag') == 'CLASSIFIER':
         qFocus.extend(question.traceForwardFromFoldTamlama(hangiParent, True, True, False, True))
-        """                                                        No POSS, yes CLASS, no MODIF"""
+    else:
+        qFocus.extend(question.traceForwardFromFoldTamlama(hangiParent, False, False, True, False))
 
+    
+
+   
     """ MOD EXTRACTION """
 
     """ Tricky...
@@ -194,32 +212,39 @@ def handleBetweenHangi(question, qParts):
 
     TODO 3) How about modifiers of focus parts other than HANGI -> ... hangi nadide ilin ....
 
-    we dump all (2), then traverse upwards from HANGI for (1)
+    we dump all (2), then traverse upwards from HANGI for (1), then (3)
     """
+    senChildrenDummy = question.findChildren(SEN)
+    senChildren = question.findChildren(SEN)
+
+    for child in senChildrenDummy:
+        if QPart.getPartField(child, 'depenTag') == 'DERIV':
+            senChildren.remove(child)
+            senChildren.extend(question.findChildren(child))
+            
+    for child in senChildren:
+        if child not in qFocus:
+            modCandidates = question.tracebackFrom(child)
+            
+            """ excluding the parts before HANGI, in branch ...."""
+            isHangiThere = False
+
+            for mod in modCandidates:
+                if QPart.getPartField(mod, 'text') == 'hangi':
+                    isHangiThere = True
+            """ .... that has HANGI in it. So: 
+
+            if HANGI is not there, include the branch"""
+            if (not isHangiThere):
+                modBranch = question.tracebackFrom(child)
+                modBranch.reverse()
+                modBranch.append(child)
+
+                qMods.extend(modBranch)
 
     hangiMods = question.tracebackFromFoldTamlama(HANGI, False, False, True)
 
-    senChildren = question.findChildren(SEN)
-
-    for child in senChildren:
-        modCandidates = question.tracebackFrom(child)
-
-        """ excluding the branch ...."""
-        isHangiThere = False
-
-        for mod in modCandidates:
-            if QPart.getPartField(mod, 'text') == 'hangi':
-                isHangiThere = True
-
-        """ .... that has HANGI in it. So: 
-
-        if HANGI is not there, include the branch"""
-        if (not isHangiThere):
-            modBranch = question.tracebackFrom(child)
-            modBranch.reverse()
-            modBranch.append(child)
-
-            qMods.extend(modBranch)
+    qMods.extend(reversed(hangiMods))
 
     """ Also, if SENTENCE is not included in Focus, include it at the end of qMods"""
     if QPart.getPartField(qFocus[len(qFocus)-1], 'depenTag') != 'SENTENCE':
