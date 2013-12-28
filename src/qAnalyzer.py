@@ -110,10 +110,17 @@ filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text',
 
 filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
 
+filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
+
+filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
+filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
+
 """
 for q in filteredHangiBetween:
     print "-" + q.questionText
 """
+
+
 
 print("\n\n -- nedir -- \n\n")
 
@@ -130,3 +137,7 @@ MassAnalyzer.massShowFocusMod(filteredHangisidir)
 print("\n\n -- .... hangi .... -- \n\n")
 
 MassAnalyzer.massShowFocusMod(filteredHangiBetween)
+
+print("\n\n -- denir -- \n\n")
+
+MassAnalyzer.massShowFocusMod(filteredDenir)

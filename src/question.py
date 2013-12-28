@@ -116,11 +116,11 @@ class Question:
     TRACING STUFF
     """
 
-    def tracebackFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
-        return self.traceFromFoldTamlama('back', part, includePOSS, includeCLASS, includeMODIF, includeSEN)
+    def tracebackFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False, includeOBJ=False):
+        return self.traceFromFoldTamlama('back', part, includePOSS, includeCLASS, includeMODIF, includeSEN, includeOBJ)
 
-    def traceForwardFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
-        return self.traceFromFoldTamlama('forward', part, includePOSS, includeCLASS, includeMODIF, includeSEN)
+    def traceForwardFromFoldTamlama(self, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False, includeOBJ=False):
+        return self.traceFromFoldTamlama('forward', part, includePOSS, includeCLASS, includeMODIF, includeSEN, includeOBJ)
 
     def tracebackFrom(self, part):
         return self.traceFrom('back', part)
@@ -129,7 +129,7 @@ class Question:
         return self.traceFrom('forward', part)
     
 
-    def traceFromFoldTamlama(self, direction, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False):
+    def traceFromFoldTamlama(self, direction, part, includePOSS=True, includeCLASS=True, includeMODIF=False, includeSEN=False, includeOBJ=False):
         """
         traces back from the given part, and continues only if it sees
         parts with the depenTag POSSESSOR or CLASSIFIER
@@ -172,13 +172,17 @@ class Question:
                     tamlamaChildren.append(child)
                     continue
 
+                elif includeOBJ and childTag == 'OBJECT':
+                    tamlamaChildren.append(child)
+                    continue
+
 
             children = []
 
             if tamlamaChildren != []:
                 for child in tamlamaChildren:
                     childBranch = [child]
-                    childBranch.extend(self.traceFromFoldTamlama(direction, child, includePOSS, includeCLASS, includeMODIF, includeSEN))
+                    childBranch.extend(self.traceFromFoldTamlama(direction, child, includePOSS, includeCLASS, includeMODIF, includeSEN, includeOBJ))
                     
                     children.extend(childBranch)
 

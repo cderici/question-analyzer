@@ -105,6 +105,37 @@ def handleDenir(question, qParts):
 
     SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
 
+    """ FOCUS EXTRACTION """
+
+    """ Assumption: every 'denir' has a dative.adjunct """
+
+    DativeADJchildren = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')
+
+    """ Assumption: if it has more than one dative.adjunct, the last one (the closests to the SENTENCE) is most likely the correct one"""
+
+    DativeADJ = DativeADJchildren[len(DativeADJchildren)-1]
+
+    qFocus = [SEN, DativeADJ]
+    qFocus.extend(question.tracebackFromFoldTamlama(DativeADJ, True, True, False, False, True))
+
+    """ MOD EXTRACTION """
+
+    """ dump all children of focus parts """
+
+    for fPart in qFocus:
+        children = question.findChildren(fPart)
+        
+        for child in children:
+
+            childPartsDummy = question.tracebackFrom(child)
+            childParts = question.tracebackFrom(child)
+
+            for cPart in childPartsDummy:
+                if (cPart in qFocus) or (cPart in qMods):
+                    childParts.remove(cPart)
+
+            qMods.extend(childParts)
+
     return reversed(qFocus), reversed(qMods)
 
 

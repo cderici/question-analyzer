@@ -58,6 +58,10 @@ class Distiller():
 
             return handleVerilir(self.question, qParts)
 
+        elif SENtext == 'denir' or SENtext == 'denilir' or SENtext == 'denilmektedir':
+            
+            return handleDenir(self.question, qParts)
+
         # hangisidir
         elif SENtext == 'hangisidir' or SENtext == 'hangileridir':
 
