@@ -14,14 +14,14 @@ Haritaların küçültme oranına ne denir
 Türkiye’nin kuzeybatısından esen yerel rüzgârın adı nedir
 İstanbul’da güneydoğudan esen rüzgâra ne ad verilir
 Türkiye’de güneyden esen rüzgârın ismi nedir
-Türkiye’ye Kuzeyden esen rüzgâra ne denir
+Türkiye’ye kuzeyden esen rüzgâra ne denir
 Suyun kinetik enerjisinden yararlanılarak elektrik üretimi yapılan santrallere ne ad verilir
 Yüzeye çıkan lav ve tüfün oluşturduğu yer şeklinin adı nedir
-Kara ve denizlerde düşey doğrultudaki alçalma yükselme hareketlerine ne denir
+Kara ve denizlerde düşey doğrultudaki alçalma yükselme hareketlerine ne denir
 Volkanlardan çıkan akışkan maddelere ne ad verilir
 Volkanlardan çıkan katı maddelere ne ad verilir
 Lavların ve tüflerin yeryüzüne çıkmak için izledikleri yola ne ad verilir
-Volkan konisinin tepe kısmındaki çukur kısmına ne denilmektedir
+Volkan konisinin tepe kısmındaki çukur kısıma ne denilmektedir
 Akarsuların taşıyarak oluşturdukları topraklara ne ad verilir
 Rüzgârların taşıyarak oluşturdukları topraklara ne ad verilir
 Akarsuyun doğduğu yere ne ad verilir
@@ -29,19 +29,19 @@ Akarsuyun doğduğu yere ne ad verilir
 Akarsuyun denize döküldüğü yere ne denir
 Patamoloji nedir
 Bir akarsuyun kolları ile birlikte oluşturduğu sisteme ne denir
-Bir akarsuyun kolları ile birlikte sularının toplandığı ve ya boşaltıldığı alana ne denir
+Bir akarsuyun kolları ile birlikte sularının toplandığı veya boşaltıldığı alana ne denir
 Göllerin fazla sularını boşaltan akarsulara ne denir
 Türkiye’ye kuzeydoğudan esip genellikle soğuk getiren rüzgâr hangisidir
 Ülkemize çölden esen rüzgâr hangisidir
 Türkiye’nin doğusundan esen soğuk ve kuru rüzgâr hangisidir
-Türkiye’ye batıdan esen sıcak nemli rüzgâr hangisidir
+Türkiye’ye batıdan esen sıcak ve nemli rüzgâr hangisidir
 Türkiye’de azonal(taşınmış) topraklar içinde en yaygın olanı hangisidir
 23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır
 Atmosferin en alt katmanında hangi tabaka vardır
-Ozon oluşum hangi katmanda oluşur
+Ozon oluşumu hangi katmanda oluşur
 Canlıların üzerinde yaşadığı katman hangisidir
-Dev kazanın hangi dış güç tarafından oluşturulur
-Ülke sınırlarını gösteren haritalara hangileridir
+Dev kazanı hangi dış güç tarafından oluşturulur
+Ülke sınırlarını gösteren haritalar hangileridir
 Sıcak su kaynaklarından yararlanılarak elektrik enerjisi üreten santraller hangileridir
 Yerkürenin en ince tabakası hangisidir
 Yerkürenin en kalın katmanı hangisidir
@@ -57,10 +57,10 @@ Dünyada nüfusun en çok olduğu kıta hangisidir
 Türkiye’nin en büyük baraj gölü hangisidir
 Türkiye’nin en yüksek dağı hangisidir
 Türkiye’de en az insan nüfusuna sahip olan şehir hangisidir
-Türkiye’de Çayır ve otlakların en fazla olduğu bölge hangisidir
-Türkiye’de Ekili dikili alanların en fazla yer kapladığı bölge hangisidir
-Türkiye’de Ekili dikili alanların en az yer kapladığı bölge hangisidir
-Türkiye’de ki su kaynaklarının en bol olduğu bölge hangisidir
+Türkiye’de çayır ve otlakların en fazla olduğu bölge hangisidir
+Türkiye’de ekili dikili alanların en fazla yer kapladığı bölge hangisidir
+Türkiye’de ekili dikili alanların en az yer kapladığı bölge hangisidir
+Türkiye’deki su kaynaklarının en bol olduğu bölge hangisidir
 Yükselim yağışları Türkiye’de en çok hangi bölgede görülür
 Türkiye’de cephesel yağışlar en çok hangi bölgede görülür
 Sakarya nehri hangi denize dökülür
@@ -71,7 +71,7 @@ Kılıçkaya barajı hangi ırmağın üzerinde yer almakatadır
 Rotterdam hangi ülkenin şehridir
 Pamukkale travertenleri hangi ilin sınırları içerisindedir
 Türkiye’nin en geniş kapalı havzası hangi bölgemizdedir
-Türkiye’de ki denizlerden en az tuzluluk oranına sahip olan deniz hangisidir
+Türkiye’deki denizlerden en az tuzluluk oranına sahip olan deniz hangisidir
 Sanayi İnkılâbı ilk olarak hangi ülkede başlamıştır
 Türkiye en fazla hangi ülkeye işçi göçü vermiştir
 Umit Burnu hangi kıtadadır
@@ -82,8 +82,8 @@ Soma ovasını sulayan ırmağın adı nedir
 Dünyada ilk modern manada nüfus sayımları nerede yapılmıştır
 Türkiye’de heyelan set göllerinin en fazla görüldüğü bölge neresidir
 Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir
-Ülkemizde Cumhuriyet öncesi ilk nüfus sayımı hangi tarihlerde yapılmıştır
-Cumhuriyetten Sonra ilk nüfus sayımı ne zaman yapılmıştır
+Ülkemizde cumhuriyet öncesi ilk nüfus sayımı hangi tarihlerde yapılmıştır
+Cumhuriyetten sonra ilk nüfus sayımı ne zaman yapılmıştır
 Kavimler göçü hangi yıllar arasında olmuştur
 Coğrafi keşifler hangi yüzyılda başlamıştır
 İlk para kullanımı hangi uygarlık döneminde olmuştur
@@ -93,15 +93,49 @@ Tarım, hayvancılık ve ticari faaliyetler ilk kez hangi çağda başlamıştı
 Taşkömürü yatakları hangi jeolojik zamanda oluşmuştur
 Bakteriler ilk olarak hangi jeolojik zamanda ortaya çıkmıştır
 Kıta bölünmeleri hangi jeolojik zamanda başlamıştır
-İstanbul boğazı hangi jeolojik dönemde oluşmuştur
+İstanbul Boğazı hangi jeolojik dönemde oluşmuştur
 Ege Denizi hangi jeolojik zamanda oluşmuştur
 Toros Dağları hangi jeolojik zamanda oluşmuştur
 Köpek hangi çağda evcilleştirilmiştir
 Türkiye arazisinin yüzde kaçı ormanlık alandır
-Türkiye’de Tarım alanları ülke arazisinin yüzde kaçını oluşturur
+Türkiye’de tarım alanları ülke arazisinin yüzde kaçını oluşturur
 Dünyanın nüfusu ne kadardır
 Türkiye’nin nüfusu ne kadardır
 Yeryüzündeki kayaçlar kaç ana grupta sınıflandırılır
 Göçlerin en önemli nedeni nedir
 Ümit Burnuna ilk kez ulaşan denizci kimdir
-Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir
+Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir
+Yeryüzündeki büyük kara parçalarına ne ad verilir
+Türkiye, hangi kıtalar arasında yer almaktadır
+Bir yerin deniz seviyesinden yüksekliği neyle ifade edilir
+Canlı, cansız varlıkların bütünü neyi ifade eder
+Karınca yuvalarının açık önü hangi yönü gösterir
+Ağaçların ve taşların yosun tutan tarafı hangi yönü gösterir
+Bir yerin tepeden görünümüne ne ad verilir
+Bir yerin kuş bakışı taslak çizimine ne denir
+Hava sıcaklığını ölçen araca ne ad verilir
+Yüksekliği 500m’den fazla olan yerlere ne ad verilir
+Üç tarafı sularla kaplı kara parçasına ne ad verilir
+Çevresine göre daha alçakta bulunan ve tarıma elverişli geniş, düz kara parçasına ne ad verilir
+Karaların denizlere doğru olan dar uzantısına ne ad verilir
+Dağlar haritada hangi renkle gösterilir
+Deniz ve göller haritada hangi renkle gösterilir
+Haritada ovalar hangi renkte gösterilir
+Denizlerle bağlantısı olmayan su birikintilerine ne ad verilir
+Atatürk Barajı hangi nehir üzerinde kurulmuştur
+Dünyanın yıllık hareketi sırasında güneş çevresinde izlediği yörüngeye ne ad verilir
+Türkiye’de en uzun gündüz hangi tarihlerde yaşanır
+Cebelitarık boğazı hangi deniz ve okyanusu birbirine bağlar
+Dünyamız Güneş etrafında dönmeseydi, hangisi meydana gelmezdi
+Bir yerin enlem ve boylamlar yardımıyla belirtilen konumuna ne ad verilir
+Yeryüzündeki bir noktanın ekvatora en yakin uzaklığının açı olarak değerine ne denir
+Dünya üzerindeki bir noktanın başlangıç meridyenine en yakin uzaklığının açı cinsinden değerine ne ad verilir
+Bakü–Ceyhan petrol boru hattı Türkiye ile hangi Türk devleti arasındadır
+Türkiye’de maden yatakları ve çeşitleri bakımından en zengin bölge hangisidir
+Türkiye’nin en yüksek bölgesi hangisidir
+Ülkemizde en çok nüfusu olan il hangisidir
+İç Anadolu Bölgesi’nde hangi iklim türü hâkimdir
+Fiziki haritada tarım alanlarına uygun yerler hangi renkle gösterilir
+Türkiye’nin en yüksek dağı hangisidir
+Çevresine göre çukurda kalmış, akarsuların derine gömülmeden aktıkları dar veya geniş düzlüklere ne ad verilir
+Gerçek ölçülerin küçültülerek çizilmesine ne denir
