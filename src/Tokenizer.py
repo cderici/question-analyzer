@@ -20,7 +20,7 @@ class QuestionParser:
         cur.execute("select * from question");
         rows = cur.fetchall();
 
-        self.questions = [row[1] for row in rows];
+        self.questions = [row[0] for row in rows];
 
         return self.questions;
 
