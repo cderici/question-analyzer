@@ -93,7 +93,7 @@ ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
 analyzer = QuestionAnalysis(ourQuestions[0])
 
-# QuestionAnalysis.visualizeAll(ourQuestions)
+QuestionAnalysis.visualizeAll(ourQuestions)
 
 # analyzer.showFocusMod()
 
@@ -115,11 +115,11 @@ filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
 
+
 """
-for q in filteredHangiBetween:
+for q in filteredDenir:
     print "-" + q.questionText
 """
-
 
 
 print("\n\n -- nedir -- \n\n")

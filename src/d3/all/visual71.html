@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(750, {label: "Rotterdam",nodeclass: "type-TK"});g.addNode(751, {label: "hangi",nodeclass: "type-TK"});g.addNode(752, {label: "ülkenin",nodeclass: "type-TK"});g.addNode(753, {label: "şehir",nodeclass: "type-TK"});g.addNode(754, {label: "şehridir",nodeclass: "type-TK"});g.addNode(755, {label: ".",nodeclass: "type-TK"});g.addEdge(null,750,754,{label: "SUBJECT"});g.addEdge(null,751,752,{label: "MODIFIER"});g.addEdge(null,752,753,{label: "POSSESSOR"});g.addEdge(null,753,754,{label: "DERIV"});g.addEdge(null,754,755,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(749, {label: "Rotterdam",nodeclass: "type-TK"});g.addNode(750, {label: "hangi",nodeclass: "type-TK"});g.addNode(751, {label: "ülkenin",nodeclass: "type-TK"});g.addNode(752, {label: "şehir",nodeclass: "type-TK"});g.addNode(753, {label: "şehridir",nodeclass: "type-TK"});g.addNode(754, {label: ".",nodeclass: "type-TK"});g.addEdge(null,749,753,{label: "SUBJECT"});g.addEdge(null,750,751,{label: "MODIFIER"});g.addEdge(null,751,752,{label: "POSSESSOR"});g.addEdge(null,752,753,{label: "DERIV"});g.addEdge(null,753,754,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(705, {label: "Sakarya",nodeclass: "type-TK"});g.addNode(706, {label: "nehri",nodeclass: "type-TK"});g.addNode(707, {label: "hangi",nodeclass: "type-TK"});g.addNode(708, {label: "denize",nodeclass: "type-TK"});g.addNode(709, {label: "dök",nodeclass: "type-TK"});g.addNode(710, {label: "dökülür",nodeclass: "type-TK"});g.addNode(711, {label: ".",nodeclass: "type-TK"});g.addEdge(null,705,706,{label: "CLASSIFIER"});g.addEdge(null,706,710,{label: "SUBJECT"});g.addEdge(null,707,708,{label: "MODIFIER"});g.addEdge(null,708,710,{label: "DATIVE.ADJUNCT"});g.addEdge(null,709,710,{label: "DERIV"});g.addEdge(null,710,711,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(704, {label: "Sakarya",nodeclass: "type-TK"});g.addNode(705, {label: "nehri",nodeclass: "type-TK"});g.addNode(706, {label: "hangi",nodeclass: "type-TK"});g.addNode(707, {label: "denize",nodeclass: "type-TK"});g.addNode(708, {label: "dök",nodeclass: "type-TK"});g.addNode(709, {label: "dökülür",nodeclass: "type-TK"});g.addNode(710, {label: ".",nodeclass: "type-TK"});g.addEdge(null,704,705,{label: "CLASSIFIER"});g.addEdge(null,705,709,{label: "SUBJECT"});g.addEdge(null,706,707,{label: "MODIFIER"});g.addEdge(null,707,709,{label: "DATIVE.ADJUNCT"});g.addEdge(null,708,709,{label: "DERIV"});g.addEdge(null,709,710,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Ülke sınırlarını gösteren haritalara hangileridir</p>
+<p>Ülke sınırlarını gösteren haritalar hangileridir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(473, {label: "Ülke",nodeclass: "type-TK"});g.addNode(474, {label: "sınırlarını",nodeclass: "type-TK"});g.addNode(475, {label: "göster",nodeclass: "type-TK"});g.addNode(476, {label: "gösteren",nodeclass: "type-TK"});g.addNode(477, {label: "haritalara",nodeclass: "type-TK"});g.addNode(478, {label: "hangi",nodeclass: "type-TK"});g.addNode(479, {label: "hangileridir",nodeclass: "type-TK"});g.addNode(480, {label: ".",nodeclass: "type-TK"});g.addEdge(null,473,474,{label: "CLASSIFIER"});g.addEdge(null,474,475,{label: "OBJECT"});g.addEdge(null,475,476,{label: "DERIV"});g.addEdge(null,476,477,{label: "MODIFIER"});g.addEdge(null,477,479,{label: "DATIVE.ADJUNCT"});g.addEdge(null,478,479,{label: "DERIV"});g.addEdge(null,479,480,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(473, {label: "Ülke",nodeclass: "type-TK"});g.addNode(474, {label: "sınırlarını",nodeclass: "type-TK"});g.addNode(475, {label: "göster",nodeclass: "type-TK"});g.addNode(476, {label: "gösteren",nodeclass: "type-TK"});g.addNode(477, {label: "haritalar",nodeclass: "type-TK"});g.addNode(478, {label: "hangi",nodeclass: "type-TK"});g.addNode(479, {label: "hangileridir",nodeclass: "type-TK"});g.addNode(480, {label: ".",nodeclass: "type-TK"});g.addEdge(null,473,474,{label: "CLASSIFIER"});g.addEdge(null,474,475,{label: "OBJECT"});g.addEdge(null,475,476,{label: "DERIV"});g.addEdge(null,476,477,{label: "MODIFIER"});g.addEdge(null,477,479,{label: "SUBJECT"});g.addEdge(null,478,479,{label: "DERIV"});g.addEdge(null,479,480,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

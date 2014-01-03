@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Dünyanın yıllık hareketi sırasında güneş çevresinde izlediği yörüngeye ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1272, {label: "Dünyanın",nodeclass: "type-TK"});g.addNode(1273, {label: "yıllık",nodeclass: "type-TK"});g.addNode(1274, {label: "hareketi",nodeclass: "type-TK"});g.addNode(1275, {label: "sırasında",nodeclass: "type-TK"});g.addNode(1276, {label: "güneş",nodeclass: "type-TK"});g.addNode(1277, {label: "çevresinde",nodeclass: "type-TK"});g.addNode(1278, {label: "izle",nodeclass: "type-TK"});g.addNode(1279, {label: "izlediği",nodeclass: "type-TK"});g.addNode(1280, {label: "yörüngeye",nodeclass: "type-TK"});g.addNode(1281, {label: "ne",nodeclass: "type-TK"});g.addNode(1282, {label: "ad",nodeclass: "type-TK"});g.addNode(1283, {label: "ver",nodeclass: "type-TK"});g.addNode(1284, {label: "verilir",nodeclass: "type-TK"});g.addNode(1285, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1272,1274,{label: "POSSESSOR"});g.addEdge(null,1273,1274,{label: "CLASSIFIER"});g.addEdge(null,1274,1275,{label: "OBJECT"});g.addEdge(null,1275,1278,{label: "MODIFIER"});g.addEdge(null,1276,1277,{label: "CLASSIFIER"});g.addEdge(null,1277,1278,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1278,1279,{label: "DERIV"});g.addEdge(null,1279,1280,{label: "MODIFIER"});g.addEdge(null,1280,1284,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1281,1282,{label: "MODIFIER"});g.addEdge(null,1282,1284,{label: "SUBJECT"});g.addEdge(null,1283,1284,{label: "DERIV"});g.addEdge(null,1284,1285,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

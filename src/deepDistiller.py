@@ -107,9 +107,12 @@ def handleDenir(question, qParts):
 
     """ FOCUS EXTRACTION """
 
-    """ Assumption: every 'denir' has a dative.adjunct """
+    """ FALSE Assumption: every 'denir' has a dative.adjunct """
 
     DativeADJchildren = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')
+
+    if DativeADJchildren == []:
+        return False, False
 
     """ Assumption: if it has more than one dative.adjunct, the last one (the closests to the SENTENCE) is most likely the correct one"""
 

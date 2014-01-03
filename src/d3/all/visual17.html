@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türkiye’ye Kuzeyden esen rüzgâra ne denir</p>
+<p>Türkiye’ye kuzeyden esen rüzgâra ne denir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(172, {label: "Türkiyeye",nodeclass: "type-TK"});g.addNode(173, {label: "Kuzeyden",nodeclass: "type-TK"});g.addNode(174, {label: "esen",nodeclass: "type-TK"});g.addNode(175, {label: "rüzgâra",nodeclass: "type-TK"});g.addNode(176, {label: "ne",nodeclass: "type-TK"});g.addNode(177, {label: "de",nodeclass: "type-TK"});g.addNode(178, {label: "denir",nodeclass: "type-TK"});g.addNode(179, {label: ".",nodeclass: "type-TK"});g.addEdge(null,172,178,{label: "SUBJECT"});g.addEdge(null,173,178,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,174,175,{label: "MODIFIER"});g.addEdge(null,175,178,{label: "DATIVE.ADJUNCT"});g.addEdge(null,176,178,{label: "MODIFIER"});g.addEdge(null,177,178,{label: "DERIV"});g.addEdge(null,178,179,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(172, {label: "Türkiyeye",nodeclass: "type-TK"});g.addNode(173, {label: "kuzeyden",nodeclass: "type-TK"});g.addNode(174, {label: "esen",nodeclass: "type-TK"});g.addNode(175, {label: "rüzgâra",nodeclass: "type-TK"});g.addNode(176, {label: "ne",nodeclass: "type-TK"});g.addNode(177, {label: "de",nodeclass: "type-TK"});g.addNode(178, {label: "denir",nodeclass: "type-TK"});g.addNode(179, {label: ".",nodeclass: "type-TK"});g.addEdge(null,172,178,{label: "SUBJECT"});g.addEdge(null,173,178,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,174,175,{label: "MODIFIER"});g.addEdge(null,175,178,{label: "DATIVE.ADJUNCT"});g.addEdge(null,176,178,{label: "MODIFIER"});g.addEdge(null,177,178,{label: "DERIV"});g.addEdge(null,178,179,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
