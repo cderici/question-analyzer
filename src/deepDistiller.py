@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import re
 from question import *
 
 
@@ -42,11 +43,21 @@ def handleNedir(question, qParts):
             modChildren.extend(question.findChildrenDepenTag(focusPart, 'MODIFIER'))
 
         """ register the final mod parts"""
-        for modChild in modChildren:
+        for modChild in reversed(modChildren):
             qMods.append(modChild)
             qMods.extend(question.tracebackFrom(modChild))
-                        
-        
+            
+        """special hack for parts like 'Türkiyeden'"""
+        subjects = QPart.getAllPartsWithField(qParts, 'depenTag', 'SUBJECT')
+        if len(subjects) > 1:
+            for subj in subjects:
+                subjText = QPart.getPartField(subj, 'text')
+
+                compl = re.compile(ur"Türkiye", re.UNICODE)
+
+                if compl.search(subjText) != None:
+                    qMods.append(subj)
+
         return reversed(qFocus), reversed(qMods)
 
 
@@ -86,7 +97,6 @@ def handleVerilir(question, qParts):
         focusChild = dativeModChildren.pop(numOfModChildren-1)
         qFocus.append(focusChild)
         qFocus.extend(question.tracebackFrom(focusChild))
-
     
     """ MOD EXTRACTION """
 
@@ -172,11 +182,24 @@ def handleHangiHangileri(question,qParts):
     """extend the modChildren with the modifier children of the focus parts """
     for focusPart in qFocus:
         modChildren.extend(question.findChildrenDepenTag(focusPart, 'MODIFIER'))
-        
+
     """ register the final mod parts"""
-    for modChild in modChildren:
+    for modChild in reversed(modChildren):
         qMods.append(modChild)
         qMods.extend(question.tracebackFrom(modChild))
+
+        
+    """special hack for parts like 'Türkiyeden'"""
+    subjects = QPart.getAllPartsWithField(qParts, 'depenTag', 'SUBJECT')
+    if len(subjects) > 1:
+        for subj in subjects:
+            subjText = QPart.getPartField(subj, 'text')
+
+            compl = re.compile(ur"Türkiye", re.UNICODE)
+
+            if compl.search(subjText) != None:
+                qMods.append(subj)
+
 
     return reversed(qFocus), reversed(qMods)
 

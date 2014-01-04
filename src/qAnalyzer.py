@@ -122,22 +122,22 @@ for q in filteredDenir:
 """
 
 
-print("\n\n -- nedir -- \n\n")
+#print("\n\n -- nedir -- \n\n")
 
-MassAnalyzer.massShowFocusMod(filteredNedir)
+#MassAnalyzer.massShowFocusMod(filteredNedir)
 
-print("\n\n -- verilir -- \n\n")
+#print("\n\n -- verilir -- \n\n")
 
-MassAnalyzer.massShowFocusMod(filteredVerilir)
+#MassAnalyzer.massShowFocusMod(filteredVerilir)
 
 print("\n\n -- hangisidir/hangileridir -- \n\n")
 
 MassAnalyzer.massShowFocusMod(filteredHangisidir)
 
-print("\n\n -- .... hangi .... -- \n\n")
+#print("\n\n -- .... hangi .... -- \n\n")
 
-MassAnalyzer.massShowFocusMod(filteredHangiBetween)
+#MassAnalyzer.massShowFocusMod(filteredHangiBetween)
 
-print("\n\n -- denir -- \n\n")
+#print("\n\n -- denir -- \n\n")
 
-MassAnalyzer.massShowFocusMod(filteredDenir)
+#MassAnalyzer.massShowFocusMod(filteredDenir)
