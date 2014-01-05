@@ -141,47 +141,47 @@ Gerçek ölçülerin küçültülerek çizilmesine ne denir|çizilmesine denir|G
 Uzun yıllar devam eden atmosfer olaylarının ortalama durumunu inceleyen bilim dalı hangisidir|bilim dalı|Uzun yıllar devam eden atmosfer olaylarının ortalama durumu inceleyen
 Okyanus, deniz, göl, akarsu, kaynak suları ve yer altı sularının bütününe ne ad verilir|bütününe ad|Okyanus, deniz, göl, akarsu, kaynak suları ve yer altı sularının
 Geçtiği kıyılarda havanın soğumasına neden olan sulara ne denir|sulara denir|Geçtiği kıyılarda havanın soğumasına neden olan 
-Yeryüzünde en soğuk ay ortalaması 10 C'nin üzerine olan iklim kuşağına ne isim verilir?|iklim kuşağına isim|Yeryüzünde en soğuk ay ortalaması 10 C'nin üzerine olan
-Yer kürede hangi yönden esen rüzgarlar sıcaklığı yükseltir?|hangi yönden|Yer kürede esen rüzgarlar sıcaklığı yükseltir
+Yeryüzünde en soğuk ay ortalaması 10 C'nin üzerine olan iklim kuşağına ne isim verilir|iklim kuşağına isim|Yeryüzünde en soğuk ay ortalaması 10 C'nin üzerine olan
+Yer kürede hangi yönden esen rüzgarlar sıcaklığı yükseltir|hangi yönden|Yer kürede esen rüzgarlar sıcaklığı yükseltir
 Gulf Stream sıcak su akıntısı hangi yönde hareket eder|hangi yönde|Gulf Stream sıcak su akıntısı hareket eder
 Gulf Stream sıcak su akıntısı nereleri etkiler|nereleri|Gulf Stream sıcak su akıntısı etkiler
-Alize rüzgarlarının da etkisiyle oluşan sıcak okyanus akıntısının adı nedir?|okyanus akıntısının adı|Alize rüzgarlarının da etkisiyle oluşan sıcak
-Alize rüzgarlarının da etkisiyle oluşan sıcak okyanus akıntısına ne isim verilir?|okyanus akıntısına isim |Alize rüzgarlarının da etkisiyle oluşan sıcak 
-Yeryüzünde en çok ısınan alanlar nerelerdir?|nerelerdir|Yeryüzünde en çok ısınan alanlar
-Denizlerde güneş ışınları kaç metreye kadar etkilidir?|kaç metreye kadar|Denizlerde güneş ışınları etkilidir
+Alize rüzgarlarının da etkisiyle oluşan sıcak okyanus akıntısının adı nedir|okyanus akıntısının adı|Alize rüzgarlarının da etkisiyle oluşan sıcak
+Alize rüzgarlarının da etkisiyle oluşan sıcak okyanus akıntısına ne isim verilir|okyanus akıntısına isim |Alize rüzgarlarının da etkisiyle oluşan sıcak 
+Yeryüzünde en çok ısınan alanlar nerelerdir|nerelerdir|Yeryüzünde en çok ısınan alanlar
+Denizlerde güneş ışınları kaç metreye kadar etkilidir|kaç metreye kadar|Denizlerde güneş ışınları etkilidir
 Rüzgarın hızı neyle ölçülür|neyle |Rüzgarın hızı ölçülür
-Kuzey Amerika'nın doğu kıyılarının batı kıyılarına göre daha soğuk olmasına sebep olan nedir?|sebep olan|Kuzey Amerika'nın doğu kıyılarının batı kıyılarına göre daha soğuk olmasına
-Güneş ışınlarını dik açıyla alan Ekvator çevresinin Dünya'nın en sıcak yeri olmamasının sebebi nedir?|sebebi|Güneş ışınlarını dik açıyla alan Ekvator çevresinin Dünya'nın en sıcak yeri olmamasının
+Kuzey Amerika'nın doğu kıyılarının batı kıyılarına göre daha soğuk olmasına sebep olan nedir|sebep olan|Kuzey Amerika'nın doğu kıyılarının batı kıyılarına göre daha soğuk olmasına
+Güneş ışınlarını dik açıyla alan Ekvator çevresinin Dünya'nın en sıcak yeri olmamasının sebebi nedir|sebebi|Güneş ışınlarını dik açıyla alan Ekvator çevresinin Dünya'nın en sıcak yeri olmamasının
 Günün en soğuk anı ne zamandır|ne zamandır|Günün en soğuk anı
 Neden ve sonuç bakımından karmaşık coğrafya olaylarını incelerken hangi coğrafya ilkesine başvurulur|hangi coğrafya ilkesine|Neden ve sonuç bakımından karmaşık coğrafya olaylarını incelerken başvurulur
-Sıcaklığın Ekvator'dan kutuplara doğru düzenli olarak azalmasını engelleyen nedir?|engelleyen|Sıcaklığın Ekvator'dan kutuplara doğru düzenli olarak azalmasını 
-Denizlerde güneş ışınları nereye kadar etkili olur?|nereye kadar|Denizlerde güneş ışınları etkili olur
-Dağ zirvelerinde nem miktarı ne kadardır?|ne kadardır|Dağ zirvelerinde nem miktarı
-Karalarda güneş ışınlarının etkili olduğu derinlik ne kadardır?|ne kadardır|Karalarda güneş ışınlarının etkili olduğu derinlik
-Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı ne kadardır?|ne kadardır |Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı
-Muson ikliminde yıllık sıcaklık farkı ne kadardır?|ne kadardır|Muson ikliminde yıllık sıcaklık farkı 
-Ekvatoral iklimde yıllık yağış miktarı ne kadardır?|ne kadardır|Ekvatoral iklimde yıllık yağış miktarı
-Karasal iklimde yıllık yağış miktarı kaç mm'dir?|kaç mm'dir|Karasal iklimde yıllık yağış miktarı
-Çöl ikliminde günlük sıcaklık farkı kaç dereceyi bulur?|kaç dereceyi|Çöl ikliminde günlük sıcaklık farkı bulur
+Sıcaklığın Ekvator'dan kutuplara doğru düzenli olarak azalmasını engelleyen nedir|engelleyen|Sıcaklığın Ekvator'dan kutuplara doğru düzenli olarak azalmasını 
+Denizlerde güneş ışınları nereye kadar etkili olur|nereye kadar|Denizlerde güneş ışınları etkili olur
+Dağ zirvelerinde nem miktarı ne kadardır|ne kadardır|Dağ zirvelerinde nem miktarı
+Karalarda güneş ışınlarının etkili olduğu derinlik ne kadardır|ne kadardır|Karalarda güneş ışınlarının etkili olduğu derinlik
+Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı ne kadardır|ne kadardır |Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı
+Muson ikliminde yıllık sıcaklık farkı ne kadardır|ne kadardır|Muson ikliminde yıllık sıcaklık farkı 
+Ekvatoral iklimde yıllık yağış miktarı ne kadardır|ne kadardır|Ekvatoral iklimde yıllık yağış miktarı
+Karasal iklimde yıllık yağış miktarı kaç mm'dir|kaç mm'dir|Karasal iklimde yıllık yağış miktarı
+Çöl ikliminde günlük sıcaklık farkı kaç dereceyi bulur|kaç dereceyi|Çöl ikliminde günlük sıcaklık farkı bulur
 Yükselti arttıkça neye bağlı olarak bitki örtüsü değişir|neye bağlı olarak|Yükselti arttıkça bitki örtüsü değişir
-Yüksek bulutlara ne denir?|bulutlara denir|Yüksek
-Kümülüs bulutları kaç metre aralığında bulunur?|kaç metre|Kümülüs bulutları aralığında bulunur
-Sirüs bulutları kaç metre yükseklikte bunulur?|kaç metre|Sirüs bulutları yükseklikte bunulur
-Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca ne olur?|olur|Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca
+Yüksek bulutlara ne denir|bulutlara denir|Yüksek
+Kümülüs bulutları kaç metre aralığında bulunur|kaç metre|Kümülüs bulutları aralığında bulunur
+Sirüs bulutları kaç metre yükseklikte bunulur|kaç metre|Sirüs bulutları yükseklikte bunulur
+Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca ne olur|olur|Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca
 Alize rüzgarları neye sebep olur|sebep olur |Alize rüzgarları 
 Bir dağ yamacı boyunca yükselen nemli havanın soğuyarak yoğuşması sonucunda ne olur|olur|Bir dağ yamacı boyunca yükselen nemli havanın soğuyarak yoğuşması sonucunda
-Sıcaklık ve nem bakımından farklı özellikteki hava kütlelerinin karşılaşma alanlarında ne meydana gelir?|meydana gelir|Sıcaklık ve nem bakımından farklı özellikteki hava kütlelerinin karşılaşma alanlarında
+Sıcaklık ve nem bakımından farklı özellikteki hava kütlelerinin karşılaşma alanlarında ne meydana gelir|meydana gelir|Sıcaklık ve nem bakımından farklı özellikteki hava kütlelerinin karşılaşma alanlarında
 İnsanların barınma ihtiyacı için ürettikleri barınaklar neye göre farklılık gösterir|neye göre|İnsanların barınma ihtiyacı için ürettikleri barınaklar farklılık gösterir
 Güneş ışınlarının kırılma ve yansıma miktarı neye göre artar|neye göre|Güneş ışınlarının kırılma ve yansıma miktarı artar
-Bulutlar neye göre sınıflandırılır?|neye göre|Bulutlar sınıflandırılır
-Yeryüzünde kaç farklı sıcaklık kuşağı oluşmuştur?|kaç farklı|Yeryüzünde sıcaklık kuşağı oluşmuştur
+Bulutlar neye göre sınıflandırılır|neye göre|Bulutlar sınıflandırılır
+Yeryüzünde kaç farklı sıcaklık kuşağı oluşmuştur|kaç farklı|Yeryüzünde sıcaklık kuşağı oluşmuştur
 Su küre, taş küre ve hava kürenin her birine yayılmış olan küre hangisidir|küre|Su küre, taş küre ve hava kürenin her birine yayılmış olan
-Canlılar küresi hangi kürelere yayılmış durumdadır?|hangi kürelere|Canlılar küresi yayılmış durumdadır
-Biyosfer hangi kürelere yayılmıştır?|hangi kürelere|Biyosfer yayılmıştır
-Doğal çevreyi kaç temel unsur oluşturur?|kaç temel unsur|Doğal çevreyi oluşturur
-Eş sıcaklık eğrilerine ne denir?|Eş sıcaklık eğrilerine denir|?
-Doğal çevreyi oluşturan dört temel unsur hangileridir?|dört temel unsur|Doğal çevreyi oluşturan
-Doğal çevreyi oluşturan temel unsurlar hangileridir?|temel unsurlar|Doğal çevreyi oluşturan 
+Canlılar küresi hangi kürelere yayılmış durumdadır|hangi kürelere|Canlılar küresi yayılmış durumdadır
+Biyosfer hangi kürelere yayılmıştır|hangi kürelere|Biyosfer yayılmıştır
+Doğal çevreyi kaç temel unsur oluşturur|kaç temel unsur|Doğal çevreyi oluşturur
+Eş sıcaklık eğrilerine ne denir|Eş sıcaklık eğrilerine denir|?
+Doğal çevreyi oluşturan dört temel unsur hangileridir|dört temel unsur|Doğal çevreyi oluşturan
+Doğal çevreyi oluşturan temel unsurlar hangileridir|temel unsurlar|Doğal çevreyi oluşturan 
 Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı yol ile ilgili olarak ne söyleyebiliriz|yol ile ilgili |Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı olarak söyleyebiliriz
 Güney Yarım Küre'ye kıyasla Kuzey Yarım Küre'deki sıcaklık farklarıyla ilgili ne söyleyebiliriz|sıcaklık farklarıyla ilgili|Güney Yarım Küre'ye kıyasla Kuzey Yarım Küre'deki söyleyebiliriz
-Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık nasıl değişir?|nasıl değişir|Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık
+Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık nasıl değişir|nasıl değişir|Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık
