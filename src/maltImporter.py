@@ -9,9 +9,9 @@ class MaltImporter:
     def getRawQuestionTexts(self, qFilePath):
         qFile = codecs.open(qFilePath, 'r', 'utf-8');##utf-8 file
         qTexts = qFile.readlines();
-        qTexts = [text.strip() for text in qTexts];
+        qTexts = [text.strip().split('|') for text in qTexts];
 
-        return qTexts; ## list of raw questions
+        return qTexts; ## list of raw questions with Focus and Mod
 
     def getParsedQuestionTexts(self, qParsedFilePath):
         qFile = codecs.open(qParsedFilePath, 'r', 'utf-8');
@@ -43,6 +43,13 @@ class MaltImporter:
         length = len(qTexts);
 
         for i in range(0, length):
-            self.questions.append(Question(qTexts[i], qTextParts[i]))            
-
+            question = Question(qTexts[i][0], qTextParts[i]);
+            question.focus = qTexts[i][1];
+            question.mod = qTexts[i][2];
+            
+            question.setMeta();
+            
+            self.questions.append(question);
+            
         return self.questions;
+

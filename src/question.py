@@ -63,23 +63,37 @@ class Question:
     ##Raw question text
     questionText = '';
 
+    focus = '';
+	
+    mod = '';
+
     ##Dependency parsed question parts
     questionParts = [];
+
+    ##Metadata of question parts -> Possible values: FOC, MOD, NON
+    questionPartsMeta = [];
 
     ##Root of the parts -- Always (.) period
     root = None;
 
-    ##Focus of the question
-    focus = '';
-
-    ##LAT of the question
-    lat = '';
-
-    def __init__(self, qText= '', qParts = []):
+    def __init__(self, qText, qParts):
         self.questionText = qText;
         self.questionParts = qParts;
 
         self.findRoot();
+
+    def setMeta(self):
+        self.questionPartsMeta = ['NON'] * len(self.questionParts);
+
+        focusItems = self.focus.split(' ');
+
+        modItems = self.mod.split(' ');
+
+        for i in range(0, len(self.questionParts)):
+            if(self.questionParts[i][1] in focusItems):
+                self.questionPartsMeta[i] = 'FOC';
+            if(self.questionParts[i][1] in modItems):
+                self.questionPartsMeta[i] = 'MOD';
 
     def findRoot(self):
         temp = [a for a in self.questionParts if a[1] == '.'];
