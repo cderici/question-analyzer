@@ -3,8 +3,19 @@
 import re
 from question import *
 
+nedirFC = 0
+verilirFC = 0
+denirFC = 0
+hangisidirFC = 0
+hangiBtwFC = 0
 
-def handleNedir(question, qParts):
+nedirMC = 0
+verilirMC = 0
+denirMC = 0
+hangisidirMC = 0
+hangiBtwMC = 0
+
+def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus = []
     qMods = []
@@ -15,7 +26,7 @@ def handleNedir(question, qParts):
     but nevertheless
     """
     if not SUBJ:
-        return False, False
+        return False, False, nedirFC, nedirMC
     else:
         
         """ FOCUS EXTRACTION """
@@ -58,10 +69,10 @@ def handleNedir(question, qParts):
                 if compl.search(subjText) != None:
                     qMods.append(subj)
 
-        return reversed(qFocus), reversed(qMods)
+        return reversed(qFocus), reversed(qMods), nedirFC, nedirMC
 
 
-def handleVerilir(question, qParts):
+def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus = []
     qMods = []
@@ -82,6 +93,9 @@ def handleVerilir(question, qParts):
     """
 
     DativeADJ = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')[0]
+
+    if DativeADJ == []:
+        return False, False, verilirFC, verilirMC
 
     qFocus.extend([SUBJ, DativeADJ])
 
@@ -130,10 +144,10 @@ def handleVerilir(question, qParts):
             qMods.append(modChild)
             qMods.extend(question.tracebackFrom(modChild))
 
-    return reversed(qFocus), reversed(qMods)
+    return reversed(qFocus), reversed(qMods), verilirFC, verilirMC
 
 
-def handleDenir(question, qParts):
+def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus = []
     qMods = []
@@ -147,7 +161,7 @@ def handleDenir(question, qParts):
     DativeADJchildren = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')
 
     if DativeADJchildren == []:
-        return False, False
+        return False, False, denirFC, denirMC
 
     """ Assumption: if it has more than one dative.adjunct, the last one (the closests to the SENTENCE) is most likely the correct one"""
 
@@ -174,10 +188,10 @@ def handleDenir(question, qParts):
 
             qMods.extend(childParts)
 
-    return reversed(qFocus), reversed(qMods)
+    return reversed(qFocus), reversed(qMods), denirFC, denirMC
 
 
-def handleHangiHangileri(question,qParts):
+def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     
     qFocus = []
     qMods = []
@@ -190,7 +204,7 @@ def handleHangiHangileri(question,qParts):
         """ this will get the subject which is nearest to the sentence """
         SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
         if not SUBJ:
-            return False,False
+            return False, False, hangisidirFC, hangisidirMC
     else:
         SUBJ = subjChildren[len(subjChildren)-1]
 
@@ -226,11 +240,11 @@ def handleHangiHangileri(question,qParts):
                 qMods.append(subj)
 
 
-    return reversed(qFocus), reversed(qMods)
+    return reversed(qFocus), reversed(qMods), hangisidirFC, hangisidirMC
 
 
 
-def handleBetweenHangi(question, qParts):
+def hangiBtwExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus = []
     qMods = []
@@ -332,4 +346,4 @@ def handleBetweenHangi(question, qParts):
     if QPart.getPartField(qFocus[len(qFocus)-1], 'depenTag') != 'SENTENCE':
         qMods.append(SEN)
     
-    return qFocus, qMods
+    return qFocus, qMods, hangiBtwFC, hangiBtwMC

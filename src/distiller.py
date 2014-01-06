@@ -13,8 +13,10 @@ class Distiller():
 
     # focus is a list of ordered parts
     qFocus = []
+    qFocusConfidence = 0
 
     qMods = []
+    qModsConfidence = 0
 
     def __init__(self, question = None):
         self.question = question
@@ -32,7 +34,7 @@ class Distiller():
 
     def goForStatistics(self):
         print(self.question.questionText + " -> Statistical Approach")
-        return False, False
+        return False, False, 0, 0
 
 
     # this should be general for all domains, maybe this whole class should be that way
@@ -44,43 +46,37 @@ class Distiller():
 
         if not SEN:
             # raise RuntimeError("Something's REALLY wrong! Here's the question: " + self.question.questionText)
-            return False, False
+            return False, False, 0, 0
 
         SENtext = QPart.getPartField(SEN, 'text')
 
         # nedir
         if SENtext == 'nedir':
 
-            return handleNedir(self.question, qParts)
+            return nedirExpert(self.question, qParts)
 
         # verilir
         elif SENtext == 'verilir':
 
-            return handleVerilir(self.question, qParts)
+            return verilirExpert(self.question, qParts)
 
         elif SENtext == 'denir' or SENtext == 'denilir' or SENtext == 'denilmektedir':
             
-            return handleDenir(self.question, qParts)
+            return denirExpert(self.question, qParts)
 
         # hangisidir
         elif SENtext == 'hangisidir' or SENtext == 'hangileridir':
 
-            return handleHangiHangileri(self.question, qParts)
+            return hangisidirExpert(self.question, qParts)
 
         # ... hangi ...
         elif self.checkForBetweenHangi(qParts):
             
-            return handleBetweenHangi(self.question, qParts)
+            return hangiBtwExpert(self.question, qParts)
 
         else:
-            return False, False
+            return False, False, 0, 0
 
-
-
-
-
-        # denir
-        # .... hangi ....
 
         # neresidir/nerede
 
@@ -88,7 +84,7 @@ class Distiller():
 
         # kac/kaci/kacini/ne kadar
         
-        return False, False
+        return False, False, 0, 0
 
 
     def checkForBetweenHangi(self, qParts):

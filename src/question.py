@@ -64,8 +64,10 @@ class Question:
     questionText = '';
 
     focus = '';
+    focusConfidence = 0
 	
     mod = '';
+    modConfidence = 0
 
     ##Dependency parsed question parts
     questionParts = [];
