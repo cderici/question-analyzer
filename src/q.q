@@ -1,4 +1,4 @@
-23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır|hangi mevsimin|23 Eylül, Kuzey yarım kürede başlangıcıdır
+23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır|hangi mevsimin|23 Eylül Kuzey yarım kürede başlangıcıdır
 Akarsu aşındırması sonucunda meydana gelen deniz seviyesine yakın, hafif dalgalı düzlüklere ne denir|düzlüklere denir|Akarsu aşındırması sonucunda meydana gelen hafif dalgalı
 Akarsuların taşıyarak oluşturdukları topraklara ne ad verilir|topraklara ad|Akarsuların taşıyarak oluşturdukları
 Akarsuyun denize döküldüğü yere ne denir|yere denir|Akarsuyun denize döküldüğü
@@ -185,3 +185,44 @@ Doğal çevreyi oluşturan temel unsurlar hangileridir|temel unsurlar|Doğal çe
 Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı yol ile ilgili olarak ne söyleyebiliriz|yol ile ilgili |Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı olarak söyleyebiliriz
 Güney Yarım Küre'ye kıyasla Kuzey Yarım Küre'deki sıcaklık farklarıyla ilgili ne söyleyebiliriz|sıcaklık farklarıyla ilgili|Güney Yarım Küre'ye kıyasla Kuzey Yarım Küre'deki söyleyebiliriz
 Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık nasıl değişir|nasıl değişir|Genel olarak Ekvator'dan kutuplara gidildikçe sıcaklık
+Yer Yuvarlağını meydana getiren iç içe geçmiş kürelere ne isim verilir|kürelere isim|Yer yuvarlağını meydana getiren iç içe geçmiş
+Yer kabuğunun ortalama kalınlığı karalarda kaç km. aralığındadır|kaç km|Yer kabuğunun ortalama kalınlığı karalarda aralığındadır
+Yer kabuğunun ortalama kalınlığı denizlerde ne kadardır|ne kadardır|Yer kabuğunun ortalama kalınlığı denizlerde
+Granitik kabuğun bileşiminde en çok hangi elementler bulunur|hangi elementler|Granitik kabuğun bileşiminde en çok bulunur
+Bazaltik kabuğun bileşiminde en çok bulunan elementler hangileridir|elementler|Bazaltik kabuğun bileşiminde en çok bulunan
+Bazaltik kabuğun yoğunluğu ne kadardır|ne kadardır|Bazaltik kabuğun yoğunluğu
+Granitik kabuk hangi taşlardan meydana gelir|hangi taşlardan|Granitik kabuk meydana gelir
+Astenosfer adı verilen manto katmanın derinliği kaç km. aralığında yer alır|kaç km|Astenosfer adı verilen manto katmanın derinliği aralığında yer alır
+Sıvı haldeki astenosfer malzemesine ne denir|astenosfer malzemesine denir|Sıvı haldeki
+Manto, Yer Yuvarlağı hacminin yüzde kaçını kaplamaktadır|yüzde kaçını|Manto Yer Yuvarlağının kaplamaktadır
+Dış çekirdek neden oluşur|neden oluşur|Dış çekirdek
+İç çekirdeğin sıcaklığı kaç dereceyi bulur|kaç dereceyi|İç çekirdeğin sıcaklığı bulur
+Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen katı cisimlere ne ad verilir|katı cisimlere ad|Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen
+Direnci düşük kayaçların bulunduğu arazilerde ne tür yer şekileri meydana gelir|ne tür yer şekilleri|Direnci düşük kayaçların bulunduğu arazilerde meydana gelir
+Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri nerede bulunur|nerede|Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri
+Tortul kayaçların bir diğer adı nedir|kayaçların bir diğer adı|Tortul
+Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan kayaçlara ne isim verilir|kayaçlara isim|Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan
+Kayaların başkalaşıma uğramasına ne sebep olur|sebep olur|Kayaların başkalaşıma uğramasına
+Yeryüzü şekillerinin oluşmasına sebep olan nedir|sebep|Yeryüzü şekillerinin oluşmasına
+Tektonik hareketlere neden olan enerji kaynağı nedir|enerji kaynağı|Tektonik hareketlere neden olan
+Mantonun içerisindeki konveksiyon akıntıları hangi yönde hareket eder|hangi yönde|Mantonun içerisindeki konveksiyon akıntıları hareket eder
+Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları hangi jeolojik zamanda oluşmuştur|hangi jeolojik zamanda|Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları oluşmuştur
+Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları hangi orojenez sonucunda oluşmuştur|hangi orojenez|Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları sonucunda oluşmuştur
+Epirojenik hareketler sırasında denizin çekilmesine ne denir|denizin çekilmesine denir|Epirojenik hareketler sırasında
+Lav nedir|Lav|.
+Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken gaz halinde çıkan nedir|gaz halinde çıkan|Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken
+Volkanik kökenli adaların en fazla bulunduğu yer neresidir|yer|Volkanik kökenli adaların en fazla bulunduğu
+Volkan tüfü kaç cm uzunluğundadır|cm|Volkan tüfü uzunluğundadır
+Volkan tüfünün uzunluğu kaç cm.dir|cm dir|Volkan tüfünün uzunluğu
+Ağrı Dağı hangi tür volkanlardandır|hangi tür volkanlardandır|Ağrı Dağı
+Yeryüzünde kaç tane etkin volkan vardır|tane|Yeryüzünde etkin volkan
+Yeryüzündeki etkin volkanların yüzde kaçı Büyük Okyanus çevresindedir|yüzde kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir
+Yeryüzündeki etkin volkanların kaçı Büyük Okyanus çevresindedir|kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir
+Yeryüzündeki volkanik alanların ortak özelliği nedir|ortak özelliği|Yeryüzündeki volkanik alanların
+Kaç çeşit deprem dalgası vardır|çeşit|deprem dalgası
+Deprem dalgaları içinde en hızlı dalgalar hangileridir|dalgalar|Deprem dalgaları içinde en hızlı
+Deprem sırasında yer kabuğuna ilk ulaşan dalgalar hangileridir|dalgalar|Deprem sırasında yer kabuğuna ilk ulaşan
+Tsunami denen dev dalgalara ne sebep olur|sebep olur|Tsunami denen dev dalgalara
+Depremin aletle ölçülen büyüklüğüne ne denir|büyüklüğüne denir|Depremin aletle ölçülen
+Ülkemizin de içinde bulunduğu deprem kuşağı hangisidir|deprem kuşağı|Ülkemizin de içinde bulunduğu
+Yeryüzünde depremlerin çoğunluğu nerede olur|nerede|Yeryüzünde depremlerin çoğunluğu
