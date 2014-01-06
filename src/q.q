@@ -1,4 +1,4 @@
-23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır|hangi mevsimin|23 Eylül Kuzey yarım kürede başlangıcıdır
+23 Eylül, Kuzey yarım kürede hangi mevsimin başlangıcıdır|hangi mevsimin|23 Eylül, Kuzey yarım kürede başlangıcıdır
 Akarsu aşındırması sonucunda meydana gelen deniz seviyesine yakın, hafif dalgalı düzlüklere ne denir|düzlüklere denir|Akarsu aşındırması sonucunda meydana gelen hafif dalgalı
 Akarsuların taşıyarak oluşturdukları topraklara ne ad verilir|topraklara ad|Akarsuların taşıyarak oluşturdukları
 Akarsuyun denize döküldüğü yere ne denir|yere denir|Akarsuyun denize döküldüğü
@@ -226,3 +226,53 @@ Tsunami denen dev dalgalara ne sebep olur|sebep olur|Tsunami denen dev dalgalara
 Depremin aletle ölçülen büyüklüğüne ne denir|büyüklüğüne denir|Depremin aletle ölçülen
 Ülkemizin de içinde bulunduğu deprem kuşağı hangisidir|deprem kuşağı|Ülkemizin de içinde bulunduğu
 Yeryüzünde depremlerin çoğunluğu nerede olur|nerede|Yeryüzünde depremlerin çoğunluğu
+Yeryüzünde kendine özgü bir iklimi, bitki örtüsü ve hayvan topluluğu bulunduran bölgelere ne ad verilir||
+Canlıların çevreyle birlikte oluşturdukları yaşam birlikteliklerine ne denir||
+Biyomlar neyin en büyük birimleridir||
+Ekosistemin en büyük birimi nedir||
+Biyomların yeryüzüne dağılışındaki en büyük etken koşul hangisidir||
+Atmosferdeki Azot toplam gaz miktarının yüzde kaçını oluşturur||
+Denizler ve okyanuslar yeryüzünün yüzde kaçını meydana getirir||
+Deniz ekosisteminin ortalama derinliği ne kadardır||
+Suyun litosfer, hidrosfer ve atmosfer arasındaki hareketi ne olarak adlandırılır||
+Ekosfer kaç büyük ekosistemden oluşur||
+Tundra bölgelerinde en yüksek hava sıcaklığı kaç dereceye ulaşır||
+Manş tüneli denizin kaç metre altında inşa edilmiştir||
+1907 yılında Çin’de meydana gelen kuraklık sonucu kaç kişi açlıktan etkilenmiştir||
+Hindistan’da 1,5 milyon kişinin ölümüyle sonuçlana kuraklık hangi yıllar arasında olmuştur||
+IV. Jeolojik zamanın başlarında Dünya genelinde buzul alanları kaçıncı enleme kadar gelmiştir||
+Aztek uygarlığı hangi yüzyıllar arasında hüküm sürmüştür||
+Çin uygarlığı tarihi kaç yıla dayanır||
+Barut, pusula, mürekkep, kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık hangisidir||
+Dağıtım neyin tüketiciye ulaştırılmasıdır||
+Tüketim neyin kullanılmasıdır||
+Yer yuvarlağındaki iç içe kürelere ne ad verilir||
+Yer kabuğunun karalardaki ortalama kalınlığı ne kadardır||
+Yer kabuğunun okyanuslardaki ortalama kalınlığı ne kadardır||
+Granitik Kabuğun yoğunluğu ne kadardır||
+Sima tabakası bünyesinde ne yoğunluğundan dolayı bu ismi alınmıştır||
+Çekirdek tabakanın diğer bir adı nedir||
+Granit, siyenit, diyorit ve gabro ne tip kayaçlardır||
+Levha tektoniği teorisi kimin teorisinin geliştirilmiş halidir||
+Yeryüzündeki deprem bölgelerinin dağılışı neyle paralellik gösterir||
+Dağ oluşumu hareketleri kaç şekilde gerçekleşir||
+Tortul tabakanın kırılmasıyla ne oluşur||
+Transgresyon ve regresyon hangi hareketler dahilinde incelenir||
+Transgresyon kısaca nedir||
+Regresyon kısaca nedir||
+Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğu şekillerdir||
+Volkanlardan çıkan volkan tüfü, lapilli ve volkan bombası isimlerini neye göre alırlar||
+Rihter ölçeği ne amaçla kullanılır||
+Rihter ölçeği nasıl derecelendirilmiştir||
+Hiposantr depremin nerede oluşturduğu kısımdır||
+Levha hareketleri sonucunda ortaya çıkan gerilimler neyin kırılmasına neden olur||
+Kaç çeşit deprem dalgası vardır||
+Boyuna dalgaların yer kabuğundaki hızları ne kadardır||
+P dalgalarının manto ile çekirdek arasındaki hızları ne kadardır||
+En fazla hasara neden olan dalgalar hangileridir||
+S dalgaları deprem esnasında hangi dalgalardan sonra gelirler||
+Sismoloji neyle ilgili araştırmaları yapar||
+Büyük okyanus kıyıları deprem kuşağı yeryüzündeki depremlerin yüzde kaçına ev sahipliği yapar||
+Yeryüzündeki depremlerin yüzde kaçı Akdeniz-Himalaya kuşağında meydana gelir||
+Dünyada en az deprem olma olasılığı olan bölgeler nereleridir||
+Normal fay, ters fay dışındaki fay çeşidi hangisidir||
