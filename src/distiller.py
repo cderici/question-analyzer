@@ -23,22 +23,12 @@ class Distiller():
         self.qFocus = []
         self.qMods = []
 
-
-    def distillQuestion(self):
-        ruleBased = self.ruleBasedExtractor()
-
-        if not ruleBased:
-            return self.goForStatistics()
-        else:
-            return ruleBased
-
-    def goForStatistics(self):
-        print(self.question.questionText + " -> Statistical Approach")
+    def HMM_Glasses(self):
         return False, False, 0, 0
 
 
     # this should be general for all domains, maybe this whole class should be that way
-    def ruleBasedExtractor(self):
+    def FM_Distiller(self):
 
         qParts = self.question.questionParts
 

@@ -26,15 +26,21 @@ class QuestionAnalysis:
 
 
     def extractFocusMod(self):
-        extractedFocus, extractedMod, fConf, mConf = Distiller(self.question).distillQuestion()
+        dist = Distiller(self.question)
 
-        self.question.focus = extractedFocus
-        self.question.mod = extractedMod
 
-        self.question.focusConfidence = fConf
-        self.question.focusConfidence = mConf
+        """ TODO : fConf and mConf are total confidences (e.g. fConf is equal for each part of the focus), but """
+        ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
 
-        return extractedFocus, extractedMod
+        glassFocus, glassMod, fGlassConf, mGlassConf = dist.HMM_Glasses()
+
+        self.question.focus = ruleFocus
+        self.question.mod = ruleMod
+
+        self.question.focusConfidence = fRuleConf
+        self.question.focusConfidence = mRuleConf
+
+        return ruleFocus, ruleMod
         
     def showFocusMod(self):
         focus, mod = self.extractFocusMod()
