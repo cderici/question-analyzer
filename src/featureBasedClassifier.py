@@ -49,7 +49,7 @@ class Parser:
         length = len(qTexts);
 
         for i in range(0, length):
-            self.questions.append(Question(qTexts[i], qTextParts[i]))            
+            self.questions.append(Question(qTexts[i][0], qTextParts[i]))            
 
         return self.questions;
 
