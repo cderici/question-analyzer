@@ -85,23 +85,48 @@ def handleVerilir(question, qParts):
 
     qFocus.extend([SUBJ, DativeADJ])
 
+    focusChildren = question.findChildrenDepenTag(DativeADJ, 'POSSESSOR')
+    focusChildren.extend(question.findChildrenDepenTag(DativeADJ, 'CLASSIFIER'))
+
     dativeModChildren = question.findChildrenDepenTag(DativeADJ, 'MODIFIER')
     dativeModChildren.extend(question.findChildrenDepenTag(DativeADJ, 'POSSESSOR'))
     dativeModChildren.extend(question.findChildrenDepenTag(DativeADJ, 'CLASSIFIER'))
                              
+    numFocusChildren = len(focusChildren)
 
     numOfModChildren = len(dativeModChildren)
 
+
+
     if numOfModChildren > 1:
         """ we take (and remove) the last modifier"""
-        focusChild = dativeModChildren.pop(numOfModChildren-1)
-        qFocus.append(focusChild)
-        qFocus.extend(question.tracebackFrom(focusChild))
-    
+        #focusChild = focusChildren.pop(numFocusChildren-1)
+        
+        focusChild = dativeModChildren[numOfModChildren-1]
+
+        childTag = QPart.getPartField(focusChild, 'depenTag')
+
+        if childTag != 'MODIFIER':
+            focusChild = dativeModChildren.pop(numOfModChildren-1)
+            qFocus.append(focusChild)
+            qFocus.extend(question.tracebackFrom(focusChild))
+        
+    elif numOfModChildren == 1:
+        childTag = QPart.getPartField(dativeModChildren[0], 'depenTag')
+        if childTag == 'POSSESSOR' or childTag == 'CLASSIFIER':
+            fChild = dativeModChildren.pop(0)
+            qFocus.append(fChild)
+            qFocus.extend(question.tracebackFromFoldTamlama(fChild, includePOSS=True, includeCLASS=True))
+            
+            modCandidates = question.tracebackFrom(fChild)
+            for candy in modCandidates:
+                if candy not in qFocus:
+                    qMods.append(candy)
+                    qMods.extend(question.tracebackFrom(candy))
     """ MOD EXTRACTION """
 
     if dativeModChildren != []:
-        for modChild in dativeModChildren:
+        for modChild in reversed(dativeModChildren):
             qMods.append(modChild)
             qMods.extend(question.tracebackFrom(modChild))
 

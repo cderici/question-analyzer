@@ -126,13 +126,13 @@ for q in filteredDenir:
 
 #MassAnalyzer.massShowFocusMod(filteredNedir)
 
-#print("\n\n -- verilir -- \n\n")
+print("\n\n -- verilir -- \n\n")
 
-#MassAnalyzer.massShowFocusMod(filteredVerilir)
+MassAnalyzer.massShowFocusMod(filteredVerilir)
 
-print("\n\n -- hangisidir/hangileridir -- \n\n")
+#print("\n\n -- hangisidir/hangileridir -- \n\n")
 
-MassAnalyzer.massShowFocusMod(filteredHangisidir)
+#MassAnalyzer.massShowFocusMod(filteredHangisidir)
 
 #print("\n\n -- .... hangi .... -- \n\n")
 
