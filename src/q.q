@@ -276,3 +276,103 @@ Büyük okyanus kıyıları deprem kuşağı yeryüzündeki depremlerin yüzde k
 Yeryüzündeki depremlerin yüzde kaçı Akdeniz-Himalaya kuşağında meydana gelir||
 Dünyada en az deprem olma olasılığı olan bölgeler nereleridir||
 Normal fay, ters fay dışındaki fay çeşidi hangisidir||
+Suyun atmosfer ile yeryüzü arasındaki dönüşüm hareketine ne ad verilir||
+Yeryüzündeki suların yüzde kaçı tatlı sulardan oluşur||
+Denizler ve okyanuslar yeryüzünde ne kadar alan kaplamaktadır||
+Dünyadaki okyanus sayısı kaçtır||
+Okyanus ve deniz suları neden içme ve kullanma suyu olarak doğrudan kullanıma uygun değildir||
+Göl ayağının diğer bir adı nedir||
+Gideğeni olan göllerin suları nasıldır||
+Dünyada tektonik göllerin en yoğun olduğu bölge neresidir||
+Aral ne çeşit bir göldür||
+Debi ne cinsinden ifade edilir||
+Kayaçların ayrışması kaç şekilde gerçekleşir||
+Topraklar oluşum yerlerine göre kaç gruba ayrılır||
+Tundra topraklar hangi bölgelerde görülür||
+Kahverengi orman toprakları neyin fazla olduğundan dolayı tarımsal verimi düşüktür||
+Laterit toprakların neden tarımsal verimi düşüktür||
+Litosol toprakları ne anlama gelir||
+Lösler nasıl meydana gelir||
+Buzulların taşıdığı malzemelerin birikmesiyle ne çeşit topraklar oluşur||
+Orta kuşağın nemli ormanlarında yıllık yağış miktarı ne kadardır||
+Akdeniz bölgesinin doğal bitki örtüsü nedir||
+İçinde yer altı suyunun bulunduğu tabakaya ne ad verilir||
+Türkiye’nin iz düşüm alana göre km2 ye düşen ortalama nüfusu kaçtır||
+Türkiye’de bir yere kırsal yerleşme diyebilmek için neye bakılması gerekir||
+Nüfusu 10 000’in altında olan yerleşkelere ne ad verilir||
+Kırsal yerleşmeler kaça ayrılır||
+Mezralar daha çok hangi bölgemizde görülür||
+Ülkemizin yüzde kaçı şehirlerde yaşamaktadır||
+Türkiye’de şehirleşme hızı mı daha yüksektir, sanayileşme hızı mı||
+Türkiye’de şehirler fonksiyonlarına göre kaça ayrılırlar||
+Nüfus hangi 3 yaş grubunda incelenir||
+Bir ülkede genç nüfus hangi yaş grubu olarak değerlendirilir||
+Türkiye’de nüfusun çoğunlukta olduğu yaş grubu hangisidir||
+Çalışma çağındaki nüfusun taban alındığı yaş nedir||
+Türkiye’de ilk periyodik nüfus sayımı ne zaman yapılmıştır||
+Türkiye’de ikinci nüfus sayımı hangi tarihte yapılmıştır||
+2000 yılına kadar yapılan nüfus sayımlarında hangi yasak uygulanmıştır||
+TÜİK neyin kısaltmasıdır||
+Türkiye İstatistik Kurumunun kısa adı nedir||
+Cumhuriyetimizin ilk nüfus sayımına göre nüfus ne kadardı||
+İç göçler hangi iki ana başlıkla ele alınır||
+Türkiye’de iç göçlerde kadınlar mı daha fazla etkilidir, erkekler mi||
+İç göçlerde hangi yaş grubunun etkisi daha fazladır||
+1979 yılında Sovyetler Birliği’nin Afganistan’ı işgalinde Türkiye2ye sığınan Afgan sayısı kaçtır||
+Yunanistan’da yaşayan yaklaşık 400 bin Türk hangi antlaşma sayesinde Türkiye’ye göçmüştür||
+Kır nüfusundaki doğurganlık oranı kent nüfusuna göre nasıldır||
+Ordu, Rize ve Trabzon’a ne amaçla geçici iç göçler gerçekleşmektedir||
+1950’li yıllarda göç hareketleri daha çok nerden nereye doğruydu||
+1980’li yıllarda göç hareketleri daha çok nerden nereye doğruydu||
+Cumhuriyetin ilk yıllarında ülkenin kaçta kaçı kırsal kesimlerde yaşamaktaydı||
+Ülkemizde yüksek ve engebeli yerlerde nüfus nasıldır||
+İnsan ve insana ait faaliyetleri inceleyen coğrafyanın alt dalının adı nedir||
+Yeryüzünün insan tarafından değiştirilmiş ve değiştirilmekte olan görünümü, coğrafyanın hangi alt dalı tarafından incelenmektedir||
+İnsanlara ait ulaşım, sanayi, turizm, nüfuslanma ve yerleşme gibi faaliyetleri coğrafyanın hangi alt dalı konu edinir||
+Doğa ile insan arasındaki etkileşimi inceleyen bilim dalı hangisidir||
+Uluslar arası örgütlerin kuruluşu, yapısı ve faaliyetleri hangi coğrafya alt dalının inceleme alanına girmektedir||
+İnsanların yaşamlarını sürdürdükleri ve çeşitli ekonomik faaliyetlerde bulundukları bölgeye ne denir||
+Eski çağlarda, tarımın yaygınlaşması ve tarımda hayvanların kullanılmaya başlaması neye sebebiyet vermiştir||
+Ticaretin öneminin artmasıyla deniz kıyısına kurulan şehirlere ne denir||
+Devletleşmeyle birlikte gelen merkezi şehirlere ne isim verilir||
+Peygamberler ve din yayıcılarının yaşadığı yerler etrafında kurulan şehirlere ne denir||
+Taş kömürü, demir, petrol ve altın gibi kaynakların etrafına kurulan şehirlere ne isim verilir||
+Sanayileşmenin artmasıyla, maden yataklarının etrafında baş gösteren şehirleşme çeşidi nedir||
+İnsanların yılın belirli vakitleri özellikle gidip gezdiği şehirlere ne ad verilir||
+Son yüzyılda, bilim ve teknolojinin gelişiminde başı çeken şehirlere ne ad verilir||
+Dünyada yerleşim alanlarının dağılışı nasıldır||
+Denizler, buzullar, dağlar ve yer şekilleri yerleşimi nasıl etkiler||
+Yerleşmeyi sınırlandıran en önemli faktör nedir||
+Dünyadaki yerleşmeler nerede son bulmaktadır||
+Kutup bölgelerinde yerleşmeyi sınırlandıran en önemli faktör nedir||
+Yeryüzündeki yerleşmelerin genel olarak kurulduğu yerler nerelerdir||
+Ulaşımda sınırlayıcı etki yapan en önemli faktör nedir||
+Yükseltinin fazla olması yerleşmeyi nasıl etkiler||
+Sıcaklık yükseklere çıkıldıkça nasıl değişir||
+Yerleşmeler yükseklere çıkıldıkça nasıl değişir||
+Yükseltiye bağlı olarak yerleşimin sona erdiği noktaya ne denir||
+Yerleşmenin yükselti sınırı kutuplardan ekvatora gidildikçe nasıl değişir||
+Ekvatorda kentlerin yükseğe kurulmasının sebebi nedir||
+Gür ormanlar yerleşmeyi nasıl etkiler||
+Bataklıklar yerleşmeyi nasıl etkiler||
+İnsanların geçimini tarım ve hayvancılıktan sağladığı köylere ve köy altı yerleşmelerine ne denir||
+Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük yerleşim birimlerine ne denir||
+Kır yerleşmelerinin en büyüğüne ne denir||
+Köylerdeki nüfus miktarı genelde kaçtır||
+Köy yerleşmelerinin toplu olmasındaki en önemli faktör nedir||
+Çizgisel yerleşim dokusunun oluşmasındaki en önemli faktör nedir||
+Yer şekillerinin az engebeli olduğu yerlerde görülen yerleşmeye ne ad verilir||
+İnsanların barınma, korunma ve çalışma gibi ihtiyaçlarını karşıladığı tüm yapılara ne denir||
+Meskenlerin yapımında kullanılan malzemeler üzerinde en çok ne etkilidir||
+Ağaç malzeme kullanılarak ya da ağaçların üst üste konulmasıyla yapılan meskenlere ne denir||
+Toprak evlerin en yaygın tipi nedir||
+Orman örtüsünün bulunmadığı yüksek yaylalarda ve dağlarda yaygın olan mesken çeşidi nedir||
+Tuğla, briket, çimento ve gaz beton gibi çeşitli yapı malzemelerinin kullanıldığı meskenlere ne ad verilir||
+Ekvator kesiminde, meskenlerin bambu ve kamıştan yapılmasının en önemli sebebi nedir||
+Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verilir||
+Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen yerleşim çeşidi nedir||
+İlk insanlar nereleri mesken olarak seçmişlerdir||
+İlk yerleşim yerlerinin akarsu boylarına kurulmasının temel sebebi nedir||
+İnsanların yılın belli bir dönemlerinde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir||
+Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının sebebi nedir||
+Bataklık bölgeler yerleşim koşullarını nasıl etkiler||
