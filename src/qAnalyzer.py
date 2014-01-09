@@ -80,6 +80,7 @@ class MassAnalyzer:
                     if isDeriv and QPart.getPartField(part, partType) == partValue:
                         filtered.append(q)
                     else:
+                        #print(q.questionText)
                         continue
             else:
                 PART = QPart.getQPartWithField(q.questionParts, tagType, tagName)
@@ -87,71 +88,29 @@ class MassAnalyzer:
                     if QPart.getPartField(PART, partType) == partValue:
                         filtered.append(q)
                     else:
+                        #print(q.questionText)
                         continue
                 else:
+                    #print(q.questionText)
                     continue
 
         return filtered
 
 
+    """ 
+    filters questions that can't be handled by our current experts
+    """
+    def filterOthers(self, currentExpertQuestions):
+
+        filtered = []
+
+        for q in self.questionSet:
+            if q not in currentExpertQuestions:
+                filtered.append(q)
+
+        return filtered
+
     @staticmethod
     def massShowFocusMod(questionSet):
         for question in questionSet:
             QuestionAnalysis(question).showFocusMod()
-        
-
-    
-
-
-ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
-
-analyzer = QuestionAnalysis(ourQuestions[0])
-
-QuestionAnalysis.visualizeAll(ourQuestions)
-
-# analyzer.showFocusMod()
-
-
-mass = MassAnalyzer(ourQuestions)
-
-filteredNedir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'nedir')
-
-filteredVerilir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'verilir')
-
-filteredHangisidir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangisidir')
-
-filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangileridir'))
-
-filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
-
-filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
-
-filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
-filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
-
-
-"""
-for q in filteredDenir:
-    print "-" + q.questionText
-"""
-
-
-print("\n\n -- nedir -- \n\n")
-
-MassAnalyzer.massShowFocusMod(filteredNedir)
-
-print("\n\n -- verilir -- \n\n")
-
-MassAnalyzer.massShowFocusMod(filteredVerilir)
-
-print("\n\n -- hangisidir/hangileridir -- \n\n")
-
-MassAnalyzer.massShowFocusMod(filteredHangisidir)
-
-print("\n\n -- .... hangi .... -- \n\n")
-
-MassAnalyzer.massShowFocusMod(filteredHangiBetween)
-
-print("\n\n -- denir -- \n\n")
-
-MassAnalyzer.massShowFocusMod(filteredDenir)

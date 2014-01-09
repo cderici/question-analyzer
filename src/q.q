@@ -7,7 +7,7 @@ Atmosferin en alt katmanında hangi tabaka vardır|hangi tabaka|Atmosferin en al
 Bakteriler ilk olarak hangi jeolojik zamanda ortaya çıkmıştır|hangi jeolojik zamanda|Bakteriler ilk olarak ortaya çıkmıştır
 Bir akarsuyun kolları ile birlikte oluşturduğu sisteme ne denir|sisteme denir|Bir akarsuyun kolları ile birlikte oluşturduğu
 Bir akarsuyun kolları ile birlikte sularının toplandığı ve ya boşaltıldığı alana ne denir|alana denir|Bir akarsuyun kolları ile birlikte sularının toplandığı veya boşaltıldığı
-Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir||
+Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir|Birleşmiş Milletler Nüfus Vakfının adı|kısa
 Bitki ve hayvan topluluklarını inceleyen bilim dalı nedir|bilim dalı|Bitki ve hayvan topluluklarını inceleyen
 Biyosfer ’in diğer adı nedir|Biyosferin adı|diğer
 Biyosferi, ultraviyole ışınlarının zararlarından koruyan gaz hangisidir|gaz|Biyosferi ultraviyole ışınlarının zararlarından koruyan
@@ -27,7 +27,7 @@ Ege Denizi hangi jeolojik zamanda oluşmuştur|hangi jeolojik zamanda|Ege Denizi
 Göçlerin en önemli nedeni nedir|Göçlerin nedeni|en önemli
 Göllerin fazla sularını boşaltan akarsulara ne denir|akarsulara denir|Göllerin fazla sularını boşaltan
 Gönüllü göçler üzerinde etkili olan faktörlere ne isim verilir|faktörlere isim|Gönüllü göçler üzerinde etkili olan
-Haritaların küçültme oranına ne denir|Haritaların küçültme oranına denir|[]
+Haritaların küçültme oranına ne denir|Haritaların küçültme oranına denir|.
 İç kuvvetlerin etkisiyle yeryüzünde oluşan hareketlerin adı nedir|hareketlerin adı|İç kuvvetlerin etkisiyle yeryüzünde oluşan
 İçerisinde bitki ve hayvan fosili bulunduran kayaç hangisidir|kayaç|İçerisinde bitki ve hayvan fosili bulunduran
 İki akarsu havzasını birbirinden ayıran sınıra ne ad verilir|sınıra ad|İki akarsu havzasını birbirinden ayıran
@@ -50,7 +50,7 @@ Nil Deltası hangi ülkenin sınırları içerisindedir|hangi ülkenin|Nil Delta
 Ormanların tahrip edilmesi sonucu oluşan bozkırlara ne denir|bozkırlara denir|Ormanların tahrip edilmesi sonucu oluşan
 Ozon oluşumu hangi katmanda oluşur|hangi katmanda|Ozon oluşumu oluşur
 Pamukkale travertenleri hangi ilin sınırları içerisindedir|hangi ilin|Pamukkale travertenleri içerisindedir
-Patamoloji nedir|Patamoloji|[]
+Patamoloji nedir|Patamoloji|.
 Rotterdam hangi ülkenin şehridir|hangi ülkenin|Rotterdam şehridir
 Rüzgârların taşıyarak oluşturdukları topraklara ne ad verilir|topraklara ad|Rüzgârların taşıyarak oluşturdukları
 Sakarya nehri hangi denize dökülür|hangi denize|Sakarya nehri dökülür
@@ -114,7 +114,7 @@ Ağaçların ve taşların yosun tutan tarafı hangi yönü gösterir|hangi yön
 Bir yerin tepeden görünümüne ne ad verilir|görünümüne ad|Bir yerin tepeden
 Bir yerin kuş bakışı taslak çizimine ne denir|taslak çizimine denir|Bir yerin kuş bakışı
 Hava sıcaklığını ölçen araca ne ad verilir|araca ad|Hava sıcaklığını ölçen
-Yüksekliği 500m’den fazla olan yerlere ne ad verilir|yerlere ad|Yüksekliği 500m’den fazla olan
+Yüksekliği 500m’den fazla olan yerlere ne ad verilir|yerlere ad|Yüksekliği 500mden fazla olan
 Üç tarafı sularla kaplı kara parçasına ne ad verilir|kara parçasına ad|Üç tarafı sularla kaplı
 Çevresine göre daha alçakta bulunan ve tarıma elverişli geniş, düz kara parçasına ne ad verilir|kara parçasına ad|Çevresine göre daha alçakta bulunan ve tarıma elverişli geniş, düz
 Karaların denizlere doğru olan dar uzantısına ne ad verilir|Karaların uzantısına ad|denizlere doğru olan dar
@@ -200,7 +200,7 @@ Dış çekirdek neden oluşur|neden oluşur|Dış çekirdek
 Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen katı cisimlere ne ad verilir|katı cisimlere ad|Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen
 Direnci düşük kayaçların bulunduğu arazilerde ne tür yer şekileri meydana gelir|ne tür yer şekilleri|Direnci düşük kayaçların bulunduğu arazilerde meydana gelir
 Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri nerede bulunur|nerede|Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri
-Tortul kayaçların bir diğer adı nedir|kayaçların bir diğer adı|Tortul
+Tortul kayaçların bir diğer adı nedir|kayaçların adı|diğer Tortul
 Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan kayaçlara ne isim verilir|kayaçlara isim|Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan
 Kayaların başkalaşıma uğramasına ne sebep olur|sebep olur|Kayaların başkalaşıma uğramasına
 Yeryüzü şekillerinin oluşmasına sebep olan nedir|sebep|Yeryüzü şekillerinin oluşmasına
@@ -226,11 +226,11 @@ Tsunami denen dev dalgalara ne sebep olur|sebep olur|Tsunami denen dev dalgalara
 Depremin aletle ölçülen büyüklüğüne ne denir|büyüklüğüne denir|Depremin aletle ölçülen
 Ülkemizin de içinde bulunduğu deprem kuşağı hangisidir|deprem kuşağı|Ülkemizin de içinde bulunduğu
 Yeryüzünde depremlerin çoğunluğu nerede olur|nerede|Yeryüzünde depremlerin çoğunluğu
-Yeryüzünde kendine özgü bir iklimi, bitki örtüsü ve hayvan topluluğu bulunduran bölgelere ne ad verilir||
-Canlıların çevreyle birlikte oluşturdukları yaşam birlikteliklerine ne denir||
+Yeryüzünde kendine özgü bir iklimi, bitki örtüsü ve hayvan topluluğu bulunduran bölgelere ne ad verilir|bölgelere ad|Yeryüzünde kendine özgü bir iklimi bitki örtüsü ve hayvan topluluğu bulunduran
+Canlıların çevreyle birlikte oluşturdukları yaşam birlikteliklerine ne denir|yaşam birlikteliklerine denir|Canlıların çevreyle birlikte oluşturdukları
 Biyomlar neyin en büyük birimleridir||
-Ekosistemin en büyük birimi nedir||
-Biyomların yeryüzüne dağılışındaki en büyük etken koşul hangisidir||
+Ekosistemin en büyük birimi nedir|Ekosistemin birimi|en büyük
+Biyomların yeryüzüne dağılışındaki en büyük etken koşul hangisidir|etken koşul|Biyomların yeryüzüne dağılışındaki en büyük
 Atmosferdeki Azot toplam gaz miktarının yüzde kaçını oluşturur||
 Denizler ve okyanuslar yeryüzünün yüzde kaçını meydana getirir||
 Deniz ekosisteminin ortalama derinliği ne kadardır||
@@ -239,27 +239,27 @@ Ekosfer kaç büyük ekosistemden oluşur||
 Tundra bölgelerinde en yüksek hava sıcaklığı kaç dereceye ulaşır||
 Manş tüneli denizin kaç metre altında inşa edilmiştir||
 1907 yılında Çin’de meydana gelen kuraklık sonucu kaç kişi açlıktan etkilenmiştir||
-Hindistan’da 1,5 milyon kişinin ölümüyle sonuçlana kuraklık hangi yıllar arasında olmuştur||
+Hindistan’da 1,5 milyon kişinin ölümüyle sonuçlanan kuraklık hangi yıllar arasında olmuştur|hangi yıllar arasında|Hindistanda 1,5 milyon kişinin ölümüyle sonuçlanan kuraklık olmuştur
 IV. Jeolojik zamanın başlarında Dünya genelinde buzul alanları kaçıncı enleme kadar gelmiştir||
-Aztek uygarlığı hangi yüzyıllar arasında hüküm sürmüştür||
+Aztek uygarlığı hangi yüzyıllar arasında hüküm sürmüştür|hangi yüzyıllar arasında|Aztek uygarlığı hüküm sürmüştür
 Çin uygarlığı tarihi kaç yıla dayanır||
-Barut, pusula, mürekkep, kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık hangisidir||
+Barut, pusula, mürekkep, kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık hangisidir|uygarlık|Barut pusula mürekkep kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık
 Dağıtım neyin tüketiciye ulaştırılmasıdır||
 Tüketim neyin kullanılmasıdır||
-Yer yuvarlağındaki iç içe kürelere ne ad verilir||
+Yer yuvarlağındaki iç içe kürelere ne ad verilir|kürelere ad|Yer yuvarlağındaki iç içe
 Yer kabuğunun karalardaki ortalama kalınlığı ne kadardır||
 Yer kabuğunun okyanuslardaki ortalama kalınlığı ne kadardır||
 Granitik Kabuğun yoğunluğu ne kadardır||
 Sima tabakası bünyesinde ne yoğunluğundan dolayı bu ismi alınmıştır||
-Çekirdek tabakanın diğer bir adı nedir||
+Çekirdek tabakanın diğer bir adı nedir|Çekirdek tabakanın adı|diğer
 Granit, siyenit, diyorit ve gabro ne tip kayaçlardır||
 Levha tektoniği teorisi kimin teorisinin geliştirilmiş halidir||
 Yeryüzündeki deprem bölgelerinin dağılışı neyle paralellik gösterir||
 Dağ oluşumu hareketleri kaç şekilde gerçekleşir||
 Tortul tabakanın kırılmasıyla ne oluşur||
-Transgresyon ve regresyon hangi hareketler dahilinde incelenir||
-Transgresyon kısaca nedir||
-Regresyon kısaca nedir||
+Transgresyon ve regresyon hangi hareketler dahilinde incelenir|hangi hareketler|Transgresyon ve regresyon dahilinde incelenir
+Transgresyon kısaca nedir|Transgresyon|kısaca
+Regresyon kısaca nedir|Regresyon|kısaca
 Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğu şekillerdir||
 Volkanlardan çıkan volkan tüfü, lapilli ve volkan bombası isimlerini neye göre alırlar||
 Rihter ölçeği ne amaçla kullanılır||
@@ -269,110 +269,110 @@ Levha hareketleri sonucunda ortaya çıkan gerilimler neyin kırılmasına neden
 Kaç çeşit deprem dalgası vardır||
 Boyuna dalgaların yer kabuğundaki hızları ne kadardır||
 P dalgalarının manto ile çekirdek arasındaki hızları ne kadardır||
-En fazla hasara neden olan dalgalar hangileridir||
-S dalgaları deprem esnasında hangi dalgalardan sonra gelirler||
+En fazla hasara neden olan dalgalar hangileridir|dalgalar|En fazla hasara neden olan
+S dalgaları deprem esnasında hangi dalgalardan sonra gelirler|hangi dalgalardan|S dalgaları deprem esnasında sonra gelirler
 Sismoloji neyle ilgili araştırmaları yapar||
 Büyük okyanus kıyıları deprem kuşağı yeryüzündeki depremlerin yüzde kaçına ev sahipliği yapar||
 Yeryüzündeki depremlerin yüzde kaçı Akdeniz-Himalaya kuşağında meydana gelir||
 Dünyada en az deprem olma olasılığı olan bölgeler nereleridir||
-Normal fay, ters fay dışındaki fay çeşidi hangisidir||
-Suyun atmosfer ile yeryüzü arasındaki dönüşüm hareketine ne ad verilir||
+Normal fay, ters fay dışındaki fay çeşidi hangisidir|fay çeşidi|Normal fay ters fay dışındaki fay çeşidi
+Suyun atmosfer ile yeryüzü arasındaki dönüşüm hareketine ne ad verilir|dönüşüm hareketine ad|Suyun atmosfer ile yeryüzü arasındaki
 Yeryüzündeki suların yüzde kaçı tatlı sulardan oluşur||
 Denizler ve okyanuslar yeryüzünde ne kadar alan kaplamaktadır||
 Dünyadaki okyanus sayısı kaçtır||
 Okyanus ve deniz suları neden içme ve kullanma suyu olarak doğrudan kullanıma uygun değildir||
-Göl ayağının diğer bir adı nedir||
+Göl ayağının diğer bir adı nedir|Göl ayağının adı|diğer
 Gideğeni olan göllerin suları nasıldır||
 Dünyada tektonik göllerin en yoğun olduğu bölge neresidir||
 Aral ne çeşit bir göldür||
 Debi ne cinsinden ifade edilir||
 Kayaçların ayrışması kaç şekilde gerçekleşir||
 Topraklar oluşum yerlerine göre kaç gruba ayrılır||
-Tundra topraklar hangi bölgelerde görülür||
+Tundra topraklar hangi bölgelerde görülür|hangi bölgelerde|Tundra topraklar görülür
 Kahverengi orman toprakları neyin fazla olduğundan dolayı tarımsal verimi düşüktür||
 Laterit toprakların neden tarımsal verimi düşüktür||
 Litosol toprakları ne anlama gelir||
 Lösler nasıl meydana gelir||
 Buzulların taşıdığı malzemelerin birikmesiyle ne çeşit topraklar oluşur||
 Orta kuşağın nemli ormanlarında yıllık yağış miktarı ne kadardır||
-Akdeniz bölgesinin doğal bitki örtüsü nedir||
-İçinde yer altı suyunun bulunduğu tabakaya ne ad verilir||
+Akdeniz bölgesinin doğal bitki örtüsü nedir|doğal bitki örtüsü|Akdeniz bölgesinin
+İçinde yer altı suyunun bulunduğu tabakaya ne ad verilir|tabakaya ad|İçinde yer altı suyunun bulunduğu
 Türkiye’nin iz düşüm alana göre km2 ye düşen ortalama nüfusu kaçtır||
 Türkiye’de bir yere kırsal yerleşme diyebilmek için neye bakılması gerekir||
-Nüfusu 10 000’in altında olan yerleşkelere ne ad verilir||
+Nüfusu 10000’in altında olan yerleşkelere ne ad verilir|yerleşkelere ad|Nüfusu 10000 altında olan
 Kırsal yerleşmeler kaça ayrılır||
-Mezralar daha çok hangi bölgemizde görülür||
+Mezralar daha çok hangi bölgemizde görülür|hangi bölgemizde|Mezralar daha çok görülür
 Ülkemizin yüzde kaçı şehirlerde yaşamaktadır||
 Türkiye’de şehirleşme hızı mı daha yüksektir, sanayileşme hızı mı||
 Türkiye’de şehirler fonksiyonlarına göre kaça ayrılırlar||
-Nüfus hangi 3 yaş grubunda incelenir||
-Bir ülkede genç nüfus hangi yaş grubu olarak değerlendirilir||
-Türkiye’de nüfusun çoğunlukta olduğu yaş grubu hangisidir||
-Çalışma çağındaki nüfusun taban alındığı yaş nedir||
+Nüfus hangi üç yaş grubunda incelenir|hangi üç yaş grubunda|Nüfus incelenir
+Bir ülkede genç nüfus hangi yaş grubu olarak değerlendirilir|hangi yaş grubu|Bir ülkede genç nüfus olarak değerlendirilir
+Türkiye’de nüfusun çoğunlukta olduğu yaş grubu hangisidir|yaş grubu|Türkiyede nüfusun çoğunlukta olduğu
+Çalışma çağındaki nüfusun taban alındığı yaş nedir|yaş|Çalışma çağındaki nüfusun taban alındığı
 Türkiye’de ilk periyodik nüfus sayımı ne zaman yapılmıştır||
-Türkiye’de ikinci nüfus sayımı hangi tarihte yapılmıştır||
-2000 yılına kadar yapılan nüfus sayımlarında hangi yasak uygulanmıştır||
+Türkiye’de ikinci nüfus sayımı hangi tarihte yapılmıştır|hangi tarihte|Türkiyede ikinci nüfus sayımı yapılmıştır
+2000 yılına kadar yapılan nüfus sayımlarında hangi yasak uygulanmıştır|hangi yasak|2000 yılına kadar yapılan nüfus sayımlarında uygulanmıştır
 TÜİK neyin kısaltmasıdır||
-Türkiye İstatistik Kurumunun kısa adı nedir||
+Türkiye İstatistik Kurumunun kısa adı nedir|kısa adı|Türkiye İstatistik Kurumunun
 Cumhuriyetimizin ilk nüfus sayımına göre nüfus ne kadardı||
-İç göçler hangi iki ana başlıkla ele alınır||
+İç göçler hangi iki ana başlıkla ele alınır|hangi iki ana başlıkta|İç göçler ele alınır
 Türkiye’de iç göçlerde kadınlar mı daha fazla etkilidir, erkekler mi||
-İç göçlerde hangi yaş grubunun etkisi daha fazladır||
+İç göçlerde hangi yaş grubunun etkisi daha fazladır|hangi yaş grubunun|İç göçlerde etkisi daha fazladır
 1979 yılında Sovyetler Birliği’nin Afganistan’ı işgalinde Türkiye2ye sığınan Afgan sayısı kaçtır||
-Yunanistan’da yaşayan yaklaşık 400 bin Türk hangi antlaşma sayesinde Türkiye’ye göçmüştür||
+Yunanistan’da yaşayan yaklaşık 400 bin Türk hangi antlaşma sayesinde Türkiye’ye göçmüştür|hangi antlaşma|Yunanistanda yaşayan yaklaşık 400 bin Türk sayesinde Türkiyeye göçmüştür
 Kır nüfusundaki doğurganlık oranı kent nüfusuna göre nasıldır||
 Ordu, Rize ve Trabzon’a ne amaçla geçici iç göçler gerçekleşmektedir||
 1950’li yıllarda göç hareketleri daha çok nerden nereye doğruydu||
 1980’li yıllarda göç hareketleri daha çok nerden nereye doğruydu||
 Cumhuriyetin ilk yıllarında ülkenin kaçta kaçı kırsal kesimlerde yaşamaktaydı||
 Ülkemizde yüksek ve engebeli yerlerde nüfus nasıldır||
-İnsan ve insana ait faaliyetleri inceleyen coğrafyanın alt dalının adı nedir||
-Yeryüzünün insan tarafından değiştirilmiş ve değiştirilmekte olan görünümü, coğrafyanın hangi alt dalı tarafından incelenmektedir||
-İnsanlara ait ulaşım, sanayi, turizm, nüfuslanma ve yerleşme gibi faaliyetleri coğrafyanın hangi alt dalı konu edinir||
-Doğa ile insan arasındaki etkileşimi inceleyen bilim dalı hangisidir||
-Uluslar arası örgütlerin kuruluşu, yapısı ve faaliyetleri hangi coğrafya alt dalının inceleme alanına girmektedir||
-İnsanların yaşamlarını sürdürdükleri ve çeşitli ekonomik faaliyetlerde bulundukları bölgeye ne denir||
+İnsan ve insana ait faaliyetleri inceleyen coğrafyanın alt dalının adı nedir|coğrafyanın alt dalının adı|İnsan ve insana ait faaliyetleri inceleyen
+Yeryüzünün insan tarafından değiştirilmiş ve değiştirilmekte olan görünümü, coğrafyanın hangi alt dalı tarafından incelenmektedir|coğrafyanın hangi alt dalı|Yeryüzünün insan tarafından değiştirilmiş ve değiştirilmekte olan görünümü incelenmektedir
+İnsanlara ait ulaşım, sanayi, turizm, nüfuslanma ve yerleşme gibi faaliyetleri coğrafyanın hangi alt dalı konu edinir|coğrafyanın hangi alt dalı|İnsanlara ait ulaşım sanayi turizm nüfuslanma ve yerleşme gibi faaliyetleri konu edinir
+Doğa ile insan arasındaki etkileşimi inceleyen bilim dalı hangisidir|bilim dalı|Doğa ile insan arasındaki etkileşimi inceleyen
+Uluslar arası örgütlerin kuruluşu, yapısı ve faaliyetleri hangi coğrafya alt dalının inceleme alanına girmektedir|hangi coğrafya alt dalının|Uluslar arası örgütlerin kuruluşu yapısı ve faaliyetleri inceleme alanına girmektedir
+İnsanların yaşamlarını sürdürdükleri ve çeşitli ekonomik faaliyetlerde bulundukları bölgeye ne denir|bölgeye denir|İnsanların yaşamlarını sürdürdükleri ve çeşitli ekonomik faaliyetlerde bulundukları
 Eski çağlarda, tarımın yaygınlaşması ve tarımda hayvanların kullanılmaya başlaması neye sebebiyet vermiştir||
-Ticaretin öneminin artmasıyla deniz kıyısına kurulan şehirlere ne denir||
-Devletleşmeyle birlikte gelen merkezi şehirlere ne isim verilir||
-Peygamberler ve din yayıcılarının yaşadığı yerler etrafında kurulan şehirlere ne denir||
-Taş kömürü, demir, petrol ve altın gibi kaynakların etrafına kurulan şehirlere ne isim verilir||
-Sanayileşmenin artmasıyla, maden yataklarının etrafında baş gösteren şehirleşme çeşidi nedir||
-İnsanların yılın belirli vakitleri özellikle gidip gezdiği şehirlere ne ad verilir||
-Son yüzyılda, bilim ve teknolojinin gelişiminde başı çeken şehirlere ne ad verilir||
+Ticaretin öneminin artmasıyla deniz kıyısına kurulan şehirlere ne denir|şehirlere denir|Ticaretin öneminin artmasıyla deniz kıyısına kurulan
+Devletleşmeyle birlikte gelen merkezi şehirlere ne isim verilir|merkezi şehirlere isim|Devletleşmeyle birlikte gelen
+Peygamberler ve din yayıcılarının yaşadığı yerler etrafında kurulan şehirlere ne denir|şehirlere denir|Peygamberler ve din yayıcılarının yaşadığı yerler etrafında kurulan
+Taş kömürü, demir, petrol ve altın gibi kaynakların etrafına kurulan şehirlere ne isim verilir|şehirlere isim|Taş kömürü demir petrol ve altın gibi kaynakların etrafında kurulan
+Sanayileşmenin artmasıyla, maden yataklarının etrafında baş gösteren şehirleşme çeşidi nedir|şehirleşme çeşidi|Sanayileşmenin artmasıyla maden yataklarının etrafında baş gösteren
+İnsanların yılın belirli vakitleri özellikle gidip gezdiği şehirlere ne ad verilir|şehirlere ad|İnsanların yılın belirli vakitleri özellikle gidip gezdiği
+Son yüzyılda, bilim ve teknolojinin gelişiminde başı çeken şehirlere ne ad verilir|şehirlere ad|Son yüzyılda bilim ve teknolojinin gelişiminde başı çeken
 Dünyada yerleşim alanlarının dağılışı nasıldır||
 Denizler, buzullar, dağlar ve yer şekilleri yerleşimi nasıl etkiler||
-Yerleşmeyi sınırlandıran en önemli faktör nedir||
+Yerleşmeyi sınırlandıran en önemli faktör nedir|faktör|Yerleşmeyi sınırlandıran
 Dünyadaki yerleşmeler nerede son bulmaktadır||
-Kutup bölgelerinde yerleşmeyi sınırlandıran en önemli faktör nedir||
+Kutup bölgelerinde yerleşmeyi sınırlandıran en önemli faktör nedir|faktör|Kutup bölgelerinde yerleşmeyi sınırlandıran en önemli
 Yeryüzündeki yerleşmelerin genel olarak kurulduğu yerler nerelerdir||
-Ulaşımda sınırlayıcı etki yapan en önemli faktör nedir||
+Ulaşımda sınırlayıcı etki yapan en önemli faktör nedir|faktör|Ulaşımda sınırlayıcı etki yapan en önemli
 Yükseltinin fazla olması yerleşmeyi nasıl etkiler||
 Sıcaklık yükseklere çıkıldıkça nasıl değişir||
 Yerleşmeler yükseklere çıkıldıkça nasıl değişir||
-Yükseltiye bağlı olarak yerleşimin sona erdiği noktaya ne denir||
+Yükseltiye bağlı olarak yerleşimin sona erdiği noktaya ne denir|noktaya|Yükseltiye bağlı olarak yerleşimin sona erdiği
 Yerleşmenin yükselti sınırı kutuplardan ekvatora gidildikçe nasıl değişir||
-Ekvatorda kentlerin yükseğe kurulmasının sebebi nedir||
+Ekvatorda kentlerin yükseğe kurulmasının sebebi nedir|kurulmasının sebebi|
 Gür ormanlar yerleşmeyi nasıl etkiler||
 Bataklıklar yerleşmeyi nasıl etkiler||
-İnsanların geçimini tarım ve hayvancılıktan sağladığı köylere ve köy altı yerleşmelerine ne denir||
-Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük yerleşim birimlerine ne denir||
-Kır yerleşmelerinin en büyüğüne ne denir||
+İnsanların geçimini tarım ve hayvancılıktan sağladığı köylere ve köy altı yerleşmelerine ne denir|köylere ve köy altı yerleşmelerine denir|İnsanların geçimini tarım ve hayvancılıktan sağladığı
+Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük yerleşim birimlerine ne denir|yerleşim birimlerine|Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük
+Kır yerleşmelerinin en büyüğüne ne denir|Kır yerleşmelerinin denir|en büyüğüne
 Köylerdeki nüfus miktarı genelde kaçtır||
-Köy yerleşmelerinin toplu olmasındaki en önemli faktör nedir||
-Çizgisel yerleşim dokusunun oluşmasındaki en önemli faktör nedir||
-Yer şekillerinin az engebeli olduğu yerlerde görülen yerleşmeye ne ad verilir||
-İnsanların barınma, korunma ve çalışma gibi ihtiyaçlarını karşıladığı tüm yapılara ne denir||
+Köy yerleşmelerinin toplu olmasındaki en önemli faktör nedir|faktör|Köy yerleşmelerinin toplu olmasındaki en önemli
+Çizgisel yerleşim dokusunun oluşmasındaki en önemli faktör nedir|faktör|Çizgisel yerleşim dokusunun oluşmasındaki en önemli
+Yer şekillerinin az engebeli olduğu yerlerde görülen yerleşmeye ne ad verilir|yerleşmeye ad|Yer şekillerinin az engebeli olduğu yerlerde görülen
+İnsanların barınma, korunma ve çalışma gibi ihtiyaçlarını karşıladığı tüm yapılara ne denir|tüm yapılara|İnsanların barınma korunma ve çalışma gibi ihtiyaçlarını karşıladığı
 Meskenlerin yapımında kullanılan malzemeler üzerinde en çok ne etkilidir||
-Ağaç malzeme kullanılarak ya da ağaçların üst üste konulmasıyla yapılan meskenlere ne denir||
-Toprak evlerin en yaygın tipi nedir||
-Orman örtüsünün bulunmadığı yüksek yaylalarda ve dağlarda yaygın olan mesken çeşidi nedir||
-Tuğla, briket, çimento ve gaz beton gibi çeşitli yapı malzemelerinin kullanıldığı meskenlere ne ad verilir||
-Ekvator kesiminde, meskenlerin bambu ve kamıştan yapılmasının en önemli sebebi nedir||
-Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verilir||
-Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen yerleşim çeşidi nedir||
+Ağaç malzeme kullanılarak ya da ağaçların üst üste konulmasıyla yapılan meskenlere ne denir|meskenlere|Ağaç malzeme kullanılarak ya da ağaçların üst üste konulmasıyla yapılan
+Toprak evlerin en yaygın tipi nedir|tipi|Toprak evlerin en yaygın
+Orman örtüsünün bulunmadığı yüksek yaylalarda ve dağlarda yaygın olan mesken çeşidi nedir|mesken çeşidi| Orman örtüsünün bulunmadığı yüksek yaylalarda ve dağlarda yaygın olan
+Tuğla, briket, çimento ve gaz beton gibi çeşitli yapı malzemelerinin kullanıldığı meskenlere ne ad verilir|meskenlere ad|Tuğla briket çimento ve gaz beton gibi çeşitli yapı malzemelerinin kullanıldığı
+Ekvator kesiminde, meskenlerin bambu ve kamıştan yapılmasının en önemli sebebi nedir|sebebi|Ekvator kesiminde meskenlerin bambu ve kamıştan yapılmasının en önemli
+Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verilir|meskenlere ad|Kutuplarda yakın yerde kar ve buz kullanılarak yapılan
+Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen yerleşim çeşidi nedir|yerleşim çeşidi|Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen
 İlk insanlar nereleri mesken olarak seçmişlerdir||
-İlk yerleşim yerlerinin akarsu boylarına kurulmasının temel sebebi nedir||
-İnsanların yılın belli bir dönemlerinde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir||
-Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının sebebi nedir||
+İlk yerleşim yerlerinin akarsu boylarına kurulmasının temel sebebi nedir|temel sebebi|İlk yerleşim yerlerinin akarsu boylarına kurulmasının
+İnsanların yılın belli bir döneminde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir|yer değişikliğine |İnsanların yılın belli bir döneminde gezme görme ve dinlenme amaçlarına yönelik olarak yaptıkları
+Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının sebebi nedir|sebebi|Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının
 Bataklık bölgeler yerleşim koşullarını nasıl etkiler||
