@@ -30,8 +30,9 @@ class QuestionParser:
 
         for p_item in p:
             text = text.replace('(' + p_item + ')', ' ');
+        res = re.findall('[0-9,a-z,ğ,ü,ş,ç,ö,ı,â,'',’,A-Z,Ğ,Ü,Ş,Ç,Ö,İ,Â,-]+', text.replace('i̇','i').replace('\'','').replace('’',''));
         
-        return re.findall('[0-9,a-z,ğ,ü,ş,ç,ö,ı,â,'',’,A-Z,Ğ,Ü,Ş,Ç,Ö,İ,Â]+', text.replace('i̇','i').replace('\'','').replace('’','')); 
+        return [item.strip(',').strip('.').strip('?').strip('!').strip('.').strip(':').strip(';') for item in res]; 
     
     def tokenizeQuestions(self):
         self.questionsTokenized = [self.tokenize(sentence) for sentence in self.questions];
