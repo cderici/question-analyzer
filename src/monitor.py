@@ -59,9 +59,11 @@ getAllExpertResults()
 
 print("\n\n ===================== OTHERS ======================== \n\n")
 
-filteredNedir.extend(filteredVerilir)
-filteredNedir.extend(filteredHangisidir)
-filteredNedir.extend(filteredHangiBetween)
-filteredNedir.extend(filteredDenir)
+allExperts = filteredNedir
 
-MassAnalyzer.massShowFocusMod(mass.filterOthers(filteredNedir))
+allExperts.extend(filteredVerilir)
+allExperts.extend(filteredHangisidir)
+allExperts.extend(filteredHangiBetween)
+allExperts.extend(filteredDenir)
+
+MassAnalyzer.massShowFocusMod(mass.filterOthers(allExperts))
