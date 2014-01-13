@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3767, {label: "Kutuplara",nodeclass: "type-TK"});g.addNode(3768, {label: "yakın",nodeclass: "type-TK"});g.addNode(3769, {label: "yerde",nodeclass: "type-TK"});g.addNode(3770, {label: "kar",nodeclass: "type-TK"});g.addNode(3771, {label: "ve",nodeclass: "type-TK"});g.addNode(3772, {label: "buz",nodeclass: "type-TK"});g.addNode(3773, {label: "kullan",nodeclass: "type-TK"});g.addNode(3774, {label: "_",nodeclass: "type-TK"});g.addNode(3775, {label: "kullanılarak",nodeclass: "type-TK"});g.addNode(3776, {label: "yap",nodeclass: "type-TK"});g.addNode(3777, {label: "_",nodeclass: "type-TK"});g.addNode(3778, {label: "yapılan",nodeclass: "type-TK"});g.addNode(3779, {label: "meskenlere",nodeclass: "type-TK"});g.addNode(3780, {label: "ne",nodeclass: "type-TK"});g.addNode(3781, {label: "ad",nodeclass: "type-TK"});g.addNode(3782, {label: "ver",nodeclass: "type-TK"});g.addNode(3783, {label: "verilir",nodeclass: "type-TK"});g.addNode(3784, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3767,3777,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3768,3769,{label: "MODIFIER"});g.addEdge(null,3769,3777,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3770,3771,{label: "OBJECT"});g.addEdge(null,3771,3772,{label: "COORDINATION"});g.addEdge(null,3772,3775,{label: "OBJECT"});g.addEdge(null,3773,3774,{label: "DERIV"});g.addEdge(null,3774,3775,{label: "DERIV"});g.addEdge(null,3775,3777,{label: "MODIFIER"});g.addEdge(null,3776,3777,{label: "DERIV"});g.addEdge(null,3777,3778,{label: "DERIV"});g.addEdge(null,3778,3779,{label: "MODIFIER"});g.addEdge(null,3779,3783,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3780,3781,{label: "MODIFIER"});g.addEdge(null,3781,3783,{label: "SUBJECT"});g.addEdge(null,3782,3783,{label: "DERIV"});g.addEdge(null,3783,3784,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

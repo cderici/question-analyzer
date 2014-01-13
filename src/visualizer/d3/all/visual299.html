@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Türkiye’de ikinci nüfus sayımı hangi tarihte yapılmıştır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3160, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(3161, {label: "ikinci",nodeclass: "type-TK"});g.addNode(3162, {label: "nüfus",nodeclass: "type-TK"});g.addNode(3163, {label: "sayımı",nodeclass: "type-TK"});g.addNode(3164, {label: "hangi",nodeclass: "type-TK"});g.addNode(3165, {label: "tarihte",nodeclass: "type-TK"});g.addNode(3166, {label: "yap",nodeclass: "type-TK"});g.addNode(3167, {label: "yapılmıştır",nodeclass: "type-TK"});g.addNode(3168, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3160,3163,{label: "CLASSIFIER"});g.addEdge(null,3161,3162,{label: "MODIFIER"});g.addEdge(null,3162,3163,{label: "CLASSIFIER"});g.addEdge(null,3163,3167,{label: "SUBJECT"});g.addEdge(null,3164,3165,{label: "MODIFIER"});g.addEdge(null,3165,3167,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3166,3167,{label: "DERIV"});g.addEdge(null,3167,3168,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

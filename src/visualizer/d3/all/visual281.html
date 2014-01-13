@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Dünyada tektonik göllerin en yoğun olduğu bölge neresidir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2989, {label: "Dünyada",nodeclass: "type-TK"});g.addNode(2990, {label: "tektonik",nodeclass: "type-TK"});g.addNode(2991, {label: "göllerin",nodeclass: "type-TK"});g.addNode(2992, {label: "en",nodeclass: "type-TK"});g.addNode(2993, {label: "yoğun",nodeclass: "type-TK"});g.addNode(2994, {label: "ol",nodeclass: "type-TK"});g.addNode(2995, {label: "olduğu",nodeclass: "type-TK"});g.addNode(2996, {label: "bölge",nodeclass: "type-TK"});g.addNode(2997, {label: "nere",nodeclass: "type-TK"});g.addNode(2998, {label: "neresidir",nodeclass: "type-TK"});g.addNode(2999, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2989,2994,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,2990,2991,{label: "CLASSIFIER"});g.addEdge(null,2991,2994,{label: "SUBJECT"});g.addEdge(null,2992,2993,{label: "MODIFIER"});g.addEdge(null,2993,2994,{label: "MODIFIER"});g.addEdge(null,2994,2995,{label: "DERIV"});g.addEdge(null,2995,2996,{label: "MODIFIER"});g.addEdge(null,2996,2998,{label: "SUBJECT"});g.addEdge(null,2997,2998,{label: "DERIV"});g.addEdge(null,2998,2999,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

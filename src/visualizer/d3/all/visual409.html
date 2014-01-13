@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>İnsanların beslenme ihtiyacını karşılamak için sürdürdüğü tarım ve hayvvancılık faaliyetleri neyle ilişkilidir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4493, {label: "İnsanların",nodeclass: "type-TK"});g.addNode(4494, {label: "besle",nodeclass: "type-TK"});g.addNode(4495, {label: "_",nodeclass: "type-TK"});g.addNode(4496, {label: "beslenme",nodeclass: "type-TK"});g.addNode(4497, {label: "ihtiyacını",nodeclass: "type-TK"});g.addNode(4498, {label: "karşıla",nodeclass: "type-TK"});g.addNode(4499, {label: "karşılamak",nodeclass: "type-TK"});g.addNode(4500, {label: "için",nodeclass: "type-TK"});g.addNode(4501, {label: "sür",nodeclass: "type-TK"});g.addNode(4502, {label: "_",nodeclass: "type-TK"});g.addNode(4503, {label: "sürdürdüğü",nodeclass: "type-TK"});g.addNode(4504, {label: "tarım",nodeclass: "type-TK"});g.addNode(4505, {label: "ve",nodeclass: "type-TK"});g.addNode(4506, {label: "hayvvancılık",nodeclass: "type-TK"});g.addNode(4507, {label: "faaliyetleri",nodeclass: "type-TK"});g.addNode(4508, {label: "neyle",nodeclass: "type-TK"});g.addNode(4509, {label: "ilişki",nodeclass: "type-TK"});g.addNode(4510, {label: "_",nodeclass: "type-TK"});g.addNode(4511, {label: "ilişkilidir",nodeclass: "type-TK"});g.addNode(4512, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4493,4495,{label: "SUBJECT"});g.addEdge(null,4494,4495,{label: "DERIV"});g.addEdge(null,4495,4496,{label: "DERIV"});g.addEdge(null,4496,4497,{label: "CLASSIFIER"});g.addEdge(null,4497,4498,{label: "OBJECT"});g.addEdge(null,4498,4499,{label: "DERIV"});g.addEdge(null,4499,4500,{label: "OBJECT"});g.addEdge(null,4500,4502,{label: "MODIFIER"});g.addEdge(null,4501,4502,{label: "DERIV"});g.addEdge(null,4502,4503,{label: "DERIV"});g.addEdge(null,4503,4504,{label: "MODIFIER"});g.addEdge(null,4504,4505,{label: "OBJECT"});g.addEdge(null,4505,4506,{label: "COORDINATION"});g.addEdge(null,4506,4507,{label: "CLASSIFIER"});g.addEdge(null,4507,4511,{label: "SUBJECT"});g.addEdge(null,4508,4511,{label: "MODIFIER"});g.addEdge(null,4509,4510,{label: "DERIV"});g.addEdge(null,4510,4511,{label: "DERIV"});g.addEdge(null,4511,4512,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

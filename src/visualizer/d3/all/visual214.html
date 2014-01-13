@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Volkanik kökenli adaların en fazla bulunduğu yer neresidir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2304, {label: "Volkanik",nodeclass: "type-TK"});g.addNode(2305, {label: "köken",nodeclass: "type-TK"});g.addNode(2306, {label: "kökenli",nodeclass: "type-TK"});g.addNode(2307, {label: "adaların",nodeclass: "type-TK"});g.addNode(2308, {label: "en",nodeclass: "type-TK"});g.addNode(2309, {label: "fazla",nodeclass: "type-TK"});g.addNode(2310, {label: "bulun",nodeclass: "type-TK"});g.addNode(2311, {label: "bulunduğu",nodeclass: "type-TK"});g.addNode(2312, {label: "yer",nodeclass: "type-TK"});g.addNode(2313, {label: "nere",nodeclass: "type-TK"});g.addNode(2314, {label: "neresidir",nodeclass: "type-TK"});g.addNode(2315, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2304,2306,{label: "MODIFIER"});g.addEdge(null,2305,2306,{label: "DERIV"});g.addEdge(null,2306,2307,{label: "MODIFIER"});g.addEdge(null,2307,2310,{label: "SUBJECT"});g.addEdge(null,2308,2309,{label: "MODIFIER"});g.addEdge(null,2309,2310,{label: "MODIFIER"});g.addEdge(null,2310,2311,{label: "DERIV"});g.addEdge(null,2311,2312,{label: "MODIFIER"});g.addEdge(null,2312,2314,{label: "SUBJECT"});g.addEdge(null,2313,2314,{label: "DERIV"});g.addEdge(null,2314,2315,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

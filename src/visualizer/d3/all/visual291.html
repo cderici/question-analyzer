@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Mezralar daha çok hangi bölgemizde görülür</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3083, {label: "Mezralar",nodeclass: "type-TK"});g.addNode(3084, {label: "daha",nodeclass: "type-TK"});g.addNode(3085, {label: "çok",nodeclass: "type-TK"});g.addNode(3086, {label: "hangi",nodeclass: "type-TK"});g.addNode(3087, {label: "bölgemizde",nodeclass: "type-TK"});g.addNode(3088, {label: "gör",nodeclass: "type-TK"});g.addNode(3089, {label: "görülür",nodeclass: "type-TK"});g.addNode(3090, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3083,3089,{label: "SUBJECT"});g.addEdge(null,3084,3085,{label: "MODIFIER"});g.addEdge(null,3085,3086,{label: "MODIFIER"});g.addEdge(null,3086,3087,{label: "MODIFIER"});g.addEdge(null,3087,3089,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3088,3089,{label: "DERIV"});g.addEdge(null,3089,3090,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

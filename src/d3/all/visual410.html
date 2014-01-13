@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Orta kuşaktaki pek çok insanın en temel besin maddesi nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4513, {label: "Orta",nodeclass: "type-TK"});g.addNode(4514, {label: "kuşak",nodeclass: "type-TK"});g.addNode(4515, {label: "kuşaktaki",nodeclass: "type-TK"});g.addNode(4516, {label: "pek",nodeclass: "type-TK"});g.addNode(4517, {label: "çok",nodeclass: "type-TK"});g.addNode(4518, {label: "insanın",nodeclass: "type-TK"});g.addNode(4519, {label: "en",nodeclass: "type-TK"});g.addNode(4520, {label: "temel",nodeclass: "type-TK"});g.addNode(4521, {label: "besin",nodeclass: "type-TK"});g.addNode(4522, {label: "maddesi",nodeclass: "type-TK"});g.addNode(4523, {label: "ne",nodeclass: "type-TK"});g.addNode(4524, {label: "nedir",nodeclass: "type-TK"});g.addNode(4525, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4513,4514,{label: "MODIFIER"});g.addEdge(null,4514,4515,{label: "DERIV"});g.addEdge(null,4515,4518,{label: "MODIFIER"});g.addEdge(null,4516,4518,{label: "MODIFIER"});g.addEdge(null,4517,4518,{label: "DETERMINER"});g.addEdge(null,4518,4522,{label: "POSSESSOR"});g.addEdge(null,4519,4520,{label: "MODIFIER"});g.addEdge(null,4520,4521,{label: "MODIFIER"});g.addEdge(null,4521,4522,{label: "CLASSIFIER"});g.addEdge(null,4522,4524,{label: "SUBJECT"});g.addEdge(null,4523,4524,{label: "DERIV"});g.addEdge(null,4524,4525,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

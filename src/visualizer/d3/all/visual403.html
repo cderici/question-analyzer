@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Tarih boyunca insanın doğadan yararlanmasını hızlandıran en önemli faktör ne olmuştur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4399, {label: "Tarih",nodeclass: "type-TK"});g.addNode(4400, {label: "boyunca",nodeclass: "type-TK"});g.addNode(4401, {label: "insanın",nodeclass: "type-TK"});g.addNode(4402, {label: "doğadan",nodeclass: "type-TK"});g.addNode(4403, {label: "yarar",nodeclass: "type-TK"});g.addNode(4404, {label: "_",nodeclass: "type-TK"});g.addNode(4405, {label: "yararlanmasını",nodeclass: "type-TK"});g.addNode(4406, {label: "hız",nodeclass: "type-TK"});g.addNode(4407, {label: "_",nodeclass: "type-TK"});g.addNode(4408, {label: "_",nodeclass: "type-TK"});g.addNode(4409, {label: "hızlandıran",nodeclass: "type-TK"});g.addNode(4410, {label: "en",nodeclass: "type-TK"});g.addNode(4411, {label: "önem",nodeclass: "type-TK"});g.addNode(4412, {label: "önemli",nodeclass: "type-TK"});g.addNode(4413, {label: "faktör",nodeclass: "type-TK"});g.addNode(4414, {label: "ne",nodeclass: "type-TK"});g.addNode(4415, {label: "olmuştur",nodeclass: "type-TK"});g.addNode(4416, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4399,4400,{label: "OBJECT"});g.addEdge(null,4400,4415,{label: "MODIFIER"});g.addEdge(null,4401,4405,{label: "POSSESSOR"});g.addEdge(null,4402,4405,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,4403,4404,{label: "DERIV"});g.addEdge(null,4404,4405,{label: "DERIV"});g.addEdge(null,4405,4409,{label: "OBJECT"});g.addEdge(null,4406,4407,{label: "DERIV"});g.addEdge(null,4407,4408,{label: "DERIV"});g.addEdge(null,4408,4409,{label: "DERIV"});g.addEdge(null,4409,4413,{label: "MODIFIER"});g.addEdge(null,4410,4412,{label: "MODIFIER"});g.addEdge(null,4411,4412,{label: "DERIV"});g.addEdge(null,4412,4413,{label: "MODIFIER"});g.addEdge(null,4413,4415,{label: "SUBJECT"});g.addEdge(null,4414,4415,{label: "MODIFIER"});g.addEdge(null,4415,4416,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

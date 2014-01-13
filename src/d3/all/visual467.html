@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ekvator bölgesinde nüfuslanmanın az olmasının en temel sebebi nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(5339, {label: "Ekvator",nodeclass: "type-TK"});g.addNode(5340, {label: "bölgesinde",nodeclass: "type-TK"});g.addNode(5341, {label: "nüfus",nodeclass: "type-TK"});g.addNode(5342, {label: "_",nodeclass: "type-TK"});g.addNode(5343, {label: "nüfuslanmanın",nodeclass: "type-TK"});g.addNode(5344, {label: "az",nodeclass: "type-TK"});g.addNode(5345, {label: "ol",nodeclass: "type-TK"});g.addNode(5346, {label: "olmasının",nodeclass: "type-TK"});g.addNode(5347, {label: "en",nodeclass: "type-TK"});g.addNode(5348, {label: "temel",nodeclass: "type-TK"});g.addNode(5349, {label: "sebebi",nodeclass: "type-TK"});g.addNode(5350, {label: "ne",nodeclass: "type-TK"});g.addNode(5351, {label: "nedir",nodeclass: "type-TK"});g.addNode(5352, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5339,5340,{label: "CLASSIFIER"});g.addEdge(null,5340,5351,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5341,5342,{label: "DERIV"});g.addEdge(null,5342,5343,{label: "DERIV"});g.addEdge(null,5343,5345,{label: "SUBJECT"});g.addEdge(null,5344,5345,{label: "MODIFIER"});g.addEdge(null,5345,5346,{label: "DERIV"});g.addEdge(null,5346,5349,{label: "POSSESSOR"});g.addEdge(null,5347,5348,{label: "MODIFIER"});g.addEdge(null,5348,5349,{label: "CLASSIFIER"});g.addEdge(null,5349,5351,{label: "SUBJECT"});g.addEdge(null,5350,5351,{label: "DERIV"});g.addEdge(null,5351,5352,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

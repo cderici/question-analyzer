@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ülkemizde cumhuriyet öncesi ilk nüfus sayımı hangi tarihlerde yapılmıştır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(938, {label: "Ülkemizde",nodeclass: "type-TK"});g.addNode(939, {label: "cumhuriyet",nodeclass: "type-TK"});g.addNode(940, {label: "önce",nodeclass: "type-TK"});g.addNode(941, {label: "öncesi",nodeclass: "type-TK"});g.addNode(942, {label: "ilk",nodeclass: "type-TK"});g.addNode(943, {label: "nüfus",nodeclass: "type-TK"});g.addNode(944, {label: "sayımı",nodeclass: "type-TK"});g.addNode(945, {label: "hangi",nodeclass: "type-TK"});g.addNode(946, {label: "tarihlerde",nodeclass: "type-TK"});g.addNode(947, {label: "yap",nodeclass: "type-TK"});g.addNode(948, {label: "yapılmıştır",nodeclass: "type-TK"});g.addNode(949, {label: ".",nodeclass: "type-TK"});g.addEdge(null,938,948,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,939,940,{label: "OBJECT"});g.addEdge(null,940,941,{label: "DERIV"});g.addEdge(null,941,948,{label: "SUBJECT"});g.addEdge(null,942,943,{label: "MODIFIER"});g.addEdge(null,943,944,{label: "CLASSIFIER"});g.addEdge(null,944,948,{label: "SUBJECT"});g.addEdge(null,945,946,{label: "MODIFIER"});g.addEdge(null,946,948,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,947,948,{label: "DERIV"});g.addEdge(null,948,949,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

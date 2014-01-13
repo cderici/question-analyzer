@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Bir ülkede genç nüfus hangi yaş grubu olarak değerlendirilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3114, {label: "Bir",nodeclass: "type-TK"});g.addNode(3115, {label: "ülkede",nodeclass: "type-TK"});g.addNode(3116, {label: "genç",nodeclass: "type-TK"});g.addNode(3117, {label: "nüfus",nodeclass: "type-TK"});g.addNode(3118, {label: "hangi",nodeclass: "type-TK"});g.addNode(3119, {label: "yaş",nodeclass: "type-TK"});g.addNode(3120, {label: "grubu",nodeclass: "type-TK"});g.addNode(3121, {label: "ol",nodeclass: "type-TK"});g.addNode(3122, {label: "olarak",nodeclass: "type-TK"});g.addNode(3123, {label: "değer",nodeclass: "type-TK"});g.addNode(3124, {label: "_",nodeclass: "type-TK"});g.addNode(3125, {label: "_",nodeclass: "type-TK"});g.addNode(3126, {label: "değerlendirilir",nodeclass: "type-TK"});g.addNode(3127, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3114,3115,{label: "DETERMINER"});g.addEdge(null,3115,3121,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3116,3117,{label: "MODIFIER"});g.addEdge(null,3117,3120,{label: "MODIFIER"});g.addEdge(null,3118,3119,{label: "MODIFIER"});g.addEdge(null,3119,3120,{label: "CLASSIFIER"});g.addEdge(null,3120,3121,{label: "OBJECT"});g.addEdge(null,3121,3122,{label: "DERIV"});g.addEdge(null,3122,3126,{label: "MODIFIER"});g.addEdge(null,3123,3124,{label: "DERIV"});g.addEdge(null,3124,3125,{label: "DERIV"});g.addEdge(null,3125,3126,{label: "DERIV"});g.addEdge(null,3126,3127,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

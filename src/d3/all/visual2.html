@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Akarsu aşındırması sonucunda meydana gelen deniz seviyesine yakın, hafif dalgalı düzlüklere ne denir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(11, {label: "Akarsu",nodeclass: "type-TK"});g.addNode(12, {label: "aşın",nodeclass: "type-TK"});g.addNode(13, {label: "_",nodeclass: "type-TK"});g.addNode(14, {label: "aşındırması",nodeclass: "type-TK"});g.addNode(15, {label: "sonucunda",nodeclass: "type-TK"});g.addNode(16, {label: "meydana",nodeclass: "type-TK"});g.addNode(17, {label: "gel",nodeclass: "type-TK"});g.addNode(18, {label: "gelen",nodeclass: "type-TK"});g.addNode(19, {label: "deniz",nodeclass: "type-TK"});g.addNode(20, {label: "seviyesine",nodeclass: "type-TK"});g.addNode(21, {label: "yakın",nodeclass: "type-TK"});g.addNode(22, {label: "hafif",nodeclass: "type-TK"});g.addNode(23, {label: "dalga",nodeclass: "type-TK"});g.addNode(24, {label: "dalgalı",nodeclass: "type-TK"});g.addNode(25, {label: "düz",nodeclass: "type-TK"});g.addNode(26, {label: "düzlüklere",nodeclass: "type-TK"});g.addNode(27, {label: "ne",nodeclass: "type-TK"});g.addNode(28, {label: "de",nodeclass: "type-TK"});g.addNode(29, {label: "denir",nodeclass: "type-TK"});g.addNode(30, {label: ".",nodeclass: "type-TK"});g.addEdge(null,11,13,{label: "OBJECT"});g.addEdge(null,12,13,{label: "DERIV"});g.addEdge(null,13,14,{label: "DERIV"});g.addEdge(null,14,15,{label: "CLASSIFIER"});g.addEdge(null,15,17,{label: "MODIFIER"});g.addEdge(null,16,17,{label: "DATIVE.ADJUNCT"});g.addEdge(null,17,18,{label: "DERIV"});g.addEdge(null,18,20,{label: "MODIFIER"});g.addEdge(null,19,20,{label: "CLASSIFIER"});g.addEdge(null,20,29,{label: "DATIVE.ADJUNCT"});g.addEdge(null,21,26,{label: "CLASSIFIER"});g.addEdge(null,22,23,{label: "MODIFIER"});g.addEdge(null,23,24,{label: "DERIV"});g.addEdge(null,24,26,{label: "MODIFIER"});g.addEdge(null,25,26,{label: "DERIV"});g.addEdge(null,26,29,{label: "DATIVE.ADJUNCT"});g.addEdge(null,27,29,{label: "MODIFIER"});g.addEdge(null,28,29,{label: "DERIV"});g.addEdge(null,29,30,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yeryüzündeki deprem bölgelerinin dağılışı neyle paralellik gösterir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2743, {label: "yeryüzü",nodeclass: "type-TK"});g.addNode(2744, {label: "Yeryüzündeki",nodeclass: "type-TK"});g.addNode(2745, {label: "deprem",nodeclass: "type-TK"});g.addNode(2746, {label: "bölgelerinin",nodeclass: "type-TK"});g.addNode(2747, {label: "dağıl",nodeclass: "type-TK"});g.addNode(2748, {label: "dağılışı",nodeclass: "type-TK"});g.addNode(2749, {label: "neyle",nodeclass: "type-TK"});g.addNode(2750, {label: "paralel",nodeclass: "type-TK"});g.addNode(2751, {label: "paralellik",nodeclass: "type-TK"});g.addNode(2752, {label: "gösterir",nodeclass: "type-TK"});g.addNode(2753, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2743,2744,{label: "DERIV"});g.addEdge(null,2744,2746,{label: "MODIFIER"});g.addEdge(null,2745,2746,{label: "CLASSIFIER"});g.addEdge(null,2746,2748,{label: "OBJECT"});g.addEdge(null,2747,2748,{label: "DERIV"});g.addEdge(null,2748,2752,{label: "OBJECT"});g.addEdge(null,2749,2752,{label: "INSTRUMENTAL.ADJUNCT"});g.addEdge(null,2750,2751,{label: "DERIV"});g.addEdge(null,2751,2752,{label: "OBJECT"});g.addEdge(null,2752,2753,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

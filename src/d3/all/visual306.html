@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Cumhuriyetin ilk yıllarında ülkenin kaçta kaçı kırsal kesimlerde yaşamaktaydı</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3227, {label: "Cumhuriyetin",nodeclass: "type-TK"});g.addNode(3228, {label: "ilk",nodeclass: "type-TK"});g.addNode(3229, {label: "yıllarında",nodeclass: "type-TK"});g.addNode(3230, {label: "ülkenin",nodeclass: "type-TK"});g.addNode(3231, {label: "kaç",nodeclass: "type-TK"});g.addNode(3232, {label: "kaçta",nodeclass: "type-TK"});g.addNode(3233, {label: "kaçı",nodeclass: "type-TK"});g.addNode(3234, {label: "kırsal",nodeclass: "type-TK"});g.addNode(3235, {label: "kesimlerde",nodeclass: "type-TK"});g.addNode(3236, {label: "yaşa",nodeclass: "type-TK"});g.addNode(3237, {label: "_",nodeclass: "type-TK"});g.addNode(3238, {label: "yaşamaktaydı",nodeclass: "type-TK"});g.addNode(3239, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3227,3229,{label: "POSSESSOR"});g.addEdge(null,3228,3229,{label: "MODIFIER"});g.addEdge(null,3229,3238,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3230,3238,{label: "POSSESSOR"});g.addEdge(null,3231,3232,{label: "DERIV"});g.addEdge(null,3232,3238,{label: "MODIFIER"});g.addEdge(null,3233,3238,{label: "SUBJECT"});g.addEdge(null,3234,3235,{label: "MODIFIER"});g.addEdge(null,3235,3238,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3236,3237,{label: "DERIV"});g.addEdge(null,3237,3238,{label: "DERIV"});g.addEdge(null,3238,3239,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

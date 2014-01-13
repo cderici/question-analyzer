@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Tarım, hayvancılık ve ticari faaliyetler ilk kez hangi çağda başlamıştır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(618, {label: "Tarım",nodeclass: "type-TK"});g.addNode(619, {label: "hayvancılık",nodeclass: "type-TK"});g.addNode(620, {label: "ve",nodeclass: "type-TK"});g.addNode(621, {label: "ticari",nodeclass: "type-TK"});g.addNode(622, {label: "faaliyetler",nodeclass: "type-TK"});g.addNode(623, {label: "ilk",nodeclass: "type-TK"});g.addNode(624, {label: "kez",nodeclass: "type-TK"});g.addNode(625, {label: "hangi",nodeclass: "type-TK"});g.addNode(626, {label: "çağda",nodeclass: "type-TK"});g.addNode(627, {label: "başlamıştır",nodeclass: "type-TK"});g.addNode(628, {label: ".",nodeclass: "type-TK"});g.addEdge(null,618,619,{label: "CLASSIFIER"});g.addEdge(null,619,620,{label: "SUBJECT"});g.addEdge(null,620,622,{label: "COORDINATION"});g.addEdge(null,621,622,{label: "MODIFIER"});g.addEdge(null,622,627,{label: "SUBJECT"});g.addEdge(null,623,624,{label: "MODIFIER"});g.addEdge(null,624,627,{label: "MODIFIER"});g.addEdge(null,625,626,{label: "MODIFIER"});g.addEdge(null,626,627,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,627,628,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

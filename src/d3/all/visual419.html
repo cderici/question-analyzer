@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ağaçların bulunmadığı kurak bölgeler en çok hangi yapı malzemesi kullanır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4631, {label: "Ağaçların",nodeclass: "type-TK"});g.addNode(4632, {label: "bulun",nodeclass: "type-TK"});g.addNode(4633, {label: "bulunmadığı",nodeclass: "type-TK"});g.addNode(4634, {label: "kurak",nodeclass: "type-TK"});g.addNode(4635, {label: "bölgeler",nodeclass: "type-TK"});g.addNode(4636, {label: "en",nodeclass: "type-TK"});g.addNode(4637, {label: "çok",nodeclass: "type-TK"});g.addNode(4638, {label: "hangi",nodeclass: "type-TK"});g.addNode(4639, {label: "yapı",nodeclass: "type-TK"});g.addNode(4640, {label: "malzemesi",nodeclass: "type-TK"});g.addNode(4641, {label: "kullanır",nodeclass: "type-TK"});g.addNode(4642, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4631,4632,{label: "SUBJECT"});g.addEdge(null,4632,4633,{label: "DERIV"});g.addEdge(null,4633,4635,{label: "MODIFIER"});g.addEdge(null,4634,4635,{label: "MODIFIER"});g.addEdge(null,4635,4641,{label: "SUBJECT"});g.addEdge(null,4636,4637,{label: "MODIFIER"});g.addEdge(null,4637,4641,{label: "MODIFIER"});g.addEdge(null,4638,4639,{label: "MODIFIER"});g.addEdge(null,4639,4640,{label: "CLASSIFIER"});g.addEdge(null,4640,4641,{label: "OBJECT"});g.addEdge(null,4641,4642,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

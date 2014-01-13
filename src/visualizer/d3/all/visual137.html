@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>İç Anadolu Bölgesi’nde hangi iklim türü hâkimdir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1405, {label: "İç",nodeclass: "type-TK"});g.addNode(1406, {label: "Anadolu",nodeclass: "type-TK"});g.addNode(1407, {label: "Bölgesinde",nodeclass: "type-TK"});g.addNode(1408, {label: "hangi",nodeclass: "type-TK"});g.addNode(1409, {label: "iklim",nodeclass: "type-TK"});g.addNode(1410, {label: "türü",nodeclass: "type-TK"});g.addNode(1411, {label: "hakim",nodeclass: "type-TK"});g.addNode(1412, {label: "hâkimdir",nodeclass: "type-TK"});g.addNode(1413, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1405,1406,{label: "CLASSIFIER"});g.addEdge(null,1406,1407,{label: "CLASSIFIER"});g.addEdge(null,1407,1412,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1408,1409,{label: "MODIFIER"});g.addEdge(null,1409,1410,{label: "CLASSIFIER"});g.addEdge(null,1410,1412,{label: "OBJECT"});g.addEdge(null,1411,1412,{label: "DERIV"});g.addEdge(null,1412,1413,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

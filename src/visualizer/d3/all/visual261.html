@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğu şekillerdir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2781, {label: "Dayk",nodeclass: "type-TK"});g.addNode(2782, {label: "batolit",nodeclass: "type-TK"});g.addNode(2783, {label: "ve",nodeclass: "type-TK"});g.addNode(2784, {label: "sill",nodeclass: "type-TK"});g.addNode(2785, {label: "gibi",nodeclass: "type-TK"});g.addNode(2786, {label: "şekiller",nodeclass: "type-TK"});g.addNode(2787, {label: "nerede",nodeclass: "type-TK"});g.addNode(2788, {label: "magmanın",nodeclass: "type-TK"});g.addNode(2789, {label: "katı",nodeclass: "type-TK"});g.addNode(2790, {label: "_",nodeclass: "type-TK"});g.addNode(2791, {label: "katılaşarak",nodeclass: "type-TK"});g.addNode(2792, {label: "oluş",nodeclass: "type-TK"});g.addNode(2793, {label: "_",nodeclass: "type-TK"});g.addNode(2794, {label: "oluşturduğu",nodeclass: "type-TK"});g.addNode(2795, {label: "şekil",nodeclass: "type-TK"});g.addNode(2796, {label: "şekillerdir",nodeclass: "type-TK"});g.addNode(2797, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2781,2796,{label: "SUBJECT"});g.addEdge(null,2782,2783,{label: "OBJECT"});g.addEdge(null,2783,2784,{label: "COORDINATION"});g.addEdge(null,2784,2785,{label: "OBJECT"});g.addEdge(null,2785,2786,{label: "MODIFIER"});g.addEdge(null,2786,2796,{label: "SUBJECT"});g.addEdge(null,2787,2793,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,2788,2793,{label: "SUBJECT"});g.addEdge(null,2789,2790,{label: "DERIV"});g.addEdge(null,2790,2791,{label: "DERIV"});g.addEdge(null,2791,2793,{label: "MODIFIER"});g.addEdge(null,2792,2793,{label: "DERIV"});g.addEdge(null,2793,2794,{label: "DERIV"});g.addEdge(null,2794,2796,{label: "MODIFIER"});g.addEdge(null,2795,2796,{label: "DERIV"});g.addEdge(null,2796,2797,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

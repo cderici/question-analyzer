@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Nil Deltası hangi ülkenin sınırları içerisindedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(495, {label: "Nil",nodeclass: "type-TK"});g.addNode(496, {label: "Deltası",nodeclass: "type-TK"});g.addNode(497, {label: "hangi",nodeclass: "type-TK"});g.addNode(498, {label: "ülkenin",nodeclass: "type-TK"});g.addNode(499, {label: "sınırları",nodeclass: "type-TK"});g.addNode(500, {label: "içeri",nodeclass: "type-TK"});g.addNode(501, {label: "içerisindedir",nodeclass: "type-TK"});g.addNode(502, {label: ".",nodeclass: "type-TK"});g.addEdge(null,495,496,{label: "CLASSIFIER"});g.addEdge(null,496,501,{label: "SUBJECT"});g.addEdge(null,497,498,{label: "MODIFIER"});g.addEdge(null,498,499,{label: "POSSESSOR"});g.addEdge(null,499,500,{label: "OBJECT"});g.addEdge(null,500,501,{label: "DERIV"});g.addEdge(null,501,502,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

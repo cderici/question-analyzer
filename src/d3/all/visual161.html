@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı ne kadardır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1709, {label: "Yeryüzünde",nodeclass: "type-TK"});g.addNode(1710, {label: "soğuk",nodeclass: "type-TK"});g.addNode(1711, {label: "kuşak",nodeclass: "type-TK"});g.addNode(1712, {label: "ol",nodeclass: "type-TK"});g.addNode(1713, {label: "olarak",nodeclass: "type-TK"});g.addNode(1714, {label: "ad",nodeclass: "type-TK"});g.addNode(1715, {label: "_",nodeclass: "type-TK"});g.addNode(1716, {label: "_",nodeclass: "type-TK"});g.addNode(1717, {label: "_",nodeclass: "type-TK"});g.addNode(1718, {label: "adlandırılan",nodeclass: "type-TK"});g.addNode(1719, {label: "iklim",nodeclass: "type-TK"});g.addNode(1720, {label: "kuşağında",nodeclass: "type-TK"});g.addNode(1721, {label: "en",nodeclass: "type-TK"});g.addNode(1722, {label: "sıcak",nodeclass: "type-TK"});g.addNode(1723, {label: "ayın",nodeclass: "type-TK"});g.addNode(1724, {label: "ortalama",nodeclass: "type-TK"});g.addNode(1725, {label: "sıcak",nodeclass: "type-TK"});g.addNode(1726, {label: "sıcaklığı",nodeclass: "type-TK"});g.addNode(1727, {label: "ne",nodeclass: "type-TK"});g.addNode(1728, {label: "kadar",nodeclass: "type-TK"});g.addNode(1729, {label: "kadardır",nodeclass: "type-TK"});g.addNode(1730, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1709,1712,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1710,1711,{label: "MODIFIER"});g.addEdge(null,1711,1712,{label: "OBJECT"});g.addEdge(null,1712,1713,{label: "DERIV"});g.addEdge(null,1713,1717,{label: "MODIFIER"});g.addEdge(null,1714,1715,{label: "DERIV"});g.addEdge(null,1715,1716,{label: "DERIV"});g.addEdge(null,1716,1717,{label: "DERIV"});g.addEdge(null,1717,1718,{label: "DERIV"});g.addEdge(null,1718,1720,{label: "MODIFIER"});g.addEdge(null,1719,1720,{label: "CLASSIFIER"});g.addEdge(null,1720,1729,{label: "MODIFIER"});g.addEdge(null,1721,1722,{label: "MODIFIER"});g.addEdge(null,1722,1723,{label: "MODIFIER"});g.addEdge(null,1723,1726,{label: "POSSESSOR"});g.addEdge(null,1724,1726,{label: "CLASSIFIER"});g.addEdge(null,1725,1726,{label: "DERIV"});g.addEdge(null,1726,1729,{label: "SUBJECT"});g.addEdge(null,1727,1728,{label: "OBJECT"});g.addEdge(null,1728,1729,{label: "DERIV"});g.addEdge(null,1729,1730,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

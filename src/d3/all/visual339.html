@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Orman örtüsünün bulunmadığı yüksek yaylalarda ve dağlarda yaygın olan mesken çeşidi nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3715, {label: "Orman",nodeclass: "type-TK"});g.addNode(3716, {label: "örtüsünün",nodeclass: "type-TK"});g.addNode(3717, {label: "bulun",nodeclass: "type-TK"});g.addNode(3718, {label: "bulunmadığı",nodeclass: "type-TK"});g.addNode(3719, {label: "yüksek",nodeclass: "type-TK"});g.addNode(3720, {label: "yaylalarda",nodeclass: "type-TK"});g.addNode(3721, {label: "ve",nodeclass: "type-TK"});g.addNode(3722, {label: "dağlarda",nodeclass: "type-TK"});g.addNode(3723, {label: "yaygın",nodeclass: "type-TK"});g.addNode(3724, {label: "ol",nodeclass: "type-TK"});g.addNode(3725, {label: "olan",nodeclass: "type-TK"});g.addNode(3726, {label: "mesken",nodeclass: "type-TK"});g.addNode(3727, {label: "çeşidi",nodeclass: "type-TK"});g.addNode(3728, {label: "ne",nodeclass: "type-TK"});g.addNode(3729, {label: "nedir",nodeclass: "type-TK"});g.addNode(3730, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3715,3716,{label: "CLASSIFIER"});g.addEdge(null,3716,3717,{label: "SUBJECT"});g.addEdge(null,3717,3718,{label: "DERIV"});g.addEdge(null,3718,3720,{label: "MODIFIER"});g.addEdge(null,3719,3720,{label: "MODIFIER"});g.addEdge(null,3720,3721,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3721,3722,{label: "COORDINATION"});g.addEdge(null,3722,3724,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3723,3724,{label: "MODIFIER"});g.addEdge(null,3724,3725,{label: "DERIV"});g.addEdge(null,3725,3727,{label: "MODIFIER"});g.addEdge(null,3726,3727,{label: "CLASSIFIER"});g.addEdge(null,3727,3729,{label: "SUBJECT"});g.addEdge(null,3728,3729,{label: "DERIV"});g.addEdge(null,3729,3730,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

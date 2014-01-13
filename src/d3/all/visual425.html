@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ormanların katledilmesinin en önemli sonucu nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4708, {label: "Ormanların",nodeclass: "type-TK"});g.addNode(4709, {label: "katlet",nodeclass: "type-TK"});g.addNode(4710, {label: "_",nodeclass: "type-TK"});g.addNode(4711, {label: "katledilmesinin",nodeclass: "type-TK"});g.addNode(4712, {label: "en",nodeclass: "type-TK"});g.addNode(4713, {label: "önem",nodeclass: "type-TK"});g.addNode(4714, {label: "önemli",nodeclass: "type-TK"});g.addNode(4715, {label: "sonucu",nodeclass: "type-TK"});g.addNode(4716, {label: "ne",nodeclass: "type-TK"});g.addNode(4717, {label: "nedir",nodeclass: "type-TK"});g.addNode(4718, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4708,4710,{label: "SUBJECT"});g.addEdge(null,4709,4710,{label: "DERIV"});g.addEdge(null,4710,4711,{label: "DERIV"});g.addEdge(null,4711,4715,{label: "POSSESSOR"});g.addEdge(null,4712,4714,{label: "MODIFIER"});g.addEdge(null,4713,4714,{label: "DERIV"});g.addEdge(null,4714,4715,{label: "MODIFIER"});g.addEdge(null,4715,4717,{label: "SUBJECT"});g.addEdge(null,4716,4717,{label: "DERIV"});g.addEdge(null,4717,4718,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

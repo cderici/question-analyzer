@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen katı cisimlere ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2137, {label: "Yer",nodeclass: "type-TK"});g.addNode(2138, {label: "kabuğunun",nodeclass: "type-TK"});g.addNode(2139, {label: "ana",nodeclass: "type-TK"});g.addNode(2140, {label: "maddesi",nodeclass: "type-TK"});g.addNode(2141, {label: "ol",nodeclass: "type-TK"});g.addNode(2142, {label: "olan",nodeclass: "type-TK"});g.addNode(2143, {label: "ve",nodeclass: "type-TK"});g.addNode(2144, {label: "minerallerden",nodeclass: "type-TK"});g.addNode(2145, {label: "meydana",nodeclass: "type-TK"});g.addNode(2146, {label: "gel",nodeclass: "type-TK"});g.addNode(2147, {label: "gelen",nodeclass: "type-TK"});g.addNode(2148, {label: "katı",nodeclass: "type-TK"});g.addNode(2149, {label: "cisimlere",nodeclass: "type-TK"});g.addNode(2150, {label: "ne",nodeclass: "type-TK"});g.addNode(2151, {label: "ad",nodeclass: "type-TK"});g.addNode(2152, {label: "ver",nodeclass: "type-TK"});g.addNode(2153, {label: "verilir",nodeclass: "type-TK"});g.addNode(2154, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2137,2138,{label: "CLASSIFIER"});g.addEdge(null,2138,2140,{label: "POSSESSOR"});g.addEdge(null,2139,2140,{label: "CLASSIFIER"});g.addEdge(null,2140,2141,{label: "OBJECT"});g.addEdge(null,2141,2142,{label: "DERIV"});g.addEdge(null,2142,2143,{label: "MODIFIER"});g.addEdge(null,2143,2144,{label: "COORDINATION"});g.addEdge(null,2144,2146,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,2145,2146,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2146,2147,{label: "DERIV"});g.addEdge(null,2147,2149,{label: "MODIFIER"});g.addEdge(null,2148,2149,{label: "MODIFIER"});g.addEdge(null,2149,2153,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2150,2151,{label: "MODIFIER"});g.addEdge(null,2151,2153,{label: "SUBJECT"});g.addEdge(null,2152,2153,{label: "DERIV"});g.addEdge(null,2153,2154,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

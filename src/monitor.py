@@ -4,8 +4,10 @@ ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
 analyzer = QuestionAnalysis(ourQuestions[0])
 
-QuestionAnalysis.visualizeAll(ourQuestions)
-
+if 'visualize' in sys.argv:
+    print("visualizing...")
+    QuestionAnalysis.visualizeAll(ourQuestions)
+    print("visualization done ....")
 # analyzer.showFocusMod()
 
 
@@ -55,15 +57,17 @@ def getAllExpertResults():
 
     print(len(filteredNedir) + len(filteredVerilir) + len(filteredHangisidir) + len(filteredHangiBetween) + len(filteredDenir))
 
-getAllExpertResults()
+if 'experts' in sys.argv:
+    getAllExpertResults()
 
-print("\n\n ===================== OTHERS ======================== \n\n")
+if 'others' in sys.argv:
+    print("\n\n ===================== OTHERS ======================== \n\n")
 
-allExperts = filteredNedir
+    allExperts = filteredNedir
 
-allExperts.extend(filteredVerilir)
-allExperts.extend(filteredHangisidir)
-allExperts.extend(filteredHangiBetween)
-allExperts.extend(filteredDenir)
+    allExperts.extend(filteredVerilir)
+    allExperts.extend(filteredHangisidir)
+    allExperts.extend(filteredHangiBetween)
+    allExperts.extend(filteredDenir)
 
-MassAnalyzer.massShowFocusMod(mass.filterOthers(allExperts))
+    MassAnalyzer.massShowFocusMod(mass.filterOthers(allExperts))

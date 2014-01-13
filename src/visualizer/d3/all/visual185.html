@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı yol ile ilgili olarak ne söyleyebiliriz</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1971, {label: "Ekvatora",nodeclass: "type-TK"});g.addNode(1972, {label: "doğru",nodeclass: "type-TK"});g.addNode(1973, {label: "git",nodeclass: "type-TK"});g.addNode(1974, {label: "_",nodeclass: "type-TK"});g.addNode(1975, {label: "gidildikçe",nodeclass: "type-TK"});g.addNode(1976, {label: "güneş",nodeclass: "type-TK"});g.addNode(1977, {label: "ışınlarının",nodeclass: "type-TK"});g.addNode(1978, {label: "atmosferde",nodeclass: "type-TK"});g.addNode(1979, {label: "al",nodeclass: "type-TK"});g.addNode(1980, {label: "aldığı",nodeclass: "type-TK"});g.addNode(1981, {label: "yol",nodeclass: "type-TK"});g.addNode(1982, {label: "ile",nodeclass: "type-TK"});g.addNode(1983, {label: "ilgi",nodeclass: "type-TK"});g.addNode(1984, {label: "ilgili",nodeclass: "type-TK"});g.addNode(1985, {label: "ol",nodeclass: "type-TK"});g.addNode(1986, {label: "olarak",nodeclass: "type-TK"});g.addNode(1987, {label: "ne",nodeclass: "type-TK"});g.addNode(1988, {label: "söyle",nodeclass: "type-TK"});g.addNode(1989, {label: "söyleyebiliriz",nodeclass: "type-TK"});g.addNode(1990, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1971,1974,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1972,1974,{label: "MODIFIER"});g.addEdge(null,1973,1974,{label: "DERIV"});g.addEdge(null,1974,1975,{label: "DERIV"});g.addEdge(null,1975,1989,{label: "MODIFIER"});g.addEdge(null,1976,1977,{label: "CLASSIFIER"});g.addEdge(null,1977,1979,{label: "SUBJECT"});g.addEdge(null,1978,1979,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1979,1980,{label: "DERIV"});g.addEdge(null,1980,1981,{label: "MODIFIER"});g.addEdge(null,1981,1982,{label: "OBJECT"});g.addEdge(null,1982,1985,{label: "MODIFIER"});g.addEdge(null,1983,1984,{label: "DERIV"});g.addEdge(null,1984,1985,{label: "MODIFIER"});g.addEdge(null,1985,1986,{label: "DERIV"});g.addEdge(null,1986,1989,{label: "MODIFIER"});g.addEdge(null,1987,1989,{label: "MODIFIER"});g.addEdge(null,1988,1989,{label: "DERIV"});g.addEdge(null,1989,1990,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

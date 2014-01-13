@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Japonya demir çelik üretiminde dünyada kaçıncı sıradadır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4191, {label: "Japonya",nodeclass: "type-TK"});g.addNode(4192, {label: "demir",nodeclass: "type-TK"});g.addNode(4193, {label: "çelik",nodeclass: "type-TK"});g.addNode(4194, {label: "üretiminde",nodeclass: "type-TK"});g.addNode(4195, {label: "dünyada",nodeclass: "type-TK"});g.addNode(4196, {label: "kaçıncı",nodeclass: "type-TK"});g.addNode(4197, {label: "sıra",nodeclass: "type-TK"});g.addNode(4198, {label: "sıradadır",nodeclass: "type-TK"});g.addNode(4199, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4191,4198,{label: "SUBJECT"});g.addEdge(null,4192,4193,{label: "CLASSIFIER"});g.addEdge(null,4193,4194,{label: "CLASSIFIER"});g.addEdge(null,4194,4198,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4195,4198,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4196,4197,{label: "MODIFIER"});g.addEdge(null,4197,4198,{label: "DERIV"});g.addEdge(null,4198,4199,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli sonuç nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(5516, {label: "geliş",nodeclass: "type-TK"});g.addNode(5517, {label: "Gelişmekte",nodeclass: "type-TK"});g.addNode(5518, {label: "ol",nodeclass: "type-TK"});g.addNode(5519, {label: "olan",nodeclass: "type-TK"});g.addNode(5520, {label: "ülkelerde",nodeclass: "type-TK"});g.addNode(5521, {label: "ortalama",nodeclass: "type-TK"});g.addNode(5522, {label: "yaşam",nodeclass: "type-TK"});g.addNode(5523, {label: "süresinin",nodeclass: "type-TK"});g.addNode(5524, {label: "uza",nodeclass: "type-TK"});g.addNode(5525, {label: "uzamasının",nodeclass: "type-TK"});g.addNode(5526, {label: "gelecekte",nodeclass: "type-TK"});g.addNode(5527, {label: "doğ",nodeclass: "type-TK"});g.addNode(5528, {label: "_",nodeclass: "type-TK"});g.addNode(5529, {label: "doğuracağı",nodeclass: "type-TK"});g.addNode(5530, {label: "en",nodeclass: "type-TK"});g.addNode(5531, {label: "önem",nodeclass: "type-TK"});g.addNode(5532, {label: "önemli",nodeclass: "type-TK"});g.addNode(5533, {label: "sonuç",nodeclass: "type-TK"});g.addNode(5534, {label: "ne",nodeclass: "type-TK"});g.addNode(5535, {label: "nedir",nodeclass: "type-TK"});g.addNode(5536, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5516,5517,{label: "DERIV"});g.addEdge(null,5517,5518,{label: "MODIFIER"});g.addEdge(null,5518,5519,{label: "DERIV"});g.addEdge(null,5519,5520,{label: "MODIFIER"});g.addEdge(null,5520,5524,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5521,5523,{label: "CLASSIFIER"});g.addEdge(null,5522,5523,{label: "CLASSIFIER"});g.addEdge(null,5523,5524,{label: "SUBJECT"});g.addEdge(null,5524,5525,{label: "DERIV"});g.addEdge(null,5525,5529,{label: "SUBJECT"});g.addEdge(null,5526,5529,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5527,5528,{label: "DERIV"});g.addEdge(null,5528,5529,{label: "DERIV"});g.addEdge(null,5529,5533,{label: "MODIFIER"});g.addEdge(null,5530,5532,{label: "MODIFIER"});g.addEdge(null,5531,5532,{label: "DERIV"});g.addEdge(null,5532,5533,{label: "MODIFIER"});g.addEdge(null,5533,5535,{label: "SUBJECT"});g.addEdge(null,5534,5535,{label: "DERIV"});g.addEdge(null,5535,5536,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

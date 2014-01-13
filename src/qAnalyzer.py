@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+import sys
+
+sys.path.append('fm-distiller')
+sys.path.append('data')
+sys.path.append('visualizer')
+
 import qVisualizer
 from maltImporter import MaltImporter
 from question import Question, QPart
@@ -7,8 +13,8 @@ from distiller import Distiller
 
 import codecs;
 
-qFilePath = 'q.q';
-qParsedFilePath = 'q_parsed.qp';
+qFilePath = 'data/q.q';
+qParsedFilePath = 'data/q_parsed.qp';
 
 
 class QuestionAnalysis:
@@ -23,7 +29,7 @@ class QuestionAnalysis:
     @staticmethod
     def visualizeAll(questions):
         qVisualizer.visualizeAllQuestions(questions)
-
+        
 
     def extractFocusMod(self):
         dist = Distiller(self.question)

@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Peygamberler ve din yayıcılarının yaşadığı yerler etrafında kurulan şehirlere ne denir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3387, {label: "Peygamberler",nodeclass: "type-TK"});g.addNode(3388, {label: "ve",nodeclass: "type-TK"});g.addNode(3389, {label: "din",nodeclass: "type-TK"});g.addNode(3390, {label: "yay",nodeclass: "type-TK"});g.addNode(3391, {label: "yayıcılarının",nodeclass: "type-TK"});g.addNode(3392, {label: "yaşa",nodeclass: "type-TK"});g.addNode(3393, {label: "yaşadığı",nodeclass: "type-TK"});g.addNode(3394, {label: "yerler",nodeclass: "type-TK"});g.addNode(3395, {label: "etrafında",nodeclass: "type-TK"});g.addNode(3396, {label: "kur",nodeclass: "type-TK"});g.addNode(3397, {label: "_",nodeclass: "type-TK"});g.addNode(3398, {label: "kurulan",nodeclass: "type-TK"});g.addNode(3399, {label: "şehirlere",nodeclass: "type-TK"});g.addNode(3400, {label: "ne",nodeclass: "type-TK"});g.addNode(3401, {label: "de",nodeclass: "type-TK"});g.addNode(3402, {label: "denir",nodeclass: "type-TK"});g.addNode(3403, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3387,3388,{label: "SUBJECT"});g.addEdge(null,3388,3389,{label: "COORDINATION"});g.addEdge(null,3389,3390,{label: "OBJECT"});g.addEdge(null,3390,3391,{label: "DERIV"});g.addEdge(null,3391,3392,{label: "SUBJECT"});g.addEdge(null,3392,3393,{label: "DERIV"});g.addEdge(null,3393,3394,{label: "MODIFIER"});g.addEdge(null,3394,3395,{label: "OBJECT"});g.addEdge(null,3395,3398,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3396,3397,{label: "DERIV"});g.addEdge(null,3397,3398,{label: "DERIV"});g.addEdge(null,3398,3399,{label: "MODIFIER"});g.addEdge(null,3399,3402,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3400,3402,{label: "MODIFIER"});g.addEdge(null,3401,3402,{label: "DERIV"});g.addEdge(null,3402,3403,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

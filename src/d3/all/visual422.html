@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Hızlı nüfus artışı ve kentlere göçlere temel olarak neye sebep olmuştur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4667, {label: "hız",nodeclass: "type-TK"});g.addNode(4668, {label: "Hızlı",nodeclass: "type-TK"});g.addNode(4669, {label: "nüfus",nodeclass: "type-TK"});g.addNode(4670, {label: "art",nodeclass: "type-TK"});g.addNode(4671, {label: "artışı",nodeclass: "type-TK"});g.addNode(4672, {label: "ve",nodeclass: "type-TK"});g.addNode(4673, {label: "kentlere",nodeclass: "type-TK"});g.addNode(4674, {label: "göçlere",nodeclass: "type-TK"});g.addNode(4675, {label: "temel",nodeclass: "type-TK"});g.addNode(4676, {label: "ol",nodeclass: "type-TK"});g.addNode(4677, {label: "olarak",nodeclass: "type-TK"});g.addNode(4678, {label: "neye",nodeclass: "type-TK"});g.addNode(4679, {label: "sebep",nodeclass: "type-TK"});g.addNode(4680, {label: "olmuştur",nodeclass: "type-TK"});g.addNode(4681, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4667,4668,{label: "DERIV"});g.addEdge(null,4668,4669,{label: "MODIFIER"});g.addEdge(null,4669,4671,{label: "OBJECT"});g.addEdge(null,4670,4671,{label: "DERIV"});g.addEdge(null,4671,4672,{label: "OBJECT"});g.addEdge(null,4672,4673,{label: "COORDINATION"});g.addEdge(null,4673,4676,{label: "OBJECT"});g.addEdge(null,4674,4676,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4675,4676,{label: "OBJECT"});g.addEdge(null,4676,4677,{label: "DERIV"});g.addEdge(null,4677,4680,{label: "MODIFIER"});g.addEdge(null,4678,4680,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4679,4680,{label: "OBJECT"});g.addEdge(null,4680,4681,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

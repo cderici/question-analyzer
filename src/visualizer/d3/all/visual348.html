@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü maddi ve manevi özellikler bütünü neyi oluşturur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3865, {label: "Bir",nodeclass: "type-TK"});g.addNode(3866, {label: "toplumun",nodeclass: "type-TK"});g.addNode(3867, {label: "tarihsel",nodeclass: "type-TK"});g.addNode(3868, {label: "süreç",nodeclass: "type-TK"});g.addNode(3869, {label: "içinde",nodeclass: "type-TK"});g.addNode(3870, {label: "üre",nodeclass: "type-TK"});g.addNode(3871, {label: "_",nodeclass: "type-TK"});g.addNode(3872, {label: "ürettiği",nodeclass: "type-TK"});g.addNode(3873, {label: "ve",nodeclass: "type-TK"});g.addNode(3874, {label: "kuşaktan",nodeclass: "type-TK"});g.addNode(3875, {label: "kuşağa",nodeclass: "type-TK"});g.addNode(3876, {label: "aktar",nodeclass: "type-TK"});g.addNode(3877, {label: "aktardığı",nodeclass: "type-TK"});g.addNode(3878, {label: "her",nodeclass: "type-TK"});g.addNode(3879, {label: "türlü",nodeclass: "type-TK"});g.addNode(3880, {label: "maddi",nodeclass: "type-TK"});g.addNode(3881, {label: "ve",nodeclass: "type-TK"});g.addNode(3882, {label: "manevi",nodeclass: "type-TK"});g.addNode(3883, {label: "özellikler",nodeclass: "type-TK"});g.addNode(3884, {label: "bütün",nodeclass: "type-TK"});g.addNode(3885, {label: "bütünü",nodeclass: "type-TK"});g.addNode(3886, {label: "neyi",nodeclass: "type-TK"});g.addNode(3887, {label: "oluş",nodeclass: "type-TK"});g.addNode(3888, {label: "oluşturur",nodeclass: "type-TK"});g.addNode(3889, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3865,3866,{label: "DETERMINER"});g.addEdge(null,3866,3871,{label: "SUBJECT"});g.addEdge(null,3867,3868,{label: "MODIFIER"});g.addEdge(null,3868,3869,{label: "OBJECT"});g.addEdge(null,3869,3871,{label: "MODIFIER"});g.addEdge(null,3870,3871,{label: "DERIV"});g.addEdge(null,3871,3872,{label: "DERIV"});g.addEdge(null,3872,3873,{label: "MODIFIER"});g.addEdge(null,3873,3874,{label: "COORDINATION"});g.addEdge(null,3874,3876,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,3875,3876,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3876,3877,{label: "DERIV"});g.addEdge(null,3877,3881,{label: "MODIFIER"});g.addEdge(null,3878,3881,{label: "DETERMINER"});g.addEdge(null,3879,3880,{label: "MODIFIER"});g.addEdge(null,3880,3881,{label: "MODIFIER"});g.addEdge(null,3881,3882,{label: "COORDINATION"});g.addEdge(null,3882,3883,{label: "MODIFIER"});g.addEdge(null,3883,3885,{label: "CLASSIFIER"});g.addEdge(null,3884,3885,{label: "DERIV"});g.addEdge(null,3885,3888,{label: "SUBJECT"});g.addEdge(null,3886,3888,{label: "OBJECT"});g.addEdge(null,3887,3888,{label: "DERIV"});g.addEdge(null,3888,3889,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

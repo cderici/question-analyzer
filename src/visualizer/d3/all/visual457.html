@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Sanayi devrimi ile en önemli nüfus artışı hani kıtada yaşanmıştır</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(5207, {label: "Sanayi",nodeclass: "type-TK"});g.addNode(5208, {label: "devrimi",nodeclass: "type-TK"});g.addNode(5209, {label: "ile",nodeclass: "type-TK"});g.addNode(5210, {label: "en",nodeclass: "type-TK"});g.addNode(5211, {label: "önem",nodeclass: "type-TK"});g.addNode(5212, {label: "önemli",nodeclass: "type-TK"});g.addNode(5213, {label: "nüfus",nodeclass: "type-TK"});g.addNode(5214, {label: "art",nodeclass: "type-TK"});g.addNode(5215, {label: "artışı",nodeclass: "type-TK"});g.addNode(5216, {label: "hani",nodeclass: "type-TK"});g.addNode(5217, {label: "kıtada",nodeclass: "type-TK"});g.addNode(5218, {label: "yaşa",nodeclass: "type-TK"});g.addNode(5219, {label: "yaşanmıştır",nodeclass: "type-TK"});g.addNode(5220, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5207,5208,{label: "CLASSIFIER"});g.addEdge(null,5208,5209,{label: "OBJECT"});g.addEdge(null,5209,5213,{label: "MODIFIER"});g.addEdge(null,5210,5212,{label: "MODIFIER"});g.addEdge(null,5211,5212,{label: "DERIV"});g.addEdge(null,5212,5213,{label: "MODIFIER"});g.addEdge(null,5213,5215,{label: "CLASSIFIER"});g.addEdge(null,5214,5215,{label: "DERIV"});g.addEdge(null,5215,5219,{label: "SUBJECT"});g.addEdge(null,5216,5219,{label: "MODIFIER"});g.addEdge(null,5217,5219,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5218,5219,{label: "DERIV"});g.addEdge(null,5219,5220,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

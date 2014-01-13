@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan sistemlere ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4963, {label: "Yeryüzünün",nodeclass: "type-TK"});g.addNode(4964, {label: "alt",nodeclass: "type-TK"});g.addNode(4965, {label: "altındaki",nodeclass: "type-TK"});g.addNode(4966, {label: "sıcak",nodeclass: "type-TK"});g.addNode(4967, {label: "suları",nodeclass: "type-TK"});g.addNode(4968, {label: "enerji",nodeclass: "type-TK"});g.addNode(4969, {label: "kaynağı",nodeclass: "type-TK"});g.addNode(4970, {label: "ol",nodeclass: "type-TK"});g.addNode(4971, {label: "olarak",nodeclass: "type-TK"});g.addNode(4972, {label: "kullan",nodeclass: "type-TK"});g.addNode(4973, {label: "kullanan",nodeclass: "type-TK"});g.addNode(4974, {label: "sistemlere",nodeclass: "type-TK"});g.addNode(4975, {label: "ne",nodeclass: "type-TK"});g.addNode(4976, {label: "ad",nodeclass: "type-TK"});g.addNode(4977, {label: "ver",nodeclass: "type-TK"});g.addNode(4978, {label: "verilir",nodeclass: "type-TK"});g.addNode(4979, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4963,4964,{label: "POSSESSOR"});g.addEdge(null,4964,4965,{label: "DERIV"});g.addEdge(null,4965,4967,{label: "MODIFIER"});g.addEdge(null,4966,4967,{label: "MODIFIER"});g.addEdge(null,4967,4970,{label: "OBJECT"});g.addEdge(null,4968,4969,{label: "CLASSIFIER"});g.addEdge(null,4969,4970,{label: "OBJECT"});g.addEdge(null,4970,4971,{label: "DERIV"});g.addEdge(null,4971,4972,{label: "MODIFIER"});g.addEdge(null,4972,4973,{label: "DERIV"});g.addEdge(null,4973,4974,{label: "MODIFIER"});g.addEdge(null,4974,4978,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4975,4976,{label: "MODIFIER"});g.addEdge(null,4976,4978,{label: "SUBJECT"});g.addEdge(null,4977,4978,{label: "DERIV"});g.addEdge(null,4978,4979,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

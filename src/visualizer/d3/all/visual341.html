@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ekvator kesiminde, meskenlerin bambu ve kamıştan yapılmasının en önemli sebebi nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3751, {label: "Ekvator",nodeclass: "type-TK"});g.addNode(3752, {label: "kesiminde",nodeclass: "type-TK"});g.addNode(3753, {label: "meskenlerin",nodeclass: "type-TK"});g.addNode(3754, {label: "bambu",nodeclass: "type-TK"});g.addNode(3755, {label: "ve",nodeclass: "type-TK"});g.addNode(3756, {label: "kamıştan",nodeclass: "type-TK"});g.addNode(3757, {label: "yap",nodeclass: "type-TK"});g.addNode(3758, {label: "_",nodeclass: "type-TK"});g.addNode(3759, {label: "yapılmasının",nodeclass: "type-TK"});g.addNode(3760, {label: "en",nodeclass: "type-TK"});g.addNode(3761, {label: "önem",nodeclass: "type-TK"});g.addNode(3762, {label: "önemli",nodeclass: "type-TK"});g.addNode(3763, {label: "sebebi",nodeclass: "type-TK"});g.addNode(3764, {label: "ne",nodeclass: "type-TK"});g.addNode(3765, {label: "nedir",nodeclass: "type-TK"});g.addNode(3766, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3751,3752,{label: "CLASSIFIER"});g.addEdge(null,3752,3758,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3753,3758,{label: "SUBJECT"});g.addEdge(null,3754,3755,{label: "OBJECT"});g.addEdge(null,3755,3756,{label: "COORDINATION"});g.addEdge(null,3756,3758,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,3757,3758,{label: "DERIV"});g.addEdge(null,3758,3759,{label: "DERIV"});g.addEdge(null,3759,3763,{label: "POSSESSOR"});g.addEdge(null,3760,3762,{label: "MODIFIER"});g.addEdge(null,3761,3762,{label: "DERIV"});g.addEdge(null,3762,3763,{label: "MODIFIER"});g.addEdge(null,3763,3765,{label: "SUBJECT"});g.addEdge(null,3764,3765,{label: "DERIV"});g.addEdge(null,3765,3766,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

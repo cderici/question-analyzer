@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yeryüzünün insan tarafından değiştirilmiş ve değiştirilmekte olan görünümü, coğrafyanın hangi alt dalı tarafından incelenmektedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3254, {label: "Yeryüzünün",nodeclass: "type-TK"});g.addNode(3255, {label: "insan",nodeclass: "type-TK"});g.addNode(3256, {label: "tarafından",nodeclass: "type-TK"});g.addNode(3257, {label: "değiş",nodeclass: "type-TK"});g.addNode(3258, {label: "_",nodeclass: "type-TK"});g.addNode(3259, {label: "değiştirilmiş",nodeclass: "type-TK"});g.addNode(3260, {label: "ve",nodeclass: "type-TK"});g.addNode(3261, {label: "değiş",nodeclass: "type-TK"});g.addNode(3262, {label: "_",nodeclass: "type-TK"});g.addNode(3263, {label: "_",nodeclass: "type-TK"});g.addNode(3264, {label: "değiştirilmekte",nodeclass: "type-TK"});g.addNode(3265, {label: "ol",nodeclass: "type-TK"});g.addNode(3266, {label: "olan",nodeclass: "type-TK"});g.addNode(3267, {label: "görünümü",nodeclass: "type-TK"});g.addNode(3268, {label: "coğrafyanın",nodeclass: "type-TK"});g.addNode(3269, {label: "hangi",nodeclass: "type-TK"});g.addNode(3270, {label: "alt",nodeclass: "type-TK"});g.addNode(3271, {label: "dalı",nodeclass: "type-TK"});g.addNode(3272, {label: "tarafından",nodeclass: "type-TK"});g.addNode(3273, {label: "incele",nodeclass: "type-TK"});g.addNode(3274, {label: "incelenmektedir",nodeclass: "type-TK"});g.addNode(3275, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3254,3259,{label: "SUBJECT"});g.addEdge(null,3255,3256,{label: "OBJECT"});g.addEdge(null,3256,3259,{label: "MODIFIER"});g.addEdge(null,3257,3258,{label: "DERIV"});g.addEdge(null,3258,3259,{label: "DERIV"});g.addEdge(null,3259,3260,{label: "SENTENCE"});g.addEdge(null,3260,3274,{label: "COORDINATION"});g.addEdge(null,3261,3262,{label: "DERIV"});g.addEdge(null,3262,3263,{label: "DERIV"});g.addEdge(null,3263,3264,{label: "DERIV"});g.addEdge(null,3264,3265,{label: "OBJECT"});g.addEdge(null,3265,3266,{label: "DERIV"});g.addEdge(null,3266,3267,{label: "MODIFIER"});g.addEdge(null,3267,3274,{label: "SUBJECT"});g.addEdge(null,3268,3271,{label: "POSSESSOR"});g.addEdge(null,3269,3270,{label: "MODIFIER"});g.addEdge(null,3270,3271,{label: "CLASSIFIER"});g.addEdge(null,3271,3272,{label: "OBJECT"});g.addEdge(null,3272,3274,{label: "MODIFIER"});g.addEdge(null,3273,3274,{label: "DERIV"});g.addEdge(null,3274,3275,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

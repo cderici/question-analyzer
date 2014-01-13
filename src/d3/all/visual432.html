@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Uranyum ve toryum gibi elektron yayan maddelerin doğal denge halindeki diğer maddelerin atom yapılarını bozmasına ne denir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4824, {label: "Uranyum",nodeclass: "type-TK"});g.addNode(4825, {label: "ve",nodeclass: "type-TK"});g.addNode(4826, {label: "toryum",nodeclass: "type-TK"});g.addNode(4827, {label: "gibi",nodeclass: "type-TK"});g.addNode(4828, {label: "elektron",nodeclass: "type-TK"});g.addNode(4829, {label: "yay",nodeclass: "type-TK"});g.addNode(4830, {label: "yayan",nodeclass: "type-TK"});g.addNode(4831, {label: "maddelerin",nodeclass: "type-TK"});g.addNode(4832, {label: "doğal",nodeclass: "type-TK"});g.addNode(4833, {label: "denge",nodeclass: "type-TK"});g.addNode(4834, {label: "hal",nodeclass: "type-TK"});g.addNode(4835, {label: "halindeki",nodeclass: "type-TK"});g.addNode(4836, {label: "diğer",nodeclass: "type-TK"});g.addNode(4837, {label: "maddelerin",nodeclass: "type-TK"});g.addNode(4838, {label: "atom",nodeclass: "type-TK"});g.addNode(4839, {label: "yapılarını",nodeclass: "type-TK"});g.addNode(4840, {label: "boz",nodeclass: "type-TK"});g.addNode(4841, {label: "bozmasına",nodeclass: "type-TK"});g.addNode(4842, {label: "ne",nodeclass: "type-TK"});g.addNode(4843, {label: "de",nodeclass: "type-TK"});g.addNode(4844, {label: "denir",nodeclass: "type-TK"});g.addNode(4845, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4824,4825,{label: "OBJECT"});g.addEdge(null,4825,4826,{label: "COORDINATION"});g.addEdge(null,4826,4827,{label: "OBJECT"});g.addEdge(null,4827,4829,{label: "MODIFIER"});g.addEdge(null,4828,4829,{label: "OBJECT"});g.addEdge(null,4829,4830,{label: "DERIV"});g.addEdge(null,4830,4831,{label: "MODIFIER"});g.addEdge(null,4831,4839,{label: "POSSESSOR"});g.addEdge(null,4832,4833,{label: "MODIFIER"});g.addEdge(null,4833,4834,{label: "OBJECT"});g.addEdge(null,4834,4835,{label: "DERIV"});g.addEdge(null,4835,4837,{label: "MODIFIER"});g.addEdge(null,4836,4837,{label: "MODIFIER"});g.addEdge(null,4837,4839,{label: "POSSESSOR"});g.addEdge(null,4838,4839,{label: "CLASSIFIER"});g.addEdge(null,4839,4840,{label: "OBJECT"});g.addEdge(null,4840,4841,{label: "DERIV"});g.addEdge(null,4841,4844,{label: "SUBJECT"});g.addEdge(null,4842,4844,{label: "MODIFIER"});g.addEdge(null,4843,4844,{label: "DERIV"});g.addEdge(null,4844,4845,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

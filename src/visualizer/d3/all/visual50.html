@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Ormanların tahrip edilmesi sonucu oluşan bozkırlara ne denir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(503, {label: "Ormanların",nodeclass: "type-TK"});g.addNode(504, {label: "tahrip",nodeclass: "type-TK"});g.addNode(505, {label: "et",nodeclass: "type-TK"});g.addNode(506, {label: "_",nodeclass: "type-TK"});g.addNode(507, {label: "edilmesi",nodeclass: "type-TK"});g.addNode(508, {label: "sonucu",nodeclass: "type-TK"});g.addNode(509, {label: "oluş",nodeclass: "type-TK"});g.addNode(510, {label: "oluşan",nodeclass: "type-TK"});g.addNode(511, {label: "bozkırlara",nodeclass: "type-TK"});g.addNode(512, {label: "ne",nodeclass: "type-TK"});g.addNode(513, {label: "de",nodeclass: "type-TK"});g.addNode(514, {label: "denir",nodeclass: "type-TK"});g.addNode(515, {label: ".",nodeclass: "type-TK"});g.addEdge(null,503,507,{label: "SUBJECT"});g.addEdge(null,504,507,{label: "OBJECT"});g.addEdge(null,505,506,{label: "DERIV"});g.addEdge(null,506,507,{label: "DERIV"});g.addEdge(null,507,508,{label: "CLASSIFIER"});g.addEdge(null,508,509,{label: "OBJECT"});g.addEdge(null,509,510,{label: "DERIV"});g.addEdge(null,510,511,{label: "MODIFIER"});g.addEdge(null,511,514,{label: "DATIVE.ADJUNCT"});g.addEdge(null,512,514,{label: "MODIFIER"});g.addEdge(null,513,514,{label: "DERIV"});g.addEdge(null,514,515,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

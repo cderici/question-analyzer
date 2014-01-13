@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Bir dağ yamacı boyunca yükselen nemli havanın soğuyarak yoğuşması sonucunda ne olur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1823, {label: "Bir",nodeclass: "type-TK"});g.addNode(1824, {label: "dağ",nodeclass: "type-TK"});g.addNode(1825, {label: "yamacı",nodeclass: "type-TK"});g.addNode(1826, {label: "boyunca",nodeclass: "type-TK"});g.addNode(1827, {label: "yüksel",nodeclass: "type-TK"});g.addNode(1828, {label: "yükselen",nodeclass: "type-TK"});g.addNode(1829, {label: "nem",nodeclass: "type-TK"});g.addNode(1830, {label: "nemli",nodeclass: "type-TK"});g.addNode(1831, {label: "havanın",nodeclass: "type-TK"});g.addNode(1832, {label: "soğu",nodeclass: "type-TK"});g.addNode(1833, {label: "soğuyarak",nodeclass: "type-TK"});g.addNode(1834, {label: "yoğuşması",nodeclass: "type-TK"});g.addNode(1835, {label: "sonucunda",nodeclass: "type-TK"});g.addNode(1836, {label: "ne",nodeclass: "type-TK"});g.addNode(1837, {label: "olur",nodeclass: "type-TK"});g.addNode(1838, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1823,1824,{label: "DETERMINER"});g.addEdge(null,1824,1825,{label: "CLASSIFIER"});g.addEdge(null,1825,1826,{label: "OBJECT"});g.addEdge(null,1826,1827,{label: "MODIFIER"});g.addEdge(null,1827,1828,{label: "DERIV"});g.addEdge(null,1828,1831,{label: "MODIFIER"});g.addEdge(null,1829,1830,{label: "DERIV"});g.addEdge(null,1830,1831,{label: "MODIFIER"});g.addEdge(null,1831,1832,{label: "SUBJECT"});g.addEdge(null,1832,1833,{label: "DERIV"});g.addEdge(null,1833,1837,{label: "MODIFIER"});g.addEdge(null,1834,1835,{label: "CLASSIFIER"});g.addEdge(null,1835,1837,{label: "MODIFIER"});g.addEdge(null,1836,1837,{label: "MODIFIER"});g.addEdge(null,1837,1838,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

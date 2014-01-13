@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Levha tektoniği teorisi kimin teorisinin geliştirilmiş halidir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(2732, {label: "Levha",nodeclass: "type-TK"});g.addNode(2733, {label: "tektoniği",nodeclass: "type-TK"});g.addNode(2734, {label: "teorisi",nodeclass: "type-TK"});g.addNode(2735, {label: "kimin",nodeclass: "type-TK"});g.addNode(2736, {label: "teorisinin",nodeclass: "type-TK"});g.addNode(2737, {label: "geliş",nodeclass: "type-TK"});g.addNode(2738, {label: "_",nodeclass: "type-TK"});g.addNode(2739, {label: "geliştirilmiş",nodeclass: "type-TK"});g.addNode(2740, {label: "hal",nodeclass: "type-TK"});g.addNode(2741, {label: "halidir",nodeclass: "type-TK"});g.addNode(2742, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2732,2733,{label: "CLASSIFIER"});g.addEdge(null,2733,2734,{label: "CLASSIFIER"});g.addEdge(null,2734,2739,{label: "SUBJECT"});g.addEdge(null,2735,2736,{label: "MODIFIER"});g.addEdge(null,2736,2739,{label: "SUBJECT"});g.addEdge(null,2737,2738,{label: "DERIV"});g.addEdge(null,2738,2739,{label: "DERIV"});g.addEdge(null,2739,2740,{label: "OBJECT"});g.addEdge(null,2740,2741,{label: "DERIV"});g.addEdge(null,2741,2742,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

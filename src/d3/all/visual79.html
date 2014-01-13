@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Türkiye’de tarım alanları ülke arazisinin yüzde kaçını oluşturur</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(806, {label: "Türkiyede",nodeclass: "type-TK"});g.addNode(807, {label: "tarım",nodeclass: "type-TK"});g.addNode(808, {label: "alanları",nodeclass: "type-TK"});g.addNode(809, {label: "ülke",nodeclass: "type-TK"});g.addNode(810, {label: "arazisinin",nodeclass: "type-TK"});g.addNode(811, {label: "yüz",nodeclass: "type-TK"});g.addNode(812, {label: "yüzde",nodeclass: "type-TK"});g.addNode(813, {label: "kaçını",nodeclass: "type-TK"});g.addNode(814, {label: "oluş",nodeclass: "type-TK"});g.addNode(815, {label: "oluşturur",nodeclass: "type-TK"});g.addNode(816, {label: ".",nodeclass: "type-TK"});g.addEdge(null,806,815,{label: "SUBJECT"});g.addEdge(null,807,808,{label: "CLASSIFIER"});g.addEdge(null,808,815,{label: "OBJECT"});g.addEdge(null,809,810,{label: "CLASSIFIER"});g.addEdge(null,810,815,{label: "SUBJECT"});g.addEdge(null,811,812,{label: "DERIV"});g.addEdge(null,812,815,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,813,815,{label: "OBJECT"});g.addEdge(null,814,815,{label: "DERIV"});g.addEdge(null,815,816,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

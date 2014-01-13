@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>İnsanlara ait ulaşım, sanayi, turizm, nüfuslanma ve yerleşme gibi faaliyetleri coğrafyanın hangi alt dalı konu edinir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3276, {label: "İnsanlara",nodeclass: "type-TK"});g.addNode(3277, {label: "ait",nodeclass: "type-TK"});g.addNode(3278, {label: "ulaşım",nodeclass: "type-TK"});g.addNode(3279, {label: "sanayi",nodeclass: "type-TK"});g.addNode(3280, {label: "turizm",nodeclass: "type-TK"});g.addNode(3281, {label: "nüfus",nodeclass: "type-TK"});g.addNode(3282, {label: "_",nodeclass: "type-TK"});g.addNode(3283, {label: "nüfuslanma",nodeclass: "type-TK"});g.addNode(3284, {label: "ve",nodeclass: "type-TK"});g.addNode(3285, {label: "yerleş",nodeclass: "type-TK"});g.addNode(3286, {label: "yerleşme",nodeclass: "type-TK"});g.addNode(3287, {label: "gibi",nodeclass: "type-TK"});g.addNode(3288, {label: "faaliyetleri",nodeclass: "type-TK"});g.addNode(3289, {label: "coğrafyanın",nodeclass: "type-TK"});g.addNode(3290, {label: "hangi",nodeclass: "type-TK"});g.addNode(3291, {label: "alt",nodeclass: "type-TK"});g.addNode(3292, {label: "dalı",nodeclass: "type-TK"});g.addNode(3293, {label: "konu",nodeclass: "type-TK"});g.addNode(3294, {label: "edinir",nodeclass: "type-TK"});g.addNode(3295, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3276,3277,{label: "OBJECT"});g.addEdge(null,3277,3294,{label: "MODIFIER"});g.addEdge(null,3278,3294,{label: "SUBJECT"});g.addEdge(null,3279,3288,{label: "CLASSIFIER"});g.addEdge(null,3280,3283,{label: "CLASSIFIER"});g.addEdge(null,3281,3282,{label: "DERIV"});g.addEdge(null,3282,3283,{label: "DERIV"});g.addEdge(null,3283,3284,{label: "OBJECT"});g.addEdge(null,3284,3286,{label: "COORDINATION"});g.addEdge(null,3285,3286,{label: "DERIV"});g.addEdge(null,3286,3287,{label: "OBJECT"});g.addEdge(null,3287,3288,{label: "MODIFIER"});g.addEdge(null,3288,3294,{label: "OBJECT"});g.addEdge(null,3289,3292,{label: "POSSESSOR"});g.addEdge(null,3290,3291,{label: "MODIFIER"});g.addEdge(null,3291,3292,{label: "CLASSIFIER"});g.addEdge(null,3292,3294,{label: "SUBJECT"});g.addEdge(null,3293,3294,{label: "OBJECT"});g.addEdge(null,3294,3295,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

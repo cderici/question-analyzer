@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Çevresine göre çukurda kalmış, akarsuların derine gömülmeden aktıkları dar veya geniş düzlüklere ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(1425, {label: "Çevresine",nodeclass: "type-TK"});g.addNode(1426, {label: "göre",nodeclass: "type-TK"});g.addNode(1427, {label: "çukurda",nodeclass: "type-TK"});g.addNode(1428, {label: "kalmış",nodeclass: "type-TK"});g.addNode(1429, {label: "akarsuların",nodeclass: "type-TK"});g.addNode(1430, {label: "derin",nodeclass: "type-TK"});g.addNode(1431, {label: "derine",nodeclass: "type-TK"});g.addNode(1432, {label: "göm",nodeclass: "type-TK"});g.addNode(1433, {label: "_",nodeclass: "type-TK"});g.addNode(1434, {label: "gömülmeden",nodeclass: "type-TK"});g.addNode(1435, {label: "ak",nodeclass: "type-TK"});g.addNode(1436, {label: "aktıkları",nodeclass: "type-TK"});g.addNode(1437, {label: "dar",nodeclass: "type-TK"});g.addNode(1438, {label: "veya",nodeclass: "type-TK"});g.addNode(1439, {label: "geniş",nodeclass: "type-TK"});g.addNode(1440, {label: "düz",nodeclass: "type-TK"});g.addNode(1441, {label: "düzlüklere",nodeclass: "type-TK"});g.addNode(1442, {label: "ne",nodeclass: "type-TK"});g.addNode(1443, {label: "ad",nodeclass: "type-TK"});g.addNode(1444, {label: "ver",nodeclass: "type-TK"});g.addNode(1445, {label: "verilir",nodeclass: "type-TK"});g.addNode(1446, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1425,1426,{label: "OBJECT"});g.addEdge(null,1426,1428,{label: "MODIFIER"});g.addEdge(null,1427,1428,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1428,1436,{label: "MODIFIER"});g.addEdge(null,1429,1436,{label: "SUBJECT"});g.addEdge(null,1430,1431,{label: "DERIV"});g.addEdge(null,1431,1434,{label: "OBJECT"});g.addEdge(null,1432,1433,{label: "DERIV"});g.addEdge(null,1433,1434,{label: "DERIV"});g.addEdge(null,1434,1436,{label: "OBJECT"});g.addEdge(null,1435,1436,{label: "DERIV"});g.addEdge(null,1436,1445,{label: "SUBJECT"});g.addEdge(null,1437,1438,{label: "MODIFIER"});g.addEdge(null,1438,1445,{label: "COORDINATION"});g.addEdge(null,1439,1441,{label: "MODIFIER"});g.addEdge(null,1440,1441,{label: "DERIV"});g.addEdge(null,1441,1445,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1442,1443,{label: "MODIFIER"});g.addEdge(null,1443,1445,{label: "SUBJECT"});g.addEdge(null,1444,1445,{label: "DERIV"});g.addEdge(null,1445,1446,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

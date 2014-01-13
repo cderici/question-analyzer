@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Yerleşmeyi sınırlandıran en önemli faktör nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3469, {label: "yerleş",nodeclass: "type-TK"});g.addNode(3470, {label: "Yerleşmeyi",nodeclass: "type-TK"});g.addNode(3471, {label: "sınır",nodeclass: "type-TK"});g.addNode(3472, {label: "_",nodeclass: "type-TK"});g.addNode(3473, {label: "_",nodeclass: "type-TK"});g.addNode(3474, {label: "sınırlandıran",nodeclass: "type-TK"});g.addNode(3475, {label: "en",nodeclass: "type-TK"});g.addNode(3476, {label: "önem",nodeclass: "type-TK"});g.addNode(3477, {label: "önemli",nodeclass: "type-TK"});g.addNode(3478, {label: "faktör",nodeclass: "type-TK"});g.addNode(3479, {label: "ne",nodeclass: "type-TK"});g.addNode(3480, {label: "nedir",nodeclass: "type-TK"});g.addNode(3481, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3469,3470,{label: "DERIV"});g.addEdge(null,3470,3473,{label: "OBJECT"});g.addEdge(null,3471,3472,{label: "DERIV"});g.addEdge(null,3472,3473,{label: "DERIV"});g.addEdge(null,3473,3474,{label: "DERIV"});g.addEdge(null,3474,3478,{label: "MODIFIER"});g.addEdge(null,3475,3477,{label: "MODIFIER"});g.addEdge(null,3476,3477,{label: "DERIV"});g.addEdge(null,3477,3478,{label: "MODIFIER"});g.addEdge(null,3478,3480,{label: "SUBJECT"});g.addEdge(null,3479,3480,{label: "DERIV"});g.addEdge(null,3480,3481,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

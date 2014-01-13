@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Uluslar arası örgütlerin kuruluşu, yapısı ve faaliyetleri hangi coğrafya alt dalının inceleme alanına girmektedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3309, {label: "Uluslar",nodeclass: "type-TK"});g.addNode(3310, {label: "arası",nodeclass: "type-TK"});g.addNode(3311, {label: "örgütlerin",nodeclass: "type-TK"});g.addNode(3312, {label: "kuruluşu",nodeclass: "type-TK"});g.addNode(3313, {label: "yapısı",nodeclass: "type-TK"});g.addNode(3314, {label: "ve",nodeclass: "type-TK"});g.addNode(3315, {label: "faaliyetleri",nodeclass: "type-TK"});g.addNode(3316, {label: "hangi",nodeclass: "type-TK"});g.addNode(3317, {label: "coğrafya",nodeclass: "type-TK"});g.addNode(3318, {label: "alt",nodeclass: "type-TK"});g.addNode(3319, {label: "dalının",nodeclass: "type-TK"});g.addNode(3320, {label: "incele",nodeclass: "type-TK"});g.addNode(3321, {label: "inceleme",nodeclass: "type-TK"});g.addNode(3322, {label: "alanına",nodeclass: "type-TK"});g.addNode(3323, {label: "girmektedir",nodeclass: "type-TK"});g.addNode(3324, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3309,3310,{label: "OBJECT"});g.addEdge(null,3310,3313,{label: "MODIFIER"});g.addEdge(null,3311,3312,{label: "POSSESSOR"});g.addEdge(null,3312,3313,{label: "CLASSIFIER"});g.addEdge(null,3313,3314,{label: "OBJECT"});g.addEdge(null,3314,3315,{label: "COORDINATION"});g.addEdge(null,3315,3323,{label: "OBJECT"});g.addEdge(null,3316,3317,{label: "MODIFIER"});g.addEdge(null,3317,3323,{label: "SUBJECT"});g.addEdge(null,3318,3319,{label: "CLASSIFIER"});g.addEdge(null,3319,3320,{label: "SUBJECT"});g.addEdge(null,3320,3321,{label: "DERIV"});g.addEdge(null,3321,3322,{label: "CLASSIFIER"});g.addEdge(null,3322,3323,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3323,3324,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

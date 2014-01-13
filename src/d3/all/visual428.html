@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Atmosferde toz, duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar yükselmesi olayına ne denir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4748, {label: "Atmosferde",nodeclass: "type-TK"});g.addNode(4749, {label: "toz",nodeclass: "type-TK"});g.addNode(4750, {label: "duman",nodeclass: "type-TK"});g.addNode(4751, {label: "ve",nodeclass: "type-TK"});g.addNode(4752, {label: "gaz",nodeclass: "type-TK"});g.addNode(4753, {label: "gibi",nodeclass: "type-TK"});g.addNode(4754, {label: "maddelerin",nodeclass: "type-TK"});g.addNode(4755, {label: "insan",nodeclass: "type-TK"});g.addNode(4756, {label: "ve",nodeclass: "type-TK"});g.addNode(4757, {label: "diğer",nodeclass: "type-TK"});g.addNode(4758, {label: "canlılara",nodeclass: "type-TK"});g.addNode(4759, {label: "zarar",nodeclass: "type-TK"});g.addNode(4760, {label: "ver",nodeclass: "type-TK"});g.addNode(4761, {label: "verecek",nodeclass: "type-TK"});g.addNode(4762, {label: "kadar",nodeclass: "type-TK"});g.addNode(4763, {label: "yüksel",nodeclass: "type-TK"});g.addNode(4764, {label: "yükselmesi",nodeclass: "type-TK"});g.addNode(4765, {label: "olayına",nodeclass: "type-TK"});g.addNode(4766, {label: "ne",nodeclass: "type-TK"});g.addNode(4767, {label: "de",nodeclass: "type-TK"});g.addNode(4768, {label: "denir",nodeclass: "type-TK"});g.addNode(4769, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4748,4760,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4749,4750,{label: "MODIFIER"});g.addEdge(null,4750,4751,{label: "OBJECT"});g.addEdge(null,4751,4752,{label: "COORDINATION"});g.addEdge(null,4752,4753,{label: "OBJECT"});g.addEdge(null,4753,4760,{label: "MODIFIER"});g.addEdge(null,4754,4760,{label: "SUBJECT"});g.addEdge(null,4755,4756,{label: "OBJECT"});g.addEdge(null,4756,4758,{label: "COORDINATION"});g.addEdge(null,4757,4758,{label: "MODIFIER"});g.addEdge(null,4758,4760,{label: "OBJECT"});g.addEdge(null,4759,4760,{label: "OBJECT"});g.addEdge(null,4760,4761,{label: "DERIV"});g.addEdge(null,4761,4762,{label: "OBJECT"});g.addEdge(null,4762,4763,{label: "MODIFIER"});g.addEdge(null,4763,4764,{label: "DERIV"});g.addEdge(null,4764,4765,{label: "CLASSIFIER"});g.addEdge(null,4765,4768,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4766,4768,{label: "MODIFIER"});g.addEdge(null,4767,4768,{label: "DERIV"});g.addEdge(null,4768,4769,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

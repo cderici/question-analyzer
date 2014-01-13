@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>İnsanların yılın belli bir döneminde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3825, {label: "İnsanların",nodeclass: "type-TK"});g.addNode(3826, {label: "yılın",nodeclass: "type-TK"});g.addNode(3827, {label: "belli",nodeclass: "type-TK"});g.addNode(3828, {label: "bir",nodeclass: "type-TK"});g.addNode(3829, {label: "döneminde",nodeclass: "type-TK"});g.addNode(3830, {label: "gez",nodeclass: "type-TK"});g.addNode(3831, {label: "gezme",nodeclass: "type-TK"});g.addNode(3832, {label: "gör",nodeclass: "type-TK"});g.addNode(3833, {label: "görme",nodeclass: "type-TK"});g.addNode(3834, {label: "ve",nodeclass: "type-TK"});g.addNode(3835, {label: "dinlen",nodeclass: "type-TK"});g.addNode(3836, {label: "dinlenme",nodeclass: "type-TK"});g.addNode(3837, {label: "amaçlarına",nodeclass: "type-TK"});g.addNode(3838, {label: "yönelik",nodeclass: "type-TK"});g.addNode(3839, {label: "ol",nodeclass: "type-TK"});g.addNode(3840, {label: "olarak",nodeclass: "type-TK"});g.addNode(3841, {label: "yap",nodeclass: "type-TK"});g.addNode(3842, {label: "yaptıkları",nodeclass: "type-TK"});g.addNode(3843, {label: "yer",nodeclass: "type-TK"});g.addNode(3844, {label: "değişik",nodeclass: "type-TK"});g.addNode(3845, {label: "değişikliğine",nodeclass: "type-TK"});g.addNode(3846, {label: "ne",nodeclass: "type-TK"});g.addNode(3847, {label: "ad",nodeclass: "type-TK"});g.addNode(3848, {label: "ver",nodeclass: "type-TK"});g.addNode(3849, {label: "verilir",nodeclass: "type-TK"});g.addNode(3850, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3825,3841,{label: "SUBJECT"});g.addEdge(null,3826,3829,{label: "POSSESSOR"});g.addEdge(null,3827,3829,{label: "MODIFIER"});g.addEdge(null,3828,3829,{label: "DETERMINER"});g.addEdge(null,3829,3831,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3830,3831,{label: "DERIV"});g.addEdge(null,3831,3833,{label: "OBJECT"});g.addEdge(null,3832,3833,{label: "DERIV"});g.addEdge(null,3833,3834,{label: "OBJECT"});g.addEdge(null,3834,3837,{label: "COORDINATION"});g.addEdge(null,3835,3836,{label: "DERIV"});g.addEdge(null,3836,3837,{label: "CLASSIFIER"});g.addEdge(null,3837,3838,{label: "OBJECT"});g.addEdge(null,3838,3839,{label: "MODIFIER"});g.addEdge(null,3839,3840,{label: "DERIV"});g.addEdge(null,3840,3841,{label: "MODIFIER"});g.addEdge(null,3841,3842,{label: "DERIV"});g.addEdge(null,3842,3843,{label: "MODIFIER"});g.addEdge(null,3843,3845,{label: "CLASSIFIER"});g.addEdge(null,3844,3845,{label: "DERIV"});g.addEdge(null,3845,3849,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3846,3847,{label: "MODIFIER"});g.addEdge(null,3847,3849,{label: "SUBJECT"});g.addEdge(null,3848,3849,{label: "DERIV"});g.addEdge(null,3849,3850,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

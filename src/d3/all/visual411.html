@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>İklimin değişmesi en çok hangi ekonomik olayı etkiler</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(4526, {label: "İklimin",nodeclass: "type-TK"});g.addNode(4527, {label: "değiş",nodeclass: "type-TK"});g.addNode(4528, {label: "değişmesi",nodeclass: "type-TK"});g.addNode(4529, {label: "en",nodeclass: "type-TK"});g.addNode(4530, {label: "çok",nodeclass: "type-TK"});g.addNode(4531, {label: "hangi",nodeclass: "type-TK"});g.addNode(4532, {label: "ekonomik",nodeclass: "type-TK"});g.addNode(4533, {label: "olayı",nodeclass: "type-TK"});g.addNode(4534, {label: "etkiler",nodeclass: "type-TK"});g.addNode(4535, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4526,4527,{label: "SUBJECT"});g.addEdge(null,4527,4528,{label: "DERIV"});g.addEdge(null,4528,4534,{label: "SUBJECT"});g.addEdge(null,4529,4530,{label: "MODIFIER"});g.addEdge(null,4530,4531,{label: "MODIFIER"});g.addEdge(null,4531,4533,{label: "MODIFIER"});g.addEdge(null,4532,4533,{label: "MODIFIER"});g.addEdge(null,4533,4534,{label: "OBJECT"});g.addEdge(null,4534,4535,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>

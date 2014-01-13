@@ -1,0 +1,73 @@
+<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
+
+<style>
+.type-TK > .label > rect {
+  fill: #00ffd0;
+}
+
+svg {
+  align:center
+  border: 1px solid #999;
+}
+
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+rect {
+  fill: #fff;
+}
+
+.node rect {
+  stroke-width: 1px;
+  stroke: #999;
+  fill: none;
+}
+
+.edge rect {
+  fill: #fff;
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+</head>
+<body>
+
+<p>Türkiye İstatistik Kurumunun kısa adı nedir</p>
+
+<hr>
+
+<div id="attach">
+  <svg id="svg-canvas" width=800 height=600>
+    <g transform="translate(20, 20)"/>
+  </svg>
+</div>
+
+<script>                                                             
+                     var g = new dagreD3.Digraph();g.addNode(3189, {label: "Türkiye",nodeclass: "type-TK"});g.addNode(3190, {label: "İstatistik",nodeclass: "type-TK"});g.addNode(3191, {label: "Kurumunun",nodeclass: "type-TK"});g.addNode(3192, {label: "kısa",nodeclass: "type-TK"});g.addNode(3193, {label: "adı",nodeclass: "type-TK"});g.addNode(3194, {label: "ne",nodeclass: "type-TK"});g.addNode(3195, {label: "nedir",nodeclass: "type-TK"});g.addNode(3196, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3189,3195,{label: "SUBJECT"});g.addEdge(null,3190,3191,{label: "CLASSIFIER"});g.addEdge(null,3191,3193,{label: "POSSESSOR"});g.addEdge(null,3192,3193,{label: "MODIFIER"});g.addEdge(null,3193,3194,{label: "SUBJECT"});g.addEdge(null,3194,3195,{label: "DERIV"});g.addEdge(null,3195,3196,{label: "SENTENCE"});
+  var renderer = new dagreD3.Renderer();
+  var oldDrawNode = renderer.drawNode();
+  renderer.drawNode(function(graph, u, svg) {
+    oldDrawNode(graph, u, svg);
+    svg.classed(graph.node(u).nodeclass, true);
+  });
+  var layout = renderer.run(g, d3.select("svg g"));
+  d3.select("svg")
+    .attr("width", layout.graph().width + 40)
+    .attr("height", layout.graph().height + 40);
+
+  d3.select("svg").call(d3.behavior.zoom().on("zoom", function() {
+        var svg = d3.select("svg");
+        var ev = d3.event;
+        svg.select("g")
+          .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
+      }));
+</script>
