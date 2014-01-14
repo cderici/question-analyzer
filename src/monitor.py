@@ -1,6 +1,6 @@
 from qAnalyzer import *
 from maltImporter import MaltImporter
-from glasses import *
+from hmmGlasses import *
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
