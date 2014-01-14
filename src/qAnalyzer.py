@@ -5,9 +5,9 @@ import sys
 sys.path.append('fm-distiller')
 sys.path.append('data')
 sys.path.append('visualizer')
+sys.path.append('glasses')
 
 import qVisualizer
-from maltImporter import MaltImporter
 from question import Question, QPart
 from distiller import Distiller
 

@@ -1,4 +1,6 @@
 from qAnalyzer import *
+from maltImporter import MaltImporter
+from glasses import *
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
@@ -71,3 +73,13 @@ if 'others' in sys.argv:
     allExperts.extend(filteredDenir)
 
     MassAnalyzer.massShowFocusMod(mass.filterOthers(allExperts))
+
+
+if 'hmm' in sys.argv:
+    print(ourQuestions[0].questionText)
+    print(type(ourQuestions[0].focus))
+    print(ourQuestions[0].mod)
+
+    print(ourQuestions[0].questionParts)
+    print("\n\n")
+    print(ourQuestions[0].questionPartsMeta)

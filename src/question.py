@@ -84,6 +84,25 @@ class Question:
 
         self.findRoot();
 
+    def extract_FM_Parts(self, FOC_MOD):
+        if questionPartsMeta == []:
+            raise RuntimeError("question meta data is not there! run setMeta()")
+        elif FOC_MOD != 'FOC' and FOC_MOD != 'MOD':
+            raise RuntimeError("FOC_MOD can either be \"FOC\" or \"MOD\"")
+        """ technically FOC_MOD can be any string, but
+        other than FOC and MOD, it will return [] except 
+        when it is NON, where it will return all parts except the focus and mods.
+        Usually the NON case doesn't make much sense.
+        """
+
+        parts = []
+
+        for i in range(0, len(self.questionPartsMeta)):
+            if self.questionPartsMeta[i] == FOC_MOD:
+                parts.append(self.questionParts[i])
+        
+        return parts
+
     def setMeta(self):
         self.questionPartsMeta = ['NON'] * len(self.questionParts);
 
