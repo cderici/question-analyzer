@@ -44,11 +44,18 @@ class MaltImporter:
 
         for i in range(0, length):
             question = Question(qTexts[i][0], qTextParts[i]);
+<<<<<<< HEAD
             #question.focus = qTexts[i][1];
             #question.mod = qTexts[i][2];
+
+            question.setMeta(qTexts[i][1], qTexts[i][2]);
+=======
+            question.focus = qTexts[i][1];
+            question.mod = qTexts[i][2];
             question.coarseClass = qTexts[i][3];
             question.fineClass = qTexts[i][4];
-            question.setMeta(qTexts[i][1], qTexts[i][2]);
+            question.setMeta();
+>>>>>>> 64b44ed8eb4336e8e806a0542c7068b2b4f86bf0
             
             self.questions.append(question);
             

@@ -1,6 +1,12 @@
+import sys
+
+sys.path.append('classBags')
+
+
 from qAnalyzer import *
 from maltImporter import MaltImporter
 from hmmGlasses import *
+from featureBasedClassifier import *
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
@@ -85,3 +91,8 @@ if 'hmm' in sys.argv:
     print(ourQuestions[0].questionPartsMeta)
 
     hmmLearn(ourQuestions)
+
+if 'class' in sys.argv:
+    print('Test');
+    rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
+    rule.findCategories();

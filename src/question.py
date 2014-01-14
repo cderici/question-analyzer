@@ -62,6 +62,10 @@ class QPart:
 class Question:
     ##Raw question text
     questionText = '';
+	
+    ##Classes (Coarse and Fine)
+    coarseClass = '';
+    fineClass = '';
 
     trueFocus = [];
     focus = [];
