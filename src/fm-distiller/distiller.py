@@ -24,7 +24,7 @@ class Distiller():
         self.qMods = []
 
     def HMM_Glasses(self):
-        return False, False, 0, 0
+        return [], [], 0, 0
 
 
     # this should be general for all domains, maybe this whole class should be that way
@@ -36,7 +36,7 @@ class Distiller():
 
         if not SEN:
             # raise RuntimeError("Something's REALLY wrong! Here's the question: " + self.question.questionText)
-            return False, False, 0, 0
+            return [], [], 0, 0
 
         SENtext = QPart.getPartField(SEN, 'text')
 
@@ -65,7 +65,7 @@ class Distiller():
             return hangiBtwExpert(self.question, qParts)
 
         else:
-            return False, False, 0, 0
+            return [], [], 0, 0
 
 
         # neresidir/nerede
@@ -74,7 +74,7 @@ class Distiller():
 
         # kac/kaci/kacini/ne kadar
         
-        return False, False, 0, 0
+        return [], [], 0, 0
 
 
     def checkForBetweenHangi(self, qParts):

@@ -83,3 +83,5 @@ if 'hmm' in sys.argv:
     print(ourQuestions[0].questionParts)
     print("\n\n")
     print(ourQuestions[0].questionPartsMeta)
+
+    hmmLearn(ourQuestions)

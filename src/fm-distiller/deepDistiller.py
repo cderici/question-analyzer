@@ -26,7 +26,7 @@ def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     but nevertheless
     """
     if not SUBJ:
-        return False, False, nedirFC, nedirMC
+        return [], [], nedirFC, nedirMC
     else:
         
         """ FOCUS EXTRACTION """
@@ -95,7 +95,7 @@ def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     DativeADJ = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')[0]
 
     if DativeADJ == []:
-        return False, False, verilirFC, verilirMC
+        return [], [], verilirFC, verilirMC
 
     qFocus.extend([SUBJ, DativeADJ])
 
@@ -161,7 +161,7 @@ def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     DativeADJchildren = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')
 
     if DativeADJchildren == []:
-        return False, False, denirFC, denirMC
+        return [], [], denirFC, denirMC
 
     """ Assumption: if it has more than one dative.adjunct, the last one (the closests to the SENTENCE) is most likely the correct one"""
 
@@ -204,7 +204,7 @@ def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
         """ this will get the subject which is nearest to the sentence """
         SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
         if not SUBJ:
-            return False, False, hangisidirFC, hangisidirMC
+            return [], [], hangisidirFC, hangisidirMC
     else:
         SUBJ = subjChildren[len(subjChildren)-1]
 

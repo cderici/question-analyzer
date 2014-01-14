@@ -51,18 +51,7 @@ class QuestionAnalysis:
     def showFocusMod(self):
         focus, mod = self.extractFocusMod()
 
-        focusText = "Not Found"
-        modText = "Not Found"
-
-        if focus:
-            focusText = ""
-            for focusPart in focus:
-                focusText += QPart.getPartField(focusPart, 'text') + " "
-
-        if mod:
-            modText = ""
-            for modPart in mod:
-                modText += QPart.getPartField(modPart, 'text') + " "
+        focusText, modText = self.question.extract_FM_Text()
 
         print(u"Q: {} || Focus: {} || Mod: {}".format(self.question.questionText, focusText, modText))
 

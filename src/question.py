@@ -63,10 +63,12 @@ class Question:
     ##Raw question text
     questionText = '';
 
-    focus = '';
+    trueFocus = [];
+    focus = [];
     focusConfidence = 0
 	
-    mod = '';
+    trueMod = [];
+    mod = [];
     modConfidence = 0
 
     ##Dependency parsed question parts
@@ -84,37 +86,46 @@ class Question:
 
         self.findRoot();
 
-    def extract_FM_Parts(self, FOC_MOD):
-        if questionPartsMeta == []:
-            raise RuntimeError("question meta data is not there! run setMeta()")
-        elif FOC_MOD != 'FOC' and FOC_MOD != 'MOD':
-            raise RuntimeError("FOC_MOD can either be \"FOC\" or \"MOD\"")
-        """ technically FOC_MOD can be any string, but
-        other than FOC and MOD, it will return [] except 
-        when it is NON, where it will return all parts except the focus and mods.
-        Usually the NON case doesn't make much sense.
-        """
+    def extract_FM_Text(self):
+        focusText = "Not Found"
+        modText = "Not Found"
 
-        parts = []
+        if self.focus != []:
+            focusText = ""
+            for focusPart in self.focus:
+                focusText += QPart.getPartField(focusPart, 'text') + " "
 
-        for i in range(0, len(self.questionPartsMeta)):
-            if self.questionPartsMeta[i] == FOC_MOD:
-                parts.append(self.questionParts[i])
-        
-        return parts
+        if self.mod != []:
+            modText = ""
+            for modPart in self.mod:
+                modText += QPart.getPartField(modPart, 'text') + " "
 
-    def setMeta(self):
-        self.questionPartsMeta = ['NON'] * len(self.questionParts);
+        return focusText, modText
 
-        focusItems = self.focus.split(' ');
+    def setMeta(self, focusText, modText):
+        # resetting the previous gold records
+        self.trueFocus = []
+        self.trueMod = []
 
-        modItems = self.mod.split(' ');
+        partsLen = len(self.questionParts);
 
-        for i in range(0, len(self.questionParts)):
-            if(self.questionParts[i][1] in focusItems):
+        self.questionPartsMeta = ['NON'] * partsLen;
+
+        focusItems = focusText.split(' ');
+
+        modItems = modText.split(' ');
+
+        for i in range(0, partsLen):
+            part = self.questionParts[i]
+
+            partText = QPart.getPartField(part, 'text')
+
+            if(partText in focusItems):
                 self.questionPartsMeta[i] = 'FOC';
-            if(self.questionParts[i][1] in modItems):
+                self.trueFocus.append(part)
+            if(partText in modItems):
                 self.questionPartsMeta[i] = 'MOD';
+                self.trueMod.append(part)
 
     def findRoot(self):
         temp = [a for a in self.questionParts if a[1] == '.'];
