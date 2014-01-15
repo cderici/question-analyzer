@@ -27,7 +27,7 @@ Ege Denizi hangi jeolojik zamanda oluşmuştur|hangi jeolojik zamanda|Ege Denizi
 Göçlerin en önemli nedeni nedir|Göçlerin nedeni|en önemli|DESCRIPTION|EFFECT
 Göllerin fazla sularını boşaltan akarsulara ne denir|akarsulara denir|Göllerin fazla sularını boşaltan|DESCRIPTION|DEFINITION
 Gönüllü göçler üzerinde etkili olan faktörlere ne isim verilir|faktörlere isim|Gönüllü göçler üzerinde etkili olan|DESCRIPTION|DEFINITION
-Haritaların küçültme oranına ne denir|Haritaların küçültme oranına denir|.|DESCRIPTION|DEFINITION
+Haritaların küçültme oranına ne denir|Haritaların küçültme oranına denir||DESCRIPTION|DEFINITION
 İç kuvvetlerin etkisiyle yeryüzünde oluşan hareketlerin adı nedir|hareketlerin adı|İç kuvvetlerin etkisiyle yeryüzünde oluşan|DESCRIPTION|DEFINITION
 İçerisinde bitki ve hayvan fosili bulunduran kayaç hangisidir|kayaç|İçerisinde bitki ve hayvan fosili bulunduran|DESCRIPTION|DEFINITION
 İki akarsu havzasını birbirinden ayıran sınıra ne ad verilir|sınıra ad|İki akarsu havzasını birbirinden ayıran|DESCRIPTION|DEFINITION
@@ -37,7 +37,7 @@ Haritaların küçültme oranına ne denir|Haritaların küçültme oranına den
 İmparatorluklar ilk olarak hangi çağda kurulmuştur|hangi çağda|İmparatorluklar ilk olarak kurulmuştur|TEMPORAL|PERIOD
 İstanbul Boğazı hangi jeolojik dönemde oluşmuştur|hangi jeolojik dönemde|İstanbul Boğazı oluşmuştur|TEMPORAL|PERIOD
 İstanbul’da güneydoğudan esen rüzgâra ne ad verilir|rüzgâra ad|İstanbulda güneydoğudan esen|ENTITY|WIND
-Kara ve denizlerde düşey doğrultudaki alçalma yükselme hareketlerine ne denir|alçalma yükselme hareketlerine denir|Kara ve denizlerde düşey doğrultudaki|DESCRIPTION|DEFINITION
+Kara ve denizlerde düşey doğrultudaki alçalma yükselme hareketlerine ne denir|alçalma yükselme hareketlerine denir|Kara ve denizlerde düşey doğrultudaki|DESCRIPTION|DEFINITION
 Karstik mağaralarda oluşan sarkıt ve dikitler hangi kayaç türlerindendir|hangi kayaç türlerindendir|Karstik mağaralarda oluşan sarkıt ve dikitler|DESCRIPTION|DEFINITION
 Kavimler göçü hangi yıllar arasında olmuştur|hangi yıllar arasında|Kavimler göçü olmuştur|TEMPORAL|DATE
 Kılıçkaya barajı hangi ırmağın üzerinde yer almakatadır|hangi ırmağın|Kılıçkaya barajı üzerinde yer almaktadır|ENTITY|RIVER
@@ -50,7 +50,7 @@ Nil Deltası hangi ülkenin sınırları içerisindedir|hangi ülkenin|Nil Delta
 Ormanların tahrip edilmesi sonucu oluşan bozkırlara ne denir|bozkırlara denir|Ormanların tahrip edilmesi sonucu oluşan|DESCRIPTION|DEFINITION
 Ozon oluşumu hangi katmanda oluşur|hangi katmanda|Ozon oluşumu oluşur|DESCRIPTION|DEFINITION
 Pamukkale travertenleri hangi ilin sınırları içerisindedir|hangi ilin|Pamukkale travertenleri içerisindedir|LOCATION|CITY
-Patamoloji nedir|Patamoloji|.|DESCRIPTION|DEFINITION
+Patamoloji nedir|Patamoloji||DESCRIPTION|DEFINITION
 Rotterdam hangi ülkenin şehridir|hangi ülkenin|Rotterdam şehridir|LOCATION|COUNTRY
 Rüzgârların taşıyarak oluşturdukları topraklara ne ad verilir|topraklara ad|Rüzgârların taşıyarak oluşturdukları|DESCRIPTION|DEFINITION
 Sakarya nehri hangi denize dökülür|hangi denize|Sakarya nehri dökülür|ENTITY|SEA
@@ -179,7 +179,7 @@ Su küre, taş küre ve hava kürenin her birine yayılmış olan küre hangisid
 Canlılar küresi hangi kürelere yayılmış durumdadır|hangi kürelere|Canlılar küresi yayılmış durumdadır|DESCRIPTION|DEFINITION
 Biyosfer hangi kürelere yayılmıştır|hangi kürelere|Biyosfer yayılmıştır|DESCRIPTION|DEFINITION
 Doğal çevreyi kaç temel unsur oluşturur|kaç temel unsur|Doğal çevreyi oluşturur|DESCRIPTION|DEFINITION
-Eş sıcaklık eğrilerine ne denir|Eş sıcaklık eğrilerine denir|.|DESCRIPTION|DEFINITION
+Eş sıcaklık eğrilerine ne denir|Eş sıcaklık eğrilerine denir||DESCRIPTION|DEFINITION
 Doğal çevreyi oluşturan dört temel unsur hangileridir|temel unsur|Doğal çevreyi oluşturan|DESCRIPTION|DEFINITION
 Doğal çevreyi oluşturan temel unsurlar hangileridir|temel unsurlar|Doğal çevreyi oluşturan |DESCRIPTION|DEFINITION
 Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı yol ile ilgili olarak ne söyleyebiliriz|yol ile ilgili |Ekvatora doğru gidildikçe güneş ışınlarının atmosferde aldığı olarak söyleyebiliriz|DESCRIPTION|DEFINITION
@@ -209,7 +209,7 @@ Mantonun içerisindeki konveksiyon akıntıları hangi yönde hareket eder|hangi
 Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları hangi jeolojik zamanda oluşmuştur|hangi jeolojik zamanda|Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları oluşmuştur|TEMPORAL|PERIOD
 Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları hangi orojenez sonucunda oluşmuştur|hangi orojenez|Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları sonucunda oluşmuştur|DESCRIPTION|REASON
 Epirojenik hareketler sırasında denizin çekilmesine ne denir|denizin çekilmesine denir|Epirojenik hareketler sırasında|DESCRIPTION|DEFINITION
-Lav nedir|Lav|.|DESCRIPTION|DEFINITION
+Lav nedir|Lav||DESCRIPTION|DEFINITION
 Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken gaz halinde çıkan nedir|gaz halinde çıkan|Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken|DESCRIPTION|DEFINITION
 Volkanik kökenli adaların en fazla bulunduğu yer neresidir|yer|Volkanik kökenli adaların en fazla bulunduğu|LOCATION|REGION
 Volkan tüfü kaç cm uzunluğundadır|cm|Volkan tüfü uzunluğundadır|NUMERIC|SIZE
