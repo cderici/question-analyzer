@@ -87,6 +87,7 @@ if 'others' in sys.argv:
 
 
 if 'hmm' in sys.argv:
+    """
     print(ourQuestions[0].questionText)
     print(type(ourQuestions[0].focus))
     print(ourQuestions[0].mod)
@@ -94,10 +95,20 @@ if 'hmm' in sys.argv:
     print(ourQuestions[0].questionParts)
     print("\n\n")
     print(ourQuestions[0].questionPartsMeta)
+    """
+    #learnerCheck(ourQuestions)
+    glass = Glass(ourQuestions)
 
-    hmmLearn(ourQuestions)
+    #glass.printAllDebug()
+    import pprint
+    qIndex = 0
+    pp = pprint.PrettyPrinter(indent=4)
+    print(ourQuestions[qIndex].questionText)
+    print(ourQuestions[qIndex].trueFocus)
+    pp.pprint(glass.computeFocusProbs(ourQuestions[qIndex]))
+    #print(serializeDepTree(ourQuestions[356].questionParts))
 
-    print(serializeDepTree(ourQuestions[356].questionParts))
+
 if 'class' in sys.argv:
     print('Test');
     rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);

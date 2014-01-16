@@ -1,159 +1,106 @@
 from question import *
+from hmmLearner import *
 
 import copy
+import pprint
 
-"""
-1 - tree serialize
-2 - learn
-3 - evaluate
-"""
+class Glass:
 
-# total: total tag count
-# focus: number of times this tag is being seen as focus
-# mod: see focus
-tagCounts = {'SENTENCE':{'total':0,'focus':0, 'mod':0},
-             'SUBJECT':{'total':0,'focus':0, 'mod':0},
-             'MODIFIER':{'total':0,'focus':0, 'mod':0},
-             'CLASSIFIER':{'total':0,'focus':0, 'mod':0},
-             'POSSESSOR':{'total':0,'focus':0, 'mod':0},
-             'DETERMINER':{'total':0,'focus':0, 'mod':0},
-             'LOCATIVE.ADJUNCT':{'total':0,'focus':0, 'mod':0},
-             'DATIVE.ADJUNCT':{'total':0,'focus':0, 'mod':0},
-             'OBJECT':{'total':0,'focus':0, 'mod':0},
-#             'DERIV':{'total':0,'focus':0, 'mod':0},
-             'ABLATIVE.ADJUNCT':{'total':0,'focus':0, 'mod':0},
-             'INSTRUMENTAL.ADJUNCT':{'total':0,'focus':0, 'mod':0},
-             'COORDINATION':{'total':0,'focus':0, 'mod':0},
-             'ROOT':{'total':0,'focus':0, 'mod':0},
-             'VOCATIVE':{'total':0,'focus':0, 'mod':0},
-             'APPOSITION':{'total':0,'focus':0, 'mod':0},
-             'QUESTION.PARTICLE':{'total':0,'focus':0, 'mod':0},
-             'INTENSIFIER':{'total':0,'focus':0, 'mod':0},
-             'S.MODIFIER':{'total':0,'focus':0, 'mod':0},
-             'notconnected':{'total':0,'focus':0, 'mod':0}
-             }
+    # probs. that a depen tag being a FOC, MOD or NON
+    tagProbs = None
 
-initTagCounts = copy.deepcopy(tagCounts)
+    # initial probs. of tags being FOC, MOD or NON
+    initFmnProbs = None
 
-FmnCounts = {'FOC':0,
-             'MOD':0,
-             'NON':0
-             }
+    # transition probs btw FOC, MOD and NON
+    transitionProbs = None
 
-dummy = FmnCounts.copy()
+    def __init__(self, questions):
+        tagCounts, initFmnCounts, FmnCounts = hmmLearn(questions)
 
-for k in FmnCounts.keys():
-    FmnCounts[k] = dummy.copy()
+        self.tagProbs = copy.deepcopy(tagCounts)
+        self.initFmnProbs = copy.deepcopy(initFmnCounts)
+        self.transitionProbs = copy.deepcopy(FmnCounts)
 
-def serializeDepTree(parts):
+        # computing initial probabilities from counts
+        for fmn in initFmnCounts.keys():
+            self.initFmnProbs[fmn] = initFmnCounts[fmn]/(len(questions)*1.0)
 
-    # serialize parts
-    prt = []
-    for part in parts:
-        pTag = QPart.getPartField(part, 'depenTag')
-        pText = QPart.getPartField(part, 'text')
+        # computing tagProbs from tagCounts
+        for tag in tagCounts.keys():
+            for fmn in tagCounts[tag].keys():
+                self.tagProbs[tag][fmn] = tagCounts[tag][fmn]/(tagCounts[tag]['total']*1.0)
 
-        if pTag != 'DERIV' and pText != '.':
-            prt.append(part)
+        # computing transition probabilities
+        for fmn in FmnCounts.keys():
+            total = sum(FmnCounts[fmn].values())
+            for fmn2 in FmnCounts[fmn].keys():
+                self.transitionProbs[fmn][fmn2] = FmnCounts[fmn][fmn2]/(total*1.0)
 
-    prt.reverse()
-    return prt
+    def printAllDebug(self):
+        pp = pprint.PrettyPrinter(indent = 4)
 
-def hmmLearn(questions):
+        print("\n\n Tag Probs \n\n")
+        pp.pprint(self.tagProbs)
 
-    # focus and mod parts (same index with questions)
-    focuses = []
-    mods = []
+        print("\n\n Init Fmn Probs \n\n")
+        pp.pprint(self.initFmnProbs)
 
-    allParts = []
-    totalPartCount = 0
-    for question in questions:
+        print("\n\n Transition Probs \n\n")
+        pp.pprint(self.transitionProbs)
 
-        serialParts = serializeDepTree(question.questionParts)
-        totalPartCount += len(serialParts)
 
-        for fPart in question.trueFocus:
-            tag = QPart.getPartField(fPart, 'depenTag')
-            tagCounts[tag]['focus'] += 1
+    def computeFocusProbs(self, newQuestion):
+        serialParts = serializeDepTree(newQuestion.questionParts)
 
-        for mPart in question.trueMod:
-            tag = QPart.getPartField(mPart, 'depenTag')
-            try:
-                tagCounts[tag]['mod'] += 1
-            except:
-                raise RuntimeError(question.questionText)
-
-        for part in serialParts:
+        mostProbableSequence = []
+        
+        for partIndex in range(0, len(serialParts)):
+            part = serialParts[partIndex]
             tag = QPart.getPartField(part, 'depenTag')
-            tagCounts[tag]['total'] += 1
+            
+            if partIndex == 0: # start?
+                focProb = self.initFmnProbs['FOC']*self.tagProbs[tag]['focus']
+                modProb = self.initFmnProbs['MOD']*self.tagProbs[tag]['mod']
+                nonProb = self.initFmnProbs['NON']*self.tagProbs[tag]['non']
 
+                highestState = max(focProb, modProb, nonProb)
 
+                if highestState == focProb:
+                    mostProbableSequence.append(['FOC',focProb])
+                elif highestState == modProb:
+                    mostProbableSequence.append(['MOD',modProb])
+                elif highestState == nonProb:
+                    mostProbableSequence.append(['NON',nonProb])
+                else:
+                    raise RuntimeError("something is horribly wrong in the initial stage")
 
-
-        """ Computing initial counts """
-        initPart = serialParts[0]
-
-        ipTag = QPart.getPartField(initPart, 'depenTag')
-        
-        initTagCounts[ipTag]['total'] += 1
-        
-        if initPart in question.trueFocus:
-            initTagCounts[ipTag]['focus'] += 1
-        elif initPart in question.trueMod:
-            initTagCounts[ipTag]['mod'] += 1
-        
-
-        """ Computing bigram counts P({Foc Mod Non | Foc Mod Non) """
-        for i in range(0, len(serialParts)-1):
-
-            part = serialParts[i]
-            partProp = ''
-            if part in question.trueFocus:
-                partProp = 'FOC'
-            elif part in question.trueMod:
-                partProp = 'MOD'
             else:
-                partProp = 'NON'
+                # beware, nasty hack ahead
+                prevState = mostProbableSequence[partIndex-1][0]
+                prevProb = mostProbableSequence[partIndex-1][1]
+                
+                currentFocusProb = prevProb*self.tagProbs[tag]['focus']*self.transitionProbs[prevState]['FOC']
 
-            nextPart = serialParts[i+1]
-            nPartProp = ''
-            if nextPart in question.trueFocus:
-                nPartProp = 'FOC'
-            elif nextPart in question.trueMod:
-                nPartProp = 'MOD'
-            else:
-                nPartProp = 'NON'
+                print("FOCPROB: " + str(currentFocusProb))
+                currentModProb = prevProb*self.tagProbs[tag]['mod']*self.transitionProbs[prevState]['MOD']
+                currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
 
-            FmnCounts[partProp][nPartProp] += 1
-        
-    print("Total Counts:\n\n")
-    print(tagCounts)
-    
-    print("Init Counts:\n\n")
-    print(initTagCounts)
+                highestState = max(currentFocusProb, currentModProb, currentNonProb)
 
-    print("FMN Counts:\n\n")
-    print(FmnCounts)
-    
-    print("Total Part Count : " + str(totalPartCount))
-    checkSum = 0
-    checkSum += sum(FmnCounts['FOC'].values())
-    checkSum += sum(FmnCounts['MOD'].values())
-    checkSum += sum(FmnCounts['NON'].values())
-    
-    print("Checksum : " + str((totalPartCount-490) == checkSum))
-    
-    
-    """ check exists, if not learn and store
-    P(FOC|tag) 
-    P(MOD|tag) 
-    P(NON|tag)
-    """
+                if highestState == currentFocusProb:
+                    currentState = 'FOC'
+                    currentProb = currentFocusProb
+                elif highestState == currentModProb:
+                    currentState = 'MOD'
+                    currentProb = currentModProb
+                elif highestState == currentNonProb:
+                    currentState = 'NON'
+                    currentProb = currentNonProb
+                else:
+                    raise RuntimeError("something is horribly wrong in middle stages")
+                
+                mostProbableSequence.append([currentState, currentProb])
 
-     
-
-    """ check exists, if not learn and store
-    P(FOC|FOC) P(FOC|MOD) P(FOC|NON)
-    P(MOD|FOC) P(MOD|MOD) P(MOD|NON)
-    P(NON|FOC) P(NON|MOD) P(NON|NON)
-    """
+        #mostProbableSequence.reverse()
+        return mostProbableSequence
