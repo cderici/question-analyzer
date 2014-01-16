@@ -7,7 +7,7 @@ Atmosferin en alt katmanında hangi tabaka vardır|hangi tabaka|Atmosferin en al
 Bakteriler ilk olarak hangi jeolojik zamanda ortaya çıkmıştır|hangi jeolojik zamanda|Bakteriler ilk olarak ortaya çıkmıştır|TEMPORAL|PERIOD
 Bir akarsuyun kolları ile birlikte oluşturduğu sisteme ne denir|sisteme denir|Bir akarsuyun kolları ile birlikte oluşturduğu|DESCRIPTION|DEFINITION
 Bir akarsuyun kolları ile birlikte sularının toplandığı ve ya boşaltıldığı alana ne denir|alana denir|Bir akarsuyun kolları ile birlikte sularının toplandığı veya boşaltıldığı|DESCRIPTION|DEFINITION
-Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir|Birleşmiş Milletler Nüfus Vakfının adı|kısa|ABBREVIATION|
+Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir|Birleşmiş Milletler Nüfus Vakfının adı|kısa|ABBREVIATION|
 Bitki ve hayvan topluluklarını inceleyen bilim dalı nedir|bilim dalı|Bitki ve hayvan topluluklarını inceleyen|DESCRIPTION|DEFINITION
 Biyosfer ’in diğer adı nedir|Biyosferin adı|diğer|DESCRIPTION|DEFINITION
 Biyosferi, ultraviyole ışınlarının zararlarından koruyan gaz hangisidir|gaz|Biyosferi ultraviyole ışınlarının zararlarından koruyan|DESCRIPTION|DEFINITION
@@ -19,7 +19,7 @@ Coğrafi keşifler hangi yüzyılda başlamıştır|hangi yüzyılda|Coğrafi ke
 Coğrafi keşiflerin başlamasına hangi icat olanak sağlamıştır|hangi icat|Coğrafi keşiflerin başlamasına olanak sağlamıştır|DESCRIPTION|DEFINITION
 Cumhuriyetten Sonra ilk nüfus sayımı ne zaman yapılmıştır|ne zaman yapılmıştır|Cumhuriyetten Sonra ilk nüfus sayımı|TEMPORAL|DATE
 Dev kazanı hangi dış güç tarafından oluşturulur|hangi dış güç|tarafından Dev kazanı oluşturulur|DESCRIPTION|DEFINITION
-Dünyada ilk modern manada nüfus sayımları nerede yapılmıştır|nerede yapılmıştır|Dünyada ilk modern manada nüfus sayımları nerede yapılmıştır|LOCATION|COUNTRY
+Dünyada ilk modern manada nüfus sayımları nerede yapılmıştır|nerede yapılmıştır|Dünyada ilk modern manada nüfus sayımları|LOCATION|COUNTRY
 Dünyada nüfusun en az olduğu kıta hangisidir|kıta|Dünyada nüfusun en az olduğu|LOCATION|CONTINENT
 Dünyada nüfusun en çok olduğu kıta hangisidir|kıta|Dünyada nüfusun en çok olduğu|LOCATION|CONTINENT
 Dünyanın nüfusu ne kadardır|ne kadardır|Dünyanın nüfusu|NUMERIC|COUNT
@@ -199,7 +199,7 @@ Dış çekirdek neden oluşur|neden oluşur|Dış çekirdek|DESCRIPTION|DEFINITI
 İç çekirdeğin sıcaklığı kaç dereceyi bulur|kaç dereceyi|İç çekirdeğin sıcaklığı bulur|NUMERIC|SIZE
 Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen katı cisimlere ne ad verilir|katı cisimlere ad|Yer kabuğunun ana maddesi olan ve minerallerden meydana gelen|DESCRIPTION|DEFINITION
 Direnci düşük kayaçların bulunduğu arazilerde ne tür yer şekileri meydana gelir|ne tür yer şekilleri|Direnci düşük kayaçların bulunduğu arazilerde meydana gelir|DESCRIPTION|DEFINITION
-Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri nerede bulunur|nerede|Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri|LOCATION|REGION
+Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri nerede bulunur|nerede bulunur|Ülkemizde volkanik tüflerin aşınmasıyla oluşmuş yer şekilleri|LOCATION|REGION
 Tortul kayaçların bir diğer adı nedir|kayaçların adı|diğer Tortul|DESCRIPTION|DEFINITION
 Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan kayaçlara ne isim verilir|kayaçlara isim|Püskürük ve tortul kayaçların aşırı sıcaklık ve basınç altında kalarak değişime uğramasıyla oluşan|DESCRIPTION|DEFINITION
 Kayaların başkalaşıma uğramasına ne sebep olur|sebep olur|Kayaların başkalaşıma uğramasına|DESCRIPTION|EFFECT
@@ -225,7 +225,7 @@ Deprem sırasında yer kabuğuna ilk ulaşan dalgalar hangileridir|dalgalar|Depr
 Tsunami denen dev dalgalara ne sebep olur|sebep olur|Tsunami denen dev dalgalara|DESCRIPTION|DEFINITION
 Depremin aletle ölçülen büyüklüğüne ne denir|büyüklüğüne denir|Depremin aletle ölçülen|DESCRIPTION|DEFINITION
 Ülkemizin de içinde bulunduğu deprem kuşağı hangisidir|deprem kuşağı|Ülkemizin de içinde bulunduğu|DESCRIPTION|DEFINITION
-Yeryüzünde depremlerin çoğunluğu nerede olur|nerede|Yeryüzünde depremlerin çoğunluğu|DESCRIPTION|DEFINITION
+Yeryüzünde depremlerin çoğunluğu nerede olur|nerede olur|Yeryüzünde depremlerin çoğunluğu|DESCRIPTION|DEFINITION
 Yeryüzünde kendine özgü bir iklimi, bitki örtüsü ve hayvan topluluğu bulunduran bölgelere ne ad verilir|bölgelere ad|Yeryüzünde kendine özgü bir iklimi bitki örtüsü ve hayvan topluluğu bulunduran|DESCRIPTION|DEFINITION
 Canlıların çevreyle birlikte oluşturdukları yaşam birlikteliklerine ne denir|yaşam birlikteliklerine denir|Canlıların çevreyle birlikte oluşturdukları|DESCRIPTION|DEFINITION
 Biyomlar neyin en büyük birimleridir|neyin|Biyomlar en büyük birimleridir|DESCRIPTION|DEFINITION
@@ -258,10 +258,10 @@ Dağ oluşumu hareketleri kaç şekilde gerçekleşir|kaç şekilde|Dağ oluşum
 Transgresyon ve regresyon hangi hareketler dahilinde incelenir|hangi hareketler|Transgresyon ve regresyon dahilinde incelenir|DESCRIPTION|DEFINITION
 Transgresyon kısaca nedir|Transgresyon|kısaca|DESCRIPTION|DEFINITION
 Regresyon kısaca nedir|Regresyon|kısaca|DESCRIPTION|DEFINITION
-Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğu şekillerdir|nerede|Dayk batolit ve sill gibi şekiller magmanın katılaşarak oluşturduğu şekillerdir|DESCRIPTION|DEFINITION
+Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğu şekillerdir|nerede oluşturduğu şekillerdir|Dayk batolit ve sill gibi şekiller magmanın katılaşarak oluşturduğu şekillerdir|DESCRIPTION|DEFINITION
 Volkanlardan çıkan volkan tüfü, lapilli ve volkan bombası isimlerini neye göre alırlar|neye göre|Volkanlardan çıkan volkan tüfü lapilli ve volkan bombası isimlerini alırlar|DESCRIPTION|DEFINITION
 Rihter ölçeği ne amaçla kullanılır|ne amaçla|Rihter ölçeği kullanılır|DESCRIPTION|DEFINITION
-Hiposantr depremin nerede oluşturduğu kısımdır|nerede|Hiposantr depremin oluşturduğu kısımdır|DESCRIPTION|DEFINITION
+Hiposantr depremin nerede oluşturduğu kısımdır|nerede oluşturduğu kısımdır|Hiposantr depremin oluşturduğu kısımdır|DESCRIPTION|DEFINITION
 Levha hareketleri sonucunda ortaya çıkan gerilimler neyin kırılmasına neden olur|neyin|Levha hareketleri sonucunda ortaya çıkan gerilimler kırılmasına neden olur|DESCRIPTION|DEFINITION
 Kaç çeşit deprem dalgası vardır|Kaç çeşit|deprem dalgası vardır|NUMERIC|COUNT
 Boyuna dalgaların yer kabuğundaki hızları ne kadardır|ne kadardır|Boyuna dalgaların yer kabuğundaki hızları|NUMERIC|SIZE
@@ -343,91 +343,91 @@ Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verili
 Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen yerleşim çeşidi nedir|yerleşim çeşidi|Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen|DESCRIPTION|DEFINITION
 İlk insanlar nereleri mesken olarak seçmişlerdir|nereleri|İlk insanlar mesken olarak seçmişlerdir|DESCRIPTION|DEFINITION
 İlk yerleşim yerlerinin akarsu boylarına kurulmasının temel sebebi nedir|temel sebebi|İlk yerleşim yerlerinin akarsu boylarına kurulmasının|DESCRIPTION|DEFINITION
-İnsanların yılın belli bir döneminde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir|yer değişikliğine |İnsanların yılın belli bir döneminde gezme görme ve dinlenme amaçlarına yönelik olarak yaptıkları|DESCRIPTION|DEFINITION
+İnsanların yılın belli bir döneminde gezme, görme ve dinlenme amaçlarına yönelik olarak yaptıkları yer değişikliğine ne ad verilir|yer değişikliğine ad|İnsanların yılın belli bir döneminde gezme görme ve dinlenme amaçlarına yönelik olarak yaptıkları|DESCRIPTION|DEFINITION
 Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının sebebi nedir|sebebi|Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının|DESCRIPTION|REASON
-Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü maddi ve manevi özellikler bütünü neyi oluşturur|||DESCRIPTION|DEFINITION
-Bir kültürün doğduğu yere o kültürün neyi denir|||DESCRIPTION|DEFINITION
-Türk kültürünün ocağı neresidir|||DESCRIPTION|DEFINITION
-Türk kültürü hangi kültürlere komşudur|||DESCRIPTION|DEFINITION
-Sanayi tesislerinde kullanılmak üzere işlenmiş ya da yarı işlenmiş maddelere ne ad verilir|||DESCRIPTION|DEFINITION
-Dış ticaret başka bir değişle nasıl ifade edilir|||DESCRIPTION|DEFINITION
-Dünya’daki toplam istihdamın ne kadarı turizm sektöründedir|||NUMERIC|PERCENT
-2006 yılında Dünyadaki toplam turist sayısı ne kadar olarak hesaplanmıştır|||NUMERIC|COUNT
-Dünyanın 7 harikasından günümüze kalan tek eser hangidir|||DESCRIPTION|DEFINITION
-1972 yılındaki Dünya Doğal ve Kültürel Mirası Koruma Konvansiyonu kaç maddeden oluşmaktaydı|||DESCRIPTION|DEFINITION
-ABD Ulusal parkı hangi birlik tarafından koruma altına alınmıştır|||DESCRIPTION|DEFINITION
-UNESCO’nun açılımı nedir|||DESCRIPTION|DEFINITION
-UNESCO Türkiye’den kaç kültürel varlığı Dünya Miras Listesine eklemiştir|||NUMERIC|COUNT
-Dünya Doğal ve Kültür Miraslarında en büyük pay kaç eserle kime aittir|||DESCRIPTION|DEFINITION
-Artemis Tapınağı nerede kurulmuştu|||DESCRIPTION|DEFINITION
-Antik çağın en ünlü deniz feneri hangisiydi|||DESCRIPTION|DEFINITION
-Keops Piramidi kaç adet taş bloktan yapılmıştır|||NUMERIC|COUNT
-Japonya’nın yüz ölçümü ne kadardır|||NUMERIC|SIZE
-Japonya’nın nüfusu ne kadardır|||NUMERIC|SIZE
-Japonya’nın başkenti neresidir|||DESCRIPTION|DEFINITION
-Japonya’nın dili nedir|||DESCRIPTION|DEFINITION
-Japonya’da kişi başına düşen milli gelir ne kadardır|||NUMERIC|SIZE
-Japon erkelerinin ortalama ömrü ne kadardır|||NUMERIC|SIZE
-Japonya arazisinin yüzde kaçı dağlardan oluşur|||NUMERIC|PERCENT
-Japonya’nın en yüksek dağları hangi adadadır|||DESCRIPTION|DEFINITION
-Fuji dağının yüksekliği ne kadardır|||NUMERIC|SIZE
-Dünyadaki aktif volkanların kaçta kaçı Japonya’dadır|||NUMERIC|SIZE
-Japonya’da yıllık ortalama deprem sayısı kaçtır|||NUMERIC|SIZE
-1955 yılında 5500 kişinin öldüğü deprem nerede gerçekleşmiştir|||DESCRIPTION|DEFINITION
-Japonya hangi iklimin etkisi altındadır|||DESCRIPTION|DEFINITION
-Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi ne olarak nitelendirilir|||DESCRIPTION|DEFINITION
-ABD ikinci dünya savaşında hangi şehirlere atom bombası atmıştır|||DESCRIPTION|DEFINITION
-Japonya demir çelik üretiminde dünyada kaçıncı sıradadır|||NUMERIC|COUNT
-İngiltere Avrupa’nın neresinde yer alır|||DESCRIPTION|DEFINITION
-Başlangıç meridyeni hangi şehirdedir|||DESCRIPTION|DEFINITION
-İngiltere’de akarsuların boyu genellikle nasıldır|||DESCRIPTION|DEFINITION
-İngiltere’de güneşli gün sayısı mı sisli gün sayısı mı daha fazladır|||DESCRIPTION|DEFINITION
-İngiltere’de kilometrekareye ortalama kaç insan düşer|||NUMERIC|COUNT
-İngiltere’de yılık nüfus artışı kaçtır|||DESCRIPTION|DEFINITION
-İplik makinesini kim icat etmiştir|||DESCRIPTION|DEFINITION
-İplik makinesi kaç yılında icat edilmiştir|||NUMERIC|COUNT
-Su gücüyle çalışan iplik makinesi kimin tarafından icat edilmiştir|||DESCRIPTION|DEFINITION
-Su gücüyle çalışan iplik makinesi hangi tarihte icat edilmiştir|||NUMERIC|COUNT
-İngiltere’de demir yolu ağı ne kadardır|||DESCRIPTION|DEFINITION
-İngiltere’nin yıllık turizm geliri kaç dolardır|||DESCRIPTION|DEFINITION
-Hindistan’ın idari şekli nedir|||DESCRIPTION|DEFINITION
-Hindistan hangi sistemle yönetilir|||DESCRIPTION|DEFINITION
-Hindistan hangi kuzey enlemlerin arasındadır|||NUMERIC|COUNT
-Hindistan göller bakımından nasıldır|||DESCRIPTION|DEFINITION
-Hindistan’ın nüfus dağılımı nasıldır|||DESCRIPTION|DEFINITION
-İnsanların yaşadığı doğal ortamına genel olarak verilen isim nedir|||DESCRIPTION|DEFINITION
-Oluşumunda insanın etkisi olmayan çevreye ne denir|||DESCRIPTION|DEFINITION
-İnsanı n kendi amaçları doğrultusunda değiştirmiş olduğu çevreye ne denir|||DESCRIPTION|DEFINITION
-İnsanlığın ilk dönemlerinde yiyecek bulmak için başvurdukları ilk yol nedir|||DESCRIPTION|DEFINITION
-Toprağın insanlar için değer kazanması hangi keşiften sonra olmuştur|||DESCRIPTION|DEFINITION
-Tarih boyunca insanın doğadan yararlanmasını hızlandıran en önemli faktör ne olmuştur|||DESCRIPTION|DEFINITION
-Günümüzde doğadan yararlanmamızı artıran ve hızlandıran en önemli faktör nedir|||DESCRIPTION|DEFINITION
-İnsanlar toprağı işlemeyi, taşları çeşitli amaçlarla kullanmayı ve yer altı kaynaklarını işletmeyi yeryüzünün hangi katmanında yaparlar|||DESCRIPTION|DEFINITION
-İnsanlar havayolu ulaşımından yeryüzünün hangi katmanında faydalanırlar|||DESCRIPTION|DEFINITION
-İnsanlar sudan çeşitli şekillerde yeryüzünün hangi katmanında faydalanırlar|||DESCRIPTION|DEFINITION
-İnsanlar besin ve iş gücü kaynağı olarak yeryüzünün hangi katmanında faydalanırlar|||DESCRIPTION|DEFINITION
-İnsanların beslenme ihtiyacını karşılamak için sürdürdüğü tarım ve hayvvancılık faaliyetleri neyle ilişkilidir|||DESCRIPTION|DEFINITION
-Orta kuşaktaki pek çok insanın en temel besin maddesi nedir|||DESCRIPTION|DEFINITION
-İklimin değişmesi en çok hangi ekonomik olayı etkiler|||DESCRIPTION|DEFINITION
-Yıl boyunca nemli ve yağışlı olan, gür ormanlar ve otlakların bulunduğu yerlerde hangi hayvancılık çeşidi gelişmiştir|||DESCRIPTION|DEFINITION
-Yağışın az ve bitki örtüsünün zayıf olduğu yerlerde hangi hayvancılık çeşidi gelişmiştir|||DESCRIPTION|DEFINITION
-Tarımı sınırlayan en önemli etmen nedir|||DESCRIPTION|DEFINITION
-İskandinav yarımadası hangi iklim kuşağında yer alır|||DESCRIPTION|DEFINITION
-Norveç, İsveç gibi ülkelerde en önemli geçim kaynağı nedir|||DESCRIPTION|DEFINITION
-İnsanların giyinme ihtiyacı en çok neyle ilişkilidir|||DESCRIPTION|DEFINITION
-İnsanların barınma ihtiyaçlarını giderdikleri barınakları yapma şekilleri en çok neyle bağlantılıdır|||DESCRIPTION|DEFINITION
-Ağaçların bulunmadığı kurak bölgeler en çok hangi yapı malzemesi kullanır|||DESCRIPTION|DEFINITION
-Bilim ve teknik imkanlarla doğanın sınırsızca kullanımı genel olarak neye yol açmaktadır|||DESCRIPTION|DEFINITION
-Çevre sorunları ne zaman baş göstermeye başlamıştır|||TEMPORAL|DATE
-Hızlı nüfus artışı ve kentlere göçlere temel olarak neye sebep olmuştur|||DESCRIPTION|DEFINITION
-Doğal kaynakların kirlenmesinin başlıca sonucu nedir|||DESCRIPTION|DEFINITION
-Deodorant  ve zararlı gazların sanayide kullanımı temel olarak hangi çevre sorununa yol açar|||DESCRIPTION|DEFINITION
-Ormanların katledilmesinin en önemli sonucu nedir|||DESCRIPTION|DEFINITION
-Fabrika atıklarının doğaya boşaltılmasının en önemli sonucu nedir|||DESCRIPTION|DEFINITION
-Nükleer santral atıklarının doğru şekilde yok edilmemesi ne meydana getirir|||DESCRIPTION|DEFINITION
-Atmosferde toz, duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar yükselmesi olayına ne denir|||DESCRIPTION|DEFINITION
-Hava kirliliğinin oluşmasındaki başlıca etken nedir|||DESCRIPTION|DEFINITION
-İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin, suyun niteliğini bozacak kadar yükselmesi olayına ne denir|||DESCRIPTION|DEFINITION
+Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü maddi ve manevi özellikler bütününe ne denir|maddi ve manevi özellikler bütününe denir|Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü|DESCRIPTION|DEFINITION
+Bir kültürün doğduğu yere ne denir|yere denir|Bir kültürün doğduğu|DESCRIPTION|DEFINITION
+Türk kültürünün ocağı neresidir|ocağı|Türk kültürünün|DESCRIPTION|DEFINITION
+Türk kültürü hangi kültürlere komşudur|hangi kültürlere|Türk kültürü komşudur|DESCRIPTION|DEFINITION
+Sanayi tesislerinde kullanılmak üzere işlenmiş ya da yarı işlenmiş maddelere ne ad verilir|maddelere ad|Sanayi tesislerinde kullanılmak üzere işlenmiş ya da yarı işlenmiş|DESCRIPTION|DEFINITION
+Dış ticaretin diğer adı nedir|ad|Dış ticaretin diğer|DESCRIPTION|DEFINITION
+Dünya’daki toplam istihdamın ne kadarı turizm sektöründedir|toplam istihdamın ne kadarı|Dünyadaki turizm sektöründedir|NUMERIC|PERCENT
+2006 yılında Dünyadaki toplam turist sayısı ne kadar olarak hesaplanmıştır|ne kadar olarak|2006 yılında Dünyadaki toplam turist sayısı hesaplanmıştır|NUMERIC|COUNT
+Dünyanın 7 harikasından günümüze kalan tek eser hangisidir|eser|Dünyanın 7 harikasından günümüze kalan tek|DESCRIPTION|DEFINITION
+1972 yılındaki Dünya Doğal ve Kültürel Mirası Koruma Konvansiyonu kaç maddeden oluşur|kaç maddeden|1972 yılındaki Dünya Doğal ve Kültürel Mirası Koruma Konvansiyonu oluşur|DESCRIPTION|DEFINITION
+ABD Ulusal parkı hangi birlik tarafından koruma altına alınmıştır|hangi birlik|ABD Ulusal parkı tarafından koruma altına alınmıştır|DESCRIPTION|DEFINITION
+UNESCO’nun açılımı nedir|açılımı|UNESCOnun|DESCRIPTION|DEFINITION
+UNESCO Türkiye’den kaç kültürel varlığı Dünya Miras Listesine eklemiştir|kaç kültürel varlığı|UNESCO Türkiyeden Dünya Miras Listesine eklemiştir|NUMERIC|COUNT
+Dünya Doğal ve Kültür Miraslarında en büyük pay kaç eserle kime aittir|SİL|SİL|DESCRIPTION|DEFINITION
+Artemis Tapınağı nerede kurulmuştur|nerede kurulmuştur|Artemis Tapınağı|DESCRIPTION|DEFINITION
+Antik çağın en ünlü deniz feneri hangisidir|deniz feneri|Antik çağın en ünkü|DESCRIPTION|DEFINITION
+Keops Piramidi kaç adet taş bloktan yapılmıştır|kaç adet|Keops Piramidi taş bloktan yapılmıştır|NUMERIC|COUNT
+Japonya’nın yüz ölçümü ne kadardır|ne kadardır|Japonyanın yüz ölçümü|NUMERIC|SIZE
+Japonya’nın nüfusu ne kadardır|ne kadardır|Japonyanın nüfusu|NUMERIC|SIZE
+Japonya’nın başkenti neresidir|neresidir|Japonyanın başkenti|DESCRIPTION|DEFINITION
+Japonya’nın dili nedir|dili|Japonyanın|DESCRIPTION|DEFINITION
+Japonya’da kişi başına düşen milli gelir ne kadardır|ne kadardır|Japonyada kişi başına düşen milli gelir|NUMERIC|SIZE
+Japon erkelerinin ortalama ömrü ne kadardır|ne kadardır|Japon erkeklerin ortalama ömrü|NUMERIC|SIZE
+Japonya arazisinin yüzde kaçı dağlardan oluşur|Japonya arazisinin yüzde kaçı|dağlardan oluşur|NUMERIC|PERCENT
+Japonya’nın en yüksek dağları hangi adadadır|hangi adadadır|Japonyanın en yüksek dağları|DESCRIPTION|DEFINITION
+Fuji dağının yüksekliği ne kadardır|ne kadardır|Fuji dağının yüksekliği|NUMERIC|SIZE
+Dünyadaki aktif volkanların kaçta kaçı Japonya’dadır|aktif volkanların kaçta kaçı|Dünyadaki Japonyadadır|NUMERIC|SIZE
+Japonya’da yıllık ortalama deprem sayısı kaçtır|kaçtır|Japonyada yıllık ortalama deprem sayısı|NUMERIC|SIZE
+1955 yılında 5500 kişinin öldüğü deprem nerede gerçekleşmiştir|nerede gerçekleşmiştir|1955 yılında 5500 kişinin öldüğü deprem|DESCRIPTION|DEFINITION
+Japonya hangi iklimin etkisi altındadır|hangi iklimin|Japonya etkisi altındadır|DESCRIPTION|DEFINITION
+Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi ne olarak nitelendirilir|ne nitelendirilir|Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi|DESCRIPTION|DEFINITION
+ABD ikinci dünya savaşında hangi şehirlere atom bombası atmıştır|hangi şehirlere|ABD ikinci dünya savaşında atom bombası atmıştır|DESCRIPTION|DEFINITION
+Japonya demir çelik üretiminde dünyada kaçıncı sıradadır|kaçıncı sıradadır|Japonya demir çelik üretiminde|NUMERIC|COUNT
+İngiltere Avrupa’nın neresinde yer alır|neresinde yer alır|İngiltere Avrupa'nın|DESCRIPTION|DEFINITION
+Başlangıç meridyeni hangi şehirdedir|hangi şehirdedir|Başlangıç meridyeni|DESCRIPTION|DEFINITION
+İngiltere’de akarsuların boyu genellikle nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+İngiltere’de güneşli gün sayısı mı sisli gün sayısı mı daha fazladır|SİL|SİL|DESCRIPTION|DEFINITION
+İngiltere’de kilometrekareye ortalama kaç insan düşer|kaç insan|İngilterede kilometrekareye ortalama düşer|NUMERIC|COUNT
+İngiltere’de yıllık nüfus artışı kaçtır|kaçtır|İngilterede yıllık nüfus artışı|DESCRIPTION|DEFINITION
+İplik makinesini kim icat etmiştir|kim|İplik makinesini icat etmiştir|DESCRIPTION|DEFINITION
+İplik makinesi kaç yılında icat edilmiştir|kaç yılında|İplik makinesi icat edilmiştir|NUMERIC|COUNT
+Su gücüyle çalışan iplik makinesi kim tarafından icat edilmiştir|kim|Su gücüyle çalışan iplik makinesi tarafından icat edilmiştir|DESCRIPTION|DEFINITION
+Su gücüyle çalışan iplik makinesi hangi tarihte icat edilmiştir|hangi tarihte|Su gücüyle çalışan iplik makinesi icat edilmiştir|NUMERIC|COUNT
+İngiltere’de demir yolu ağı ne kadardır|ne kadardır|İngiltere demir yolu ağı|DESCRIPTION|DEFINITION
+İngiltere’nin yıllık turizm geliri kaç dolardır|kaç dolardır|İngilterenin yıllık turizm geliri|DESCRIPTION|DEFINITION
+Hindistan’ın idari şekli nedir|idari şekli|Hindistanın|DESCRIPTION|DEFINITION
+Hindistan hangi sistemle yönetilir|hangi sistemle|Hindistan yönetilir|DESCRIPTION|DEFINITION
+Hindistan hangi kuzey enlemlerin arasındadır|hangi kuzey enlemlerin|Hindistan arasındadır|NUMERIC|COUNT
+Hindistan göller bakımından nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+Hindistan’ın nüfus dağılımı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+İnsanların yaşadığı doğal ortamlara genel olarak verilen isim nedir|isim|İnsanların yaşadığı doğal ortamlara genel olarak verilen |DESCRIPTION|DEFINITION
+Oluşumunda insanın etkisi olmayan çevreye ne denir|çevreye denir|Oluşumunda insanın etkisi olmayan|DESCRIPTION|DEFINITION
+İnsanın kendi amaçları doğrultusunda değiştirmiş olduğu çevreye ne denir|çevreye denir|İnsanın kendi amaçları doğrultusunda değiştirmiş olduğu|DESCRIPTION|DEFINITION
+İnsanlığın ilk dönemlerde yiyecek bulmak için başvurdukları ilk yol nedir|ilk yol|İnsanlığın ilk dönemlerde yiyecek bulmak için başvurdukları|DESCRIPTION|DEFINITION
+Toprağın insanlar için değer kazanması hangi keşiften sonra olmuştur|hangi keşiften sonra|Toprağın insanlar için değer kazanması olmuştur|DESCRIPTION|DEFINITION
+Tarih boyunca insanın doğadan yararlanmasını hızlandıran en önemli faktör nedir|faktör|Tarih boyunca insanın doğadan yararlanmasını hızlandıran en önemli|DESCRIPTION|DEFINITION
+Günümüzde doğadan yararlanmamızı artıran ve hızlandıran en önemli faktör nedir|faktör|Günümüzde doğadan yararlanmamızı artıran ve hızlandıran en önemli|DESCRIPTION|DEFINITION
+İnsanlar toprağı işlemeyi, taşları çeşitli amaçlarla kullanmayı ve yer altı kaynaklarını işletmeyi yeryüzünün hangi katmanında yaparlar|yeryüzünün hangi katmanında|İnsanlar toprağı işlemeyi taşları çeşitli amaçlarla kullanmayı ve yer altı kaynaklarını işletmeyi yaparlar|DESCRIPTION|DEFINITION
+İnsanlar havayolu ulaşımından yeryüzünün hangi katmanında faydalanırlar|yeryüzünün hangi katmanında|İnsanlar havayolu ulaşımından faydalanırlar|DESCRIPTION|DEFINITION
+İnsanlar sudan çeşitli şekillerde yeryüzünün hangi katmanında faydalanırlar|yeryüzünün hangi katmanında|İnsanlar sudan çeşitli şekillerde faydalanırlar |DESCRIPTION|DEFINITION
+İnsanlar besin ve iş gücü kaynağı olarak yeryüzünün hangi katmanından faydalanırlar|yeryüzünün hangi katmanından|İnsanlar besin ve iş gücü kaynağı olarak faydalanırlar|DESCRIPTION|DEFINITION
+İnsanların beslenme ihtiyacını karşılamak için sürdürdüğü tarım ve hayvvancılık faaliyetleri neyle ilişkilidir|SİL|SİL|DESCRIPTION|DEFINITION
+Orta kuşaktaki pek çok insanın en temel besin maddesi nedir|besin maddesi|Orta kuşaktaki pek çok insanın en temel|DESCRIPTION|DEFINITION
+İklimin değişmesi en çok hangi ekonomik olayı etkiler|hangi ekonomik olayı|İklimin değişmesi en çok etkiler|DESCRIPTION|DEFINITION
+Yıl boyunca nemli ve yağışlı olan, gür ormanlar ve otlakların bulunduğu yerlerde hangi hayvancılık çeşidi gelişmiştir|hangi hayvancılık çeşidi|Yıl boyunca nemli ve yağışlı olan gür ormanlar ve otlakların bulunduğu yerlerde gelişmiştir|DESCRIPTION|DEFINITION
+Yağışın az ve bitki örtüsünün zayıf olduğu yerlerde hangi hayvancılık çeşidi gelişmiştir|hangi hayvancılık çeşidi|Yağışın az ve bitki örtüsünün zayıf olduğu yerlerde gelişmiştir|DESCRIPTION|DEFINITION
+Tarımı sınırlayan en önemli etmen nedir|etmen|Tarımı sınırlayan en önemli|DESCRIPTION|DEFINITION
+İskandinav yarımadası hangi iklim kuşağında yer alır|hangi iklim kuşağında|İskandinav yarımadası yer alır|DESCRIPTION|DEFINITION
+Norveç, İsveç gibi ülkelerde en önemli geçim kaynağı nedir|geçim kaynağı|Norveç İsveç gibi ülkelerde en önemli|DESCRIPTION|DEFINITION
+İnsanların giyinme ihtiyacı en çok neyle ilişkilidir|SİL|SİL|DESCRIPTION|DEFINITION
+İnsanların barınma ihtiyaçlarını giderdikleri barınakları yapma şekilleri en çok neyle bağlantılıdır|SİL|SİL|DESCRIPTION|DEFINITION
+Ağaçların bulunmadığı kurak bölgelerde en çok hangi yapı malzemesi kullanılır|hangi yapı malzemesi|Ağaçların bulunmadığı kurak bölgelerde en çok kullanılır |DESCRIPTION|DEFINITION
+Bilim ve teknik imkanlarla doğanın sınırsızca kullanımı genel olarak neye yol açmaktadır|SİL|SİL|DESCRIPTION|DEFINITION
+Çevre sorunları ne zaman baş göstermeye başlamıştır|SİL|SİL|TEMPORAL|DATE
+Hızlı nüfus artışı ve kentlere göçlere temel olarak neye sebep olmuştur|SİL|SİL|DESCRIPTION|DEFINITION
+Doğal kaynakların kirlenmesinin başlıca sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
+Deodorant ve zararlı gazların sanayide kullanımı temel olarak hangi çevre sorununa yol açar|hangi çevre sorununa|Deodorant ve zararlı gazların sanayide kullanımı temel olarak yol açar|DESCRIPTION|DEFINITION
+Ormanların katledilmesinin en önemli sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
+Fabrika atıklarının doğaya boşaltılmasının en önemli sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
+Nükleer santral atıklarının doğru şekilde yok edilmemesi ne meydana getirir|SİL|SİL|DESCRIPTION|DEFINITION
+Atmosferde toz, duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar yükselmesi olayına ne denir|yükselmesi olayına denir|Atmosferde toz duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar|DESCRIPTION|DEFINITION
+Hava kirliliğinin oluşmasındaki başlıca etken nedir|etken|Haza kirliliğinin oluşmasındaki başlıca|DESCRIPTION|DEFINITION
+İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin, suyun niteliğini bozacak kadar yükselmesi olayına ne denir|yükselmesi olayına denir|İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin suyun niteliğini bozacak kadar|DESCRIPTION|DEFINITION
 Toprağın katı, sıvı ve radyoaktif maddeler tarafından fiziksel ve kimyasal özelliklerinin bozulmasına ne denir|||DESCRIPTION|DEFINITION
 Uranyum ve toryum gibi elektron yayan maddelerin doğal denge halindeki diğer maddelerin atom yapılarını bozmasına ne denir|||DESCRIPTION|DEFINITION
 Toprağın yağış suları ve rüzgarlar tarafından aşındırılıp taşınmasına ne denir|||DESCRIPTION|DEFINITION
