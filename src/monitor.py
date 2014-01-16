@@ -43,25 +43,30 @@ for q in filteredDenir:
 """
 
 def getAllExpertResults():
-    print("\n\n -- nedir -- \n\n")
     
-    MassAnalyzer.massShowFocusMod(filteredNedir)
+    if 'all' in sys.argv or 'nedir' in sys.argv:
+        print("\n\n -- nedir -- \n\n")
+        MassAnalyzer.massShowFocusMod(filteredNedir)
 
-    print("\n\n -- verilir -- \n\n")
+    if 'all' in sys.argv or 'verilir' in sys.argv:
+        print("\n\n -- verilir -- \n\n")
     
-    MassAnalyzer.massShowFocusMod(filteredVerilir)
+        MassAnalyzer.massShowFocusMod(filteredVerilir)
     
-    print("\n\n -- hangisidir/hangileridir -- \n\n")
+    if 'all' in sys.argv or 'hangisidir' in sys.argv:
+        print("\n\n -- hangisidir/hangileridir -- \n\n")
     
-    MassAnalyzer.massShowFocusMod(filteredHangisidir)
+        MassAnalyzer.massShowFocusMod(filteredHangisidir)
     
-    print("\n\n -- .... hangi .... -- \n\n")
+    if 'all' in sys.argv or 'hangi' in sys.argv:
+        print("\n\n -- .... hangi .... -- \n\n")
     
-    MassAnalyzer.massShowFocusMod(filteredHangiBetween)
+        MassAnalyzer.massShowFocusMod(filteredHangiBetween)
     
-    print("\n\n -- denir -- \n\n")
+    if 'all' in sys.argv or 'denir' in sys.argv:
+        print("\n\n -- denir -- \n\n")
     
-    MassAnalyzer.massShowFocusMod(filteredDenir)
+        MassAnalyzer.massShowFocusMod(filteredDenir)
 
     print(len(filteredNedir) + len(filteredVerilir) + len(filteredHangisidir) + len(filteredHangiBetween) + len(filteredDenir))
 
@@ -92,6 +97,7 @@ if 'hmm' in sys.argv:
 
     hmmLearn(ourQuestions)
 
+    print(serializeDepTree(ourQuestions[356].questionParts))
 if 'class' in sys.argv:
     print('Test');
     rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
