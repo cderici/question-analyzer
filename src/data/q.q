@@ -275,7 +275,7 @@ Normal fay, ters fay dışındaki fay çeşidi hangisidir|fay çeşidi|Normal fa
 Suyun atmosfer ile yeryüzü arasındaki dönüşüm hareketine ne ad verilir|dönüşüm hareketine ad|Suyun atmosfer ile yeryüzü arasındaki|DESCRIPTION|DEFINITION
 Yeryüzündeki suların yüzde kaçı tatlı sulardan oluşur|suların yüzde kaçı|Yeryüzündeki suların tatlı sulardan |NUMERIC|PERCENT
 Denizler ve okyanuslar yeryüzünde ne kadar alan kaplamaktadır|ne kadar alan|Denizler ve okyanuslar yeryüzünde|NUMERIC|SIZE
-Dünyadaki okyanus sayısı kaçtır|kaçtır|Dünyadaki okyanus|NUMERIC|COUNT
+Dünyadaki okyanus sayısı kaçtır|okyanus sayısı kaçtır|Dünyadaki|NUMERIC|COUNT
 Göl ayağının diğer bir adı nedir|Göl ayağının adı|diğer|DESCRIPTION|DEFINITION
 Gideğeni olan göllerin suları nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 Dünyada tektonik göllerin en yoğun olduğu bölge neresidir|bölge|Dünyada tektonik göllerin en yoğun olduğu|DESCRIPTION|DEFINITION
@@ -328,7 +328,7 @@ Ekvatorda kentlerin yükseğe kurulmasının sebebi nedir|kurulmasının sebebi|
 İnsanların geçimini tarım ve hayvancılıktan sağladığı köylere ve köy altı yerleşmelerine ne denir|köylere ve köy altı yerleşmelerine denir|İnsanların geçimini tarım ve hayvancılıktan sağladığı|DESCRIPTION|DEFINITION
 Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük yerleşim birimlerine ne denir|yerleşim birimlerine|Beşeri ve ekonomik nedenlerle köylerden ayrılan daha küçük|DESCRIPTION|DEFINITION
 Kır yerleşmelerinin en büyüğüne ne denir|Kır yerleşmelerinin denir|en büyüğüne|DESCRIPTION|DEFINITION
-Köylerdeki nüfus miktarı genelde kaçtır|kaçtır|Köylerdeki nüfus miktarı genelde|DESCRIPTION|DEFINITION
+Köylerdeki nüfus miktarı genelde kaçtır|nüfus miktarı kaçtır|Köylerdeki genelde|DESCRIPTION|DEFINITION
 Köy yerleşmelerinin toplu olmasındaki en önemli faktör nedir|faktör|Köy yerleşmelerinin toplu olmasındaki en önemli|DESCRIPTION|REASON
 Çizgisel yerleşim dokusunun oluşmasındaki en önemli faktör nedir|faktör|Çizgisel yerleşim dokusunun oluşmasındaki en önemli|DESCRIPTION|REASON
 Yer şekillerinin az engebeli olduğu yerlerde görülen yerleşmeye ne ad verilir|yerleşmeye ad|Yer şekillerinin az engebeli olduğu yerlerde görülen|DESCRIPTION|DEFINITION
@@ -372,7 +372,7 @@ Japonya arazisinin yüzde kaçı dağlardan oluşur|Japonya arazisinin yüzde ka
 Japonya’nın en yüksek dağları hangi adadadır|hangi adadadır|Japonyanın en yüksek dağları|DESCRIPTION|DEFINITION
 Fuji dağının yüksekliği ne kadardır|ne kadardır|Fuji dağının yüksekliği|NUMERIC|SIZE
 Dünyadaki aktif volkanların kaçta kaçı Japonya’dadır|aktif volkanların kaçta kaçı|Dünyadaki Japonyadadır|NUMERIC|SIZE
-Japonya’da yıllık ortalama deprem sayısı kaçtır|kaçtır|Japonyada yıllık ortalama deprem sayısı|NUMERIC|SIZE
+Japonya’da yıllık ortalama deprem sayısı kaçtır|deprem sayısı kaçtır|Japonyada yıllık ortalama|NUMERIC|SIZE
 1955 yılında 5500 kişinin öldüğü deprem nerede gerçekleşmiştir|nerede gerçekleşmiştir|1955 yılında 5500 kişinin öldüğü deprem|DESCRIPTION|DEFINITION
 Japonya hangi iklimin etkisi altındadır|hangi iklimin|Japonya etkisi altındadır|DESCRIPTION|DEFINITION
 Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi ne olarak nitelendirilir|ne nitelendirilir|Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi|DESCRIPTION|DEFINITION
@@ -383,7 +383,7 @@ Başlangıç meridyeni hangi şehirdedir|hangi şehirdedir|Başlangıç meridyen
 İngiltere’de akarsuların boyu genellikle nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 İngiltere’de güneşli gün sayısı mı sisli gün sayısı mı daha fazladır|SİL|SİL|DESCRIPTION|DEFINITION
 İngiltere’de kilometrekareye ortalama kaç insan düşer|kaç insan|İngilterede kilometrekareye ortalama düşer|NUMERIC|COUNT
-İngiltere’de yıllık nüfus artışı kaçtır|kaçtır|İngilterede yıllık nüfus artışı|DESCRIPTION|DEFINITION
+İngiltere’de yıllık nüfus artışı kaçtır|nüfus artışı kaçtır|İngilterede yıllık|DESCRIPTION|DEFINITION
 İplik makinesini kim icat etmiştir|kim|İplik makinesini icat etmiştir|DESCRIPTION|DEFINITION
 İplik makinesi kaç yılında icat edilmiştir|kaç yılında|İplik makinesi icat edilmiştir|NUMERIC|COUNT
 Su gücüyle çalışan iplik makinesi kim tarafından icat edilmiştir|kim|Su gücüyle çalışan iplik makinesi tarafından icat edilmiştir|DESCRIPTION|DEFINITION
@@ -428,63 +428,63 @@ Nükleer santral atıklarının doğru şekilde yok edilmemesi ne meydana getiri
 Atmosferde toz, duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar yükselmesi olayına ne denir|yükselmesi olayına denir|Atmosferde toz duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar|DESCRIPTION|DEFINITION
 Hava kirliliğinin oluşmasındaki başlıca etken nedir|etken|Haza kirliliğinin oluşmasındaki başlıca|DESCRIPTION|DEFINITION
 İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin, suyun niteliğini bozacak kadar yükselmesi olayına ne denir|yükselmesi olayına denir|İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin suyun niteliğini bozacak kadar|DESCRIPTION|DEFINITION
-Toprağın katı, sıvı ve radyoaktif maddeler tarafından fiziksel ve kimyasal özelliklerinin bozulmasına ne denir|||DESCRIPTION|DEFINITION
-Uranyum ve toryum gibi elektron yayan maddelerin doğal denge halindeki diğer maddelerin atom yapılarını bozmasına ne denir|||DESCRIPTION|DEFINITION
-Toprağın yağış suları ve rüzgarlar tarafından aşındırılıp taşınmasına ne denir|||DESCRIPTION|DEFINITION
-Atmosfere verilen gazların sera etkisi yaratması sonucunda, atmosferin ve okyanusların ortalama sıcaklıklarının artmasına ne denir|||DESCRIPTION|DEFINITION
-Küresel ısınmanın en önemli sonucu nedir|||DESCRIPTION|DEFINITION
-Güneşten gelen mor ötesi ışınların büyük bir kısmını absorbe eden katman nedir|||DESCRIPTION|DEFINITION
-Ozon tabakasının incelmesinin en önemli sebebi nedir|||DESCRIPTION|DEFINITION
-Büyük şehirlerde birbiri ardına eğlence merkezlerinin açılması neye sebep olur|||DESCRIPTION|DEFINITION
-Doğal çevre ve insanla ilgili eşyanın insan eliyle doğal çevre ve insan tabiatıyla uyumsuz ve rahatsız edici hale getirilmesine ne denir|||DESCRIPTION|DEFINITION
-Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan sistemlere ne ad verilir|||DESCRIPTION|DEFINITION
-İnsanın yaşamı üzerinde etkili olan faktörlerin toplamına ne denir|||DESCRIPTION|DEFINITION
-Orta Afrika’da insanların yıl boyunca ince elbiseler giyiyor olmaları neyin sonucudur|||DESCRIPTION|DEFINITION
-Coğrafya bilimi en temelde neyi inceler|||DESCRIPTION|DEFINITION
-Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan insan sayısına ne denir|||DESCRIPTION|DEFINITION
-Belirli bir zamanda, bir ülke sınırları içinde kişilere yönelik yapılan demografik, ekonomik ve sosyal verilerin toplanması ve bu verilerin değerlendirilmesi işlemine ne denir|||DESCRIPTION|DEFINITION
-Ülke nüfusunun insan sayısı, dağılışı ve cinsiyet yapısı gibi bilgilere ne ile ulaşılır|||DESCRIPTION|DEFINITION
-Osmanlı devletinde ilk nüfus sayımı hangi padişah zamanında yapıldı|||DESCRIPTION|DEFINITION
-Osmanlı devletinde ilk nüfus sayımı ne zaman yapılmıştır|||TEMPORAL|DATE
-Çinde ilk modern nüfus sayımı ne zaman yapılmıştır|||TEMPORAL|DATE
-20.yüzyıldan önceki nüfus sayımlarının temel amacı neydi|||DESCRIPTION|REASON
-İnsanlık tarihi boyunca Dünya nüfusunda kaç kez büyük artış dönemi yaşanmıştır|||NUMERIC|COUNT
-İnsanlık tarihi boyunca yaşanan son büyük nufüs artış döneminin sebebi nedir|||DESCRIPTION|DEFINITION
-İnsanlık tarihi boyunca yaşanan ilk büyük nufüs artış döneminin sebebi nedir|||DESCRIPTION|DEFINITION
-M.Ö 4000 yılında tahmini insan nüfusu ne kadardı|||NUMERIC|COUNT
-Miladi takvimin başlangıcı olan 0 yılında tahmini dünya nüfusu ne kadardı|||NUMERIC|COUNT
-Sanayi devriminden sonra dünya nüfusunda neden artışa yaşanmıştır|||DESCRIPTION|REASON
-Sanayi devrimi ile en önemli nüfus artışı hani kıtada yaşanmıştır|||LOCATION|REGION
-Az gelişmiş ya da gelişmekte olan ülkelerde nüfus artış hızı nasıldır|||DESCRIPTION|DEFINITION
-Gelişmiş ülkelerde nüfus artış hızı nasıldır|||DESCRIPTION|DEFINITION
-Dünya nüfusunun kaça ulaştıktan sonra sabitleneceği öngörülmektedir|||TEMPORAL|PERIOD
-Nüfusun dağılışını etkileyen en önemli doğal faktörler nelerdir|||DESCRIPTION|DEFINITION
-Batı avrupa ülkelerinin fazla göç almasının temel sebebi nedir|||DESCRIPTION|DEFINITION
-Amerika birleşik devletlerinin doğu kıyılarının fazla göç almasının temel sebebi nedir|||DESCRIPTION|DEFINITION
-Güneydoğu asyanın fazla göç almasının temel sebebi nedir|||DESCRIPTION|DEFINITION
-Kutuplara yakın bölgelerde nüfus yoğunluğunun az olmasının en önemli sebebi nedir|||DESCRIPTION|DEFINITION
-Yüksek dağlık alanlarda nüfus yoğunluğunun az olmasının en temel sebebi nedir|||DESCRIPTION|DEFINITION
-Ekvator bölgesinde nüfuslanmanın az olmasının en temel sebebi nedir|||DESCRIPTION|DEFINITION
-Dünyanın en fazla nüfusa sahip kıtası hangisidir|||DESCRIPTION|DEFINITION
-Dünyanın en az nüfusa sahip kıtası hangisidir|||DESCRIPTION|DEFINITION
-1950-2010 yılları arasında nüfusun artışındaki değişikliklerin en önemli sebebi nedir|||DESCRIPTION|DEFINITION
-1950-2010 yılları arasında nüfus en fazla hangi kıtalarda toplanmıştır|||DESCRIPTION|DEFINITION
-Asya kıtasındaki nüfus artışının temel nedeni nedir|||DESCRIPTION|DEFINITION
-Avrupa kıtasında nüfus artış hızının azalması temel olarak neye bağlanabilir|||DESCRIPTION|REASON
-Nüfus artış hızı en fazla olan kıta hangisidir|||DESCRIPTION|DEFINITION
-Sınırları belli bir alanda, belli bir süre içinde nüfus sayısındaki değişime ne denir|||DESCRIPTION|DEFINITION
-Doğum oranından ölüm oranı çıkartıldığında ne bulunur|||DESCRIPTION|DEFINITION
-2010 yılına göre dünyadaki nüfus artış oranı kaçtır|||NUMERIC|PERCENT
-Bir ülkenin doğal nüfus artışı üzerinde direkt olarak neler etkilidir|||DESCRIPTION|DEFINITION
-Doğum ve ölüm oranları gelişmiş ülkelerde nasıldır|||DESCRIPTION|DEFINITION
-Doğum ve ölüm oranları gelişmemiş ya da gelişmekte olan ülkelerde nasıldır|||DESCRIPTION|DEFINITION
-Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli sonuç nedir|||DESCRIPTION|DEFINITION
-Genç nüfus olarak kabul edilen yaş grubu nedir|||NUMERIC|INTERVAL
-Olgun nüfus olarak kabul edilen yaş grubu nedir|||NUMERIC|INTERVAL
-Yaşlı nüfus olarak kabul edilen yaş grubu nedir|||NUMERIC|INTERVAL
-Nüfusun yaş yapısını belirleyen en önemli faktör nedir|||DESCRIPTION|DEFINITION
-Bir ülkede genç nüfusun fazla olması nüfus artış hızı ile ilgili ne söyler|||DESCRIPTION|DEFINITION
-Bağımlı nüfusu hangi yaş grupları oluşturur|||DESCRIPTION|DEFINITION
-Bir alandaki toplam nüfusun, o alanın yüz ölçümüne bölünmesiyle ne elde edilir|||DESCRIPTION|DEFINITION
-Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla ne elde edilir|||DESCRIPTION|DEFINITION
-Antarktike Kıtasında yerleşik hayatın olmamasının en büyük sebebi nedir|||DESCRIPTION|DEFINITION
+Toprağın katı, sıvı ve radyoaktif maddeler tarafından fiziksel ve kimyasal özelliklerinin bozulmasına ne denir|bozulmasına denir|Toprağın katı sıvı ve radyoaktif maddeler tarafından fiziksel ve kimyasal özelliklerinin|DESCRIPTION|DEFINITION
+Uranyum ve toryum gibi elektron yayan maddelerin doğal denge halindeki diğer maddelerin atom yapılarını bozmasına ne denir|bozmasına denir|Uranyum ve toryum gibi elektron yayan maddelerin doğal denge halindeki diğer maddelerin atom yapılarını|DESCRIPTION|DEFINITION
+Toprağın yağış suları ve rüzgarlar tarafından aşındırılıp taşınmasına ne denir|taşınmasına denir|Toprağın yağış suları ve rüzgarlar tarafından aşındırılıp|DESCRIPTION|DEFINITION
+Atmosfere verilen gazların sera etkisi yaratması sonucunda, atmosferin ve okyanusların ortalama sıcaklıklarının artmasına ne denir|okyanusların ortalama sıcaklıklarının artmasına denir|Atmosfere verilen gazların sera etkisi yaratması sonucunda atmosferin ve okyanusların|DESCRIPTION|DEFINITION
+Küresel ısınmanın en önemli sonucu nedir|sonucu|Küresel ısınmanın en önemli|DESCRIPTION|DEFINITION
+Güneşten gelen mor ötesi ışınların büyük bir kısmını absorbe eden katman nedir|katman|Güneşten gelen mor ötesi ışınların büyük bir kısmını absorbe eden|DESCRIPTION|DEFINITION
+Ozon tabakasının incelmesinin en önemli sebebi nedir|sebebi|Ozon tabakasının incelmesinin en önemli|DESCRIPTION|DEFINITION
+Büyük şehirlerde birbiri ardına eğlence merkezlerinin açılması neye sebep olur|SİL|SİL|DESCRIPTION|DEFINITION
+Doğal çevre ve insanla ilgili eşyanın insan eliyle doğal çevre ve insan tabiatıyla uyumsuz ve rahatsız edici hale getirilmesine ne denir|SİL|SİL|DESCRIPTION|DEFINITION
+Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan sistemlere ne ad verilir|sistemlere ad|Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan|DESCRIPTION|DEFINITION
+İnsanın yaşamı üzerinde etkili olan faktörlerin toplamına ne denir|faktörlerin toplamına denir|İnsanın yaşamı üzerinde etkili olan|DESCRIPTION|DEFINITION
+Orta Afrika’da insanların yıl boyunca ince elbiseler giyiyor olmaları neyin sonucudur|SİL|SİL|DESCRIPTION|DEFINITION
+Coğrafya bilimi en temelde neyi inceler|SİL|SİL|DESCRIPTION|DEFINITION
+Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan insan sayısına ne denir|insan sayısına denir|Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan|DESCRIPTION|DEFINITION
+Belirli bir zamanda, bir ülke sınırları içinde kişilere yönelik yapılan demografik, ekonomik ve sosyal verilerin toplanması ve bu verilerin değerlendirilmesi işlemine ne denir|verilerin toplanması ve değerlendirilmesi işlemine denir|Belirli bir zamanda bir ülke sınırları içinde kişilere yönelik yapılan demografik ekonomik ve sosyal|DESCRIPTION|DEFINITION
+Ülke nüfusunun insan sayısı, dağılışı ve cinsiyet yapısı gibi bilgilere ne ile ulaşılır|SİL|SİL|DESCRIPTION|DEFINITION
+Osmanlı devletinde ilk nüfus sayımı hangi padişah zamanında yapılmıştır|hangi padişah zamanında|Osmanlı devletinde ilk nüfus sayımı yapılmıştır|DESCRIPTION|DEFINITION
+Osmanlı devletinde ilk nüfus sayımı ne zaman yapılmıştır|ne zaman yapılmıştır|Osmanlı devletinde ilk nüfus sayımı|TEMPORAL|DATE
+Çinde ilk modern nüfus sayımı ne zaman yapılmıştır|ne zaman yapılmıştır|Çinde ilk modern nüfus sayımı|TEMPORAL|DATE
+20.yüzyıldan önceki nüfus sayımlarının temel amacı neydi|SİL|SİL|DESCRIPTION|REASON
+İnsanlık tarihi boyunca Dünya nüfusunda kaç kez büyük artış dönemi yaşanmıştır|kaç kez|İnsanlık tarihi boyunca Dünya nüfusunda büyük artış yaşanmıştır|NUMERIC|COUNT
+İnsanlık tarihi boyunca yaşanan son büyük nufüs artış döneminin sebebi nedir|SİL|SİL|DESCRIPTION|DEFINITION
+İnsanlık tarihi boyunca yaşanan ilk büyük nufüs artış döneminin sebebi nedir|SİL|SİL|DESCRIPTION|DEFINITION
+M.Ö 4000 yılında tahmini insan nüfusu ne kadardır|ne kadardır|M.Ö 4000 yılında tahmini insan nüfusu|NUMERIC|COUNT
+Miladi takvimin başlangıcı olan 0 yılında tahmini dünya nüfusu ne kadardır|ne kadardır|Miladi takvimin başlangıcı olan 0 yılında tahmini dünya nüfusu|NUMERIC|COUNT
+Sanayi devriminden sonra dünya nüfusunda neden artışa yaşanmıştır|SİL|SİL|DESCRIPTION|REASON
+Sanayi devrimi ile en önemli nüfus artışı hangi kıtada yaşanmıştır|hangi kıtada|Sanayi devrimi ile en önemli nüfus artışı yaşanmıştır|LOCATION|REGION
+Az gelişmiş ya da gelişmekte olan ülkelerde nüfus artış hızı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+Gelişmiş ülkelerde nüfus artış hızı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+Dünya nüfusunun kaça ulaştıktan sonra sabitleneceği öngörülmektedir|SİL|SİL|TEMPORAL|PERIOD
+Nüfusun dağılışını etkileyen en önemli doğal faktörler nelerdir|SİL|SİL|DESCRIPTION|DEFINITION
+Batı avrupa ülkelerinin fazla göç almasının temel sebebi nedir|temel sebebi|Batı avrupa ülkelerinin fazla göç almasının|DESCRIPTION|DEFINITION
+Amerika birleşik devletlerinin doğu kıyılarının fazla göç almasının temel sebebi nedir|temel sebebi|Amerika birleşik devletlerinin doğu kıyılarının fazla göç almasının|DESCRIPTION|DEFINITION
+Güneydoğu asyanın fazla göç almasının temel sebebi nedir|temel sebebi|Güneydoğu asyanın fazla göç almasının|DESCRIPTION|DEFINITION
+Kutuplara yakın bölgelerde nüfus yoğunluğunun az olmasının en önemli sebebi nedir|sebebi|Kutuplara yakın bölgelerde nüfus yoğunluğunun az olmasının|DESCRIPTION|DEFINITION
+Yüksek dağlık alanlarda nüfus yoğunluğunun az olmasının en temel sebebi nedir|sebebi|Yüksek dağlık alanlarda nüfus yoğunluğunun az olmasının en temel|DESCRIPTION|DEFINITION
+Ekvator bölgesinde nüfuslanmanın az olmasının en temel sebebi nedir|sebebi|Ekvator bölgesinde nüfuslanmanın az olmasının en temel|DESCRIPTION|DEFINITION
+Dünyanın en fazla nüfusa sahip kıtası hangisidir|kıtası|Dünyanın en fazla nüfusa sahip|DESCRIPTION|DEFINITION
+Dünyanın en az nüfusa sahip kıtası hangisidir|kıtası|Dünyanın en az nüfusa sahip|DESCRIPTION|DEFINITION
+1950-2010 yılları arasında nüfusun artışındaki değişikliklerin en önemli sebebi nedir|sebebi|1950-2010 yılları arasında nüfusun artışındaki değişikliklerin en önemli|DESCRIPTION|DEFINITION
+1950-2010 yılları arasında nüfus en fazla hangi kıtalarda toplanmıştır|hangi kıtalarda|1950-2010 yılları arasında nüfus en fazla toplanmıştır|DESCRIPTION|DEFINITION
+Asya kıtasındaki nüfus artışının temel nedeni nedir|temel nedeni|Asya kıtasındaki nüfus artışının|DESCRIPTION|DEFINITION
+Avrupa kıtasında nüfus artış hızının azalması temel olarak neye bağlanabilir|SİL|SİL|DESCRIPTION|REASON
+Nüfus artış hızı en fazla olan kıta hangisidir|kıta hangisidir|Nüfus artış hızı en fazla olan|DESCRIPTION|DEFINITION
+Sınırları belli bir alanda, belli bir süre içinde nüfus sayısındaki değişime ne denir|değişime denir|Sınırları belli bir alanda belli bir süre içinde nüfus sayısındaki|DESCRIPTION|DEFINITION
+Doğum oranından ölüm oranı çıkartıldığında ne bulunur|ne bulunur|Doğum oranından ölüm oranı çıkartıldığında|DESCRIPTION|DEFINITION
+2010 yılına göre dünyadaki nüfus artış oranı kaçtır|nüfus artış oranı kaçtır|2010 yılına göre dünyadaki|NUMERIC|PERCENT
+Bir ülkenin doğal nüfus artışı üzerinde direkt olarak neler etkilidir|SİL|SİL|DESCRIPTION|DEFINITION
+Doğum ve ölüm oranları gelişmiş ülkelerde nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+Doğum ve ölüm oranları gelişmemiş ya da gelişmekte olan ülkelerde nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
+Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli sonuç nedir|sonuç|Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli|DESCRIPTION|DEFINITION
+Genç nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Genç nüfus olarak kabul edilen|NUMERIC|INTERVAL
+Olgun nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Olgun nüfus olarak kabul edilen|NUMERIC|INTERVAL
+Yaşlı nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Yaşlı nüfus olarak kabul edilen|NUMERIC|INTERVAL
+Nüfusun yaş yapısını belirleyen en önemli faktör nedir|faktör|Nüfusun yaş yapısını belirleyen en önemli|DESCRIPTION|DEFINITION
+Bir ülkede genç nüfusun fazla olması nüfus artış hızı ile ilgili ne söyler|SİL|SİL|DESCRIPTION|DEFINITION
+Bağımlı nüfusu hangi yaş grupları oluşturur|hangi yaş grupları|Bağımlı nüfusu oluşturur|DESCRIPTION|DEFINITION
+Bir alandaki toplam nüfusun, o alanın yüz ölçümüne bölünmesiyle ne elde edilir|ne elde edilir|Bir alandaki toplam nüfusun o alanın yüz ölçümüne bölünmesiyle|DESCRIPTION|DEFINITION
+Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla ne elde edilir|ne elde edilir|Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla|DESCRIPTION|DEFINITION
+Antarktika Kıtasında yerleşik hayatın olmamasının en büyük sebebi nedir|sebebi|Antarktika Kıtasında yerleşik hayatın olmamasının en büyük|DESCRIPTION|DEFINITION
