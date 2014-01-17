@@ -8,6 +8,7 @@ import pprint
 
 class Glass:
 
+    reverse = True
     # probs. that a depen tag being a FOC, MOD or NON
     tagProbs = None
 
@@ -19,8 +20,9 @@ class Glass:
     # transition probs btw FOC, MOD and NON
     transitionProbs = None
 
-    def __init__(self, questions):
-        tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions)
+    def __init__(self, questions, reverse=True):
+        tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions, reverse)
+        self.reverse = reverse
 
         self.tagProbs = copy.deepcopy(tagCounts)
         self.wordProbs = copy.deepcopy(wordCounts)
@@ -79,7 +81,7 @@ class Glass:
         print(self.wordProbs['küre'.decode('utf-8')])
         
     def computeFocusProbs(self, newQuestion):
-        serialParts = serializeDepTree(newQuestion.questionParts)
+        serialParts = serializeDepTree(newQuestion.questionParts, self.reverse)
 
         # HACK
         self.tagProbs = self.wordProbs
@@ -96,6 +98,9 @@ class Glass:
                 modProb = self.initFmnProbs['MOD']*self.tagProbs[tag]['mod']
                 nonProb = self.initFmnProbs['NON']*self.tagProbs[tag]['non']
 
+                print("\nS FOCPROB: " + str(focProb))
+                print("S MODPROB: " + str(modProb))
+                print("S NONPROB: " + str(nonProb))
                 highestState = max(focProb, modProb, nonProb)
 
                 if highestState == focProb:

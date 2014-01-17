@@ -97,17 +97,16 @@ if 'hmm' in sys.argv:
     print(ourQuestions[0].questionPartsMeta)
     """
     #learnerCheck(ourQuestions)
-    glass = Glass(ourQuestions)
-
+    glass = Glass(ourQuestions, reverse=True)
     #glass.printAllDebug()
-    
+    revGlass = Glass(ourQuestions, reverse=False)
     import pprint
-    qIndex = 220
+    qIndex = 335
     pp = pprint.PrettyPrinter(indent=4)
     print(ourQuestions[qIndex].questionText)
     print(ourQuestions[qIndex].trueFocus)
     pp.pprint(glass.computeFocusProbs(ourQuestions[qIndex]))
-    #print(serializeDepTree(ourQuestions[356].questionParts))
+    pp.pprint(revGlass.computeFocusProbs(ourQuestions[qIndex]))
     
 
 

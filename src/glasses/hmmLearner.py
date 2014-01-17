@@ -8,7 +8,7 @@ import copy
 3 - evaluate
 """
 
-def serializeDepTree(parts):
+def serializeDepTree(parts, reverse=True):
 
     # serialize parts
     prt = []
@@ -19,10 +19,11 @@ def serializeDepTree(parts):
         if pTag != 'DERIV' and pText != '.':
             prt.append(part)
 
-    prt.reverse()
+    if reverse:
+        prt.reverse()
     return prt
 
-def hmmLearn(questions):
+def hmmLearn(questions, reverse=True):
 
     wordCounts = {}
 
@@ -69,7 +70,7 @@ def hmmLearn(questions):
     #totalPartCount = 0
     for question in questions:
 
-        serialParts = serializeDepTree(question.questionParts)
+        serialParts = serializeDepTree(question.questionParts, reverse)
         #totalPartCount += len(serialParts)
 
         for part in serialParts:
