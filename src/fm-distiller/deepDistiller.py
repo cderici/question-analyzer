@@ -54,7 +54,8 @@ def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
             modChildren.extend(question.findChildrenDepenTag(focusPart, 'MODIFIER'))
 
         """ register the final mod parts"""
-        for modChild in reversed(modChildren):
+        modChildren.reverse()
+        for modChild in modChildren:
             qMods.append(modChild)
             qMods.extend(question.tracebackFrom(modChild))
             
@@ -69,7 +70,9 @@ def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
                 if compl.search(subjText) != None:
                     qMods.append(subj)
 
-        return reversed(qFocus), reversed(qMods), nedirFC, nedirMC
+        qFocus.reverse()
+        qMods.reverse()
+        return qFocus, qMods, nedirFC, nedirMC
 
 
 def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -140,11 +143,14 @@ def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     """ MOD EXTRACTION """
 
     if dativeModChildren != []:
-        for modChild in reversed(dativeModChildren):
+        dativeModChildren.reverse()
+        for modChild in dativeModChildren:
             qMods.append(modChild)
             qMods.extend(question.tracebackFrom(modChild))
 
-    return reversed(qFocus), reversed(qMods), verilirFC, verilirMC
+    qFocus.reverse()
+    qMods.reverse()
+    return qFocus, qMods, verilirFC, verilirMC
 
 
 def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -188,7 +194,9 @@ def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
             qMods.extend(childParts)
 
-    return reversed(qFocus), reversed(qMods), denirFC, denirMC
+    qFocus.reverse()
+    qMods.reverse()
+    return qFocus, qMods, denirFC, denirMC
 
 
 def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -223,7 +231,8 @@ def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
         modChildren.extend(question.findChildrenDepenTag(focusPart, 'MODIFIER'))
 
     """ register the final mod parts"""
-    for modChild in reversed(modChildren):
+    modChildren.reverse()
+    for modChild in modChildren:
         qMods.append(modChild)
         qMods.extend(question.tracebackFrom(modChild))
 
@@ -239,8 +248,9 @@ def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
             if compl.search(subjText) != None:
                 qMods.append(subj)
 
-
-    return reversed(qFocus), reversed(qMods), hangisidirFC, hangisidirMC
+    qFocus.reverse()
+    qMods.reverse()
+    return qFocus, qMods, hangisidirFC, hangisidirMC
 
 
 
@@ -339,8 +349,8 @@ def hangiBtwExpert(question, qParts, trainMode = False, rFocus = [], rMods = [])
                 qMods.extend(modBranch)
 
     hangiMods = question.tracebackFromFoldTamlama(HANGI, False, False, True)
-
-    qMods.extend(reversed(hangiMods))
+    hangiMods.reverse()
+    qMods.extend(hangiMods)
 
     """ Also, if SENTENCE is not included in Focus, include it at the end of qMods"""
     if QPart.getPartField(qFocus[len(qFocus)-1], 'depenTag') != 'SENTENCE':

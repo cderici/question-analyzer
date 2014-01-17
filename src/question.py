@@ -90,13 +90,20 @@ class Question:
 
         self.findRoot();
 
-    def extract_FM_Text(self):
+    def extract_FM_Text(self, focusParts=False):
         focusText = "Not Found"
         modText = "Not Found"
 
+        #print(focusParts)
+
+        if focusParts:
+            focusList = focusParts
+        else:
+            focusList = self.focus
+
         if self.focus != []:
             focusText = ""
-            for focusPart in self.focus:
+            for focusPart in focusList:
                 focusText += QPart.getPartField(focusPart, 'text') + " "
 
         if self.mod != []:

@@ -56,17 +56,8 @@ class QuestionAnalysis:
                         result.append(fmnConfPart2)
 
         return result
-            
 
-    def extractFocusMod(self, reverseGlass, normalGlass):
-        dist = Distiller(self.question)
-
-        ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
-
-        mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
-        mostProbSeq = normalGlass.computeFocusProbs(self.question)
-
-        hmmResults = QuestionAnalysis.combineGlasses(mostProbRevSeq, mostProbSeq)
+    def combineDistillerGlasses(self, ruleFocus, fRuleConf, hmmResults):
 
         """ Combining Focus Parts of both distiller and hmm-glasses"""
         focusCombined = []
@@ -100,18 +91,36 @@ class QuestionAnalysis:
         focusCombined.reverse()
         focusConfidences.reverse()
 
+        return focusCombined, focusConfidences
+        
+
+    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False):
+        dist = Distiller(self.question)
+
+        ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
+        #print(ruleFocus)
+        if onlyDistiller:
+            focusCombined = ruleFocus
+            focusConfidences = fRuleConf
+            hmmResults = []
+        else:
+            mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
+            mostProbSeq = normalGlass.computeFocusProbs(self.question)
+
+            hmmResults = QuestionAnalysis.combineGlasses(mostProbRevSeq, mostProbSeq)
+            # Combining distiller and hmm results
+            focusCombined, focusConfidences = self.combineDistillerGlasses(ruleFocus, fRuleConf, hmmResults)
+
         self.question.focus = focusCombined
-
-        self.question.mod = ruleMod # out of question at this point
-
         self.question.focusConfidence = focusConfidences
 
+        self.question.mod = ruleMod # out of question at this point
         self.question.focusConfidence = mRuleConf # out of question at this point
 
-        return focusCombined, focusConfidences
+        return ruleFocus, hmmResults, focusCombined, focusConfidences
 
-    def showFocusMod(self):
-        focusCombined, focusConfidences = self.extractFocusMod()
+    def showFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False):
+        ruleFocus, hmmResults, focusCombined, focusConfidences = self.extractFocusMod(reverseGlass, normalGlass, onlyDistiller)
 
         focusText, modText = self.question.extract_FM_Text()
 
@@ -173,12 +182,21 @@ class MassAnalyzer:
 
     def massAnalyze(self):
         for question in self.questionSet:
-            QuestionAnalysis(question).extractFocusMod(self.normalGlass, self.reverseGlass)
+            ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(self.reverseGlass, self.normalGlass)
+
             focusText, modText = question.extract_FM_Text()
+            #print(ruleFocus)
+            ruleFocusTxt, modText = question.extract_FM_Text(ruleFocus)
 
-            print(u"Q: {} || Focus: {}".format(question.questionText, focusText))
+            hmmFocus = []
+            for rslt in hmmResults:
+                if rslt[0] == 'FOC':
+                    hmmFocus.append(rslt[2])
 
-    @staticmethod
-    def massShowFocusMod(questionSet):
+            hmmFocusTxt, modText = question.extract_FM_Text(hmmFocus)
+
+            print(u"Q: {} || CombinedFocus=> {} || Rule=> {} || HMM=> {}".format(question.questionText, focusText, ruleFocusTxt, hmmFocusTxt))
+
+    def massShowFocusMod(self, questionSet, onlyDistiller=False):
         for question in questionSet:
-            QuestionAnalysis(question).showFocusMod()
+            QuestionAnalysis(question).showFocusMod(self.reverseGlass, self.normalGlass, onlyDistiller)

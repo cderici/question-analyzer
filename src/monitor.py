@@ -46,27 +46,27 @@ def getAllExpertResults():
     
     if 'all' in sys.argv or 'nedir' in sys.argv:
         print("\n\n -- nedir -- \n\n")
-        MassAnalyzer.massShowFocusMod(filteredNedir)
+        mass.massShowFocusMod(filteredNedir, onlyDistiller=True)
 
     if 'all' in sys.argv or 'verilir' in sys.argv:
         print("\n\n -- verilir -- \n\n")
     
-        MassAnalyzer.massShowFocusMod(filteredVerilir)
+        mass.massShowFocusMod(filteredVerilir, onlyDistiller=True)
     
     if 'all' in sys.argv or 'hangisidir' in sys.argv:
         print("\n\n -- hangisidir/hangileridir -- \n\n")
     
-        MassAnalyzer.massShowFocusMod(filteredHangisidir)
+        mass.massShowFocusMod(filteredHangisidir, onlyDistiller=True)
     
     if 'all' in sys.argv or 'hangi' in sys.argv:
         print("\n\n -- .... hangi .... -- \n\n")
     
-        MassAnalyzer.massShowFocusMod(filteredHangiBetween)
+        mass.massShowFocusMod(filteredHangiBetween, onlyDistiller=True)
     
     if 'all' in sys.argv or 'denir' in sys.argv:
         print("\n\n -- denir -- \n\n")
     
-        MassAnalyzer.massShowFocusMod(filteredDenir)
+        mass.massShowFocusMod(filteredDenir, onlyDistiller=True)
 
     print(len(filteredNedir) + len(filteredVerilir) + len(filteredHangisidir) + len(filteredHangiBetween) + len(filteredDenir))
 
