@@ -19,11 +19,12 @@ def serializeDepTree(parts):
         if pTag != 'DERIV' and pText != '.':
             prt.append(part)
 
-    #prt.reverse()
+    prt.reverse()
     return prt
 
 def hmmLearn(questions):
 
+    wordCounts = {}
 
     # total: total tag count
     # focus: number of times this tag is being seen as focus
@@ -73,18 +74,32 @@ def hmmLearn(questions):
 
         for part in serialParts:
             tag = QPart.getPartField(part, 'depenTag')
+            
+            specialWords = ['nedir', 'verilir', 'hangisidir', 'hangileridir', 'denir', 'denilir', 'denilmektedir']
+            word = QPart.getPartField(part, 'text')
+            if not word in specialWords:
+                word = QPart.getPartField(part, 'morphRoot')
+                prt = part
+                while word == "_":
+                    derivChild = question.findChildrenDepenTag(prt, 'DERIV')[0]
+                    word = QPart.getPartField(derivChild, 'morphRoot')
+                    prt = derivChild
+
+            if not wordCounts.has_key(word):
+                wordCounts[word] = {'total':0, 'focus':0, 'mod':0, 'non':0}
 
             if part in question.trueFocus:
                 tagCounts[tag]['focus'] += 1
+                wordCounts[word]['focus'] += 1
             elif part in question.trueMod:
                 tagCounts[tag]['mod'] += 1
+                wordCounts[word]['mod'] += 1
             else:                
                 tagCounts[tag]['non'] += 1
+                wordCounts[word]['non'] +=1 
 
-        for part in serialParts:
-            tag = QPart.getPartField(part, 'depenTag')
             tagCounts[tag]['total'] += 1
-
+            wordCounts[word]['total'] += 1
 
         """ Computing initial counts """
         initPart = serialParts[0]
@@ -120,7 +135,7 @@ def hmmLearn(questions):
             FmnCounts[partProp][nPartProp] += 1
         
 
-    return tagCounts, initFmnCounts, FmnCounts
+    return tagCounts, initFmnCounts, FmnCounts, wordCounts
 
 
 def learnerCheck(questions):
@@ -131,7 +146,7 @@ def learnerCheck(questions):
     print("\n\n ===== Manual Check: HMM-Glasses Learning ====== \n\n")
 
     print("Given " + str(len(questions)) + " questions...")
-    tagCounts, initFmnCounts, FmnCounts = hmmLearn(questions)
+    tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions)
 
     print("\nTotal Counts:\n\n")
     #print(tagCounts)
@@ -144,6 +159,12 @@ def learnerCheck(questions):
     print("\nFMN Counts:\n\n")
     #print(FmnCounts)
     pp.pprint(FmnCounts)
+
+    print("\nWords Counts:\n\n")
+    pp.pprint(wordCounts)
+    print("VOCABULARY SIZE (V) : " + str(len(wordCounts)))
+    print("_ COUNT : ")
+    print(wordCounts.get('_'))
     """
     print("Total Part Count : " + str(totalPartCount))
     checkSum = 0

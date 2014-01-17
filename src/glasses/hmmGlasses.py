@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from question import *
 from hmmLearner import *
 
@@ -9,6 +11,8 @@ class Glass:
     # probs. that a depen tag being a FOC, MOD or NON
     tagProbs = None
 
+    wordProbs = None
+
     # initial probs. of tags being FOC, MOD or NON
     initFmnProbs = None
 
@@ -16,9 +20,10 @@ class Glass:
     transitionProbs = None
 
     def __init__(self, questions):
-        tagCounts, initFmnCounts, FmnCounts = hmmLearn(questions)
+        tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions)
 
         self.tagProbs = copy.deepcopy(tagCounts)
+        self.wordProbs = copy.deepcopy(wordCounts)
         self.initFmnProbs = copy.deepcopy(initFmnCounts)
         self.transitionProbs = copy.deepcopy(FmnCounts)
 
@@ -30,6 +35,11 @@ class Glass:
         for tag in tagCounts.keys():
             for fmn in tagCounts[tag].keys():
                 self.tagProbs[tag][fmn] = tagCounts[tag][fmn]/(tagCounts[tag]['total']*1.0)
+
+        # computing tagProbs from tagCounts
+        for word in wordCounts.keys():
+            for fmn in wordCounts[word].keys():
+                self.wordProbs[word][fmn] = wordCounts[word][fmn]/(wordCounts[word]['total']*1.0)
 
         # computing transition probabilities
         for fmn in FmnCounts.keys():
@@ -49,7 +59,23 @@ class Glass:
         print("\n\n Transition Probs \n\n")
         pp.pprint(self.transitionProbs)
 
-
+        print("\n\n Word Probs \n\n")
+        pp.pprint(self.wordProbs)
+        print("\n hangi \n")
+        print(self.wordProbs['hangi'])
+        print("\n nedir \n")
+        print(self.wordProbs['nedir'])
+        print("\n denir \n")
+        print(self.wordProbs['denir'])
+        print("\n ne \n")
+        print(self.wordProbs['ne'])
+        print("\n verilir \n")
+        print(self.wordProbs['verilir'])
+        print("\n ka\xc3\xa7 \n")
+        print(self.wordProbs['kaç'.decode('utf-8')])
+        print("\n kim \n")
+        print(self.wordProbs['kim'])
+        
     def computeFocusProbs(self, newQuestion):
         serialParts = serializeDepTree(newQuestion.questionParts)
 
@@ -84,6 +110,7 @@ class Glass:
 
                 print("FOCPROB: " + str(currentFocusProb))
                 currentModProb = prevProb*self.tagProbs[tag]['mod']*self.transitionProbs[prevState]['MOD']
+                print("MODPROB: " + str(currentModProb))
                 currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
 
                 highestState = max(currentFocusProb, currentModProb, currentNonProb)
@@ -102,5 +129,5 @@ class Glass:
                 
                 mostProbableSequence.append([currentState, currentProb])
 
-        #mostProbableSequence.reverse()
+        mostProbableSequence.reverse()
         return mostProbableSequence

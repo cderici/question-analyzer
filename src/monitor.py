@@ -99,7 +99,8 @@ if 'hmm' in sys.argv:
     #learnerCheck(ourQuestions)
     glass = Glass(ourQuestions)
 
-    #glass.printAllDebug()
+    glass.printAllDebug()
+    """
     import pprint
     qIndex = 0
     pp = pprint.PrettyPrinter(indent=4)
@@ -107,6 +108,7 @@ if 'hmm' in sys.argv:
     print(ourQuestions[qIndex].trueFocus)
     pp.pprint(glass.computeFocusProbs(ourQuestions[qIndex]))
     #print(serializeDepTree(ourQuestions[356].questionParts))
+    """
 
 
 if 'class' in sys.argv:
