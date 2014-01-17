@@ -75,15 +75,21 @@ class Glass:
         print(self.wordProbs['kaç'.decode('utf-8')])
         print("\n kim \n")
         print(self.wordProbs['kim'])
+        print("\n kürede \n")
+        print(self.wordProbs['küre'.decode('utf-8')])
         
     def computeFocusProbs(self, newQuestion):
         serialParts = serializeDepTree(newQuestion.questionParts)
+
+        # HACK
+        self.tagProbs = self.wordProbs
 
         mostProbableSequence = []
         
         for partIndex in range(0, len(serialParts)):
             part = serialParts[partIndex]
-            tag = QPart.getPartField(part, 'depenTag')
+            #tag = QPart.getPartField(part, 'depenTag')
+            tag = extractWord(newQuestion, part)
             
             if partIndex == 0: # start?
                 focProb = self.initFmnProbs['FOC']*self.tagProbs[tag]['focus']
@@ -108,11 +114,11 @@ class Glass:
                 
                 currentFocusProb = prevProb*self.tagProbs[tag]['focus']*self.transitionProbs[prevState]['FOC']
 
-                print("FOCPROB: " + str(currentFocusProb))
+                print("\nFOCPROB: " + str(currentFocusProb))
                 currentModProb = prevProb*self.tagProbs[tag]['mod']*self.transitionProbs[prevState]['MOD']
                 print("MODPROB: " + str(currentModProb))
                 currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
-
+                print("NONPROB: " + str(currentNonProb))
                 highestState = max(currentFocusProb, currentModProb, currentNonProb)
 
                 if highestState == currentFocusProb:

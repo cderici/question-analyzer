@@ -75,15 +75,7 @@ def hmmLearn(questions):
         for part in serialParts:
             tag = QPart.getPartField(part, 'depenTag')
             
-            specialWords = ['nedir', 'verilir', 'hangisidir', 'hangileridir', 'denir', 'denilir', 'denilmektedir']
-            word = QPart.getPartField(part, 'text')
-            if not word in specialWords:
-                word = QPart.getPartField(part, 'morphRoot')
-                prt = part
-                while word == "_":
-                    derivChild = question.findChildrenDepenTag(prt, 'DERIV')[0]
-                    word = QPart.getPartField(derivChild, 'morphRoot')
-                    prt = derivChild
+            word = extractWord(question, part)
 
             if not wordCounts.has_key(word):
                 wordCounts[word] = {'total':0, 'focus':0, 'mod':0, 'non':0}
@@ -174,3 +166,16 @@ def learnerCheck(questions):
     
     print("Checksum : " + str((totalPartCount-490) == checkSum))
     """
+
+def extractWord(question, part):
+    specialWords = ['nedir', 'verilir', 'hangisidir', 'hangileridir', 'denir', 'denilir', 'denilmektedir']
+    word = QPart.getPartField(part, 'text')
+    if not word in specialWords:
+        word = QPart.getPartField(part, 'morphRoot')
+        prt = part
+        while word == "_":
+            derivChild = question.findChildrenDepenTag(prt, 'DERIV')[0]
+            word = QPart.getPartField(derivChild, 'morphRoot')
+            prt = derivChild
+
+    return word
