@@ -98,17 +98,17 @@ class Glass:
                 modProb = self.initFmnProbs['MOD']*self.tagProbs[tag]['mod']
                 nonProb = self.initFmnProbs['NON']*self.tagProbs[tag]['non']
 
-                print("\nS FOCPROB: " + str(focProb))
-                print("S MODPROB: " + str(modProb))
-                print("S NONPROB: " + str(nonProb))
+                #print("\nS FOCPROB: " + str(focProb))
+                #print("S MODPROB: " + str(modProb))
+                #print("S NONPROB: " + str(nonProb))
                 highestState = max(focProb, modProb, nonProb)
 
                 if highestState == focProb:
-                    mostProbableSequence.append(['FOC',focProb])
+                    mostProbableSequence.append(['FOC',focProb, part])
                 elif highestState == modProb:
-                    mostProbableSequence.append(['MOD',modProb])
+                    mostProbableSequence.append(['MOD',modProb, part])
                 elif highestState == nonProb:
-                    mostProbableSequence.append(['NON',nonProb])
+                    mostProbableSequence.append(['NON',nonProb, part])
                 else:
                     raise RuntimeError("something is horribly wrong in the initial stage")
 
@@ -119,11 +119,11 @@ class Glass:
                 
                 currentFocusProb = prevProb*self.tagProbs[tag]['focus']*self.transitionProbs[prevState]['FOC']
 
-                print("\nFOCPROB: " + str(currentFocusProb))
+                #print("\nFOCPROB: " + str(currentFocusProb))
                 currentModProb = prevProb*self.tagProbs[tag]['mod']*self.transitionProbs[prevState]['MOD']
-                print("MODPROB: " + str(currentModProb))
+                #print("MODPROB: " + str(currentModProb))
                 currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
-                print("NONPROB: " + str(currentNonProb))
+                #print("NONPROB: " + str(currentNonProb))
                 highestState = max(currentFocusProb, currentModProb, currentNonProb)
 
                 if highestState == currentFocusProb:
@@ -138,7 +138,8 @@ class Glass:
                 else:
                     raise RuntimeError("something is horribly wrong in middle stages")
                 
-                mostProbableSequence.append([currentState, currentProb])
+                mostProbableSequence.append([currentState, currentProb, part])
 
-        mostProbableSequence.reverse()
+        if self.reverse:
+            mostProbableSequence.reverse()
         return mostProbableSequence

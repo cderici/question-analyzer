@@ -169,7 +169,7 @@ def learnerCheck(questions):
     """
 
 def extractWord(question, part):
-    specialWords = ['nedir', 'verilir', 'hangisidir', 'hangileridir', 'denir', 'denilir', 'denilmektedir']
+    specialWords = ['nedir', 'verilir', 'hangisidir', 'hangileridir', 'denir', 'denilir', 'denilmektedir', 'nereleridir']
     word = QPart.getPartField(part, 'text')
     if not word in specialWords:
         word = QPart.getPartField(part, 'morphRoot')

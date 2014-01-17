@@ -10,6 +10,8 @@ sys.path.append('glasses')
 import qVisualizer
 from question import Question, QPart
 from distiller import Distiller
+from hmmLearner import *
+from hmmGlasses import *
 
 import codecs;
 
@@ -30,38 +32,102 @@ class QuestionAnalysis:
     def visualizeAll(questions):
         qVisualizer.visualizeAllQuestions(questions)
         
+    @staticmethod
+    def combineGlasses(glassResult1, glassResult2):
+        result = []
+        for i in range(0, len(glassResult1)):
+            fmnConfPart1 = glassResult1[i]
+            fmnConfPart2 = glassResult2[i]
 
-    def extractFocusMod(self):
+            if fmnConfPart1[0] ==  fmnConfPart2[0]:
+                if fmnConfPart1[1] >= fmnConfPart2[1]:
+                    result.append(fmnConfPart1)
+                else:
+                    result.append(fmnConfPart2)
+            else:
+                if fmnConfPart1[0] == 'FOC':
+                    result.append(fmnConfPart1)
+                elif fmnConfPart2[0] == 'FOC':
+                    result.append(fmnConfPart2)
+                else:
+                    if fmnConfPart1[1] >= fmnConfPart2[1]:
+                        result.append(fmnConfPart1)
+                    else:
+                        result.append(fmnConfPart2)
+
+        return result
+            
+
+    def extractFocusMod(self, reverseGlass, normalGlass):
         dist = Distiller(self.question)
 
-
-        """ TODO : fConf and mConf are total confidences (e.g. fConf is equal for each part of the focus), but """
         ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
 
-        glassFocus, glassMod, fGlassConf, mGlassConf = dist.HMM_Glasses()
+        mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
+        mostProbSeq = normalGlass.computeFocusProbs(self.question)
 
-        self.question.focus = ruleFocus
-        self.question.mod = ruleMod
+        hmmResults = QuestionAnalysis.combineGlasses(mostProbRevSeq, mostProbSeq)
 
-        self.question.focusConfidence = fRuleConf
-        self.question.focusConfidence = mRuleConf
+        """ Combining Focus Parts of both distiller and hmm-glasses"""
+        focusCombined = []
+        focusConfidences = []
+        # note : order in serialization doesn't matter at this point
+        for part in serializeDepTree(self.question.questionParts):
+            # checking first what does hmm-glasses thinks about this part
+            inHmmFoc = False
+            for hmmRes in hmmResults:
+                if part == hmmRes[2] and hmmRes[0] == 'FOC':
+                    inHmmFoc = hmmRes
+                    break
 
-        return ruleFocus, ruleMod
-        
+            if part in ruleFocus:
+                if inHmmFoc: # both distiller and hmm thinks it should be focus
+                    focusCombined.append(part)
+                    focusConfidences.append(max(fRuleConf, inHmmFoc[1]))
+                else: # hmm doesn't think it's a focus, but distiller does
+                    focusCombined.append(part)
+                    focusConfidences.append(fRuleConf)
+
+            elif inHmmFoc: 
+                # hmm-glasses thinks this part is focus, 
+                # but distiller doesn't agree
+                
+                # in hmm-glasses we trust!
+                focusCombined.append(part)
+                focusConfidences.append(inHmmFoc[1])
+            # we don't do anything for the part for which both distiller and hmm-glasses think that it doesn't belong to focus
+                
+        focusCombined.reverse()
+        focusConfidences.reverse()
+
+        self.question.focus = focusCombined
+
+        self.question.mod = ruleMod # out of question at this point
+
+        self.question.focusConfidence = focusConfidences
+
+        self.question.focusConfidence = mRuleConf # out of question at this point
+
+        return focusCombined, focusConfidences
+
     def showFocusMod(self):
-        focus, mod = self.extractFocusMod()
+        focusCombined, focusConfidences = self.extractFocusMod()
 
         focusText, modText = self.question.extract_FM_Text()
 
-        print(u"Q: {} || Focus: {} || Mod: {}".format(self.question.questionText, focusText, modText))
+        print(u"Q: {} || Focus: {}".format(self.question.questionText, focusText))
 
 
 class MassAnalyzer:
     questionSet = None
 
+    normalGlass = None
+    reverseGlass = None
+
     def __init__(self, questions = None):
         self.questionSet = questions
-
+        self.normalGlass = Glass(questions, reverse=False)
+        self.reverseGlass = Glass(questions, reverse=True)
 
     # filterByTagValue('depenTag', 'SENTENCE', 'text', 'nedir')
     def filterByPartValue(self, tagType, tagName, partType, partValue):
@@ -104,6 +170,13 @@ class MassAnalyzer:
                 filtered.append(q)
 
         return filtered
+
+    def massAnalyze(self):
+        for question in self.questionSet:
+            QuestionAnalysis(question).extractFocusMod(self.normalGlass, self.reverseGlass)
+            focusText, modText = question.extract_FM_Text()
+
+            print(u"Q: {} || Focus: {}".format(question.questionText, focusText))
 
     @staticmethod
     def massShowFocusMod(questionSet):

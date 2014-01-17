@@ -23,10 +23,6 @@ class Distiller():
         self.qFocus = []
         self.qMods = []
 
-    def HMM_Glasses(self):
-        return [], [], 0, 0
-
-
     # this should be general for all domains, maybe this whole class should be that way
     def FM_Distiller(self):
 

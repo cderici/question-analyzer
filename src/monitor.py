@@ -101,7 +101,7 @@ if 'hmm' in sys.argv:
     #glass.printAllDebug()
     revGlass = Glass(ourQuestions, reverse=False)
     import pprint
-    qIndex = 335
+    qIndex = 272
     pp = pprint.PrettyPrinter(indent=4)
     print(ourQuestions[qIndex].questionText)
     print(ourQuestions[qIndex].trueFocus)
@@ -114,3 +114,6 @@ if 'class' in sys.argv:
     print('Test');
     rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
     rule.findCategories();
+
+if 'overall' in sys.argv:
+    mass.massAnalyze()
