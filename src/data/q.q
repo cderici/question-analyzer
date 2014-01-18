@@ -277,7 +277,6 @@ Yeryüzündeki suların yüzde kaçı tatlı sulardan oluşur|suların yüzde ka
 Denizler ve okyanuslar yeryüzünde ne kadar alan kaplamaktadır|ne kadar alan|Denizler ve okyanuslar yeryüzünde|NUMERIC|SIZE
 Dünyadaki okyanus sayısı kaçtır|okyanus sayısı kaçtır|Dünyadaki|NUMERIC|COUNT
 Göl ayağının diğer bir adı nedir|Göl ayağının adı|diğer|DESCRIPTION|DEFINITION
-Gideğeni olan göllerin suları nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 Dünyada tektonik göllerin en yoğun olduğu bölge neresidir|bölge|Dünyada tektonik göllerin en yoğun olduğu|DESCRIPTION|DEFINITION
 Debi ne cinsinden ifade edilir|ne cinsinden|Debi ifade edilir|DESCRIPTION|DEFINITION
 Kayaçların ayrışması kaç şekilde gerçekleşir|kaç şekilde|Kayaçların ayrışması gerçekleşir|NUMERIC|COUNT
@@ -358,7 +357,6 @@ Dünyanın 7 harikasından günümüze kalan tek eser hangisidir|eser|Dünyanın
 ABD Ulusal parkı hangi birlik tarafından koruma altına alınmıştır|hangi birlik|ABD Ulusal parkı tarafından koruma altına alınmıştır|DESCRIPTION|DEFINITION
 UNESCO’nun açılımı nedir|açılımı|UNESCOnun|DESCRIPTION|DEFINITION
 UNESCO Türkiye’den kaç kültürel varlığı Dünya Miras Listesine eklemiştir|kaç kültürel varlığı|UNESCO Türkiyeden Dünya Miras Listesine eklemiştir|NUMERIC|COUNT
-Dünya Doğal ve Kültür Miraslarında en büyük pay kaç eserle kime aittir|SİL|SİL|DESCRIPTION|DEFINITION
 Artemis Tapınağı nerede kurulmuştur|nerede kurulmuştur|Artemis Tapınağı|DESCRIPTION|DEFINITION
 Antik çağın en ünlü deniz feneri hangisidir|deniz feneri|Antik çağın en ünkü|DESCRIPTION|DEFINITION
 Keops Piramidi kaç adet taş bloktan yapılmıştır|kaç adet|Keops Piramidi taş bloktan yapılmıştır|NUMERIC|COUNT
@@ -380,8 +378,6 @@ ABD ikinci dünya savaşında hangi şehirlere atom bombası atmıştır|hangi �
 Japonya demir çelik üretiminde dünyada kaçıncı sıradadır|kaçıncı sıradadır|Japonya demir çelik üretiminde|NUMERIC|COUNT
 İngiltere Avrupa’nın neresinde yer alır|neresinde yer alır|İngiltere Avrupa'nın|DESCRIPTION|DEFINITION
 Başlangıç meridyeni hangi şehirdedir|hangi şehirdedir|Başlangıç meridyeni|DESCRIPTION|DEFINITION
-İngiltere’de akarsuların boyu genellikle nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
-İngiltere’de güneşli gün sayısı mı sisli gün sayısı mı daha fazladır|SİL|SİL|DESCRIPTION|DEFINITION
 İngiltere’de kilometrekareye ortalama kaç insan düşer|kaç insan|İngilterede kilometrekareye ortalama düşer|NUMERIC|COUNT
 İngiltere’de yıllık nüfus artışı kaçtır|nüfus artışı kaçtır|İngilterede yıllık|DESCRIPTION|DEFINITION
 İplik makinesini kim icat etmiştir|kim|İplik makinesini icat etmiştir|DESCRIPTION|DEFINITION
@@ -393,8 +389,6 @@ Su gücüyle çalışan iplik makinesi hangi tarihte icat edilmiştir|hangi tari
 Hindistan’ın idari şekli nedir|idari şekli|Hindistanın|DESCRIPTION|DEFINITION
 Hindistan hangi sistemle yönetilir|hangi sistemle|Hindistan yönetilir|DESCRIPTION|DEFINITION
 Hindistan hangi kuzey enlemlerin arasındadır|hangi kuzey enlemlerin|Hindistan arasındadır|NUMERIC|COUNT
-Hindistan göller bakımından nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
-Hindistan’ın nüfus dağılımı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 İnsanların yaşadığı doğal ortamlara genel olarak verilen isim nedir|isim|İnsanların yaşadığı doğal ortamlara genel olarak verilen |DESCRIPTION|DEFINITION
 Oluşumunda insanın etkisi olmayan çevreye ne denir|çevreye denir|Oluşumunda insanın etkisi olmayan|DESCRIPTION|DEFINITION
 İnsanın kendi amaçları doğrultusunda değiştirmiş olduğu çevreye ne denir|çevreye denir|İnsanın kendi amaçları doğrultusunda değiştirmiş olduğu|DESCRIPTION|DEFINITION
@@ -406,7 +400,6 @@ Günümüzde doğadan yararlanmamızı artıran ve hızlandıran en önemli fakt
 İnsanlar havayolu ulaşımından yeryüzünün hangi katmanında faydalanırlar|yeryüzünün hangi katmanında|İnsanlar havayolu ulaşımından faydalanırlar|DESCRIPTION|DEFINITION
 İnsanlar sudan çeşitli şekillerde yeryüzünün hangi katmanında faydalanırlar|yeryüzünün hangi katmanında|İnsanlar sudan çeşitli şekillerde faydalanırlar |DESCRIPTION|DEFINITION
 İnsanlar besin ve iş gücü kaynağı olarak yeryüzünün hangi katmanından faydalanırlar|yeryüzünün hangi katmanından|İnsanlar besin ve iş gücü kaynağı olarak faydalanırlar|DESCRIPTION|DEFINITION
-İnsanların beslenme ihtiyacını karşılamak için sürdürdüğü tarım ve hayvvancılık faaliyetleri neyle ilişkilidir|SİL|SİL|DESCRIPTION|DEFINITION
 Orta kuşaktaki pek çok insanın en temel besin maddesi nedir|besin maddesi|Orta kuşaktaki pek çok insanın en temel|DESCRIPTION|DEFINITION
 İklimin değişmesi en çok hangi ekonomik olayı etkiler|hangi ekonomik olayı|İklimin değişmesi en çok etkiler|DESCRIPTION|DEFINITION
 Yıl boyunca nemli ve yağışlı olan, gür ormanlar ve otlakların bulunduğu yerlerde hangi hayvancılık çeşidi gelişmiştir|hangi hayvancılık çeşidi|Yıl boyunca nemli ve yağışlı olan gür ormanlar ve otlakların bulunduğu yerlerde gelişmiştir|DESCRIPTION|DEFINITION
@@ -414,17 +407,8 @@ Yağışın az ve bitki örtüsünün zayıf olduğu yerlerde hangi hayvancılı
 Tarımı sınırlayan en önemli etmen nedir|etmen|Tarımı sınırlayan en önemli|DESCRIPTION|DEFINITION
 İskandinav yarımadası hangi iklim kuşağında yer alır|hangi iklim kuşağında|İskandinav yarımadası yer alır|DESCRIPTION|DEFINITION
 Norveç, İsveç gibi ülkelerde en önemli geçim kaynağı nedir|geçim kaynağı|Norveç İsveç gibi ülkelerde en önemli|DESCRIPTION|DEFINITION
-İnsanların giyinme ihtiyacı en çok neyle ilişkilidir|SİL|SİL|DESCRIPTION|DEFINITION
-İnsanların barınma ihtiyaçlarını giderdikleri barınakları yapma şekilleri en çok neyle bağlantılıdır|SİL|SİL|DESCRIPTION|DEFINITION
 Ağaçların bulunmadığı kurak bölgelerde en çok hangi yapı malzemesi kullanılır|hangi yapı malzemesi|Ağaçların bulunmadığı kurak bölgelerde en çok kullanılır |DESCRIPTION|DEFINITION
-Bilim ve teknik imkanlarla doğanın sınırsızca kullanımı genel olarak neye yol açmaktadır|SİL|SİL|DESCRIPTION|DEFINITION
-Çevre sorunları ne zaman baş göstermeye başlamıştır|SİL|SİL|TEMPORAL|DATE
-Hızlı nüfus artışı ve kentlere göçlere temel olarak neye sebep olmuştur|SİL|SİL|DESCRIPTION|DEFINITION
-Doğal kaynakların kirlenmesinin başlıca sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
 Deodorant ve zararlı gazların sanayide kullanımı temel olarak hangi çevre sorununa yol açar|hangi çevre sorununa|Deodorant ve zararlı gazların sanayide kullanımı temel olarak yol açar|DESCRIPTION|DEFINITION
-Ormanların katledilmesinin en önemli sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
-Fabrika atıklarının doğaya boşaltılmasının en önemli sonucu nedir|SİL|SİL|DESCRIPTION|DEFINITION
-Nükleer santral atıklarının doğru şekilde yok edilmemesi ne meydana getirir|SİL|SİL|DESCRIPTION|DEFINITION
 Atmosferde toz, duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar yükselmesi olayına ne denir|yükselmesi olayına denir|Atmosferde toz duman ve gaz gibi maddelerin insan ve diğer canlılara zarar verecek kadar|DESCRIPTION|DEFINITION
 Hava kirliliğinin oluşmasındaki başlıca etken nedir|etken|Haza kirliliğinin oluşmasındaki başlıca|DESCRIPTION|DEFINITION
 İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin, suyun niteliğini bozacak kadar yükselmesi olayına ne denir|yükselmesi olayına denir|İnsanlar tarafından kaynaklanan etkiler sonucunda istenmeyen zararlı maddelerin suyun niteliğini bozacak kadar|DESCRIPTION|DEFINITION
@@ -435,30 +419,17 @@ Atmosfere verilen gazların sera etkisi yaratması sonucunda, atmosferin ve okya
 Küresel ısınmanın en önemli sonucu nedir|sonucu|Küresel ısınmanın en önemli|DESCRIPTION|DEFINITION
 Güneşten gelen mor ötesi ışınların büyük bir kısmını absorbe eden katman nedir|katman|Güneşten gelen mor ötesi ışınların büyük bir kısmını absorbe eden|DESCRIPTION|DEFINITION
 Ozon tabakasının incelmesinin en önemli sebebi nedir|sebebi|Ozon tabakasının incelmesinin en önemli|DESCRIPTION|DEFINITION
-Büyük şehirlerde birbiri ardına eğlence merkezlerinin açılması neye sebep olur|SİL|SİL|DESCRIPTION|DEFINITION
-Doğal çevre ve insanla ilgili eşyanın insan eliyle doğal çevre ve insan tabiatıyla uyumsuz ve rahatsız edici hale getirilmesine ne denir|SİL|SİL|DESCRIPTION|DEFINITION
 Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan sistemlere ne ad verilir|sistemlere ad|Yeryüzünün altındaki sıcak suları enerji kaynağı olarak kullanan|DESCRIPTION|DEFINITION
 İnsanın yaşamı üzerinde etkili olan faktörlerin toplamına ne denir|faktörlerin toplamına denir|İnsanın yaşamı üzerinde etkili olan|DESCRIPTION|DEFINITION
-Orta Afrika’da insanların yıl boyunca ince elbiseler giyiyor olmaları neyin sonucudur|SİL|SİL|DESCRIPTION|DEFINITION
-Coğrafya bilimi en temelde neyi inceler|SİL|SİL|DESCRIPTION|DEFINITION
 Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan insan sayısına ne denir|insan sayısına denir|Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan|DESCRIPTION|DEFINITION
 Belirli bir zamanda, bir ülke sınırları içinde kişilere yönelik yapılan demografik, ekonomik ve sosyal verilerin toplanması ve bu verilerin değerlendirilmesi işlemine ne denir|verilerin toplanması ve değerlendirilmesi işlemine denir|Belirli bir zamanda bir ülke sınırları içinde kişilere yönelik yapılan demografik ekonomik ve sosyal|DESCRIPTION|DEFINITION
-Ülke nüfusunun insan sayısı, dağılışı ve cinsiyet yapısı gibi bilgilere ne ile ulaşılır|SİL|SİL|DESCRIPTION|DEFINITION
 Osmanlı devletinde ilk nüfus sayımı hangi padişah zamanında yapılmıştır|hangi padişah zamanında|Osmanlı devletinde ilk nüfus sayımı yapılmıştır|DESCRIPTION|DEFINITION
 Osmanlı devletinde ilk nüfus sayımı ne zaman yapılmıştır|ne zaman yapılmıştır|Osmanlı devletinde ilk nüfus sayımı|TEMPORAL|DATE
 Çinde ilk modern nüfus sayımı ne zaman yapılmıştır|ne zaman yapılmıştır|Çinde ilk modern nüfus sayımı|TEMPORAL|DATE
-20.yüzyıldan önceki nüfus sayımlarının temel amacı neydi|SİL|SİL|DESCRIPTION|REASON
 İnsanlık tarihi boyunca Dünya nüfusunda kaç kez büyük artış dönemi yaşanmıştır|kaç kez|İnsanlık tarihi boyunca Dünya nüfusunda büyük artış yaşanmıştır|NUMERIC|COUNT
-İnsanlık tarihi boyunca yaşanan son büyük nufüs artış döneminin sebebi nedir|SİL|SİL|DESCRIPTION|DEFINITION
-İnsanlık tarihi boyunca yaşanan ilk büyük nufüs artış döneminin sebebi nedir|SİL|SİL|DESCRIPTION|DEFINITION
 M.Ö 4000 yılında tahmini insan nüfusu ne kadardır|ne kadardır|M.Ö 4000 yılında tahmini insan nüfusu|NUMERIC|COUNT
 Miladi takvimin başlangıcı olan 0 yılında tahmini dünya nüfusu ne kadardır|ne kadardır|Miladi takvimin başlangıcı olan 0 yılında tahmini dünya nüfusu|NUMERIC|COUNT
-Sanayi devriminden sonra dünya nüfusunda neden artışa yaşanmıştır|SİL|SİL|DESCRIPTION|REASON
 Sanayi devrimi ile en önemli nüfus artışı hangi kıtada yaşanmıştır|hangi kıtada|Sanayi devrimi ile en önemli nüfus artışı yaşanmıştır|LOCATION|REGION
-Az gelişmiş ya da gelişmekte olan ülkelerde nüfus artış hızı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
-Gelişmiş ülkelerde nüfus artış hızı nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
-Dünya nüfusunun kaça ulaştıktan sonra sabitleneceği öngörülmektedir|SİL|SİL|TEMPORAL|PERIOD
-Nüfusun dağılışını etkileyen en önemli doğal faktörler nelerdir|SİL|SİL|DESCRIPTION|DEFINITION
 Batı avrupa ülkelerinin fazla göç almasının temel sebebi nedir|temel sebebi|Batı avrupa ülkelerinin fazla göç almasının|DESCRIPTION|DEFINITION
 Amerika birleşik devletlerinin doğu kıyılarının fazla göç almasının temel sebebi nedir|temel sebebi|Amerika birleşik devletlerinin doğu kıyılarının fazla göç almasının|DESCRIPTION|DEFINITION
 Güneydoğu asyanın fazla göç almasının temel sebebi nedir|temel sebebi|Güneydoğu asyanın fazla göç almasının|DESCRIPTION|DEFINITION
@@ -470,21 +441,66 @@ Dünyanın en az nüfusa sahip kıtası hangisidir|kıtası|Dünyanın en az nü
 1950-2010 yılları arasında nüfusun artışındaki değişikliklerin en önemli sebebi nedir|sebebi|1950-2010 yılları arasında nüfusun artışındaki değişikliklerin en önemli|DESCRIPTION|DEFINITION
 1950-2010 yılları arasında nüfus en fazla hangi kıtalarda toplanmıştır|hangi kıtalarda|1950-2010 yılları arasında nüfus en fazla toplanmıştır|DESCRIPTION|DEFINITION
 Asya kıtasındaki nüfus artışının temel nedeni nedir|temel nedeni|Asya kıtasındaki nüfus artışının|DESCRIPTION|DEFINITION
-Avrupa kıtasında nüfus artış hızının azalması temel olarak neye bağlanabilir|SİL|SİL|DESCRIPTION|REASON
 Nüfus artış hızı en fazla olan kıta hangisidir|kıta hangisidir|Nüfus artış hızı en fazla olan|DESCRIPTION|DEFINITION
 Sınırları belli bir alanda, belli bir süre içinde nüfus sayısındaki değişime ne denir|değişime denir|Sınırları belli bir alanda belli bir süre içinde nüfus sayısındaki|DESCRIPTION|DEFINITION
 Doğum oranından ölüm oranı çıkartıldığında ne bulunur|ne bulunur|Doğum oranından ölüm oranı çıkartıldığında|DESCRIPTION|DEFINITION
 2010 yılına göre dünyadaki nüfus artış oranı kaçtır|nüfus artış oranı kaçtır|2010 yılına göre dünyadaki|NUMERIC|PERCENT
-Bir ülkenin doğal nüfus artışı üzerinde direkt olarak neler etkilidir|SİL|SİL|DESCRIPTION|DEFINITION
-Doğum ve ölüm oranları gelişmiş ülkelerde nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
-Doğum ve ölüm oranları gelişmemiş ya da gelişmekte olan ülkelerde nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli sonuç nedir|sonuç|Gelişmekte olan ülkelerde ortalama yaşam süresinin uzamasının gelecekte doğuracağı en önemli|DESCRIPTION|DEFINITION
 Genç nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Genç nüfus olarak kabul edilen|NUMERIC|INTERVAL
 Olgun nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Olgun nüfus olarak kabul edilen|NUMERIC|INTERVAL
 Yaşlı nüfus olarak kabul edilen yaş grubu nedir|yaş grubu|Yaşlı nüfus olarak kabul edilen|NUMERIC|INTERVAL
 Nüfusun yaş yapısını belirleyen en önemli faktör nedir|faktör|Nüfusun yaş yapısını belirleyen en önemli|DESCRIPTION|DEFINITION
-Bir ülkede genç nüfusun fazla olması nüfus artış hızı ile ilgili ne söyler|SİL|SİL|DESCRIPTION|DEFINITION
 Bağımlı nüfusu hangi yaş grupları oluşturur|hangi yaş grupları|Bağımlı nüfusu oluşturur|DESCRIPTION|DEFINITION
 Bir alandaki toplam nüfusun, o alanın yüz ölçümüne bölünmesiyle ne elde edilir|ne elde edilir|Bir alandaki toplam nüfusun o alanın yüz ölçümüne bölünmesiyle|DESCRIPTION|DEFINITION
 Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla ne elde edilir|ne elde edilir|Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla|DESCRIPTION|DEFINITION
 Antarktika Kıtasında yerleşik hayatın olmamasının en büyük sebebi nedir|sebebi|Antarktika Kıtasında yerleşik hayatın olmamasının en büyük|DESCRIPTION|DEFINITION
+Ganj nehri hangi ülkededir||||
+Dekkan platosu Hindistan’ın hangi tarafında bulunur||||
+Ganj nehri nerede doğar||||
+Ganj nehri nereden denize dökülür||||
+Hindistan’ın tarım açısından en zengin ovaları hangileridir||||
+Hindistan’da yaşayanların yüzde kaçı tarımla uğraşır||||
+Bengal Havzası’nda en çok hangi tarım ürününün üretimi yaygındır||||
+Hint kenevirinin diğer adı nedir||||
+Hindistan pamuk ve tütün üretimi bakımından dünyada kaçıncı sıradadır||||
+Dünyada mercimek üretiminde birinci sırada olan ülke neresidir||||
+Hindistan bağımsızlığını hangi tarihte kazanmıştır||||
+Tac Mahal’i kim yaptırmıştır||||
+Hollanda’nın resmi dili nedir||||
+Hollanda’nın kuzeyi ve güneyi arasındaki uzaklık ne kadardır||||
+Hollanda topraklarının kaçta kaçı deniz seviyesinin altındadır||||
+Denizden kazanılan topraklara ne ad verilir||||
+Hollanda’nın en yüksek noktası kaç metredir||||
+Hollanda’nın en yüksek noktası neresidir||||
+Hollanda’nın en alçak noktası kaç metredir||||
+Dünya’da iç su ulaşım ağı en gelişmiş ülke hangisidir||||
+Hollanda’daki ormanlar ülke arazisinin yüzde kaçını oluşturur||||
+Hollanda’nın nüfus yoğunluğu ne kadardır||||
+İtalya’da hakim olan din hangisidir||||
+İtalya’nın uzaydan görünüşü neyi andırır||||
+İtalya’nın en büyük adaları hangileridir||||
+İtalya’da sanayi hangi tarihten sonra hızlı bir ilerleme sürecine girmiştir||||
+İtalya’ya bir yılda yaklaşık ne kadar turist gelmektedir||||
+Fransa’da yıllık kişi başına düşen milli gelir ne kadardır||||
+Fransa’da ki hava alanı sayısı ne kaçtır||||
+Dünyada turistlik açıdan en fazla ziyaret edilen ülke neresidir||||
+ABD’nin baş şehri neresidir||||
+ABD kaç eyaletten oluşmaktadır||||
+Amerika kıtasını kim keşfetmiştir||||
+Federal Almanya ve Doğu Almanya hangi tarihte birleşmişlerdir||||
+Almanya’da yaşayan Türk sayısı yaklaşık ne kadardır||||
+Rusya Federasyonu hangi yıl kurulmuştur||||
+Rusya’nın hangi kıtalarda toprağı vardır||||
+Çin’in en önemli akarsularından olan Yang-çe’nin Türkçe anlamı nedir||||
+Çin’in ikinci büyük ırmağı olan Huang-ho’nun anlamı nedir||||
+Çin uygarlığı kaç yıllık bir geçmişe sahiptir||||
+Çin hangi yıldan itibaren sosyalist bir idare tarzı ile yönetilir||||
+Pekin’in nüfusu kaç kişidir (Küçük yaşlarda sıklıkla bu şekil sorulabiliyor ||||
+Hong Kong’da hangi iklim hakimdir||||
+Çin Ar-Ge çalışmalarına yıllık ne kadar para ayırmaktadır||||
+İnsanı gelişim endeksini hangi topluluk hazırlar||||
+Hong-Kong hangi tarihine kadar İngiliz Krallığına bağlı bir sömürgeydi||||
+Çin Halk Cumhuriyeti coğrafi açıdan kaç bölgeye ayrılır||||
+Rusya’da ki petrol rezervlerinin %80’i hangi bölgesinde bulunur||||
+Rusya hangi ülkenin dağılmasıyla kurulmuştur||||
+SSCB2nin açılımı nedir||||
