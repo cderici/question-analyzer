@@ -495,7 +495,7 @@ Rusya’nın hangi kıtalarda toprağı vardır|hangi kıtalara|Rusyanın topra�
 Çin’in ikinci büyük ırmağı olan Huang-ho’nun anlamı nedir|anlamı|Çinin ikinci büyük ırmağı olan Huanghonun||
 Çin uygarlığı kaç yıllık bir geçmişe sahiptir|kaç yıllık|Çin uygarlığı bir geçmişe sahiptir||
 Çin hangi yıldan itibaren sosyalist bir idare tarzı ile yönetilir|hangi yıldan|Çin sosyalist bir idare tarzı ile yönetilir||
-Pekin’in nüfusu kaç kişidir (Küçük yaşlarda sıklıkla bu şekil sorulabiliyor|kaç kişidir|Pekinin nüfusu||
+Pekin’in nüfusu kaç kişidir|kaç kişidir|Pekinin nüfusu||
 HongKong’da hangi iklim hakimdir|hangi iklim|HonkKongda hakimdir||
 Çin Ar-Ge çalışmalarına yıllık ne kadar para ayırmaktadır|ne kadar para|Çin ArGe çalışmalarına yıllık ayırmaktadır||
 İnsani gelişim endeksini hangi topluluk hazırlar|hangi topluluk|İnsani gelişim endeksini hazırlar||
