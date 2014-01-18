@@ -102,7 +102,7 @@ class QuestionAnalysis:
         #print(ruleFocus)
         if onlyDistiller:
             focusCombined = ruleFocus
-            focusConfidences = fRuleConf
+            focusConfidences = fRuleConf # <= TODO: focusCondidences is supposed to be a list of number, not a number
             hmmResults = []
         else:
             mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
