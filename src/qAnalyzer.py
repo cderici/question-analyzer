@@ -6,6 +6,7 @@ sys.path.append('fm-distiller')
 sys.path.append('data')
 sys.path.append('visualizer')
 sys.path.append('glasses')
+sys.path.append('classBags')
 
 import qVisualizer
 from question import Question, QPart
