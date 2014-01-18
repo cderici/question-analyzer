@@ -31,28 +31,6 @@ filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'den
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
 #########################################################################
 
-
-# evaluateDistiller
-# only evaluates the distiller, 
-# produces 1) Proper model name 2) results
-#
-def evaluateDistiller(questionSet):
-
-    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
-
-    for question in questionSet:
-        serialParts = serializeDepTree(question.questionParts)
-
-        results['totalFParts'] += len(question.trueFocus)
-
-        # actual focus detection starts to work
-        ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True)
-
-        # computing tp, fp and fn
-        results = computePerClassCounts(question.trueFocus, ruleFocus, results)
-
-    return 'FM-Distiller Single', results
-
 # computePerClassCounts:
 # given the gold standard parts and computed parts, 
 # it computes simply the TruePositive, FalsePositive and FalseNegative counts
@@ -71,33 +49,6 @@ def computePerClassCounts(goldParts, resultParts, resultsArr):
     
     return resultsArr
 
-# evaluateGlasses
-# only evaluates the HMM-Glasses, 
-# produces 1) Proper model name 2) results
-#
-def evaluateGlasses(questionSet, reverse):
-    glass = Glass(questionSet, reverse)
-
-    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
-    
-    for question in questionSet:
-        serialParts = serializeDepTree(question.questionParts)
-
-        results['totalFParts'] += len(question.trueFocus)
-
-        hmmTripletAllResults = glass.computeFocusProbs(question)
-
-        hmmTripletFocusResults = [trplt for trplt in hmmTripletAllResults if (trplt[0] == 'FOC')]
-
-        resultParts = Glass.hmmResultsToParts(hmmTripletFocusResults)
-
-        results = computePerClassCounts(question.trueFocus, resultParts, results)
-        
-
-    revStr = "Forward"
-    if reverse:
-        revStr = "Backward"
-    return 'HMM-Glasses Single ('+revStr+' mode)', results
 
 # displayResults: 
 # just creates the display and prints it to stdout
@@ -128,6 +79,77 @@ def displayResults(modelName, results):
     
     print("-- F-Score : " + str(fScore))
 
+
+# evaluateDistiller
+# only evaluates the distiller, 
+# produces 1) Proper model name 2) results
+#
+def evaluateDistiller(questionSet):
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+
+    for question in questionSet:
+
+        results['totalFParts'] += len(question.trueFocus)
+
+        # actual focus detection starts to work
+        ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True)
+
+        # computing tp, fp and fn
+        results = computePerClassCounts(question.trueFocus, ruleFocus, results)
+
+    return 'FM-Distiller Single', results
+
+
+# evaluateBoth
+# given the question set, it evaluates the combination of 
+# both the FM-Distiller and HMM-Glasses
+#
+def evaluateBoth(questionSet):
+    forwGlass = Glass(questionSet, reverse=False)
+    backGlass = Glass(questionSet, reverse=True)
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+
+    for question in questionSet:
+
+        results['totalFParts'] += len(question.trueFocus)
+
+        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False)
+
+        # computing tp, fp and fn
+        results = computePerClassCounts(question.trueFocus, focusCombined, results)
+
+    return '******** FM-Distiller & HMM-Glasses ******** ', results
+
+
+# evaluateGlasses
+# only evaluates the HMM-Glasses, 
+# produces 1) Proper model name 2) results
+#
+def evaluateGlasses(questionSet, reverse):
+    glass = Glass(questionSet, reverse)
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+    
+    for question in questionSet:
+
+        results['totalFParts'] += len(question.trueFocus)
+
+        hmmTripletAllResults = glass.computeFocusProbs(question)
+
+        hmmTripletFocusResults = [trplt for trplt in hmmTripletAllResults if (trplt[0] == 'FOC')]
+
+        resultParts = Glass.hmmResultsToParts(hmmTripletFocusResults)
+
+        results = computePerClassCounts(question.trueFocus, resultParts, results)
+        
+
+    revStr = "Forward"
+    if reverse:
+        revStr = "Backward"
+    return 'HMM-Glasses Single ('+revStr+' mode)', results
+
 # evaluate:
 # this is just an interface to the specialized evaluation functions
 # 
@@ -147,6 +169,11 @@ def evaluate(questions, model):
         displayResults(bModelName, backResults)
         displayResults(fModelName, forwResults)
 
+    elif model=="combined":
+        modelDisplay, combinedResults = evaluateBoth(questions)
+
+        displayResults(modelDisplay, combinedResults)
+
 
     print("\n\n ==== Evaluation END ==== \n\n")
 
@@ -158,3 +185,6 @@ if 'distiller' in sys.argv:
 
 if 'glass' in sys.argv:
     evaluate(ourQuestions, 'glasses')
+
+if 'combined' in sys.argv:
+    evaluate(ourQuestions, 'combined')
