@@ -17,7 +17,7 @@ class QuestionParser:
     def getQeustionsFromDatabase(self):
         conn = psycopg2.connect("dbname='FatihDB' user='postgres' host='localhost' password='123123'");
         cur = conn.cursor();
-        cur.execute("select question from question");
+        cur.execute("select question from question order by q_id");
         rows = cur.fetchall();
 
         self.questions = [row[0] for row in rows];
