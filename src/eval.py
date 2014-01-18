@@ -53,7 +53,7 @@ def computePerClassCounts(goldParts, resultParts, resultsArr):
 # displayResults: 
 # just creates the display and prints it to stdout
 #
-def displayResults(modelName, results):
+def displayResults(modelName, results, fullInfo):
     print("\nResults for : " + modelName + "\n\n")
         
     total = str(results['totalFParts'])
@@ -61,11 +61,12 @@ def displayResults(modelName, results):
     fn = results['FN']*1.0
     fp = results['FP']*1.0
     
-    print("Total Focus # : " + total)
+    if fullInfo:
+        print("Total Focus # : " + total)
     
-    print("-- TP : " + str(int(tp)))
-    print("-- FN : " + str(int(fn)))
-    print("-- FP : " + str(int(fp)))
+        print("-- TP : " + str(int(tp)))
+        print("-- FN : " + str(int(fn)))
+        print("-- FP : " + str(int(fp)))
     
     precision = tp/(tp+fp)
     
@@ -100,29 +101,6 @@ def evaluateDistiller(questionSet):
 
     return 'FM-Distiller Single', results
 
-
-# evaluateBoth
-# given the question set, it evaluates the combination of 
-# both the FM-Distiller and HMM-Glasses
-#
-def evaluateBoth(questionSet):
-    forwGlass = Glass(questionSet, reverse=False)
-    backGlass = Glass(questionSet, reverse=True)
-
-    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
-
-    for question in questionSet:
-
-        results['totalFParts'] += len(question.trueFocus)
-
-        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False)
-
-        # computing tp, fp and fn
-        results = computePerClassCounts(question.trueFocus, focusCombined, results)
-
-    return '******** FM-Distiller & HMM-Glasses ******** ', results
-
-
 # evaluateGlasses
 # only evaluates the HMM-Glasses, 
 # produces 1) Proper model name 2) results
@@ -150,41 +128,65 @@ def evaluateGlasses(questionSet, reverse):
         revStr = "Backward"
     return 'HMM-Glasses Single ('+revStr+' mode)', results
 
+# evaluateBoth
+# given the question set, it evaluates the combination of 
+# both the FM-Distiller and HMM-Glasses
+#
+def evaluateBoth(questionSet):
+    forwGlass = Glass(questionSet, reverse=False)
+    backGlass = Glass(questionSet, reverse=True)
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+
+    for question in questionSet:
+
+        results['totalFParts'] += len(question.trueFocus)
+
+        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False)
+
+        # computing tp, fp and fn
+        results = computePerClassCounts(question.trueFocus, focusCombined, results)
+
+    return '******** Final Results (Full Model) ******** ', results
+
 # evaluate:
 # this is just an interface to the specialized evaluation functions
 # 
-def evaluate(questions, model):
+def evaluate(questions, model, fullInfo=True):
 
-    print("\n\n ==== Evaluation BEGIN ==== \n")
+    if fullInfo:
+        print("\n\n ==== Evaluation BEGIN ==== \n")
 
     if model=='distiller':
         modelName, results = evaluateDistiller(questions)
 
-        displayResults(modelName, results)
+        displayResults(modelName, results, fullInfo)
 
     elif model=="glasses":
         bModelName, backResults = evaluateGlasses(questions, reverse=True)
         fModelName, forwResults = evaluateGlasses(questions, reverse=False)
 
-        displayResults(bModelName, backResults)
-        displayResults(fModelName, forwResults)
+        displayResults(bModelName, backResults, fullInfo)
+        displayResults(fModelName, forwResults, fullInfo)
 
     elif model=="combined":
         modelDisplay, combinedResults = evaluateBoth(questions)
 
-        displayResults(modelDisplay, combinedResults)
+        displayResults(modelDisplay, combinedResults, fullInfo)
 
-
-    print("\n\n ==== Evaluation END ==== \n\n")
+    if fullInfo:
+        print("\n\n ==== Evaluation END ==== \n\n")
 
 
 # MAIN CONSOLE #
 
+fullInfo = False
+
 if 'distiller' in sys.argv:
-    evaluate(ourQuestions, 'distiller')
+    evaluate(ourQuestions, 'distiller', fullInfo)
 
 if 'glass' in sys.argv:
-    evaluate(ourQuestions, 'glasses')
+    evaluate(ourQuestions, 'glasses', fullInfo)
 
 if 'combined' in sys.argv:
-    evaluate(ourQuestions, 'combined')
+    evaluate(ourQuestions, 'combined', fullInfo)
