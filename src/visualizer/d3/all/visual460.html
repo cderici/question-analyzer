@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5228, {label: "Ganj",nodeclass: "type-TK"});g.addNode(5229, {label: "nehri",nodeclass: "type-TK"});g.addNode(5230, {label: "nerede",nodeclass: "type-TK"});g.addNode(5231, {label: "doğar",nodeclass: "type-TK"});g.addNode(5232, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5228,5229,{label: "CLASSIFIER"});g.addEdge(null,5229,5231,{label: "SUBJECT"});g.addEdge(null,5230,5231,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5231,5232,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(5218, {label: "Ganj",nodeclass: "type-TK"});g.addNode(5219, {label: "nehri",nodeclass: "type-TK"});g.addNode(5220, {label: "nereden",nodeclass: "type-TK"});g.addNode(5221, {label: "denize",nodeclass: "type-TK"});g.addNode(5222, {label: "dök",nodeclass: "type-TK"});g.addNode(5223, {label: "dökülür",nodeclass: "type-TK"});g.addNode(5224, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5218,5219,{label: "CLASSIFIER"});g.addEdge(null,5219,5223,{label: "SUBJECT"});g.addEdge(null,5220,5223,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,5221,5223,{label: "DATIVE.ADJUNCT"});g.addEdge(null,5222,5223,{label: "DERIV"});g.addEdge(null,5223,5224,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

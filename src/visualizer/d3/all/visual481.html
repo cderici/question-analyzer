@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5409, {label: "İtalyanın",nodeclass: "type-TK"});g.addNode(5410, {label: "uzaydan",nodeclass: "type-TK"});g.addNode(5411, {label: "görün",nodeclass: "type-TK"});g.addNode(5412, {label: "görünüşü",nodeclass: "type-TK"});g.addNode(5413, {label: "neyi",nodeclass: "type-TK"});g.addNode(5414, {label: "andırır",nodeclass: "type-TK"});g.addNode(5415, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5409,5411,{label: "SUBJECT"});g.addEdge(null,5410,5411,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,5411,5412,{label: "DERIV"});g.addEdge(null,5412,5414,{label: "SUBJECT"});g.addEdge(null,5413,5414,{label: "OBJECT"});g.addEdge(null,5414,5415,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(5401, {label: "İtalyanın",nodeclass: "type-TK"});g.addNode(5402, {label: "en",nodeclass: "type-TK"});g.addNode(5403, {label: "büyük",nodeclass: "type-TK"});g.addNode(5404, {label: "adaları",nodeclass: "type-TK"});g.addNode(5405, {label: "hangi",nodeclass: "type-TK"});g.addNode(5406, {label: "hangileridir",nodeclass: "type-TK"});g.addNode(5407, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5401,5404,{label: "POSSESSOR"});g.addEdge(null,5402,5403,{label: "MODIFIER"});g.addEdge(null,5403,5404,{label: "MODIFIER"});g.addEdge(null,5404,5406,{label: "SUBJECT"});g.addEdge(null,5405,5406,{label: "DERIV"});g.addEdge(null,5406,5407,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

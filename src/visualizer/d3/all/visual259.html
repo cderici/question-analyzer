@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2770, {label: "Transgresyon",nodeclass: "type-TK"});g.addNode(2771, {label: "ve",nodeclass: "type-TK"});g.addNode(2772, {label: "regresyon",nodeclass: "type-TK"});g.addNode(2773, {label: "hangi",nodeclass: "type-TK"});g.addNode(2774, {label: "hareketler",nodeclass: "type-TK"});g.addNode(2775, {label: "dahilinde",nodeclass: "type-TK"});g.addNode(2776, {label: "incele",nodeclass: "type-TK"});g.addNode(2777, {label: "incelenir",nodeclass: "type-TK"});g.addNode(2778, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2770,2771,{label: "SUBJECT"});g.addEdge(null,2771,2772,{label: "COORDINATION"});g.addEdge(null,2772,2777,{label: "SUBJECT"});g.addEdge(null,2773,2774,{label: "MODIFIER"});g.addEdge(null,2774,2775,{label: "CLASSIFIER"});g.addEdge(null,2775,2777,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,2776,2777,{label: "DERIV"});g.addEdge(null,2777,2778,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(2771, {label: "Transgresyon",nodeclass: "type-TK"});g.addNode(2772, {label: "kısaca",nodeclass: "type-TK"});g.addNode(2773, {label: "ne",nodeclass: "type-TK"});g.addNode(2774, {label: "nedir",nodeclass: "type-TK"});g.addNode(2775, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2771,2774,{label: "SUBJECT"});g.addEdge(null,2772,2774,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2773,2774,{label: "DERIV"});g.addEdge(null,2774,2775,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

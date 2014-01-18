@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2974, {label: "dünya",nodeclass: "type-TK"});g.addNode(2975, {label: "Dünyadaki",nodeclass: "type-TK"});g.addNode(2976, {label: "okyanus",nodeclass: "type-TK"});g.addNode(2977, {label: "sayısı",nodeclass: "type-TK"});g.addNode(2978, {label: "kaç",nodeclass: "type-TK"});g.addNode(2979, {label: "kaçtır",nodeclass: "type-TK"});g.addNode(2980, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2974,2975,{label: "DERIV"});g.addEdge(null,2975,2976,{label: "MODIFIER"});g.addEdge(null,2976,2977,{label: "CLASSIFIER"});g.addEdge(null,2977,2979,{label: "OBJECT"});g.addEdge(null,2978,2979,{label: "DERIV"});g.addEdge(null,2979,2980,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(2973, {label: "Göl",nodeclass: "type-TK"});g.addNode(2974, {label: "ayağının",nodeclass: "type-TK"});g.addNode(2975, {label: "diğer",nodeclass: "type-TK"});g.addNode(2976, {label: "bir",nodeclass: "type-TK"});g.addNode(2977, {label: "adı",nodeclass: "type-TK"});g.addNode(2978, {label: "ne",nodeclass: "type-TK"});g.addNode(2979, {label: "nedir",nodeclass: "type-TK"});g.addNode(2980, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2973,2974,{label: "CLASSIFIER"});g.addEdge(null,2974,2977,{label: "POSSESSOR"});g.addEdge(null,2975,2977,{label: "MODIFIER"});g.addEdge(null,2976,2977,{label: "DETERMINER"});g.addEdge(null,2977,2978,{label: "SUBJECT"});g.addEdge(null,2978,2979,{label: "DERIV"});g.addEdge(null,2979,2980,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

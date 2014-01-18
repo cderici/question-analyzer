@@ -73,7 +73,7 @@ Türkiye’de ekili dikili alanların en fazla yer kapladığı bölge hangisidi
 Türkiye’de en az insan nüfusuna sahip olan şehir hangisidir|şehir|Türkiyede en az insan nüfusuna sahip olan|LOCATION|CITY
 Türkiye’de en fazla pirinç tarımının yapıldığı akarsu havzasının ismi nedir|akarsu havzasının ismi|Türkiyede en fazla pirinç tarımının yapıldığı|ENTITY|RIVER
 Türkiye’de güneyden esen rüzgârın ismi nedir|rüzgârın ismi|Türkiyede güneyden esen|ENTITY|WIND
-Türkiye’de heyelan set göllerinin en fazla görüldüğü bölge neresidir|bölge|Türkiyede heyelan set göllerinin en fazla görüldüğü|LOCATION|REGION
+Türkiye’de heyelan set göllerinin en fazla görüldüğü bölge neresidir|bölge neresidir|Türkiyede heyelan set göllerinin en fazla görüldüğü|LOCATION|REGION
 Türkiye’deki denizlerden en az tuzluluk oranına sahip olan deniz hangisidir|deniz|Türkiyedeki denizlerden en az tuzluluk oranına sahip olan|ENTITY|SEA
 Türkiye’deki su kaynaklarının en bol olduğu bölge hangisidir|bölge|Türkiyedeki su kaynaklarının en bol olduğu|LOCATION|REGION
 Türkiye’de tarım alanları ülke arazisinin yüzde kaçını oluşturur|ülke arazisinin yüzde kaçını|Türkiye’de tarım alanları ülke arazisinin oluşturur|NUMERIC|PERCENT
@@ -82,7 +82,7 @@ Türkiye’nin doğusundan esen soğuk ve kuru rüzgâr hangisidir|rüzgâr|Tür
 Türkiye’nin en büyük baraj gölü hangisidir|baraj gölü|Türkiyenin en büyük|ENTITY|PROPER NOUN
 Türkiye’nin en büyük ovasının adı nedir|ovasının adı|Türkiyenin en büyük|ENTITY|PLAIN
 Türkiye’nin en geniş kapalı havzası hangi bölgemizdedir|hangi bölgemizdedir|Türkiyenin en geniş kapalı havzası|LOCATION|REGION
-Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir|şehri|Türkiyenin en geniş yüz ölçümüne|LOCATION|CITY
+Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir|şehri neresidir|Türkiyenin en geniş yüz ölçümüne|LOCATION|CITY
 Türkiye’nin en yüksek dağı hangisidir|dağı|Türkiyenin en yüksek|ENTITY|MOUNTAIN
 Türkiye’nin kuzeybatısından esen yerel rüzgârın adı nedir|rüzgârın adı|Türkiyenin kuzeybatısından esen yerel|ENTITY|WIND
 Türkiye’nin nüfusu ne kadardır|ne kadardır|Türkiyenin nüfusu|NUMERIC|COUNT
@@ -211,7 +211,7 @@ Türkiye'deki Kuzey Anadolu Dağları ve Toros Dağları hangi orojenez sonucund
 Epirojenik hareketler sırasında denizin çekilmesine ne denir|denizin çekilmesine denir|Epirojenik hareketler sırasında|DESCRIPTION|DEFINITION
 Lav nedir|Lav||DESCRIPTION|DEFINITION
 Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken gaz halinde çıkan nedir|gaz halinde çıkan|Volkanizma sonucu yüzeye sıvı halde lavlar çıkarken|DESCRIPTION|DEFINITION
-Volkanik kökenli adaların en fazla bulunduğu yer neresidir|yer|Volkanik kökenli adaların en fazla bulunduğu|LOCATION|REGION
+Volkanik kökenli adaların en fazla bulunduğu yer neresidir|yer neresidir|Volkanik kökenli adaların en fazla bulunduğu|LOCATION|REGION
 Volkan tüfü kaç cm uzunluğundadır|cm|Volkan tüfü uzunluğundadır|NUMERIC|SIZE
 Volkan tüfünün uzunluğu kaç cm.dir|cm dir|Volkan tüfünün uzunluğu|NUMERIC|SIZE
 Ağrı Dağı hangi tür volkanlardandır|hangi tür volkanlardandır|Ağrı Dağı|DESCRIPTION|DEFINITION
@@ -277,7 +277,7 @@ Yeryüzündeki suların yüzde kaçı tatlı sulardan oluşur|suların yüzde ka
 Denizler ve okyanuslar yeryüzünde ne kadar alan kaplamaktadır|ne kadar alan|Denizler ve okyanuslar yeryüzünde|NUMERIC|SIZE
 Dünyadaki okyanus sayısı kaçtır|okyanus sayısı kaçtır|Dünyadaki|NUMERIC|COUNT
 Göl ayağının diğer bir adı nedir|Göl ayağının adı|diğer|DESCRIPTION|DEFINITION
-Dünyada tektonik göllerin en yoğun olduğu bölge neresidir|bölge|Dünyada tektonik göllerin en yoğun olduğu|DESCRIPTION|DEFINITION
+Dünyada tektonik göllerin en yoğun olduğu bölge neresidir|bölge neresidir|Dünyada tektonik göllerin en yoğun olduğu|DESCRIPTION|DEFINITION
 Debi ne cinsinden ifade edilir|ne cinsinden|Debi ifade edilir|DESCRIPTION|DEFINITION
 Kayaçların ayrışması kaç şekilde gerçekleşir|kaç şekilde|Kayaçların ayrışması gerçekleşir|NUMERIC|COUNT
 Topraklar oluşum yerlerine göre kaç gruba ayrılır|kaç gruba|Topraklar oluşum yerlerine göre ayrılır|DESCRIPTION|DEFINITION
@@ -346,7 +346,7 @@ Yer şekilleri düz ve su kaynakları sınırlı olan bölgelerde görülen yerl
 Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının sebebi nedir|sebebi|Ekvatoral bölgede Amazon ve Kongo havzasında yerleşimin az olmasının|DESCRIPTION|REASON
 Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü maddi ve manevi özellikler bütününe ne denir|maddi ve manevi özellikler bütününe denir|Bir toplumun tarihsel süreç içinde ürettiği ve kuşaktan kuşağa aktardığı her türlü|DESCRIPTION|DEFINITION
 Bir kültürün doğduğu yere ne denir|yere denir|Bir kültürün doğduğu|DESCRIPTION|DEFINITION
-Türk kültürünün ocağı neresidir|ocağı|Türk kültürünün|DESCRIPTION|DEFINITION
+Türk kültürünün ocağı neresidir|ocağı neresidir|Türk kültürünün|DESCRIPTION|DEFINITION
 Türk kültürü hangi kültürlere komşudur|hangi kültürlere|Türk kültürü komşudur|DESCRIPTION|DEFINITION
 Sanayi tesislerinde kullanılmak üzere işlenmiş ya da yarı işlenmiş maddelere ne ad verilir|maddelere ad|Sanayi tesislerinde kullanılmak üzere işlenmiş ya da yarı işlenmiş|DESCRIPTION|DEFINITION
 Dış ticaretin diğer adı nedir|ad|Dış ticaretin diğer|DESCRIPTION|DEFINITION
@@ -362,7 +362,7 @@ Antik çağın en ünlü deniz feneri hangisidir|deniz feneri|Antik çağın en 
 Keops Piramidi kaç adet taş bloktan yapılmıştır|kaç adet|Keops Piramidi taş bloktan yapılmıştır|NUMERIC|COUNT
 Japonya’nın yüz ölçümü ne kadardır|ne kadardır|Japonyanın yüz ölçümü|NUMERIC|SIZE
 Japonya’nın nüfusu ne kadardır|ne kadardır|Japonyanın nüfusu|NUMERIC|SIZE
-Japonya’nın başkenti neresidir|neresidir|Japonyanın başkenti|DESCRIPTION|DEFINITION
+Japonya’nın başkenti neresidir|başkenti neresidir|Japonyanın|DESCRIPTION|DEFINITION
 Japonya’nın dili nedir|dili|Japonyanın|DESCRIPTION|DEFINITION
 Japonya’da kişi başına düşen milli gelir ne kadardır|ne kadardır|Japonyada kişi başına düşen milli gelir|NUMERIC|SIZE
 Japon erkelerinin ortalama ömrü ne kadardır|ne kadardır|Japon erkeklerin ortalama ömrü|NUMERIC|SIZE
@@ -454,16 +454,16 @@ Bağımlı nüfusu hangi yaş grupları oluşturur|hangi yaş grupları|Bağıml
 Bir alandaki toplam nüfusun, o alanın yüz ölçümüne bölünmesiyle ne elde edilir|ne elde edilir|Bir alandaki toplam nüfusun o alanın yüz ölçümüne bölünmesiyle|DESCRIPTION|DEFINITION
 Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla ne elde edilir|ne elde edilir|Bir ülkedeki nüfusun ülke yüz ölçümüne oranlanmasıyla|DESCRIPTION|DEFINITION
 Antarktika Kıtasında yerleşik hayatın olmamasının en büyük sebebi nedir|sebebi|Antarktika Kıtasında yerleşik hayatın olmamasının en büyük|DESCRIPTION|DEFINITION
-Ganj nehri hangi ülkededir||||
-Dekkan platosu Hindistan’ın hangi tarafında bulunur||||
-Ganj nehri nerede doğar||||
-Ganj nehri nereden denize dökülür||||
-Hindistan’ın tarım açısından en zengin ovaları hangileridir||||
-Hindistan’da yaşayanların yüzde kaçı tarımla uğraşır||||
-Bengal Havzası’nda en çok hangi tarım ürününün üretimi yaygındır||||
-Hint kenevirinin diğer adı nedir||||
-Hindistan pamuk ve tütün üretimi bakımından dünyada kaçıncı sıradadır||||
-Dünyada mercimek üretiminde birinci sırada olan ülke neresidir||||
+Ganj nehri hangi ülkededir|hangi ülkededir|Ganj nehri||
+Dekkan platosu Hindistan’ın hangi tarafında bulunur|Hindistanın hangi tarafında|Dekkan platosu bulunur||
+Ganj nehri nerede doğar|nerede doğar|Ganj nehri||
+Ganj nehri nereden denize dökülür|nereden dökülür|Ganj nehri denize||
+Hindistan’ın tarım açısından en zengin ovaları hangileridir|Hindistanın ovaları|tarım açısından en zengin||
+Hindistan’da yaşayanların yüzde kaçı tarımla uğraşır|yüzde kaçı|Hindistanda yaşayanların tarımla uğraşır||
+Bengal Havzası’nda en çok hangi tarım ürününün üretimi yaygındır|hangi tarım ürününün|Bengal Havzasında en çok üretimi yaygındır||
+Hint kenevirinin diğer adı nedir|Hint kenevirinin adı|diğer||
+Hindistan pamuk ve tütün üretimi bakımından dünyada kaçıncı sıradadır|kaçıncı sıradadır|Hindistan pamuk ve tütün üretimi bakımından dünyada||
+Dünyada mercimek üretiminde birinci sırada olan ülke neresidir|ülke neresidir|Dünyada mercimek üretiminde birinci sırada olan||
 Hindistan bağımsızlığını hangi tarihte kazanmıştır||||
 Tac Mahal’i kim yaptırmıştır||||
 Hollanda’nın resmi dili nedir||||
@@ -471,7 +471,7 @@ Hollanda’nın kuzeyi ve güneyi arasındaki uzaklık ne kadardır||||
 Hollanda topraklarının kaçta kaçı deniz seviyesinin altındadır||||
 Denizden kazanılan topraklara ne ad verilir||||
 Hollanda’nın en yüksek noktası kaç metredir||||
-Hollanda’nın en yüksek noktası neresidir||||
+Hollanda’nın en yüksek noktası neresidir|noktası neresidir|Hollandanın en yüksek||
 Hollanda’nın en alçak noktası kaç metredir||||
 Dünya’da iç su ulaşım ağı en gelişmiş ülke hangisidir||||
 Hollanda’daki ormanlar ülke arazisinin yüzde kaçını oluşturur||||
@@ -483,8 +483,8 @@ Hollanda’nın nüfus yoğunluğu ne kadardır||||
 İtalya’ya bir yılda yaklaşık ne kadar turist gelmektedir||||
 Fransa’da yıllık kişi başına düşen milli gelir ne kadardır||||
 Fransa’da ki hava alanı sayısı ne kaçtır||||
-Dünyada turistlik açıdan en fazla ziyaret edilen ülke neresidir||||
-ABD’nin baş şehri neresidir||||
+Dünyada turistlik açıdan en fazla ziyaret edilen ülke neresidir|ülke neresidir|Dünyada turistik açıdan en fazla ziyaret edilen||
+ABD’nin baş şehri neresidir|baş şehri neresidir|ABDnin||
 ABD kaç eyaletten oluşmaktadır||||
 Amerika kıtasını kim keşfetmiştir||||
 Federal Almanya ve Doğu Almanya hangi tarihte birleşmişlerdir||||
@@ -495,7 +495,7 @@ Rusya’nın hangi kıtalarda toprağı vardır||||
 Çin’in ikinci büyük ırmağı olan Huang-ho’nun anlamı nedir||||
 Çin uygarlığı kaç yıllık bir geçmişe sahiptir||||
 Çin hangi yıldan itibaren sosyalist bir idare tarzı ile yönetilir||||
-Pekin’in nüfusu kaç kişidir (Küçük yaşlarda sıklıkla bu şekil sorulabiliyor ||||
+Pekin’in nüfusu kaç kişidir (Küçük yaşlarda sıklıkla bu şekil sorulabiliyor||||
 Hong Kong’da hangi iklim hakimdir||||
 Çin Ar-Ge çalışmalarına yıllık ne kadar para ayırmaktadır||||
 İnsanı gelişim endeksini hangi topluluk hazırlar||||

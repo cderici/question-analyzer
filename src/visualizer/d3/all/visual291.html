@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(3083, {label: "Mezralar",nodeclass: "type-TK"});g.addNode(3084, {label: "daha",nodeclass: "type-TK"});g.addNode(3085, {label: "çok",nodeclass: "type-TK"});g.addNode(3086, {label: "hangi",nodeclass: "type-TK"});g.addNode(3087, {label: "bölgemizde",nodeclass: "type-TK"});g.addNode(3088, {label: "gör",nodeclass: "type-TK"});g.addNode(3089, {label: "görülür",nodeclass: "type-TK"});g.addNode(3090, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3083,3089,{label: "SUBJECT"});g.addEdge(null,3084,3085,{label: "MODIFIER"});g.addEdge(null,3085,3086,{label: "MODIFIER"});g.addEdge(null,3086,3087,{label: "MODIFIER"});g.addEdge(null,3087,3089,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3088,3089,{label: "DERIV"});g.addEdge(null,3089,3090,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(3083, {label: "Ülkemizin",nodeclass: "type-TK"});g.addNode(3084, {label: "yüz",nodeclass: "type-TK"});g.addNode(3085, {label: "yüzde",nodeclass: "type-TK"});g.addNode(3086, {label: "kaçı",nodeclass: "type-TK"});g.addNode(3087, {label: "şehirlerde",nodeclass: "type-TK"});g.addNode(3088, {label: "yaşamaktadır",nodeclass: "type-TK"});g.addNode(3089, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3083,3088,{label: "SUBJECT"});g.addEdge(null,3084,3085,{label: "DERIV"});g.addEdge(null,3085,3088,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3086,3088,{label: "SUBJECT"});g.addEdge(null,3087,3088,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,3088,3089,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

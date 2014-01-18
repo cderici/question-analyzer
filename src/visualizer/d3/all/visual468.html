@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5299, {label: "Hindistan",nodeclass: "type-TK"});g.addNode(5300, {label: "bağımsız",nodeclass: "type-TK"});g.addNode(5301, {label: "bağımsızlığını",nodeclass: "type-TK"});g.addNode(5302, {label: "hangi",nodeclass: "type-TK"});g.addNode(5303, {label: "tarihte",nodeclass: "type-TK"});g.addNode(5304, {label: "kazanmıştır",nodeclass: "type-TK"});g.addNode(5305, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5299,5304,{label: "SUBJECT"});g.addEdge(null,5300,5301,{label: "DERIV"});g.addEdge(null,5301,5304,{label: "OBJECT"});g.addEdge(null,5302,5303,{label: "MODIFIER"});g.addEdge(null,5303,5304,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5304,5305,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(5291, {label: "Tac",nodeclass: "type-TK"});g.addNode(5292, {label: "Mahali",nodeclass: "type-TK"});g.addNode(5293, {label: "kim",nodeclass: "type-TK"});g.addNode(5294, {label: "yap",nodeclass: "type-TK"});g.addNode(5295, {label: "yaptırmıştır",nodeclass: "type-TK"});g.addNode(5296, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5291,5292,{label: "CLASSIFIER"});g.addEdge(null,5292,5295,{label: "SUBJECT"});g.addEdge(null,5293,5295,{label: "SUBJECT"});g.addEdge(null,5294,5295,{label: "DERIV"});g.addEdge(null,5295,5296,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
