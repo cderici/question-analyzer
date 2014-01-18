@@ -95,7 +95,7 @@ class QuestionAnalysis:
         return focusCombined, focusConfidences
         
 
-    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False):
+    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False, onlyForward=True):
         dist = Distiller(self.question)
 
         ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
@@ -105,10 +105,13 @@ class QuestionAnalysis:
             focusConfidences = fRuleConf # <= TODO: focusCondidences is supposed to be a list of number, not a number
             hmmResults = []
         else:
-            mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
-            mostProbSeq = normalGlass.computeFocusProbs(self.question)
+            if onlyForward:
+                hmmResults = normalGlass.computeFocusProbs(self.question)
+            else:
+                mostProbRevSeq = reverseGlass.computeFocusProbs(self.question)
+                mostProbSeq = normalGlass.computeFocusProbs(self.question)
 
-            hmmResults = QuestionAnalysis.combineGlasses(mostProbRevSeq, mostProbSeq)
+                hmmResults = QuestionAnalysis.combineGlasses(mostProbRevSeq, mostProbSeq)
             # Combining distiller and hmm results
             focusCombined, focusConfidences = self.combineDistillerGlasses(ruleFocus, fRuleConf, hmmResults)
 

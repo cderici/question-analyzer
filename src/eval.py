@@ -132,7 +132,7 @@ def evaluateGlasses(questionSet, reverse):
 # given the question set, it evaluates the combination of 
 # both the FM-Distiller and HMM-Glasses
 #
-def evaluateBoth(questionSet):
+def evaluateBoth(questionSet, onlyForward=True):
     forwGlass = Glass(questionSet, reverse=False)
     backGlass = Glass(questionSet, reverse=True)
 
@@ -142,12 +142,17 @@ def evaluateBoth(questionSet):
 
         results['totalFParts'] += len(question.trueFocus)
 
-        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False)
+        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False, onlyForward)
 
         # computing tp, fp and fn
         results = computePerClassCounts(question.trueFocus, focusCombined, results)
 
-    return '******** Final Results (Full Model) ******** ', results
+    backStatus = 'Disabled'
+    if not onlyForward:
+        backStatus = 'Enabled'
+
+    modelName = '******** Final Results (Full Model, Backward Sweep ' + backStatus + ') ******** '
+    return modelName, results
 
 # evaluate:
 # this is just an interface to the specialized evaluation functions
@@ -170,9 +175,11 @@ def evaluate(questions, model, fullInfo=True):
         displayResults(fModelName, forwResults, fullInfo)
 
     elif model=="combined":
-        modelDisplay, combinedResults = evaluateBoth(questions)
+        modelDisplayFB, combinedResultsFB = evaluateBoth(questions, False)
+        modelDisplayF, combinedResultsF = evaluateBoth(questions, True)
 
-        displayResults(modelDisplay, combinedResults, fullInfo)
+        displayResults(modelDisplayFB, combinedResultsFB, fullInfo)
+        displayResults(modelDisplayF, combinedResultsF, fullInfo)
 
     if fullInfo:
         print("\n\n ==== Evaluation END ==== \n\n")
