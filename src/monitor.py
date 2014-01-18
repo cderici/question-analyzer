@@ -111,9 +111,8 @@ if 'hmm' in sys.argv:
 
 
 if 'class' in sys.argv:
-    print('Test');
     rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
-    rule.findCategories();
+    rule.doClassification();
 
 if 'overall' in sys.argv:
     mass.massAnalyze()

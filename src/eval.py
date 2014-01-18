@@ -177,7 +177,9 @@ def evaluate(questions, model, fullInfo=True):
     if fullInfo:
         print("\n\n ==== Evaluation END ==== \n\n")
 
-
+def evaluateClass(questions):
+    rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
+    rule.doClassification();
 # MAIN CONSOLE #
 
 fullInfo = False
@@ -190,3 +192,7 @@ if 'glass' in sys.argv:
 
 if 'combined' in sys.argv:
     evaluate(ourQuestions, 'combined', fullInfo)
+    
+if 'class' in sys.argv:
+    evaluateClass(ourQuestions)
+
