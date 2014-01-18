@@ -49,6 +49,14 @@ class Glass:
             for fmn2 in FmnCounts[fmn].keys():
                 self.transitionProbs[fmn][fmn2] = FmnCounts[fmn][fmn2]/(total*1.0)
 
+    @staticmethod
+    def hmmResultsToParts(hmmTriplets):
+        parts = []
+        for triplet in hmmTriplets:
+            parts.append(triplet[2])
+
+        return parts
+
     def printAllDebug(self):
         pp = pprint.PrettyPrinter(indent = 4)
 

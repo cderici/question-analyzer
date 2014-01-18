@@ -31,6 +31,11 @@ filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'den
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
 #########################################################################
 
+
+# evaluateDistiller
+# only evaluates the distiller, 
+# produces 1) Proper model name 2) results
+#
 def evaluateDistiller(questionSet):
 
     results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
@@ -40,52 +45,116 @@ def evaluateDistiller(questionSet):
 
         results['totalFParts'] += len(question.trueFocus)
 
+        # actual focus detection starts to work
         ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True)
 
-        for truePart in question.trueFocus:
-            if truePart in ruleFocus:
-                results['TP'] += 1
-            else:
-                results['FN'] += 1
-
-        for distPart in ruleFocus:
-            if distPart not in question.trueFocus:
-                results['FP'] += 1
+        # computing tp, fp and fn
+        results = computePerClassCounts(question.trueFocus, ruleFocus, results)
 
     return 'FM-Distiller Single', results
 
-def evalDisplay(questions, model):
+# computePerClassCounts:
+# given the gold standard parts and computed parts, 
+# it computes simply the TruePositive, FalsePositive and FalseNegative counts
+#
+def computePerClassCounts(goldParts, resultParts, resultsArr):
 
-    print("\n\n ==== Evaluation Begins ==== \n\n")
+    for truePart in goldParts:
+        if truePart in resultParts:
+            resultsArr['TP'] += 1
+        else:
+            resultsArr['FN'] += 1
+
+    for distPart in resultParts:
+        if distPart not in goldParts:
+            resultsArr['FP'] += 1
+    
+    return resultsArr
+
+# evaluateGlasses
+# only evaluates the HMM-Glasses, 
+# produces 1) Proper model name 2) results
+#
+def evaluateGlasses(questionSet, reverse):
+    glass = Glass(questionSet, reverse)
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+    
+    for question in questionSet:
+        serialParts = serializeDepTree(question.questionParts)
+
+        results['totalFParts'] += len(question.trueFocus)
+
+        hmmTripletAllResults = glass.computeFocusProbs(question)
+
+        hmmTripletFocusResults = [trplt for trplt in hmmTripletAllResults if (trplt[0] == 'FOC')]
+
+        resultParts = Glass.hmmResultsToParts(hmmTripletFocusResults)
+
+        results = computePerClassCounts(question.trueFocus, resultParts, results)
+        
+
+    revStr = "Forward"
+    if reverse:
+        revStr = "Backward"
+    return 'HMM-Glasses Single ('+revStr+' mode)', results
+
+# displayResults: 
+# just creates the display and prints it to stdout
+#
+def displayResults(modelName, results):
+    print("\nResults for : " + modelName + "\n\n")
+        
+    total = str(results['totalFParts'])
+    tp = results['TP']*1.0
+    fn = results['FN']*1.0
+    fp = results['FP']*1.0
+    
+    print("Total Focus # : " + total)
+    
+    print("-- TP : " + str(int(tp)))
+    print("-- FN : " + str(int(fn)))
+    print("-- FP : " + str(int(fp)))
+    
+    precision = tp/(tp+fp)
+    
+    print("\n-- Precision : " + str(precision))
+    
+    recall = tp/(tp+fn)
+    
+    print("-- Recall : " + str(recall))
+    
+    fScore = (2*precision*recall)/(precision+recall)
+    
+    print("-- F-Score : " + str(fScore))
+
+# evaluate:
+# this is just an interface to the specialized evaluation functions
+# 
+def evaluate(questions, model):
+
+    print("\n\n ==== Evaluation BEGIN ==== \n")
 
     if model=='distiller':
         modelName, results = evaluateDistiller(questions)
 
-        print("\n Results for : " + modelName + "\n\n")
-        
-        total = str(results['totalFParts'])
-        tp = results['TP']*1.0
-        fn = results['FN']*1.0
-        fp = results['FP']*1.0
+        displayResults(modelName, results)
 
-        print("Total Focus Parts : " + total)
+    elif model=="glasses":
+        bModelName, backResults = evaluateGlasses(questions, reverse=True)
+        fModelName, forwResults = evaluateGlasses(questions, reverse=False)
 
-        print("-- TP : " + str(tp))
-        print("-- FN : " + str(fn))
-        print("-- FP : " + str(fp))
+        displayResults(bModelName, backResults)
+        displayResults(fModelName, forwResults)
 
-        precision = tp/(tp+fp)
 
-        print("\n-- Precision : " + str(precision))
+    print("\n\n ==== Evaluation END ==== \n\n")
 
-        recall = tp/(tp+fn)
 
-        print("-- Recall : " + str(recall))
-
-        fScore = (2*precision*recall)/(precision+recall)
-
-        print("-- F-Score : " + str(fScore))
-        
+# MAIN CONSOLE #
 
 if 'distiller' in sys.argv:
-    evalDisplay(ourQuestions, 'distiller')
+    evaluate(ourQuestions, 'distiller')
+
+if 'glass' in sys.argv:
+    evaluate(ourQuestions, 'glasses')
