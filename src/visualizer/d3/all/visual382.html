@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Başlangıç meridyeni hangi şehirdedir</p>
+<p>İngiltere’de yıllık nüfus artışı kaçtır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4206, {label: "Başlangıç",nodeclass: "type-TK"});g.addNode(4207, {label: "meridyeni",nodeclass: "type-TK"});g.addNode(4208, {label: "hangi",nodeclass: "type-TK"});g.addNode(4209, {label: "şehir",nodeclass: "type-TK"});g.addNode(4210, {label: "şehirdedir",nodeclass: "type-TK"});g.addNode(4211, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4206,4207,{label: "CLASSIFIER"});g.addEdge(null,4207,4210,{label: "SUBJECT"});g.addEdge(null,4208,4209,{label: "MODIFIER"});g.addEdge(null,4209,4210,{label: "DERIV"});g.addEdge(null,4210,4211,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4190, {label: "İngilterede",nodeclass: "type-TK"});g.addNode(4191, {label: "yıllık",nodeclass: "type-TK"});g.addNode(4192, {label: "nüfus",nodeclass: "type-TK"});g.addNode(4193, {label: "art",nodeclass: "type-TK"});g.addNode(4194, {label: "artışı",nodeclass: "type-TK"});g.addNode(4195, {label: "kaç",nodeclass: "type-TK"});g.addNode(4196, {label: "kaçtır",nodeclass: "type-TK"});g.addNode(4197, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4190,4196,{label: "SUBJECT"});g.addEdge(null,4191,4192,{label: "CLASSIFIER"});g.addEdge(null,4192,4194,{label: "CLASSIFIER"});g.addEdge(null,4193,4194,{label: "DERIV"});g.addEdge(null,4194,4196,{label: "OBJECT"});g.addEdge(null,4195,4196,{label: "DERIV"});g.addEdge(null,4196,4197,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2124, {label: "Dış",nodeclass: "type-TK"});g.addNode(2125, {label: "çekirdek",nodeclass: "type-TK"});g.addNode(2126, {label: "neden",nodeclass: "type-TK"});g.addNode(2127, {label: "oluşur",nodeclass: "type-TK"});g.addNode(2128, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2124,2127,{label: "SUBJECT"});g.addEdge(null,2125,2126,{label: "MODIFIER"});g.addEdge(null,2126,2127,{label: "OBJECT"});g.addEdge(null,2127,2128,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(2122, {label: "Manto",nodeclass: "type-TK"});g.addNode(2123, {label: "Yer",nodeclass: "type-TK"});g.addNode(2124, {label: "yuvarlak",nodeclass: "type-TK"});g.addNode(2125, {label: "Yuvarlağı",nodeclass: "type-TK"});g.addNode(2126, {label: "hacminin",nodeclass: "type-TK"});g.addNode(2127, {label: "yüz",nodeclass: "type-TK"});g.addNode(2128, {label: "yüzde",nodeclass: "type-TK"});g.addNode(2129, {label: "kaçını",nodeclass: "type-TK"});g.addNode(2130, {label: "kaplamaktadır",nodeclass: "type-TK"});g.addNode(2131, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2122,2125,{label: "CLASSIFIER"});g.addEdge(null,2123,2125,{label: "CLASSIFIER"});g.addEdge(null,2124,2125,{label: "DERIV"});g.addEdge(null,2125,2126,{label: "CLASSIFIER"});g.addEdge(null,2126,2130,{label: "SUBJECT"});g.addEdge(null,2127,2128,{label: "DERIV"});g.addEdge(null,2128,2130,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,2129,2130,{label: "OBJECT"});g.addEdge(null,2130,2131,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

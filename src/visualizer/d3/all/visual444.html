@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Belirli bir zamanda sınırları belli bir alan içerisinde yaşayan insan sayısına ne denir</p>
+<p>Nüfus artış hızı en fazla olan kıta hangisidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5014, {label: "Belirli",nodeclass: "type-TK"});g.addNode(5015, {label: "bir",nodeclass: "type-TK"});g.addNode(5016, {label: "zamanda",nodeclass: "type-TK"});g.addNode(5017, {label: "sınırları",nodeclass: "type-TK"});g.addNode(5018, {label: "belli",nodeclass: "type-TK"});g.addNode(5019, {label: "bir",nodeclass: "type-TK"});g.addNode(5020, {label: "alan",nodeclass: "type-TK"});g.addNode(5021, {label: "içerisinde",nodeclass: "type-TK"});g.addNode(5022, {label: "yaşa",nodeclass: "type-TK"});g.addNode(5023, {label: "yaşayan",nodeclass: "type-TK"});g.addNode(5024, {label: "insan",nodeclass: "type-TK"});g.addNode(5025, {label: "sayısına",nodeclass: "type-TK"});g.addNode(5026, {label: "ne",nodeclass: "type-TK"});g.addNode(5027, {label: "de",nodeclass: "type-TK"});g.addNode(5028, {label: "denir",nodeclass: "type-TK"});g.addNode(5029, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5014,5016,{label: "MODIFIER"});g.addEdge(null,5015,5016,{label: "DETERMINER"});g.addEdge(null,5016,5028,{label: "MODIFIER"});g.addEdge(null,5017,5023,{label: "OBJECT"});g.addEdge(null,5018,5020,{label: "MODIFIER"});g.addEdge(null,5019,5020,{label: "DETERMINER"});g.addEdge(null,5020,5021,{label: "OBJECT"});g.addEdge(null,5021,5023,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5022,5023,{label: "DERIV"});g.addEdge(null,5023,5024,{label: "MODIFIER"});g.addEdge(null,5024,5025,{label: "CLASSIFIER"});g.addEdge(null,5025,5028,{label: "DATIVE.ADJUNCT"});g.addEdge(null,5026,5028,{label: "MODIFIER"});g.addEdge(null,5027,5028,{label: "DERIV"});g.addEdge(null,5028,5029,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(5028, {label: "Asya",nodeclass: "type-TK"});g.addNode(5029, {label: "kıta",nodeclass: "type-TK"});g.addNode(5030, {label: "kıtasındaki",nodeclass: "type-TK"});g.addNode(5031, {label: "nüfus",nodeclass: "type-TK"});g.addNode(5032, {label: "art",nodeclass: "type-TK"});g.addNode(5033, {label: "artışının",nodeclass: "type-TK"});g.addNode(5034, {label: "temel",nodeclass: "type-TK"});g.addNode(5035, {label: "nedeni",nodeclass: "type-TK"});g.addNode(5036, {label: "ne",nodeclass: "type-TK"});g.addNode(5037, {label: "nedir",nodeclass: "type-TK"});g.addNode(5038, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5028,5037,{label: "SUBJECT"});g.addEdge(null,5029,5030,{label: "DERIV"});g.addEdge(null,5030,5031,{label: "MODIFIER"});g.addEdge(null,5031,5033,{label: "OBJECT"});g.addEdge(null,5032,5033,{label: "DERIV"});g.addEdge(null,5033,5037,{label: "OBJECT"});g.addEdge(null,5034,5035,{label: "CLASSIFIER"});g.addEdge(null,5035,5037,{label: "SUBJECT"});g.addEdge(null,5036,5037,{label: "DERIV"});g.addEdge(null,5037,5038,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

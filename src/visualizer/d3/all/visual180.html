@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1928, {label: "Biyosfer",nodeclass: "type-TK"});g.addNode(1929, {label: "hangi",nodeclass: "type-TK"});g.addNode(1930, {label: "kürelere",nodeclass: "type-TK"});g.addNode(1931, {label: "yay",nodeclass: "type-TK"});g.addNode(1932, {label: "yayılmıştır",nodeclass: "type-TK"});g.addNode(1933, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1928,1932,{label: "SUBJECT"});g.addEdge(null,1929,1930,{label: "MODIFIER"});g.addEdge(null,1930,1932,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1931,1932,{label: "DERIV"});g.addEdge(null,1932,1933,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(1927, {label: "Canlılar",nodeclass: "type-TK"});g.addNode(1928, {label: "küresi",nodeclass: "type-TK"});g.addNode(1929, {label: "hangi",nodeclass: "type-TK"});g.addNode(1930, {label: "kürelere",nodeclass: "type-TK"});g.addNode(1931, {label: "yay",nodeclass: "type-TK"});g.addNode(1932, {label: "yayılmış",nodeclass: "type-TK"});g.addNode(1933, {label: "durum",nodeclass: "type-TK"});g.addNode(1934, {label: "durumdadır",nodeclass: "type-TK"});g.addNode(1935, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1927,1928,{label: "CLASSIFIER"});g.addEdge(null,1928,1932,{label: "SUBJECT"});g.addEdge(null,1929,1930,{label: "MODIFIER"});g.addEdge(null,1930,1932,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1931,1932,{label: "DERIV"});g.addEdge(null,1932,1934,{label: "OBJECT"});g.addEdge(null,1933,1934,{label: "DERIV"});g.addEdge(null,1934,1935,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

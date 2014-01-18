@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Gideğeni olan göllerin suları nasıldır</p>
+<p>Dünyada tektonik göllerin en yoğun olduğu bölge neresidir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2981, {label: "Gideğeni",nodeclass: "type-TK"});g.addNode(2982, {label: "ol",nodeclass: "type-TK"});g.addNode(2983, {label: "olan",nodeclass: "type-TK"});g.addNode(2984, {label: "göllerin",nodeclass: "type-TK"});g.addNode(2985, {label: "suları",nodeclass: "type-TK"});g.addNode(2986, {label: "nasıl",nodeclass: "type-TK"});g.addNode(2987, {label: "nasıldır",nodeclass: "type-TK"});g.addNode(2988, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2981,2982,{label: "OBJECT"});g.addEdge(null,2982,2983,{label: "DERIV"});g.addEdge(null,2983,2984,{label: "MODIFIER"});g.addEdge(null,2984,2985,{label: "POSSESSOR"});g.addEdge(null,2985,2987,{label: "SUBJECT"});g.addEdge(null,2986,2987,{label: "DERIV"});g.addEdge(null,2987,2988,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(2981, {label: "Göl",nodeclass: "type-TK"});g.addNode(2982, {label: "ayağının",nodeclass: "type-TK"});g.addNode(2983, {label: "diğer",nodeclass: "type-TK"});g.addNode(2984, {label: "bir",nodeclass: "type-TK"});g.addNode(2985, {label: "adı",nodeclass: "type-TK"});g.addNode(2986, {label: "ne",nodeclass: "type-TK"});g.addNode(2987, {label: "nedir",nodeclass: "type-TK"});g.addNode(2988, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2981,2982,{label: "CLASSIFIER"});g.addEdge(null,2982,2985,{label: "POSSESSOR"});g.addEdge(null,2983,2985,{label: "MODIFIER"});g.addEdge(null,2984,2985,{label: "DETERMINER"});g.addEdge(null,2985,2986,{label: "SUBJECT"});g.addEdge(null,2986,2987,{label: "DERIV"});g.addEdge(null,2987,2988,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

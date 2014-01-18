@@ -13,7 +13,7 @@ ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 analyzer = QuestionAnalysis(ourQuestions[0])
 
 if 'visualize' in sys.argv:
-    print("visualizing...")
+    print("visualizing..." + str(len(ourQuestions)) + " questions..")
     QuestionAnalysis.visualizeAll(ourQuestions)
     print("visualization done ....")
 # analyzer.showFocusMod()

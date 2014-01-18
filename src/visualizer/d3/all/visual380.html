@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Japonya demir çelik üretiminde dünyada kaçıncı sıradadır</p>
+<p>Başlangıç meridyeni hangi şehirdedir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4191, {label: "Japonya",nodeclass: "type-TK"});g.addNode(4192, {label: "demir",nodeclass: "type-TK"});g.addNode(4193, {label: "çelik",nodeclass: "type-TK"});g.addNode(4194, {label: "üretiminde",nodeclass: "type-TK"});g.addNode(4195, {label: "dünyada",nodeclass: "type-TK"});g.addNode(4196, {label: "kaçıncı",nodeclass: "type-TK"});g.addNode(4197, {label: "sıra",nodeclass: "type-TK"});g.addNode(4198, {label: "sıradadır",nodeclass: "type-TK"});g.addNode(4199, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4191,4198,{label: "SUBJECT"});g.addEdge(null,4192,4193,{label: "CLASSIFIER"});g.addEdge(null,4193,4194,{label: "CLASSIFIER"});g.addEdge(null,4194,4198,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4195,4198,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4196,4197,{label: "MODIFIER"});g.addEdge(null,4197,4198,{label: "DERIV"});g.addEdge(null,4198,4199,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4177, {label: "Başlangıç",nodeclass: "type-TK"});g.addNode(4178, {label: "meridyeni",nodeclass: "type-TK"});g.addNode(4179, {label: "hangi",nodeclass: "type-TK"});g.addNode(4180, {label: "şehir",nodeclass: "type-TK"});g.addNode(4181, {label: "şehirdedir",nodeclass: "type-TK"});g.addNode(4182, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4177,4178,{label: "CLASSIFIER"});g.addEdge(null,4178,4181,{label: "SUBJECT"});g.addEdge(null,4179,4180,{label: "MODIFIER"});g.addEdge(null,4180,4181,{label: "DERIV"});g.addEdge(null,4181,4182,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

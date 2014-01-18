@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Fuji dağının yüksekliği ne kadardır</p>
+<p>Japonya’da yıllık ortalama deprem sayısı kaçtır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4120, {label: "Fuji",nodeclass: "type-TK"});g.addNode(4121, {label: "dağının",nodeclass: "type-TK"});g.addNode(4122, {label: "yüksek",nodeclass: "type-TK"});g.addNode(4123, {label: "yüksekliği",nodeclass: "type-TK"});g.addNode(4124, {label: "ne",nodeclass: "type-TK"});g.addNode(4125, {label: "kadar",nodeclass: "type-TK"});g.addNode(4126, {label: "kadardır",nodeclass: "type-TK"});g.addNode(4127, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4120,4121,{label: "CLASSIFIER"});g.addEdge(null,4121,4123,{label: "POSSESSOR"});g.addEdge(null,4122,4123,{label: "DERIV"});g.addEdge(null,4123,4126,{label: "SUBJECT"});g.addEdge(null,4124,4125,{label: "OBJECT"});g.addEdge(null,4125,4126,{label: "DERIV"});g.addEdge(null,4126,4127,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4108, {label: "Japonyada",nodeclass: "type-TK"});g.addNode(4109, {label: "yıllık",nodeclass: "type-TK"});g.addNode(4110, {label: "ortalama",nodeclass: "type-TK"});g.addNode(4111, {label: "deprem",nodeclass: "type-TK"});g.addNode(4112, {label: "sayısı",nodeclass: "type-TK"});g.addNode(4113, {label: "kaç",nodeclass: "type-TK"});g.addNode(4114, {label: "kaçtır",nodeclass: "type-TK"});g.addNode(4115, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4108,4114,{label: "SUBJECT"});g.addEdge(null,4109,4114,{label: "MODIFIER"});g.addEdge(null,4110,4114,{label: "MODIFIER"});g.addEdge(null,4111,4112,{label: "CLASSIFIER"});g.addEdge(null,4112,4114,{label: "OBJECT"});g.addEdge(null,4113,4114,{label: "DERIV"});g.addEdge(null,4114,4115,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

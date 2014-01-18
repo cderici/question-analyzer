@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2083, {label: "Granitik",nodeclass: "type-TK"});g.addNode(2084, {label: "kabuk",nodeclass: "type-TK"});g.addNode(2085, {label: "hangi",nodeclass: "type-TK"});g.addNode(2086, {label: "taşlardan",nodeclass: "type-TK"});g.addNode(2087, {label: "meydana",nodeclass: "type-TK"});g.addNode(2088, {label: "gelir",nodeclass: "type-TK"});g.addNode(2089, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2083,2088,{label: "SUBJECT"});g.addEdge(null,2084,2088,{label: "SUBJECT"});g.addEdge(null,2085,2086,{label: "MODIFIER"});g.addEdge(null,2086,2088,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,2087,2088,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2088,2089,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(2083, {label: "Bazaltik",nodeclass: "type-TK"});g.addNode(2084, {label: "kabuğun",nodeclass: "type-TK"});g.addNode(2085, {label: "yoğun",nodeclass: "type-TK"});g.addNode(2086, {label: "yoğunluğu",nodeclass: "type-TK"});g.addNode(2087, {label: "ne",nodeclass: "type-TK"});g.addNode(2088, {label: "kadar",nodeclass: "type-TK"});g.addNode(2089, {label: "kadardır",nodeclass: "type-TK"});g.addNode(2090, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2083,2086,{label: "CLASSIFIER"});g.addEdge(null,2084,2086,{label: "POSSESSOR"});g.addEdge(null,2085,2086,{label: "DERIV"});g.addEdge(null,2086,2089,{label: "SUBJECT"});g.addEdge(null,2087,2088,{label: "OBJECT"});g.addEdge(null,2088,2089,{label: "DERIV"});g.addEdge(null,2089,2090,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

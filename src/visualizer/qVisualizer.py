@@ -15,18 +15,19 @@ def visualizeAllQuestions(questions):
 
     htmlStr += '</ul></body></html>'
 
-    with codecs.open('d3/all/index.html', 'w+', 'utf-8') as f:
+    with codecs.open('visualizer/d3/all/index.html', 'w+', 'utf-8') as f:
         f.write(htmlStr)
 
 def produceVisualPage(parts, qText, qNumber = 1, qAll = False):
 
     if qAll:
-        if not os.path.exists('d3/all/'):
-            os.makedirs('d3/all/')
+        if not os.path.exists('visualizer/d3/all/'):
+            print('not exists, created')
+            os.makedirs('visualizer/d3/all/')
 
-        dirPath = 'd3/all/'
+        dirPath = 'visualizer/d3/all/'
     else:
-        dirPath = 'd3/'
+        dirPath = 'visualizer/d3/'
 
     fName = dirPath + 'visual' + str(qNumber) + '.html'
 

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>2010 yılına göre dünyadaki nüfus artış oranı kaçtır</p>
+<p>Hollanda’daki ormanlar ülke arazisinin yüzde kaçını oluşturur</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5465, {label: "2010",nodeclass: "type-TK"});g.addNode(5466, {label: "yılına",nodeclass: "type-TK"});g.addNode(5467, {label: "göre",nodeclass: "type-TK"});g.addNode(5468, {label: "dünya",nodeclass: "type-TK"});g.addNode(5469, {label: "dünyadaki",nodeclass: "type-TK"});g.addNode(5470, {label: "nüfus",nodeclass: "type-TK"});g.addNode(5471, {label: "art",nodeclass: "type-TK"});g.addNode(5472, {label: "artış",nodeclass: "type-TK"});g.addNode(5473, {label: "oranı",nodeclass: "type-TK"});g.addNode(5474, {label: "kaç",nodeclass: "type-TK"});g.addNode(5475, {label: "kaçtır",nodeclass: "type-TK"});g.addNode(5476, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5465,5466,{label: "MODIFIER"});g.addEdge(null,5466,5467,{label: "OBJECT"});g.addEdge(null,5467,5475,{label: "MODIFIER"});g.addEdge(null,5468,5469,{label: "DERIV"});g.addEdge(null,5469,5470,{label: "MODIFIER"});g.addEdge(null,5470,5475,{label: "SUBJECT"});g.addEdge(null,5471,5472,{label: "DERIV"});g.addEdge(null,5472,5473,{label: "CLASSIFIER"});g.addEdge(null,5473,5475,{label: "OBJECT"});g.addEdge(null,5474,5475,{label: "DERIV"});g.addEdge(null,5475,5476,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(5372, {label: "Dünyada",nodeclass: "type-TK"});g.addNode(5373, {label: "iç",nodeclass: "type-TK"});g.addNode(5374, {label: "su",nodeclass: "type-TK"});g.addNode(5375, {label: "ulaşım",nodeclass: "type-TK"});g.addNode(5376, {label: "ağı",nodeclass: "type-TK"});g.addNode(5377, {label: "en",nodeclass: "type-TK"});g.addNode(5378, {label: "gelişmiş",nodeclass: "type-TK"});g.addNode(5379, {label: "ülke",nodeclass: "type-TK"});g.addNode(5380, {label: "hangi",nodeclass: "type-TK"});g.addNode(5381, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(5382, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5372,5378,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5373,5374,{label: "MODIFIER"});g.addEdge(null,5374,5378,{label: "SUBJECT"});g.addEdge(null,5375,5376,{label: "CLASSIFIER"});g.addEdge(null,5376,5378,{label: "OBJECT"});g.addEdge(null,5377,5378,{label: "MODIFIER"});g.addEdge(null,5378,5379,{label: "MODIFIER"});g.addEdge(null,5379,5381,{label: "SUBJECT"});g.addEdge(null,5380,5381,{label: "DERIV"});g.addEdge(null,5381,5382,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Japonya’nın en yüksek dağları hangi adadadır</p>
+<p>Dünyadaki aktif volkanların kaçta kaçı Japonya’dadır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4112, {label: "Japonyanın",nodeclass: "type-TK"});g.addNode(4113, {label: "en",nodeclass: "type-TK"});g.addNode(4114, {label: "yüksek",nodeclass: "type-TK"});g.addNode(4115, {label: "dağları",nodeclass: "type-TK"});g.addNode(4116, {label: "hangi",nodeclass: "type-TK"});g.addNode(4117, {label: "ada",nodeclass: "type-TK"});g.addNode(4118, {label: "adadadır",nodeclass: "type-TK"});g.addNode(4119, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4112,4118,{label: "SUBJECT"});g.addEdge(null,4113,4114,{label: "MODIFIER"});g.addEdge(null,4114,4115,{label: "MODIFIER"});g.addEdge(null,4115,4118,{label: "OBJECT"});g.addEdge(null,4116,4117,{label: "MODIFIER"});g.addEdge(null,4117,4118,{label: "DERIV"});g.addEdge(null,4118,4119,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4099, {label: "dünya",nodeclass: "type-TK"});g.addNode(4100, {label: "Dünyadaki",nodeclass: "type-TK"});g.addNode(4101, {label: "aktif",nodeclass: "type-TK"});g.addNode(4102, {label: "volkanların",nodeclass: "type-TK"});g.addNode(4103, {label: "kaç",nodeclass: "type-TK"});g.addNode(4104, {label: "kaçta",nodeclass: "type-TK"});g.addNode(4105, {label: "kaçı",nodeclass: "type-TK"});g.addNode(4106, {label: "Japonyadadır",nodeclass: "type-TK"});g.addNode(4107, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4099,4100,{label: "DERIV"});g.addEdge(null,4100,4102,{label: "MODIFIER"});g.addEdge(null,4101,4102,{label: "MODIFIER"});g.addEdge(null,4102,4106,{label: "POSSESSOR"});g.addEdge(null,4103,4104,{label: "DERIV"});g.addEdge(null,4104,4106,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4105,4106,{label: "SUBJECT"});g.addEdge(null,4106,4125,{label: "SUBJECT"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

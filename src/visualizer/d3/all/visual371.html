@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Japonya arazisinin yüzde kaçı dağlardan oluşur</p>
+<p>Fuji dağının yüksekliği ne kadardır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4104, {label: "Japonya",nodeclass: "type-TK"});g.addNode(4105, {label: "arazisinin",nodeclass: "type-TK"});g.addNode(4106, {label: "yüz",nodeclass: "type-TK"});g.addNode(4107, {label: "yüzde",nodeclass: "type-TK"});g.addNode(4108, {label: "kaçı",nodeclass: "type-TK"});g.addNode(4109, {label: "dağlardan",nodeclass: "type-TK"});g.addNode(4110, {label: "oluşur",nodeclass: "type-TK"});g.addNode(4111, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4104,4105,{label: "CLASSIFIER"});g.addEdge(null,4105,4110,{label: "SUBJECT"});g.addEdge(null,4106,4107,{label: "DERIV"});g.addEdge(null,4107,4110,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4108,4110,{label: "SUBJECT"});g.addEdge(null,4109,4110,{label: "OBJECT"});g.addEdge(null,4110,4111,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4091, {label: "Fuji",nodeclass: "type-TK"});g.addNode(4092, {label: "dağının",nodeclass: "type-TK"});g.addNode(4093, {label: "yüksek",nodeclass: "type-TK"});g.addNode(4094, {label: "yüksekliği",nodeclass: "type-TK"});g.addNode(4095, {label: "ne",nodeclass: "type-TK"});g.addNode(4096, {label: "kadar",nodeclass: "type-TK"});g.addNode(4097, {label: "kadardır",nodeclass: "type-TK"});g.addNode(4098, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4091,4092,{label: "CLASSIFIER"});g.addEdge(null,4092,4094,{label: "POSSESSOR"});g.addEdge(null,4093,4094,{label: "DERIV"});g.addEdge(null,4094,4097,{label: "SUBJECT"});g.addEdge(null,4095,4096,{label: "OBJECT"});g.addEdge(null,4096,4097,{label: "DERIV"});g.addEdge(null,4097,4098,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

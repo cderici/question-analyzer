@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>UNESCO’nun açılımı nedir</p>
+<p>UNESCO Türkiye’den kaç kültürel varlığı Dünya Miras Listesine eklemiştir</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4009, {label: "UNESCOnun",nodeclass: "type-TK"});g.addNode(4010, {label: "açılımı",nodeclass: "type-TK"});g.addNode(4011, {label: "ne",nodeclass: "type-TK"});g.addNode(4012, {label: "nedir",nodeclass: "type-TK"});g.addNode(4013, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4009,4010,{label: "CLASSIFIER"});g.addEdge(null,4010,4012,{label: "SUBJECT"});g.addEdge(null,4011,4012,{label: "DERIV"});g.addEdge(null,4012,4013,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(3999, {label: "UNESCO",nodeclass: "type-TK"});g.addNode(4000, {label: "Türkiyeden",nodeclass: "type-TK"});g.addNode(4001, {label: "kaç",nodeclass: "type-TK"});g.addNode(4002, {label: "kültürel",nodeclass: "type-TK"});g.addNode(4003, {label: "varlığı",nodeclass: "type-TK"});g.addNode(4004, {label: "Dünya",nodeclass: "type-TK"});g.addNode(4005, {label: "Miras",nodeclass: "type-TK"});g.addNode(4006, {label: "Listesine",nodeclass: "type-TK"});g.addNode(4007, {label: "eklemiştir",nodeclass: "type-TK"});g.addNode(4008, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3999,4007,{label: "SUBJECT"});g.addEdge(null,4000,4007,{label: "SUBJECT"});g.addEdge(null,4001,4002,{label: "MODIFIER"});g.addEdge(null,4002,4003,{label: "MODIFIER"});g.addEdge(null,4003,4007,{label: "MODIFIER"});g.addEdge(null,4004,4007,{label: "SUBJECT"});g.addEdge(null,4005,4006,{label: "CLASSIFIER"});g.addEdge(null,4006,4007,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4007,4008,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Türk kültürünün ocağı neresidir</p>
+<p>Türk kültürü hangi kültürlere komşudur</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(3901, {label: "Türk",nodeclass: "type-TK"});g.addNode(3902, {label: "kültürünün",nodeclass: "type-TK"});g.addNode(3903, {label: "ocağı",nodeclass: "type-TK"});g.addNode(3904, {label: "nere",nodeclass: "type-TK"});g.addNode(3905, {label: "neresidir",nodeclass: "type-TK"});g.addNode(3906, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3901,3902,{label: "CLASSIFIER"});g.addEdge(null,3902,3903,{label: "POSSESSOR"});g.addEdge(null,3903,3904,{label: "SUBJECT"});g.addEdge(null,3904,3905,{label: "DERIV"});g.addEdge(null,3905,3906,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(3897, {label: "Türk",nodeclass: "type-TK"});g.addNode(3898, {label: "kültürü",nodeclass: "type-TK"});g.addNode(3899, {label: "hangi",nodeclass: "type-TK"});g.addNode(3900, {label: "kültürlere",nodeclass: "type-TK"});g.addNode(3901, {label: "komşu",nodeclass: "type-TK"});g.addNode(3902, {label: "komşudur",nodeclass: "type-TK"});g.addNode(3903, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3897,3898,{label: "CLASSIFIER"});g.addEdge(null,3898,3902,{label: "SUBJECT"});g.addEdge(null,3899,3900,{label: "MODIFIER"});g.addEdge(null,3900,3902,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3901,3902,{label: "DERIV"});g.addEdge(null,3902,3903,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

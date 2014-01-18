@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>İngiltere Avrupa’nın neresinde yer alır</p>
+<p>İngiltere’de kilometrekareye ortalama kaç insan düşer</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4200, {label: "İngiltere",nodeclass: "type-TK"});g.addNode(4201, {label: "Avrupanın",nodeclass: "type-TK"});g.addNode(4202, {label: "neresinde",nodeclass: "type-TK"});g.addNode(4203, {label: "yer",nodeclass: "type-TK"});g.addNode(4204, {label: "alır",nodeclass: "type-TK"});g.addNode(4205, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4200,4204,{label: "SUBJECT"});g.addEdge(null,4201,4204,{label: "SUBJECT"});g.addEdge(null,4202,4204,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,4203,4204,{label: "OBJECT"});g.addEdge(null,4204,4205,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4183, {label: "İngilterede",nodeclass: "type-TK"});g.addNode(4184, {label: "kilometrekareye",nodeclass: "type-TK"});g.addNode(4185, {label: "ortalama",nodeclass: "type-TK"});g.addNode(4186, {label: "kaç",nodeclass: "type-TK"});g.addNode(4187, {label: "insan",nodeclass: "type-TK"});g.addNode(4188, {label: "düşer",nodeclass: "type-TK"});g.addNode(4189, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4183,4188,{label: "SUBJECT"});g.addEdge(null,4184,4188,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4185,4187,{label: "MODIFIER"});g.addEdge(null,4186,4187,{label: "MODIFIER"});g.addEdge(null,4187,4188,{label: "OBJECT"});g.addEdge(null,4188,4189,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

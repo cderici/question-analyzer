@@ -41,7 +41,7 @@ rect {
 </head>
 <body>
 
-<p>Japonya’nın başkenti neresidir</p>
+<p>Japonya’da kişi başına düşen milli gelir ne kadardır</p>
 
 <hr>
 
@@ -52,7 +52,7 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4075, {label: "Japonyanın",nodeclass: "type-TK"});g.addNode(4076, {label: "başkenti",nodeclass: "type-TK"});g.addNode(4077, {label: "nere",nodeclass: "type-TK"});g.addNode(4078, {label: "neresidir",nodeclass: "type-TK"});g.addNode(4079, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4075,4076,{label: "CLASSIFIER"});g.addEdge(null,4076,4077,{label: "SUBJECT"});g.addEdge(null,4077,4078,{label: "DERIV"});g.addEdge(null,4078,4079,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();g.addNode(4056, {label: "Japonyada",nodeclass: "type-TK"});g.addNode(4057, {label: "kişi",nodeclass: "type-TK"});g.addNode(4058, {label: "başına",nodeclass: "type-TK"});g.addNode(4059, {label: "düş",nodeclass: "type-TK"});g.addNode(4060, {label: "düşen",nodeclass: "type-TK"});g.addNode(4061, {label: "milli",nodeclass: "type-TK"});g.addNode(4062, {label: "gelir",nodeclass: "type-TK"});g.addNode(4063, {label: "ne",nodeclass: "type-TK"});g.addNode(4064, {label: "kadar",nodeclass: "type-TK"});g.addNode(4065, {label: "kadardır",nodeclass: "type-TK"});g.addNode(4066, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4056,4065,{label: "SUBJECT"});g.addEdge(null,4057,4058,{label: "CLASSIFIER"});g.addEdge(null,4058,4059,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4059,4060,{label: "DERIV"});g.addEdge(null,4060,4065,{label: "MODIFIER"});g.addEdge(null,4061,4065,{label: "MODIFIER"});g.addEdge(null,4062,4065,{label: "SUBJECT"});g.addEdge(null,4063,4064,{label: "OBJECT"});g.addEdge(null,4064,4065,{label: "DERIV"});g.addEdge(null,4065,4066,{label: "SENTENCE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
