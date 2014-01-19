@@ -101,34 +101,53 @@ def evaluateDistiller(questionSet):
         # computing tp, fp and fn
         results = computePerClassCounts(question.trueFocus, ruleFocus, results)
 
-    return 'FM-Distiller Single', results
+    return 'FM-Distiller Alone', results
 
 # evaluateGlasses
 # only evaluates the HMM-Glasses, 
 # produces 1) Proper model name 2) results
 #
-def evaluateGlasses(questionSet, reverse):
-    glass = Glass(questionSet, reverse)
-
-    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+def evaluateGlasses(questionSet, reverse, twoDirections=False):
     
+    
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+
+    if twoDirections:
+        glassNormal = Glass(questionSet, False)
+        glassRev = Glass(questionSet, True)
+    else:
+        glass = Glass(questionSet, reverse)
+
     for question in questionSet:
 
         results['totalFParts'] += len(question.trueFocus)
 
-        hmmTripletAllResults = glass.computeFocusProbs(question)
+        if twoDirections:
+            tripletsNormal = glassNormal.computeFocusProbs(question)
+            tripletsReverse = glassRev.computeFocusProbs(question)
 
+            hmmTripletAllResults = QuestionAnalysis.combineGlasses(tripletsNormal, tripletsReverse)
+
+        else:
+            hmmTripletAllResults = glass.computeFocusProbs(question)
+
+        # extracting focus parts from hmm results to evaluate
         hmmTripletFocusResults = [trplt for trplt in hmmTripletAllResults if (trplt[0] == 'FOC')]
 
+        # converting triplets to listof parts
         resultParts = Glass.hmmResultsToParts(hmmTripletFocusResults)
 
+        # computing the eval metrics
         results = computePerClassCounts(question.trueFocus, resultParts, results)
         
 
     revStr = "Forward"
     if reverse:
         revStr = "Backward"
-    return 'HMM-Glasses Single ('+revStr+' mode)', results
+    
+    if twoDirections:
+        revStr = "Forward & Backward"
+    return 'HMM-Glasses Alone ('+revStr+' mode)', results
 
 # evaluateBoth
 # given the question set, it evaluates the combination of 
@@ -172,9 +191,11 @@ def evaluate(questions, model, fullInfo=True):
     elif model=="glasses":
         bModelName, backResults = evaluateGlasses(questions, reverse=True)
         fModelName, forwResults = evaluateGlasses(questions, reverse=False)
+        twoMN, twoResults = evaluateGlasses(questions, reverse=False, twoDirections=True)
 
         displayResults(bModelName, backResults, fullInfo)
         displayResults(fModelName, forwResults, fullInfo)
+        displayResults(twoMN, twoResults, fullInfo)
 
     elif model=="combined":
         modelDisplayFB, combinedResultsFB = evaluateBoth(questions, False)
