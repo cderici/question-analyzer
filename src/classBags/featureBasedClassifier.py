@@ -6,7 +6,7 @@ from maltImporter import MaltImporter;
 
 classPath = 'classBags/classes';
 classQuestionWordsPath = 'classBags/question_words';
-classQuestionKeywordsPath = 'classBags/qeustion_keywords';
+classQuestionKeywordsPath = 'classBags/question_keywords';
 
 class RuleClass:
     coarseCategory = '';
@@ -16,6 +16,8 @@ class RuleClass:
     qnxWordsScores = [];
     keywords = [];
     keywordsScores = [];
+    
+    parts = [];
 
     def __init__(self, coarseCategory, fineCategory):
         self.coarseCategory = coarseCategory;
@@ -25,6 +27,8 @@ class RuleClass:
         self.keywords = [];
         self.qnxWordsScores = [];
         self.keywordsScores = [];
+        
+        self.parts = [];
 
     def addToQxnWords(self, word):
         self.qxnWords.append(word);
@@ -58,10 +62,10 @@ class RuleBasedQuestionClassification:
     finalCategory = [];
     
     ruleClasses = [];
-        
+
     def __init__(self, questions, classPath, classQuestionWordsPath, classQuestionKeywordsPath):
         self.questions = questions;
-
+        
         self.readClassDefinitions(classPath, classQuestionWordsPath, classQuestionKeywordsPath);
         self.calculateFeatureScores();
 
@@ -106,14 +110,14 @@ class RuleBasedQuestionClassification:
         file.close();
 
         ##Keywords
-        file = codecs.open(classQuestionKeywordsPath, 'r', 'utf-8');
+        ##file = codecs.open(classQuestionKeywordsPath, 'r', 'utf-8');
 
-        lines = file.readlines();
-        lines = [line.strip().split('\t') for line in lines];
+        ##lines = file.readlines();
+        ##lines = [line.strip().split('\t') for line in lines];
 
-        [self.getRuleClass(line[0], line[1]).addToKeywords(line[2]) for line in lines if self.getRuleClass(line[0], line[1]) is not None];
+        ##[self.getRuleClass(line[0], line[1]).addToKeywords(line[2]) for line in lines if self.getRuleClass(line[0], line[1]) is not None];
         
-        file.close();
+        ##file.close();
 
     def doClassification(self):
 
@@ -134,7 +138,7 @@ class RuleBasedQuestionClassification:
 
             self.finalCategory.append(self.ruleClasses[indexOfBestScore]);
             
-            ##print(self.ruleClasses[indexOfBestScore].coarseCategory + '\t' + self.ruleClasses[indexOfBestScore].fineCategory+ '\t'+ str(max(totalScores)));
+            print(self.ruleClasses[indexOfBestScore].coarseCategory + '\t' + self.ruleClasses[indexOfBestScore].fineCategory+ '\t'+ str(max(totalScores)));
         
         total_coarse_TP = 0.0;
         total_coarse_TN = 0.0;
@@ -266,3 +270,4 @@ class RuleBasedQuestionClassification:
         print('Micro Average Recall: ' + str(fine_Recall));
         print('Micro Average F-Measure: ' + str(fine_Micro_F));
         print('Macro Average F-Measure: ' + str(fine_Macro_F));
+
