@@ -166,7 +166,7 @@ Karasal iklimde yıllık yağış miktarı kaç mm'dir|kaç mm'dir|Karasal iklim
 Yükselti arttıkça neye bağlı olarak bitki örtüsü değişir|neye bağlı olarak|Yükselti arttıkça bitki örtüsü değişir|DESCRIPTION|REASON
 Yüksek bulutlara ne denir|bulutlara denir|Yüksek|ENTITY|CLOUD
 Kümülüs bulutları kaç metre aralığında bulunur|kaç metre|Kümülüs bulutları aralığında bulunur|NUMERIC|RANGE
-Sirüs bulutları kaç metre yükseklikte bunulur|kaç metre|Sirüs bulutları yükseklikte bunulur|NUMERIC|SIZE.HEIGHT
+Sirüs bulutları kaç metre yükseklikte bululur|kaç metre|Sirüs bulutları yükseklikte bunulur|NUMERIC|SIZE.HEIGHT
 Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca ne olur|olur|Kutup rüzgarları 60 derece enlemleri civarında batı rüzgarlarıyla karşılaşınca|DESCRIPTION|EFFECT
 Alize rüzgarları neye sebep olur|sebep olur |Alize rüzgarları |DESCRIPTION|EFFECT
 Bir dağ yamacı boyunca yükselen nemli havanın soğuyarak yoğuşması sonucunda ne olur|olur|Bir dağ yamacı boyunca yükselen nemli havanın soğuyarak yoğuşması sonucunda|DESCRIPTION|EFFECT
@@ -504,3 +504,153 @@ Hong-Kong hangi tarihe kadar İngiliz Krallığına bağlı bir sömürgeydi|han
 Rusya’daki petrol rezervlerinin %80’i hangi bölgesinde bulunur|hangi bölgesinde|Rusyadaki petrol reservlerinin 80i bulunur|LOCATION|REGION
 Rusya hangi ülkenin dağılmasıyla kurulmuştur|hangi ülkenin|Rusya dağılmasıyla kurulmuştur|LOCATION|COUNTRY
 SSCB'nin açılımı nedir|açılımı|SSCBnin|ABBREVIATION|ABBREVIATION
+İpek yolunun başlangıcı hangi ülkedir|||LOCATION|COUNTRY
+İlk coğrafi keşifler kaçıncı yüzyılda başlamıştır|||TEMPORAL|CENTURY
+Ümit burnu ne zaman keşfedilmiştir|||TEMPORAL|DATE
+Ümit burnu kimin tarafından keşfedilmiştir|||HUMAN|INDIVIDUAL
+Bartelmi Diaz nerelidir|||LOCATION|COUNTRY
+Dünyayı dolaşan ilk denizci kimdir|||HUMAN|INDIVIDUAL
+Kristof Kolomb Amerika’ya ilk kez ne zaman ulaşmıştır|||TEMPORAL|DATE
+Akdeniz ile Hint okyanusu arasındaki ticaret yollarını kısaltmayı sağlayan kanal hangisidir|||LOCATION|RIVER
+Dünyada ilk telgraf hattı ne zaman kurulmuştur|||TEMPORAL|DATE
+Matbaa ne zaman icat edildi|||TEMPORAL|DATE
+İlk fotoğraf makinası ne zaman yapıldı|||TEMPORAL|DATE
+Telefon hangi tarihte icat edildi|||TEMPORAL|DATE
+Ses kayıt makinasının icat edilme tarihi nedir|||TEMPORAL|DATE
+İlk sinema filminin yapıldığı tarih hangisidir|||TEMPORAL|DATE
+Kıtalar arası ilk telefon görüşmesi ne zaman yapıldı|||TEMPORAL|DATE
+Renkli televizyonun ilk üretilme tarihi nedir|||TEMPORAL|DATE
+Dünyada ilk olarak halkına televizyon yayını yapan ülke hangisidir|||LOCATION|COUNTRY
+Panama kanalından bir yılda yaklaşık kaç gemi geçmektedir|||NUMERIC|AVERAGE
+Dünya ticaretinin yüzde kaçı Panama kanalı üzerinden yapılmaktadır|||NUMERIC|PERCENTAGE
+Süveyş Kanalının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Dünyada kapakları olmayan en uzun kanal hangisidir|||LOCATION|RIVER
+Kiel Kanalı hangi tarihte deniz trafiğine açılmıştır|||TEMPORAL|DATE
+Yunanistan ve Mora yarımadasını birbirine bağlayan kanalın adı nedir|||LOCATION|RIVER
+Cebelitarik boğazının en sığ yeri ne kadardır|||NUMERIC|SIZE.LENGTH
+Cebelitarık boğazındaki yüzeysel akıntı nereden nereye doğrudur|||DESCRIPTION|DEFINITION
+Bering Boğazını kim keşfetmiştir|||HUMAN|INDIVIDUAL
+Bering boğazı ne zaman keşfedilmiştir|||TEMPORAL|DATE
+Bering boğazının kâşifi nerelidir|||LOCATION|COUNTRY
+Babülmendep boğazı hangi savaşa kadar Osmanlı hakimiyetindeydi|||TEMPORAL|
+Karadeniz’in Akdeniz’e açılmasını sağlayan boğazlar hangileridir|||LOCATION|
+Tarihte ilk kara yolu hangi krallık tarafından yapılmıştır|||TEMPORAL|
+İlk kara yolu ne zaman yapılmıştır|||TEMPORAL|DATE
+Türkiye’de 100 Km2’ye düşen yol ne kadardır|||NUMERIC|SIZE.DENSITY
+Türkiye’de 100 Km2’ye düşen yol kaç Km’dir|||NUMERIC|SIZE.DENSITY
+Türkiye’de 100 kilometrekarelik alana düşen yol kaç kilometredir|||NUMERIC|SIZE.DENSITY
+Dünyada hava ulaşımının kaçta kaçı ABD sınırları içinden gerçekleşmektedir|||NUMERIC|PERCENTAGE
+Dünyada demir yolu ağının en sık olduğu bölge neresidir|||LOCATION|REGION
+Dünyanın en uzun demir yolu hattının adı nedir|||ENTITY|PROPER NOUN
+Transsibirya demiryolu hattının yaklaşık uzunluğu ne kadardır|||NUMERIC|AVERAGE
+Dünyanın en uzun demiryolu hattının yaklaşık uzunluğu ne kadardır|||NUMERIC|AVERAGE
+Afrika demir yollarının gelişiminde hangi devletin desteği Avrupa devletinin desteği büyüktür|||LOCATION|COUNTRY
+Yük ve yolcu taşıma maliyetinin en yüksek olduğu ulaşım yolu hangisidir|||DESCRIPTION|DEFINITION
+Türkiye’de 1000 kişiye kaç km yol düşmektedir|||NUMERIC|SIZE.LENGTH
+Yazı ilk defa hangi uygarlık tarafından bulunmuştur|||LOCATION|COUNTRY
+Telgraf hatlarının kurulması ile hangi iletişim türü başlamıştır|||DESCRIPTION|DEFINITION
+Hürmüz boğazının en dar yeri ne kadardır|||NUMERIC|SIZE.LENGTH
+Baltık denizini Kuzey denize bağlayan kanalın uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Kiel kanalının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Babülmendep Kanalı hangi ülkelerin kıyıları arasındadır|||LOCATION|COUNTRY
+Bering boğazı hangi denizleri birbirine bağlar|||LOCATION|SEA
+Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı kaç derecedir|||NUMERIC|DEGREE
+Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı nerede ölçülmüştür|||NUMERIC|DEGREE
+Bugüne kadar Dünya üzerindeki ölçülen en düşük hava sıcaklığı kaç derecedir|||NUMERIC|DEGREE
+Bugüne kadar Dünya üzerindeki ölçülen en düşük hava sıcaklığı nerede ölçülmüştür|||NUMERIC|DEGREE
+İke kasırgası ne zaman gerçekleşmiştir|||TEMPORAL|DATE
+İke kasırgasının hızı ne kadar hıza ulaşmıştır|||NUMERIC|SPEED
+Töhoku depremi ne zaman gerçekleşmiştir|||TEMPORAL|DATE
+Marmara depremi kaç şiddetinde olmuştur|||NUMERIC|
+Marmara depremi hangi tarihte meydana gelmiştir|||TEMPORAL|DATE
+Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaydın olarak görülen kütle hareketlerine ne denir|||DESCRIPTION|DEFINITION
+Bir bölgede nem miktarındaki geçici dengesizliğin o bölgedeki su kıtlığı ile ilişkisine ne ad verilir|||DESCRIPTION|DEFINITION
+1965-1967 yılları arasında Hindistan’da hüküm süren kuraklık sonucu kaç kişi hayatını kaybetmiştir|||NUMERIC|COUNT
+Manş tüneli hangi tarihte hizmete açılmıştır|||TEMPORAL|DATE
+Manş tüneli hangi ülkeler arasındadır|||LOCATION|COUNTRY
+Dünyanın en büyük su nakli projesi hangi ülkeye aittir|||LOCATION|COUNTRY
+Toba dağı hangi ülke sınırları içerisindedir|||LOCATION|COUNTRY
+Mal ve hizmetlerin sağlanmasına ne denir|||DESCRIPTION|DEFINITION
+Mal ve hizmetlerin tüketiciye ulaştırılmasına ne ad verilir|||DESCRIPTION|DEFINITION
+Mal ve hizmetlerin kullanılması ne ile ifade edilir|||DESCRIPTION|DEFINITION
+Ekonomik faaliyetlerin ilk zincirini ne oluşturur|||ENTITY|TERM
+Ekonomik faaliyetlerin son zincirini ne oluşturur|||ENTITY|TERM
+Türkiye’de çay üretimi hangi bölgede olur|||TEMPORAL|REGION.LOCAL
+Bir çizimin harita özelliği taşıması için kaç temel ilkeye uyma zorunluluğu vardır|||NUMERIC|COUNT
+Yeryüzündeki ayrıntıları en az hata ile bir düzlem üzerinde gösterebilmek için geliştirilen metotlara ne ad verilir|||DESCRIPTION|DEFINITION
+Harita çizimi ile uğraşan bilim dalına ne ad verilir|||ENTITY|TERM
+Haritadaki uzunluğun gerçek uzunluğa bölünmesi neyi verir|||DESCRIPTION|DEFINITION
+Ölçeği 1/20 000 ile 1/200 000 arasında olan haritalar hangileridir|||DESCRIPTION|DEFINITION
+Profil hangi tip haritalardan çıkarılabilir|||DESCRIPTION|DEFINITION
+Eş derinlik eğrilerinin diğer adı nedir|||DESCRIPTION|DEFINITION
+Kıyıdan 200 metre derinliğe kadar olan saha neyle ifade edilir|||DESCRIPTION|DEFINITION
+Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden kaç derecelik bir açıyla ışık geldiği varsayılır|||NUMERIC|COUNT
+Lejant ne demektir|||DESCRIPTION|DEFINITION
+Fiziki haritalarda yeşil alanlar kaç metre aralıklarını ifade eder|||DESCRIPTION|SIZE.LENGTH
+Haritadaki uzunluk ile harita ölçeğinin çarpımı neyi verir|||ENTITY|TERM
+Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen hayali çembere ne ad verilir|||ENTITY|TERM
+Kaç adet paralel vardır|||NUMERIC|COUNT
+Paralel numaraları ile boyları arasında nasıl bir orantı vardır|||DESCRIPTION|DEFINITION
+Paraleller hangi doğrultuda uzanır|||DESCRIPTION|DEFINITION
+İki paralel arasındaki uzaklık ne kadardır|||NUMERIC|SIZE.LENGTH
+230-271 kuzey enleminin özel adı nedir|||DESCRIPTION|DEFINITION
+230-271 güney enlemin diğer adı nedir|||DESCRIPTION|DEFINITION
+Bir noktanın Ekvator’a olan uzaklığının ne cinsinden değerine enlem denir|||DESCRIPTION|DEFINITION
+Bir noktanın Ekvator’a olan uzaklığının açı cinsinden değerine ne denir|||DESCRIPTION|DEFINITION
+Greenwich’in antimeridyeni nedir|||DESCRIPTION|DEFINITION
+900 güney paralelinin özel adı nedir|||DESCRIPTION|DEFINITION
+Dünyanın dönüş yönü nasıldır|||DESCRIPTION|DEFINITION
+Saat dilimleri kaç meridyende bir numaralandırılır|||NUMERIC|COUNT
+İleri saat uygulamasına gidilmeye hangi tarihten itibaren başlanmıştır|||TEMPORAL|DATE
+En büyük paralel dairesi hangisidir|||DESCRIPTION|DEFINITION
+Güneş’in ufuk düzlemi üzerinde en yüksek noktaya ulaştığı zamana ne denir|||DESCRIPTION|DEFINITION
+Ekonomik, sosyal, doğal ya da siyasi nedenlerle birey veya toplulukların yer değiştirmesine ne denir|||DESCRIPTION|DEFINITION
+Bir ülke içinde bölge, şehir ve köy gibi bir yerden diğerine yönelik nüfus hareketlerine ne denir|||DESCRIPTION|DEFINITION
+Bir ülkeden başka bir ülkeye olan göçlere ne ad verilir|||DESCRIPTION|DEFINITION
+Göçlerin kaç temel sebebi vardır|||NUMERIC|COUNT
+Türklerin Orta Asya’dan göç etmelerinin temel sebebi neydi|||DESCRIPTION|REASON
+Savaşlar, sınır ihlalleri ve iç karışıklıklar nedeniyle can güvenliklerini sağlamak için ülke değiştiren insanlara ne denir|||DESCRIPTION|DEFINITION
+Uzun süreli ve devamlı kalmak üzere yapılan göçlere ne denir|||DESCRIPTION|DEFINITION
+Kavimler göçü kaçıncı yüzyıllarda gerçekleşmiştir|||TEMPORAL|DATE
+Çoğu türk olan kavimlerin, Orta Asya’dan ayrılıp batıya doğru kalıcı olarak hareket etmeleri olayına tarihte ne ad verilir|||ENTITY|PROPER NOUN
+Batı roma imparatorluğu hangi yılda yıkılmıştır|||TEMPORAL|DATE
+Kavimler göç hangi çağın kapanmasına sebep olmuştur|||TEMPORAL|ERA
+Coğrafi keşifler hangi yüzyılda  hız kazanmıştır|||TEMPORAL|CENTURY
+Amerika kıtasına olan göçlerde, kayıtlara göre ortalama kaç insan yer değiştirmiştir|||NUMERIC|SIZE.POPULATION
+İngiliz ve Fransızlar Amerikanın hangi bölgelerinde koloniler kurmuşlardır|||LOCATION|REGION
+İspanyollar Amerikanın hangi bölgesinde koloniler kurmuşlardır|||LOCATION|REGION
+Amerikaya olan göçler hangi yüzyılda hız kazanmıştır|||TEMPORAL|CENTURY
+Osmanlı devleti bünyesinde yaşayan rumların temel geçim kaynağı neydi|||DESCRIPTION|DEFINITION
+Yunanistan ile mübadele kararını içeren Lozan anlaşması ne zaman imzalanmıştır|||TEMPORAL|DATE
+Çoğunlukla bilim ve tekniğin gelişmesine katkıda bulunabilecek nitelikli elemanların başka ülkelere çalışmak amaçlı göç etmelerine ne denir|||DESCRIPTION|DEFINITION
+Beyin göçlerinin getirdiği en temel sonuç nedir|||DESCRIPTION|EFFECT
+Ülkeler arası beyin göçü hangi yıldan sonra hız kazanmıştır|||TEMPORAL|DATE
+Türkiye en çok beyin göçü veren ülkeler arasında kaçıcı sıradadır|||NUMERIC|COUNT
+Almanya kalkınma politikası sebebiyle hangi yıllar arası işçi alımı yapmıştır|||TEMPORAL|PERIOD
+Türkiyeden avrupaya ilk işçi göçleri hangi yıllar arasında gerçekleşmiştir|||TEMPORAL|PERIOD
+Türkiye almanya ile hangi yılda işçi göçü anlaşması yapmıştır|||TEMPORAL|DATE
+Günümüzde Almanyada yaklaşık kaç insanımız işçi olarak çalışmaktadır|||NUMERIC|SIZE.POPULATION
+Göç alan şehirlerde ortaya çıkan problemlerin temel nedeni nedir|||DESCRIPTION|REASON
+Türkiyedeki akarsuların eğimleri genel olarak nasıldır|||DESCRIPTION|DEFINITION
+Akarsularımızın taşımaya elverişli olmamasının temel sebebi nedir|||DESCRIPTION|REASON
+Türkiye hidroelektrik üretim potansiyeli açısından dünya sıralamasında kaçıncıdır|||NUMERIC|COUNT
+Dünyaca ünlü çoruh nehrinde hangi spor yapılır|||ENTITY|PROPER NOUN
+Doğru karadenizdeki akarsuların her zaman bol su taşıyor olmasının temel sebebi nedir|||DESCRIPTION|REASON
+En geniş havzaya sahip bölgemiz hangisidir|||LOCATION|REGION.LOCAL
+Ege bölgesinde akasuların doğrultusu ne yöne doğrudur|||DESCRIPTION|DEFINITION
+Yağışlı dönemde bol su taşıyan akarsular temelde nereden beslenir|||DESCRIPTION|DEFINITION
+Yağmurla beslenen akarsular daha çok hangi iklimde görülür|||DESCRIPTION|DEFINITION
+Kar ve buz sularıyla beslenen akarsuların akışında azalma hangi mevsimde olur|||TEMPORAL|SEASON
+Fırat nehrinde bahar aylarında saniyede geçen ortalama su akımı ne kadardır|||NUMERIC|SIZE.DENSITY
+Gölden çıkan akarsuların beslendiği yerlere ne denir|||DESCRIPTION|DEFINITION
+Akım rejimleri yıl içinde birden çok kez değişen akarsulara ne denir|||DESCRIPTION|DEFINITION
+Türkiyede ortalama kaç tane doğal göl vardır|||NUMERIC|AVERAGE
+Türkiyede ortalama kaç adet baraj gölü bulunmaktadır|||NUMERIC|AVERAGE
+Ülkemizdeki göllerin toplam yüzölçümü ortalama olarak ne kadardır|||NUMERIC|SIZE.AREA
+Türkiyenin en büyük gölü nedir|||ENTITY|LAKE
+Buzul gölleri ortalama kaç metre yükseklikte bulunurlar|||NUMERIC|SIZE.HEIGHT
+Volkanik alanlardaki çukurların suyla dolması sonucu oluşan göllere ne isim verilir|||DESCRIPTION|DEFINITION
+Delta ovalarındaki kıyı oklarının gerisinde oluşan göllere ne denir|||DESCRIPTION|DEFINITION
+Volkanlardan çıkan lavların bir çukurluğun ve vadinin önünü kapamasıyla oluşan göllere ne denir|||DESCRIPTION|DEFINITION
+Oluşumunda tektonik hareketler, volkanik olaylar ve doğal etkenlerin eş zamanlı rol oynadığı göllere ne denir|||DESCRIPTION|DEFINITION
+Kuzey anadolu dağlarının denize bakan yamaçlarında görülen toprak çeşidinin adı nedir|||DESCRIPTION|DEFINITION

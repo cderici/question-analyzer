@@ -138,7 +138,7 @@ class RuleBasedQuestionClassification:
 
             self.finalCategory.append(self.ruleClasses[indexOfBestScore]);
             
-            print(self.ruleClasses[indexOfBestScore].coarseCategory + '\t' + self.ruleClasses[indexOfBestScore].fineCategory+ '\t'+ str(max(totalScores)));
+            ##print(self.ruleClasses[indexOfBestScore].coarseCategory + '\t' + self.ruleClasses[indexOfBestScore].fineCategory+ '\t'+ str(max(totalScores)));
         
         total_coarse_TP = 0.0;
         total_coarse_TN = 0.0;
