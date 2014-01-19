@@ -8,12 +8,14 @@ verilirFC = 0
 denirFC = 0
 hangisidirFC = 0
 hangiBtwFC = 0
+neKadardirFC = 0
 
 nedirMC = 0
 verilirMC = 0
 denirMC = 0
 hangisidirMC = 0
 hangiBtwMC = 0
+neKadardirMC = 0
 
 def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
@@ -357,3 +359,52 @@ def hangiBtwExpert(question, qParts, trainMode = False, rFocus = [], rMods = [])
         qMods.append(SEN)
     
     return qFocus, qMods, hangiBtwFC, hangiBtwMC
+
+
+def neKadardirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
+    
+    qFocus = []
+    qMods = []
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    NE = False
+    for derivChild in question.findChildrenDepenTag(SEN, 'DERIV'):
+        for neChild in question.findChildrenDepenTag(derivChild, 'OBJECT'):
+            NE = neChild
+            break
+
+    if not NE:
+        raise RuntimeError('neKadardirExpert : there is no NE part')
+
+    qFocus = [SEN, NE]
+
+    # If sentence has an OBJECT child, we take the rightmost one
+    # and take OBJECT and its classifier if it has one
+
+    objChildren = question.findChildrenDepenTag(SEN, 'OBJECT')
+    objLen = len(objChildren)
+
+    if objLen != 0:
+        OBJ = objChildren[objLen-1]
+        qFocus.append(OBJ)
+        qFocus.extend(question.tracebackFromFoldTamlama(OBJ, False, True, False, False, False))
+
+    else:
+        # else if sentence has a SUBJECT child, we take the rightmost one
+        # and take it and its classifier if it has one
+
+        subjChildren = question.findChildrenDepenTag(SEN, 'SUBJECT')
+        subjLen = len(subjChildren)
+
+        if subjLen != 0:
+            SUBJ = subjChildren[subjLen-1]
+            qFocus.append(SUBJ)
+            qFocus.extend(question.tracebackFromFoldTamlama(SUBJ, False, True, False, False, False))
+
+        else:
+            return [], [], neKadardirFC, neKadardirMC
+
+    qFocus.reverse()
+    qMods.reverse()
+    return qFocus, qMods, neKadardirFC, neKadardirMC

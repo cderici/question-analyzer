@@ -159,7 +159,7 @@ class MassAnalyzer:
             else:
                 PART = QPart.getQPartWithField(q.questionParts, tagType, tagName)
                 if PART:
-                    if QPart.getPartField(PART, partType) == partValue:
+                    if QPart.getPartField(PART, partType) == partValue.decode('utf-8'):
                         filtered.append(q)
                     else:
                         #print(q.questionText)

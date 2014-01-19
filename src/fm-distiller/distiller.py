@@ -59,6 +59,11 @@ class Distiller():
         elif self.checkForBetweenHangi(qParts):
             
             return hangiBtwExpert(self.question, qParts)
+        
+        # ne kadardır
+        elif SENtext == 'kadardır'.decode('utf-8') and self.checkForNeKadardir(qParts, SEN):
+            
+            return neKadardirExpert(self.question, qParts)
 
         else:
             return [], [], 0, 0
@@ -79,3 +84,28 @@ class Distiller():
         hangiFiltered = [part for part in hangiParts if (QPart.getPartField(part, 'depenTag') != 'DERIV')]
 
         return hangiFiltered != []
+
+
+    def checkForNeKadardir(self, qParts, SEN):
+        
+        # we know that SEN is 'kadardır', 
+        # so its DERIV child should have a MODIFIER child texted 'ne'
+
+        derivChildren = self.question.findChildrenDepenTag(SEN, 'DERIV')
+
+        derivChild = False
+        for child in derivChildren:
+            if QPart.getPartField(child, 'morphRoot') == 'kadar':
+                derivChild = child
+                break
+        
+        if not derivChild:
+            return False
+        
+        neChildren = self.question.findChildrenDepenTag(derivChild, 'OBJECT')
+
+        for child in neChildren:
+            if QPart.getPartField(child, 'text') == 'ne':
+                return child
+
+        return False

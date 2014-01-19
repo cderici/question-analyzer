@@ -25,6 +25,8 @@ filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text',
 
 filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
 
+filteredNeKadardir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'kadardır')
+
 filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
 
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))

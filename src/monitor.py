@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import sys
 
 sys.path.append('classBags')
@@ -31,6 +33,8 @@ filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text',
 
 filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
 
+filteredNeKadardir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', "kadardır")
+#print(len(filteredNeKadardir))
 filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
 
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
@@ -43,7 +47,11 @@ for q in filteredDenir:
 """
 
 def getAllExpertResults():
-    
+ 
+    if 'all' in sys.argv or 'kadardır' in sys.argv:
+        print("\n\n -- ne kadardır -- \n\n")
+        mass.massShowFocusMod(filteredNeKadardir, onlyDistiller=True)
+   
     if 'all' in sys.argv or 'nedir' in sys.argv:
         print("\n\n -- nedir -- \n\n")
         mass.massShowFocusMod(filteredNedir, onlyDistiller=True)
