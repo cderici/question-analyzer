@@ -507,7 +507,7 @@ SSCB'nin açılımı nedir|açılımı|SSCBnin|ABBREVIATION|ABBREVIATION
 İpek yolunun başlangıcı hangi ülkedir|hangi ülkedir|İpek yolunun başlangıcı|LOCATION|COUNTRY
 İlk coğrafi keşifler kaçıncı yüzyılda başlamıştır|kaçıncı yüzyılda|İlk coğrafi keşifler başlamıştır|TEMPORAL|CENTURY
 Ümit burnu ne zaman keşfedilmiştir|ne zaman keşfedilmiştir|Ümit burnu|TEMPORAL|DATE
-Ümit burnu kim tarafından keşfedilmiştir|kim tarafından|Ümit burnu keşfedilmiştir|HUMAN|INDIVIDUAL
+Ümit burnu kimin tarafından keşfedilmiştir|kim tarafından|Ümit burnu keşfedilmiştir|HUMAN|INDIVIDUAL
 Bartelmi Diaz nerelidir|nerelidir|Bartelmi Diaz|LOCATION|COUNTRY
 Dünyayı dolaşan ilk denizci kimdir|denizci kimdir|Dünyayı dolaşan ilk|HUMAN|INDIVIDUAL
 Kristof Kolomb Amerika’ya ilk kez ne zaman ulaşmıştır|ne zaman ulaşmıştır|Kristof Kolomb Amerikaya ilk kez|TEMPORAL|DATE
@@ -544,7 +544,7 @@ Dünyada demir yolu ağının en sık olduğu bölge neresidir|bölge neresidir|
 Dünyanın en uzun demir yolu hattının adı nedir|demir yolu hattının adı|Dünyanın en uzun|ENTITY|PROPER NOUN
 Transsibirya demiryolu hattının yaklaşık uzunluğu ne kadardır|uzunluğu ne kadardır|Transsibirya demiryolu hattının yaklaşık|NUMERIC|AVERAGE
 Dünyanın en uzun demiryolu hattının yaklaşık uzunluğu ne kadardır|uzunluğu ne kadardır|Dünyanın en uzun demiryolu hattının yaklaşık|NUMERIC|AVERAGE
-Afrika demir yollarının gelişiminde hangi Avrupa devletinin desteği büyüktür|hangi Avrupa devletinin desteği|Afrika demir yollarının gelişiminde büyüktür|LOCATION|COUNTRY
+Afrika demir yollarının gelişiminde hangi devletin desteği Avrupa devletinin desteği büyüktür|hangi Avrupa devletinin desteği|Afrika demir yollarının gelişiminde büyüktür|LOCATION|COUNTRY
 Yük ve yolcu taşıma maliyetinin en yüksek olduğu ulaşım yolu hangisidir|ulaşım yolu|Yük ve yolcu taşıma maliyetinin en yüksek olduğu|DESCRIPTION|DEFINITION
 Türkiye’de 1000 kişiye kaç km yol düşmektedir|kaç km yol|Türkiyede 1000 kişiye düşmektedir|NUMERIC|SIZE.LENGTH
 Yazı ilk defa hangi uygarlık tarafından bulunmuştur|hangi uygarlık|Yazı ilk defa tarafından bulunmuştur|LOCATION|COUNTRY
@@ -563,7 +563,7 @@ Bugüne kadar Dünya üzerindeki ölçülen en düşük hava sıcaklığı nered
 Töhoku depremi ne zaman gerçekleşmiştir|ne zaman gerçekleşmiştir|Töhoku depremi|TEMPORAL|DATE
 Marmara depremi kaç şiddetinde olmuştur|kaç şiddetinde|Marmara depremi olmuştur|NUMERIC|
 Marmara depremi hangi tarihte meydana gelmiştir|hangi tarihte|Marmara depremi meydana gelmiştir|TEMPORAL|DATE
-Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaygın olarak görülen kütle hareketlerine ne denir|kütle hareketlerine denir|Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaygın olarak görülen|DESCRIPTION|DEFINITION
+Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaydın olarak görülen kütle hareketlerine ne denir|kütle hareketlerine denir|Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaygın olarak görülen|DESCRIPTION|DEFINITION
 Bir bölgede nem miktarındaki geçici dengesizliğin o bölgedeki su kıtlığı ile ilişkisine ne ad verilir|ilişkisine ad|Bir bölgede nem miktarındaki geçici dengesizliğin o bölgedeki su kıtlığı ile|DESCRIPTION|DEFINITION
 1965-1967 yılları arasında Hindistan’da hüküm süren kuraklık sonucu kaç kişi hayatını kaybetmiştir|kaç kişi|1965-1967 yılları arasında Hindistan’da hüküm süren kuraklık sonucu hayatını kaybetmiştir|NUMERIC|COUNT
 Manş tüneli hangi tarihte hizmete açılmıştır|hangi tarihte|Manş tüneli hizmete açılmıştır|TEMPORAL|DATE
@@ -580,26 +580,23 @@ Bir çizimin harita özelliği taşıması için kaç temel ilkeye uyma zorunlul
 Yeryüzündeki ayrıntıları en az hata ile bir düzlem üzerinde gösterebilmek için geliştirilen metotlara ne ad verilir|metotlara ad|Yeryüzündeki ayrıntıları en az hata ile bir düzlem üzerinde gösterebilmek için geliştirilen|DESCRIPTION|DEFINITION
 Harita çizimi ile uğraşan bilim dalına ne ad verilir|bilim dalına ad|Harita çizimi ile uğraşan|ENTITY|TERM
 Haritadaki uzunluğun gerçek uzunluğa bölünmesi neyi verir|neyi verir|Haritadaki uzunluğun gerçek uzunluğa bölünmesi|DESCRIPTION|DEFINITION
-Ölçeği 1/20000 ile 1/200000 arasında olan haritalar hangileridir|haritalar|Ölçeği 1/20000 ile 1/200000 arasında olan|DESCRIPTION|DEFINITION
+Ölçeği 1/20 000 ile 1/200 000 arasında olan haritalar hangileridir|haritalar|Ölçeği 1/20000 ile 1/200000 arasında olan|DESCRIPTION|DEFINITION
 Profil hangi tip haritalardan çıkarılabilir|hangi tip haritalardan|Profil çıkarılabilir|DESCRIPTION|DEFINITION
 Eş derinlik eğrilerinin diğer adı nedir|Eş derinlik eğrilerinin adı|diğer|DESCRIPTION|DEFINITION
 Kıyıdan 200 metre derinliğe kadar olan saha neyle ifade edilir|saha neyle ifade edilir|Kıyıdan 200 metre derinliğe kadar olan|DESCRIPTION|DEFINITION
 Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden kaç derecelik bir açıyla ışık geldiği varsayılır|kaç derecelik bir açıyla|Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden ışık geldiği varsayılır|NUMERIC|COUNT
 Lejant ne demektir|ne demektir|Lejant|DESCRIPTION|DEFINITION
-Fiziki haritalarda yeşil alanlar kaç metre aralıkları ifade eder|kaç metre aralıkları|Fiziki haritalarda yeşil alanlar ifade eder|DESCRIPTION|SIZE.LENGTH
+Fiziki haritalarda yeşil alanlar kaç metre aralıklarını ifade eder|kaç metre aralıkları|Fiziki haritalarda yeşil alanlar ifade eder|DESCRIPTION|SIZE.LENGTH
 Haritadaki uzunluk ile harita ölçeğinin çarpımı neyi verir|neyi verir|Haritadaki uzunluk ile harita ölçeğinin çarpımı|ENTITY|TERM
 Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen hayali çembere ne ad verilir|hayali çembere ad|Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen|ENTITY|TERM
 Kaç adet paralel vardır|Kaç adet|paralel vardır|NUMERIC|COUNT
-Paralel numaraları ile boyları arasında nasıl bir orantı vardır|SİL|SİL|DESCRIPTION|DEFINITION
 Paraleller hangi doğrultuda uzanır|hangi doğrultuda|Paraleller uzanır|DESCRIPTION|DEFINITION
 İki paralel arasındaki uzaklık ne kadardır|uzaklık ne kadardır|İki paralel arasındaki|NUMERIC|SIZE.LENGTH
 230-271 kuzey enleminin özel adı nedir|230-271 kuzey enleminin adı|özel|DESCRIPTION|DEFINITION
-230-271 güney enlemin diğer adı|230-271 güney enleminin adı|diğer|DESCRIPTION|DEFINITION
-Bir noktanın Ekvator’a olan uzaklığının ne cinsinden değerine enlem denir|SİL|SİL|DESCRIPTION|DEFINITION
+230-271 güney enlemin diğer adı nedir|230-271 güney enleminin adı|diğer|DESCRIPTION|DEFINITION
 Bir noktanın Ekvator’a olan uzaklığının açı cinsinden değerine ne denir|açı cinsinden değerine denir|Bir noktadnın Ekvatora olan uzaklığın|DESCRIPTION|DEFINITION
 Greenwich’in antimeridyeni nedir|antimeridyeni|Greenwichin|DESCRIPTION|DEFINITION
 900 güney paralelinin özel adı nedir|900 güney paralelinin adı|özel|DESCRIPTION|DEFINITION
-Dünyanın dönüş yönü nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 Saat dilimleri kaç meridyende bir numaralandırılır|kaç meridyende bir|Saat dilimleri numaralandırılır|NUMERIC|COUNT
 İleri saat uygulamasına gidilmeye hangi tarihten itibaren başlanmıştır|hangi tarihten itibaren|İleri saat uygulamasına gidilmeye başlanmıştır|TEMPORAL|DATE
 En büyük paralel dairesi hangisidir|paralel dairesi|En büyük|DESCRIPTION|DEFINITION
@@ -608,22 +605,21 @@ Ekonomik, sosyal, doğal ya da siyasi nedenlerle birey veya toplulukların yer d
 Bir ülke içinde bölge, şehir ve köy gibi bir yerden diğerine yönelik nüfus hareketlerine ne denir|nüfus hareketlerine denir|Bir ülke içinde bölge şehir ve köy gibi bir yerden diğerine yönelik|DESCRIPTION|DEFINITION
 Bir ülkeden başka bir ülkeye olan göçlere ne ad verilir|göçlere ad|Bir ülkeden başka bir ülkeye olan|DESCRIPTION|DEFINITION
 Göçlerin kaç temel sebebi vardır|kaç temel sebebi|Göçlerin vardır|NUMERIC|COUNT
-Türklerin Orta Asya’dan göç etmelerinin temel sebebi nedir|temel sebebi|Türklerin Orta Asya’dan göç etmelerinin|DESCRIPTION|REASON
+Türklerin Orta Asya’dan göç etmelerinin temel sebebi neydi|temel sebebi|Türklerin Orta Asya’dan göç etmelerinin|DESCRIPTION|REASON
 Savaşlar, sınır ihlalleri ve iç karışıklıklar nedeniyle can güvenliklerini sağlamak için ülke değiştiren insanlara ne denir|ülke değiştiren insanlara denir|Savaşlar sınır ihlalleri ve iç karışıklıklar nedeniyle can güvenliklerini sağlamak için|DESCRIPTION|DEFINITION
 Uzun süreli ve devamlı kalmak üzere yapılan göçlere ne denir|göçlere denir|Uzun süreli ve devamlı kalmak üzere yapılan|DESCRIPTION|DEFINITION
 Kavimler göçü kaçıncı yüzyıllarda gerçekleşmiştir|kaçıncı yüzyıllarda gerçekleşmiştir|Kavimler göçü|TEMPORAL|DATE
 Çoğu türk olan kavimlerin, Orta Asya’dan ayrılıp batıya doğru kalıcı olarak hareket etmeleri olayına tarihte ne ad verilir|hareket etmeleri olayına ad|Çoğu türk olan kavimlerin Orta Asyadan ayrılıp batıya doğru kalıcı olarak tarihte|ENTITY|PROPER NOUN
 Batı roma imparatorluğu hangi yılda yıkılmıştır|hangi yılda|Batı roma imparatorluğu yıkılmıştır|TEMPORAL|DATE
-Kavimler göçü hangi çağın kapanmasına sebep olmuştur|hangi çağın|Kavimler göçü kapanmasına sebep olmuştur|TEMPORAL|ERA
-Coğrafi keşifler hangi yüzyılda hız kazanmıştır|hangi yüzyılda|Coğrafi keşifler hız kazanmıştır|TEMPORAL|CENTURY
+Kavimler göç hangi çağın kapanmasına sebep olmuştur|hangi çağın|Kavimler göçü kapanmasına sebep olmuştur|TEMPORAL|ERA
+Coğrafi keşifler hangi yüzyılda  hız kazanmıştır|hangi yüzyılda|Coğrafi keşifler hız kazanmıştır|TEMPORAL|CENTURY
 Amerika kıtasına olan göçlerde, kayıtlara göre ortalama kaç insan yer değiştirmiştir|kaç insan|Amerika kıtasına olan göçlerde, kayıtlara göre ortalama yer değiştirmiştir|NUMERIC|SIZE.POPULATION
 İngiliz ve Fransızlar Amerikanın hangi bölgelerinde koloniler kurmuşlardır|Amerikanın hangi bölgelerinde|İngiliz ve Fransızlar koloniler kurmuşlardır|LOCATION|REGION
 İspanyollar Amerikanın hangi bölgesinde koloniler kurmuşlardır|Amerikanın hangi bölgesinde|İspanyollar koloniler kurmuşlardır|LOCATION|REGION
 Amerikaya olan göçler hangi yüzyılda hız kazanmıştır|hangi yüzyılda|Amerikaya olan göçler hız kazanmıştır|TEMPORAL|CENTURY
 Osmanlı devleti bünyesinde yaşayan rumların temel geçim kaynağı neydi|temel geçim kaynağı|Osmanlı devleti bünyesinde yaşayan rumların|DESCRIPTION|DEFINITION
 Yunanistan ile mübadele kararını içeren Lozan anlaşması ne zaman imzalanmıştır|ne zaman imzalanmıştır|Yunanistan ile mübadele kararını içeren Lozan anlaşması|TEMPORAL|DATE
-Çoğunlukla bilim ve tekniğin gelişmesine katkıda bulunabilecek nitelikli elemanların başka ülkelere çalışma amaçlı göç etmelerine ne denir|göç etmelerine denir|Çoğunlukla bilim ve tekniğin gelişmesine katkıda bulunabilecek nitelikli elemanların başka ülkelere çalışma amaçlı|DESCRIPTION|DEFINITION
-Beyin göçlerinin getirdiği en temel sonuç nedir|SİL|SİL|DESCRIPTION|EFFECT
+Çoğunlukla bilim ve tekniğin gelişmesine katkıda bulunabilecek nitelikli elemanların başka ülkelere çalışmak amaçlı göç etmelerine ne denir|göç etmelerine denir|Çoğunlukla bilim ve tekniğin gelişmesine katkıda bulunabilecek nitelikli elemanların başka ülkelere çalışma amaçlı|DESCRIPTION|DEFINITION
 Ülkeler arası beyin göçü hangi yıldan sonra hız kazanmıştır|hangi yıldan sonra|Ülkeler arası beyin göçü hız kazanmıştır|TEMPORAL|DATE
 Türkiye en çok beyin göçü veren ülkeler arasında kaçıcı sıradadır|kaçıncı sıradadır|Türkiye en çok beyin göçü veren ülkeler arasında|NUMERIC|COUNT
 Almanya kalkınma politikası sebebiyle hangi yıllar arası işçi alımı yapmıştır|hangi yıllar arası|Almanya kalkınma politikası sebebiyle işçi alımı yapılmıştır|TEMPORAL|PERIOD
@@ -631,11 +627,10 @@ Türkiyeden avrupaya ilk işçi göçleri hangi yıllar arasında gerçekleşmi�
 Türkiye almanya ile hangi yılda işçi göçü anlaşması yapmıştır|hangi yılda|Türkiye almanya ile işçi göçü anlaşması yapmıştır|TEMPORAL|DATE
 Günümüzde Almanyada yaklaşık kaç insanımız işçi olarak çalışmaktadır|kaç insanımız|Günümüzde Almanyada yaklaşık işçi olarak çalışmaktadır|NUMERIC|SIZE.POPULATION
 Göç alan şehirlerde ortaya çıkan problemlerin temel nedeni nedir|temel nedeni|Göç alan şehirlerde ortaya çıkan problemlerin|DESCRIPTION|REASON
-Türkiyedeki akarsuların eğimleri genel olarak nasıldır|SİL|SİL|DESCRIPTION|DEFINITION
 Akarsularımızın taşımaya elverişli olmamasının temel sebebi nedir|temel sebebi|Akarsularımızın taşımaya elverişli olmamasının|DESCRIPTION|REASON
 Türkiye hidroelektrik üretim potansiyeli açısından dünya sıralamasında kaçıncıdır|kaçıncıdır|Türkiye hidroelektrik üretim potansiyeli açısından dünya sıralamasında|NUMERIC|COUNT
 Dünyaca ünlü çoruh nehrinde hangi spor yapılır|hangi spor|Dünyaca ünlü çoruh nehrinde yapılır|ENTITY|PROPER NOUN
-Doğu karadenizdeki akarsuların her zaman bol su taşıyor olmasının temel sebebi nedir|temel sebebi|Doğu karadenizdeki akarsuların her zaman bol su taşıyor olmasının|DESCRIPTION|REASON
+Doğru karadenizdeki akarsuların her zaman bol su taşıyor olmasının temel sebebi nedir|temel sebebi|Doğu karadenizdeki akarsuların her zaman bol su taşıyor olmasının|DESCRIPTION|REASON
 En geniş havzaya sahip bölgemiz hangisidir|bölgemiz|En geniş havzaya sahip|LOCATION|REGION.LOCAL
 Ege bölgesinde akasuların doğrultusu ne yöne doğrudur|ne yöne doğrudur|Ege bölgesinde akarsuların doğrultusu|DESCRIPTION|DEFINITION
 Yağışlı dönemde bol su taşıyan akarsular temelde nereden beslenir|nereden beslenir|Yağışlı dönemde bol su taşıyan akarsular temelde|DESCRIPTION|DEFINITION
@@ -654,3 +649,203 @@ Delta ovalarındaki kıyı oklarının gerisinde oluşan göllere ne denir|göll
 Volkanlardan çıkan lavların bir çukurluğun ve vadinin önünü kapamasıyla oluşan göllere ne denir|göllere denir|Volkanlardan çıkan lavların bir çukurluğun ve vadinin önünü kapamasıyla oluşan|DESCRIPTION|DEFINITION
 Oluşumunda tektonik hareketler, volkanik olaylar ve doğal etkenlerin eş zamanlı rol oynadığı göllere ne denir|göllere denir|Oluşumunda tektonik hareketler volkanik olaylar ve doğal etkenlerin eş zamanlı rol oynadığı|DESCRIPTION|DEFINITION
 Kuzey anadolu dağlarının denize bakan yamaçlarında görülen toprak çeşidinin adı nedir|toprak çeşidinin adı|Kuzey anadolu dağlarının denize bakan yamaçlarında görülen|DESCRIPTION|DEFINITION
+Bir veya birden fazla özelliği benzer olan alanlar neyle adlandırılır|||DESCRIPTION|DEFINITION
+Sadabat Paktı ne zaman kurulmuştur|||TEMPORAL|DATE
+Sadabat Paktı ne zaman işlevini yitirmiştir|||TEMPORAL|DATE
+Sadabat Paktı hangi ülkelerden oluşuyordu|||LOCATION|COUNTRY
+Dortmund hangi sanayi bölgesinde yer almaktadır|||LOCATION|REGION
+Aynı kentin içinde bulunup kentten soyutlanmış yerleşim alanlarına ne ad verilir|||ENTITY|TERM
+Sanayi devrimi kaçıncı yüzyılda gerçekleşmiştir|||TEMPORAL|CENTURY
+1960 yılında Dünya üzerinde yaklaşık kaç kişi şehirlerde yaşıyordu|||NUMERIC|SIZE.POPULATION
+OECD’nin açılımı nedir|||ABBREVIATION|ABBREVIATION
+1950 yılında Dünya genelinde kişi başına düşen milli gelir ne kadardır|||NUMERIC|COUNT
+Türkiye’de ki sarp bölgelerin kapladığı alan ne kadardır|||NUMERIC|SIZE.AREA
+Türkiye arazisinin yüzde kaçı düz ve hafif eğimlidir|||NUMERIC|PERCENTAGE
+Türkiye hangi yarım kürede yer almaktadır|||ENTITY|SPHERE
+Aşar vergisi ne zaman kaldırılmıştır|||ENTITY|SPHERE
+Teşvik-i Sanayi Kanunu ne zaman çıkarılmıştır|||TEMPORAL|DATE
+1. İzmir İktisat kongresi ne zaman yapılmıştır|||TEMPORAL|DATE
+TCDD’nin açılımı nedir|||ABBREVIATION|ABBREVIATION
+Türkiye’de ilk uçak ne zaman üretildi|||TEMPORAL|DATE
+Türkiye üretilen ilk uçağa ne ad verildi|||ENTITY|PROPER NOUN
+Türkiye’de üretilen ilk uçak hangi ilçede üretildi|||LOCATION|CITY
+DPT neyi ifade eder|||ABBREVIATION|EXPRESSION
+DPT ne zaman kurulmuştur|||TEMPORAL|DATE
+Tarıma elverişli araziler ülkemiz topraklarının ne kadarını oluşturur|||NUMERIC|SIZE.AREA
+Tarım sektöründe sulamadan sonra verimi artıran en önemli faktör nedir|||DESCRIPTION|REASON
+TİGEM neyin kısaltmasıdır|||ABBREVIATION|ABBREVIATION
+Türkiye Zirai Donatım Kurumu’nun kısa adı nedir|||ABBREVIATION|ABBREVIATION
+Devlet Su işleri kısaca nasıl ifade edilir|||ABBREVIATION|ABBREVIATION
+Toprak Mahsulleri Ofisi’nin kısaltması nasıldır|||ABBREVIATION|ABBREVIATION
+Buğday üretimi en yüksek olan 3 ilimiz hangileridir|||LOCATION|CITY
+Pirinç hangi bitkinin kabuklarından ayrılmasıyla elde edilir|||DESCRIPTION|DEFINITION
+Fasulye kaç metreden yüksek yerlerde yetişmez|||NUMERIC|SIZE.HEIGHT
+Pamuk bitkisinin tohumuna ne ad verilir|||ENTITY|TERM
+Çiğit nedir|||DESCRIPTION|DEFINITION
+Türkiye şeker pancarı üretimine ne zaman başlamıştır|||TEMPORAL|DATE
+İlk şeker fabrikalarımız hangileridir|||ENTITY|PROPER NOUN
+Ege bölgesi Türkiye’de ki haşhaş üretiminin kaçta kaçını karşılar|||NUMERIC|PERCENTAGE
+GAP’ın açılımı nedir|||ABBREVIATION|ABBREVIATION
+Seralarda sürdürülen faaliyetlere ne ad verilir|||DESCRIPTION|DESCRIPTION
+Rize çay üretimimizin yüzde kaçını karşılar|||NUMERIC|PERCENTAGE
+Maden cevheri içindeki metal oranına ne isim verilir|||ENTITY|TERM
+Anadolu topraklarındaki madencilik ne zaman başlamıştır|||TEMPORAL|DATE
+MTA nedir|||ABBREVIATION|ABBREVIATION
+MTA ne zaman kurulmuştur|||TEMPORAL|DATE
+Türkiye Petrolleri Anonim Ortaklığının kısa adı nedir|||ABBREVIATION|ABBREVIATION
+Dünyadaki bor rezervlerinin yüzde kaçı Türkiye’dedir|||NUMERIC|PERCENTAGE
+Doğada kaç çeşit bor minareli vardır|||NUMERIC|COUNT
+Lüle taşı hangi il çevresinde çıkarılır|||LOCATION|CITY
+Aydın’ın hangi ilçesinde jeotermal elektrik santrali vardır|||LOCATION|CITY
+Bitkilerden veya biyolojik atıklardan elde edilen enerjiye ne ad verirli|||DESCRIPTION|DEFINITION
+Petrol yataklarımızın büyük bir çoğunluğu hangi bölgemizde yer almaktadır|||LOCATION|REGION.LOCAL
+Terrarosa toprakları hangi bölgemizde daha sık görülür|||LOCATION|REGION.LOCAL
+Yıllık yağış miktarının az olduğu kireçli topraklara ne ad verilir|||DESCRIPTION|DEFINITION
+Kestane renkli bozkır topraklarının olduğu bir yörede yıllık yağış miktarı ne kadardır|||NUMERIC|SIZE.HEIGHT
+Çayır bitki örtüsü çevresinde oluşan topraklara ne ad verilir|||DESCRIPTION|DEFINITION
+Sürülmesi ve işlenmesi zor, kil oranı fazla olan topraklara ne isim verillir|||DESCRIPTION|DEFINITION
+Ege, iç anadolu ve doğu anadolunun çöküntülü kısımlarında yaygın olan üst kısmı kireçli topraklara ne denir|||DESCRIPTION|DEFINITION
+Akarsuların taşıyıp biriktirdiği malzemelerden oluşan toprağa ne denir|||DESCRIPTION|DEFINITION
+Dağlık alanlarda yamaçlar boyunca ufalanan çeşitli malzemelerin, dağların eteklerinde birikmesiyle oluşan topraklara ne ad verilir|||DESCRIPTION|DEFINITION
+Volkanlardan çıkan kum boyutundaki malzemeler ile yamaç eteklerindeki kolüvyal depolar üzerinde oluşan topraklara ne denir|||DESCRIPTION|DEFINITION
+Türkiye arazisinin yüzde kaçında tarım yapılmaktadır|||NUMERIC|PERCENTAGE
+Türkiyede yetiştirilen tarım ürünlerinin çeşitliği temelde neye bağlıdır|||DESCRIPTION|REASON
+Türkiyede en çok yetiştirilen tahıl ürünü nedir|||ENTITY|PLANT
+Çay hangi toprakta daha iyi yetişir|||DESCRIPTION|DEFINITION
+Maki ve çalılıkların yaygın olduğu bölgelerde yapılan hayvancılıkta hangi hayvan daha yaygındır|||DESCRIPTION|DEFINITION
+Bozkırların daha yoğun olduğu yörelerde hangi hayvan yetiştiriciliği fazladır|||DESCRIPTION|DEFINITION
+Çayırların daha fazla görüldüğü bölgelerde hangi hayvan daha çok yetiştirilir|||DESCRIPTION|DEFINITION
+Dut ağaçlarının yaygın olduğu bölgelerde hangi hayvandan daha çok faydalanılır|||DESCRIPTION|DEFINITION
+Çam ormanlarının daha fazla olduğu yörelerde görülen hayvancılık çeşidi nedir|||DESCRIPTION|DEFINITION
+Seramik, porselen, çömlek, tuğla ve kiremit yapımında ham madde olarak hangi toprak çeşidi kullanılır|||DESCRIPTION|DEFINITION
+Türkiyede yaklaşık kaç farklı bitki türü bulunmaktadır|||NUMERIC|COUNT
+Türkiyedeki bitki çeşitlilğinin fazla olmasının en önemli sebebi nedir|||DESCRIPTION|REASON
+Sadece türkiyede bulunan ve dünyanın başka hiç bir yerinde görülmeyen bitkilere ne ad verilir|||DESCRIPTION|DEFINITION
+3. ve 4. Jeolojik zamanda oluşmuş, günümüzde yetişmesi imkansız bitkilere ne denir|||DESCRIPTION|DEFINITION
+Ülkemizin yüzde kaçı ormanlarla kaplıdır|||NUMERIC|PERCENTAGE
+Ağaçlar yapraklarının özelliklerine göre kaça ayrılırlar|||NUMERIC|COUNT
+Kızılçamın dünyada en geniş yayılış alanı nerededir|||LOCATION|REGION
+Sarıçam türkiyede daha çok nerede bulunur|||LOCATION|REGION.LOCAL
+Kızılağaç en fazla kaç metre yükseklikte görülür|||NUMERIC|SIZE.HEIGHT
+Ihlamur en fazla kaç metre yükseklikte görülür|||NUMERIC|SIZE.HEIGHT
+Karaçam ortalama hangi yüksekliklerde görülür|||NUMERIC|SIZE.HEIGHT
+Göknar ortalama hangi yükseklerde görülür|||NUMERIC|SIZE.HEIGHT
+Maki bitki örtüsünün ortalama boyu ne kadardır|||NUMERIC|SIZE.HEIGHT
+Maki hangi iklime uygun bir bitki örtüsüdür|||DESCRIPTION|DEFINITION
+Karadeniz kıyılarında ormanların tahrip edildiği bölgelerde rastlanan çalılara ne ad verilir|||DESCRIPTION|DEFINITION
+Kurak bölgelerde ilkbahar yağışıyla yeşeren ve yazın sararan ot topluluklarına ne denir|||DESCRIPTION|DEFINITION
+Türkiyenin iç kesimlerinde ormanların tahrip edilmesiyle oluşan ve doğal olmayan bozkır alanlarına ne denir|||DESCRIPTION|DEFINITION
+İlkbaharda yeşerip yaz boyu yeşil kalan ve bozkırdan daha gür olan bitki örtüsüne ne denir|||DESCRIPTION|DEFINITION
+Alpin çayırlarda ne çeşit hayvancılık yapılır|||DESCRIPTION|DEFINITION
+Akarsuların taşıdıkları malzeme ile kendi önlerini kapatmaları sonucu oluşan göllere ne ad verilir|||DESCRIPTION|DEFINITION
+Toprak çeşitlerinden hangisinin tarımsal verimliliği en fazladır|||DESCRIPTION|DEFINITION
+Türkiye ormanlarının yüzde kaçı Karadeniz bölgesinde bulunur|||NUMERIC|PERCENTAGE
+Türkiye ormanlarının yüzde kaçı ege bölgesinde bulunur|||NUMERIC|PERCENTAGE
+Can ve mal kayıplarına neden olan doğa olaylarına ne denir|||DESCRIPTION|DEFINITION
+Doğal afetler oluşum nedenlerine göre kaça ayrılırlar|||NUMERIC|COUNT
+Doğal afetler gelişim hızlarına göre kaça ayrılırlar|||NUMERIC|COUNT
+Yer kabuğunda meydana gelen ani ve kısa süreli sarsıntılara ne ad verilir|||DESCRIPTION|DEFINITION
+Depremler oluşumlarına göre kaça ayrılır|||NUMERIC|COUNT
+Dünyada en fazla deprem hangi deprem kuşağında meydana gelir|||DESCRIPTION|DEFINITION
+Büyük okyanus deprem kuşağında dünya depremlerinin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
+Alp-Himalaya kuşağında dünyadaki depremlerin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
+Ülkemizde şuan faal durumda olan kaç organize sanayi vardır|||NUMERIC|COUNT
+Bolu otoyol tüneli hangi projenin bir parçasıdır|||ENTITY|PROPER NOUN
+Kara Yolları Genel Müdürlüğü ne zaman kurulmuştur|||TEMPORAL|DATE
+KGM neyin kısaltmasıdır|||ABBREVIATION|ABBREVIATION
+Bir limanın iç bölgelerle olan ulaşım bağlantısı özelliğine ne denir|||DESCRIPTION|DEFINITION
+Hinterlant’ın diğer adı nedir|||DESCRIPTION|DEFINITION
+Ülkemizin en işlek limanı hangisidir|||ENTITY|PROPER NOUN
+BTC nedir|||ABBREVIATION|ABBREVIATION
+Mavi Akım Projesi hangi tarihte tamamlanmıştır|||TEMPORAL|DATE
+Hazar- Türkiye- Avrupa Doğal gaz hattı hangi proje kapsamında ilerlemektedir|||ENTITY|PROPER NOUN
+Üretilen mal ve hizmetlerin alınıp satılmasına ne denir|||DESCRIPTION|DEFINITION
+Milet Amfi Tiyatrosu hangi ildedir|||LOCATION|CITY
+Milet Amfi Tiyatrosu hangi ilçededir|||LOCATION|CITY
+Efes’i yılda ortalama kaç kişi ziyaret etmektedir|||NUMERIC|SIZE.POPULATION
+İstanbul ne zaman Osmanlı hakimiyetine geçmiştir|||TEMPORAL|DATE
+Ülkemizde kaç ilde kaplıca bulunmaktadır|||NUMERIC|COUNT
+Ülkemizdeki 2010 yılında toplam turist sayısı ne kadardır|||NUMERIC|SIZE.POPULATION
+Turizm teşvik kanunu ne zaman çıkmıştır|||TEMPORAL|DATE
+Türsab nedir|||ABBREVIATION|ABBREVIATION
+Avrupa endemik bitki sayısı toplamı ne kardır|||NUMERIC|COUNT
+Türkiye’nin endemik bitki sayısı kaç adettir|||NUMERIC|COUNT
+Her yıl Konya’da 1-17 Aralık tarihleri arasında kimi anma törenleri düzenlenir|||HUMAN|INDIVIDUAL
+Karain mağarası hangi ilin sınırları içerisindedir|||LOCATION|CITY
+Yere Batan Sarnıcı kim tarafından yaptırılmıştır|||HUMAN|INDIVIDUAL
+Yere Batan Sarnıcı hangi tarihler arasında yaptırılmıştır|||TEMPORAL|DATE
+Ayasofya kim tarafından camiye dönüştürülmüştür|||HUMAN|INDIVIDUAL
+Ayasofya günümüzde ne amaçla hizmet vermektedir|||DESCRIPTION|REASON
+TSE ne demektir|||ABBREVIATION|ABBREVIATION
+TSE ne zaman kurulmuştur|||TEMPORAL|DATE
+TSE bağımsız bir kamu kuruluşuna ne zaman dönüşmüştür|||TEMPORAL|DATE
+Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin kaç saate olması beklenmektedir|||HUMAN|COUNT
+2010 yılı verilerine göre ülkemizdeki otoyol uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Türkiye’de ilk şeker fabrikası hangi tarihte kurulmuştur|||TEMPORAL|DATE
+Ülkemizde hangi bölge dışında bütün bölgelerde şeker fabrikası vardır|||LOCATION|REGION.LOCAL
+Türkiye’de birinci beş yıllık sanayi alanı hangi tarihte yürürlüğe konmuştur|||TEMPORAL|DATE
+Sanayi’nin diğer adı nedir|||DESCRIPTION|DEFINITION
+Oltu taşı hangi ilimizde çıkarılmaktadır|||LOCATION|CITY
+Kütahya’nın hangi ilçesinde feldispat yatakları mevcuttur|||LOCATION|CITY
+Hızla akan suyun, elektrik üreten türbinleri çalıştırması ile oluşan enerji ne enerjisidir|||DESCRIPTION|DEFINITION
+İzmir İktisat kongresi kimin teşviki ile olmuştur|||HUMAN|INDIVIDUAL
+Türkiye’deki kültür balıkçılığı hangi iki balık üzerine yoğunlaşmıştır|||ENTITY|TERM
+Türkiye Sanayi ve Madin Bankası hangi tarihte kurulmuştur|||TEMPORAL|DATE
+Tiftik keçisi ne olarak da bilinir|||DESCRIPTION|DEFINITION
+Koyun ve keçi gibi hayvanların genel adı nedir|||DESCRIPTION|DEFINITION
+İpek böceği yetiştirme ve ondan koza elde etme işine ne ad verilir|||DESCRIPTION|DEFINITION
+İpek böcekçiliği en çok hangi bölgemizde yapılmaktadır|||LOCATION|REGION.LOCAL
+İpek böceği daha çok hangi ağacın yaprakları ile beslenir|||ENTITY|PLANT
+Anzer balı hangi ilimize özgüdür|||LOCATION|CITY
+Denizlerden üretilen balık üretiminin yüzde kaçı Karadeniz bölgesinden karşılanır|||NUMERIC|PERCENTAGE
+Tek sıvı maden hangisidir|||ENTITY|SUBSTANCE
+Türkiye hangi deprem kuşağında yer almaktadır|||DESCRIPTION|DEFINITION
+Türkiyede kaç tane deprem bölgesi vardır|||NUMERIC|COUNT
+Toprağın belirli bir süre için tamamen veya kısmen aniden su altında kalmasına ne denir|||DESCRIPTION|DEFINITION
+Sel sularının akarsu yatağının dışına çıkarak tarım alanlarına taşmasına ne denir|||DESCRIPTION|DEFINITION
+Dünyada sel felaketleri en çok nerede yaşanır|||LOCATION|REGION
+Bangladeşte dünyada görülen sel felaketlerinin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
+Türkiyede yılda ortalama kaç adet sel felaketi olmaktadır|||NUMERIC|AVERAGE
+Uzun bir zaman içinde yağışın belirgin bir şekilde normal değerlerin altına düşmesine ne denir|||DESCRIPTION|DEFINITION
+Toprak yüzeyinin akarsular, sel suları ve rüzgar gibi dış kuvvetler tarafından aşındırılarak taşınmasına ne denir|||DESCRIPTION|DEFINITION
+Yamaç boyunca taş, kum ve toprak tabakalarının yer değiştirmesi olayına ne denir|||DESCRIPTION|DEFINITION
+Eğimli yamaçlarda fazla yağışlarla doygun hale gelen toprağın adeta bir hamur gibi yamaç boyunca kaymasına ne denir|||DESCRIPTION|DEFINITION
+Toprak kaymalarını harekete geçiren en önemli faktör nedir|||DESCRIPTION|REASON
+Karadeniz kıyılarının yüzde kaçı heyelan riski taşır|||NUMERIC|PERCENTAGE
+Türkiyede heyelan olayları en çok hangi mevsimde olur|||TEMPORAL|SEASON
+Kar örtüsünün hızlı bir şekilde eğim yönünde hareket etmesine ne denir|||DESCRIPTION|DEFINITION
+Rüzgarın hızı kaç kilometrenin üzerine çıkarsa fırtına denir|||NUMERIC|SPEED
+Kasırgaların saattaki ortalama hızları kaçtır|||NUMERIC|SPEED
+Hızlı bir şekilde dönen hava kolonlarınının buluduğu fırtın sistemine ne ad verilir|||ENTITY|TERM
+Yeryüzünde en şiddetli kasırgalar hani kuşakta görülür|||LOCATION|REGION
+Yeryüzüne yaklaşık olarak kaç adet aktif volkan vardır|||NUMERIC|COUNT
+Dünyadaki aktif volkanlar en fazla hangi bölgede konumlanmıştır|||LOCATION|REGION
+Depremler nedeniyle okyanus kıyılarında oluşan dev dalgalara ne ad verilir|||DESCRIPTION|DEFINITION
+Türkiyede en fazla can kaybına yol açan doğal afetin adı nedir|||DESCRIPTION|DEFINITION
+Kar yağışlarının fazla, arazinin engebeli olduğu bölgelerde hangi doğal afet daha fazla görülür|||DESCRIPTION|DEFINITION
+Türkiyenin en doğu ile en batı ucu arasınaki zaman farkı kaçtır|||NUMERIC|COUNT
+Türkiyenin ortalama yüz ölçümü ne kadardır|||NUMERIC|SIZE.AREA
+Ağrı dağının yüksekliği yaklaşık kaç metredir|||NUMERIC|SIZE.HEIGHT
+Kızılırmak nehrinin uzunluğu kaç metredir|||NUMERIC|SIZE.LENGTH
+Türkiyenin kara sınırlarının toplam uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Türkiyenin suriye ile olan sınırının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Türkiyenin iran ile olan sınırının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Türkiyenin Irak ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
+Türkiyenin Ermenistan ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
+Türkiyenin Yunanistan ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
+Türkiyenin en büyük adası hangisidir|||LOCATION|CITY
+Gökçeadanın yüz ölçümü kaç kilometre karedir|||NUMERIC|SIZE.AREA
+Türkiyenin en büyük baraj gölünün adı nedir|||ENTITY|PROPER NOUN
+Atatürk baraj gölünün büyüklüğü ne kadardır|||NUMERIC|SIZE.AREA
+Türkiyenin en doğu ucu ile en batı ucu arasındaki uzaklık ne kadardır|||NUMERIC|SIZE.LENGTH
+Türkiyenin yüzölçümü olarak en büyük bölgesi hangisidir|||LOCATION|REGION.LOCAL
+Doğu anadolu bölgesinin yüz ölçümü yaklaşık ne kadardır|||NUMERIC|SIZE.AREA
+Doğu anadolu bölgesinde kaç bölüm vardır|||NUMERIC|COUNT
+Doğu anadolu bölgesinin nüfusunu ortalama ne kadardır|||NUMERIC|SIZE.POPULATION
+Fırat sularını nereye döker|||LOCATION|REGION
+Dicle sularını nereye döker|||LOCATION|REGION
+Kura nehri sularını nereye döker|||LOCATION|REGION
+Doğu anadolu bölgesinde kaç il vardır|||NUMERIC|COUNT
+Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan ili hangisidir|||LOCATION|CITY
+Erzumunun nüfusu yaklaşık ne kadardır|||NUMERIC|SIZE.POPULATION
+Türkiyenin nüfus yoğunluğu en az olan bölgesi hangisidir|||LOCATION|REGION.LOCAL
