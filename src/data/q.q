@@ -269,7 +269,7 @@ P dalgalarının manto ile çekirdek arasındaki hızları ne kadardır|hızlar�
 En fazla hasara neden olan dalgalar hangileridir|dalgalar|En fazla hasara neden olan|ENTITY|TERM
 S dalgaları deprem esnasında hangi dalgalardan sonra gelirler|hangi dalgalardan|S dalgaları deprem esnasında sonra gelirler|ENTITY|TERM
 Sismoloji neyle ilgili araştırmaları yapar|neyle ilgili|Sismoloji araştırmaları yapar|DESCRIPTION|DEFINITION
-Yeryüzündeki depremlerin yüzde kaçı Akdeniz-Himalaya kuşağında meydana gelir|depremlerin yüzde kaçı|Yeryüzündeki depremlerin|NUMERIC|PERCENTAGE
+Yeryüzündeki depremlerin yüzde kaçı Akdeniz-Himalaya kuşağında meydana gelir|depremlerin yüzde kaçı|Yeryüzündeki Akdeniz-Himalaya kuşağında meydana gelir|NUMERIC|PERCENTAGE
 Dünyada en az deprem olma olasılığı olan bölgeler nereleridir|bölgeler|Dünyada en az deprem olma olasılığı olan|LOCATION|REGION
 Normal fay, ters fay dışındaki fay çeşidi hangisidir|fay çeşidi|Normal fay ters fay dışındaki fay çeşidi|DESCRIPTION|DEFINITION
 Suyun atmosfer ile yeryüzü arasındaki dönüşüm hareketine ne ad verilir|dönüşüm hareketine ad|Suyun atmosfer ile yeryüzü arasındaki|ENTITY|TERM
@@ -286,10 +286,10 @@ Orta kuşağın nemli ormanlarında yıllık yağış miktarı ne kadardır|yağ
 Akdeniz bölgesinin doğal bitki örtüsü nedir|doğal bitki örtüsü|Akdeniz bölgesinin|ENTITY|TERM
 İçinde yer altı suyunun bulunduğu tabakaya ne ad verilir|tabakaya ad|İçinde yer altı suyunun bulunduğu|ENTITY|TERM
 Nüfusu 10000’in altında olan yerleşkelere ne ad verilir|yerleşkelere ad|Nüfusu 10000 altında olan|DESCRIPTION|DEFINITION
-Kırsal yerleşmeler kaça ayrılır|kaça ayrılır|Kırsal yerleşmeler|NUMERIC|COUNT
+Kırsal yerleşmeler kaça ayrılır|Kırsal yerleşmelerkaça ayrılır||NUMERIC|COUNT
 Mezralar daha çok hangi bölgemizde görülür|hangi bölgemizde|Mezralar daha çok görülür|LOCATION|REGION.LOCAL
 Ülkemizin yüzde kaçı şehirlerde yaşamaktadır|Ülkemizin yüzde kaçı|şehirlerde yaşamaktadır|NUMERIC|PERCENTAGE
-Türkiye’de şehirler fonksiyonlarına göre kaça ayrılırlar|kaça ayrılırlar|Türkiyede şehirler fonksiyonlarına göre|NUMERIC|COUNT
+Türkiye’de şehirler fonksiyonlarına göre kaça ayrılırlar|şehirler kaça ayrılırlar|Türkiyede fonksiyonlarına göre|NUMERIC|COUNT
 Nüfus hangi üç yaş grubunda incelenir|hangi üç yaş grubunda|Nüfus incelenir|DESCRIPTION|DESCRIPTION
 Bir ülkede genç nüfus hangi yaş grubu olarak değerlendirilir|hangi yaş grubu|Bir ülkede genç nüfus olarak değerlendirilir|DESCRIPTION|DEFINITION
 Türkiye’de nüfusun çoğunlukta olduğu yaş grubu hangisidir|yaş grubu|Türkiyede nüfusun çoğunlukta olduğu|DESCRIPTION|DEFINITION
@@ -459,7 +459,7 @@ Dekkan platosu Hindistan’ın hangi tarafında bulunur|Hindistanın hangi taraf
 Ganj nehri nerede doğar|nerede doğar|Ganj nehri|LOCATION|COUNTRY
 Ganj nehri nereden denize dökülür|nereden dökülür|Ganj nehri denize|LOCATION|CITY
 Hindistan’ın tarım açısından en zengin ovaları hangileridir|Hindistanın ovaları|tarım açısından en zengin|ENTITY|PLAIN
-Hindistan’da yaşayanların yüzde kaçı tarımla uğraşır|yüzde kaçı|Hindistanda yaşayanların tarımla uğraşır|NUMERIC|PERCENTAGE
+Hindistan’da yaşayanların yüzde kaçı tarımla uğraşır|yaşayanların yüzde kaçı|Hindistanda tarımla uğraşır|NUMERIC|PERCENTAGE
 Bengal Havzası’nda en çok hangi tarım ürününün üretimi yaygındır|hangi tarım ürününün|Bengal Havzasında en çok üretimi yaygındır|ENTITY|PLANT
 Hint kenevirinin diğer adı nedir|Hint kenevirinin adı|diğer|ENTITY|TERM
 Hindistan pamuk ve tütün üretimi bakımından dünyada kaçıncı sıradadır|kaçıncı sıradadır|Hindistan pamuk ve tütün üretimi bakımından dünyada|NUMERIC|COUNT
@@ -491,15 +491,15 @@ Federal Almanya ve Doğu Almanya hangi tarihte birleşmişlerdir|hangi tarihte|F
 Almanya’da yaşayan Türk sayısı yaklaşık ne kadardır|Türk sayısı ne kadardır|Almanyada yaşayan yakşalık|NUMERIC|SIZE.POPULATION
 Rusya Federasyonu hangi yıl kurulmuştur|hangi yıl|Rusya Federasyonu kurulmuştur|TEMPORAL|DATE
 Rusya’nın hangi kıtalarda toprağı vardır|hangi kıtalara|Rusyanın toprağı vardır|LOCATION|CONTINENT
-Çin’in en önemli akarsularından olan Yang-çe’nin Türkçe anlamı nedir|Türkçe anlamı|Çinin en önemli akarsularından olan Yangçenin|DESCRIPTION|DEFINITION
-Çin’in ikinci büyük ırmağı olan Huang-ho’nun anlamı nedir|anlamı|Çinin ikinci büyük ırmağı olan Huanghonun|DESCRIPTION|DESCRIPTION
+Çin’in en önemli akarsularından olan Yang-çe’nin Türkçe anlamı nedir|Türkçe anlamı|Çinin en önemli akarsularından olan Yang-çenin|DESCRIPTION|DEFINITION
+Çin’in ikinci büyük ırmağı olan Huang-ho’nun anlamı nedir|anlamı|Çinin ikinci büyük ırmağı olan Huang-honun|DESCRIPTION|DESCRIPTION
 Çin uygarlığı kaç yıllık bir geçmişe sahiptir|kaç yıllık|Çin uygarlığı bir geçmişe sahiptir|NUMERIC|COUNT
 Çin hangi yıldan itibaren sosyalist bir idare tarzı ile yönetilir|hangi yıldan|Çin sosyalist bir idare tarzı ile yönetilir|TEMPORAL|DATE
 Pekin’in nüfusu kaç kişidir|kaç kişidir|Pekinin nüfusu|NUMERIC|SIZE.POPULATION
 HongKong’da hangi iklim hakimdir|hangi iklim|HonkKongda hakimdir|DESCRIPTION|DEFINITION
-Çin Ar-Ge çalışmalarına yıllık ne kadar para ayırmaktadır|ne kadar para|Çin ArGe çalışmalarına yıllık ayırmaktadır|NUMERIC|COUNT
+Çin Ar-Ge çalışmalarına yıllık ne kadar para ayırmaktadır|ne kadar para|Çin Ar-Ge çalışmalarına yıllık ayırmaktadır|NUMERIC|COUNT
 İnsani gelişim endeksini hangi topluluk hazırlar|hangi topluluk|İnsani gelişim endeksini hazırlar|HUMAN|GROUP
-Hong-Kong hangi tarihe kadar İngiliz Krallığına bağlı bir sömürgeydi|hangi tarihe|HongKong kadar İngiliz Krallığına bağlı bir sömürgeydi|TEMPORAL|DATE
+Hong-Kong hangi tarihe kadar İngiliz Krallığına bağlı bir sömürgeydi|hangi tarihe|Hong-Kong kadar İngiliz Krallığına bağlı bir sömürgeydi|TEMPORAL|DATE
 Çin Halk Cumhuriyeti coğrafi açıdan kaç bölgeye ayrılır|kaç bölgeye|Çin Halk Cumhuriyeti coğrafi açıdan ayrılır|NUMERIC|COUNT
 Rusya’daki petrol rezervlerinin %80’i hangi bölgesinde bulunur|hangi bölgesinde|Rusyadaki petrol reservlerinin 80i bulunur|LOCATION|REGION
 Rusya hangi ülkenin dağılmasıyla kurulmuştur|hangi ülkenin|Rusya dağılmasıyla kurulmuştur|LOCATION|COUNTRY
@@ -649,155 +649,155 @@ Delta ovalarındaki kıyı oklarının gerisinde oluşan göllere ne denir|göll
 Volkanlardan çıkan lavların bir çukurluğun ve vadinin önünü kapamasıyla oluşan göllere ne denir|göllere denir|Volkanlardan çıkan lavların bir çukurluğun ve vadinin önünü kapamasıyla oluşan|DESCRIPTION|DEFINITION
 Oluşumunda tektonik hareketler, volkanik olaylar ve doğal etkenlerin eş zamanlı rol oynadığı göllere ne denir|göllere denir|Oluşumunda tektonik hareketler volkanik olaylar ve doğal etkenlerin eş zamanlı rol oynadığı|DESCRIPTION|DEFINITION
 Kuzey anadolu dağlarının denize bakan yamaçlarında görülen toprak çeşidinin adı nedir|toprak çeşidinin adı|Kuzey anadolu dağlarının denize bakan yamaçlarında görülen|DESCRIPTION|DEFINITION
-Bir veya birden fazla özelliği benzer olan alanlar neyle adlandırılır|||DESCRIPTION|DEFINITION
-Sadabat Paktı ne zaman kurulmuştur|||TEMPORAL|DATE
-Sadabat Paktı ne zaman işlevini yitirmiştir|||TEMPORAL|DATE
-Sadabat Paktı hangi ülkelerden oluşuyordu|||LOCATION|COUNTRY
-Dortmund hangi sanayi bölgesinde yer almaktadır|||LOCATION|REGION
-Aynı kentin içinde bulunup kentten soyutlanmış yerleşim alanlarına ne ad verilir|||ENTITY|TERM
-Sanayi devrimi kaçıncı yüzyılda gerçekleşmiştir|||TEMPORAL|CENTURY
-1960 yılında Dünya üzerinde yaklaşık kaç kişi şehirlerde yaşıyordu|||NUMERIC|SIZE.POPULATION
-OECD’nin açılımı nedir|||ABBREVIATION|ABBREVIATION
-1950 yılında Dünya genelinde kişi başına düşen milli gelir ne kadardır|||NUMERIC|COUNT
-Türkiye’de ki sarp bölgelerin kapladığı alan ne kadardır|||NUMERIC|SIZE.AREA
-Türkiye arazisinin yüzde kaçı düz ve hafif eğimlidir|||NUMERIC|PERCENTAGE
-Türkiye hangi yarım kürede yer almaktadır|||ENTITY|SPHERE
-Aşar vergisi ne zaman kaldırılmıştır|||ENTITY|SPHERE
-Teşvik-i Sanayi Kanunu ne zaman çıkarılmıştır|||TEMPORAL|DATE
-1. İzmir İktisat kongresi ne zaman yapılmıştır|||TEMPORAL|DATE
-TCDD’nin açılımı nedir|||ABBREVIATION|ABBREVIATION
-Türkiye’de ilk uçak ne zaman üretildi|||TEMPORAL|DATE
-Türkiye üretilen ilk uçağa ne ad verildi|||ENTITY|PROPER NOUN
-Türkiye’de üretilen ilk uçak hangi ilçede üretildi|||LOCATION|CITY
-DPT neyi ifade eder|||ABBREVIATION|EXPRESSION
-DPT ne zaman kurulmuştur|||TEMPORAL|DATE
-Tarıma elverişli araziler ülkemiz topraklarının ne kadarını oluşturur|||NUMERIC|SIZE.AREA
-Tarım sektöründe sulamadan sonra verimi artıran en önemli faktör nedir|||DESCRIPTION|REASON
-TİGEM neyin kısaltmasıdır|||ABBREVIATION|ABBREVIATION
-Türkiye Zirai Donatım Kurumu’nun kısa adı nedir|||ABBREVIATION|ABBREVIATION
-Devlet Su işleri kısaca nasıl ifade edilir|||ABBREVIATION|ABBREVIATION
-Toprak Mahsulleri Ofisi’nin kısaltması nasıldır|||ABBREVIATION|ABBREVIATION
-Buğday üretimi en yüksek olan 3 ilimiz hangileridir|||LOCATION|CITY
-Pirinç hangi bitkinin kabuklarından ayrılmasıyla elde edilir|||DESCRIPTION|DEFINITION
-Fasulye kaç metreden yüksek yerlerde yetişmez|||NUMERIC|SIZE.HEIGHT
-Pamuk bitkisinin tohumuna ne ad verilir|||ENTITY|TERM
-Çiğit nedir|||DESCRIPTION|DEFINITION
-Türkiye şeker pancarı üretimine ne zaman başlamıştır|||TEMPORAL|DATE
-İlk şeker fabrikalarımız hangileridir|||ENTITY|PROPER NOUN
-Ege bölgesi Türkiye’de ki haşhaş üretiminin kaçta kaçını karşılar|||NUMERIC|PERCENTAGE
-GAP’ın açılımı nedir|||ABBREVIATION|ABBREVIATION
-Seralarda sürdürülen faaliyetlere ne ad verilir|||DESCRIPTION|DESCRIPTION
-Rize çay üretimimizin yüzde kaçını karşılar|||NUMERIC|PERCENTAGE
-Maden cevheri içindeki metal oranına ne isim verilir|||ENTITY|TERM
-Anadolu topraklarındaki madencilik ne zaman başlamıştır|||TEMPORAL|DATE
-MTA nedir|||ABBREVIATION|ABBREVIATION
-MTA ne zaman kurulmuştur|||TEMPORAL|DATE
-Türkiye Petrolleri Anonim Ortaklığının kısa adı nedir|||ABBREVIATION|ABBREVIATION
-Dünyadaki bor rezervlerinin yüzde kaçı Türkiye’dedir|||NUMERIC|PERCENTAGE
-Doğada kaç çeşit bor minareli vardır|||NUMERIC|COUNT
-Lüle taşı hangi il çevresinde çıkarılır|||LOCATION|CITY
-Aydın’ın hangi ilçesinde jeotermal elektrik santrali vardır|||LOCATION|CITY
-Bitkilerden veya biyolojik atıklardan elde edilen enerjiye ne ad verirli|||DESCRIPTION|DEFINITION
-Petrol yataklarımızın büyük bir çoğunluğu hangi bölgemizde yer almaktadır|||LOCATION|REGION.LOCAL
-Terrarosa toprakları hangi bölgemizde daha sık görülür|||LOCATION|REGION.LOCAL
-Yıllık yağış miktarının az olduğu kireçli topraklara ne ad verilir|||DESCRIPTION|DEFINITION
-Kestane renkli bozkır topraklarının olduğu bir yörede yıllık yağış miktarı ne kadardır|||NUMERIC|SIZE.HEIGHT
-Çayır bitki örtüsü çevresinde oluşan topraklara ne ad verilir|||DESCRIPTION|DEFINITION
-Sürülmesi ve işlenmesi zor, kil oranı fazla olan topraklara ne isim verillir|||DESCRIPTION|DEFINITION
-Ege, iç anadolu ve doğu anadolunun çöküntülü kısımlarında yaygın olan üst kısmı kireçli topraklara ne denir|||DESCRIPTION|DEFINITION
-Akarsuların taşıyıp biriktirdiği malzemelerden oluşan toprağa ne denir|||DESCRIPTION|DEFINITION
-Dağlık alanlarda yamaçlar boyunca ufalanan çeşitli malzemelerin, dağların eteklerinde birikmesiyle oluşan topraklara ne ad verilir|||DESCRIPTION|DEFINITION
-Volkanlardan çıkan kum boyutundaki malzemeler ile yamaç eteklerindeki kolüvyal depolar üzerinde oluşan topraklara ne denir|||DESCRIPTION|DEFINITION
-Türkiye arazisinin yüzde kaçında tarım yapılmaktadır|||NUMERIC|PERCENTAGE
-Türkiyede yetiştirilen tarım ürünlerinin çeşitliği temelde neye bağlıdır|||DESCRIPTION|REASON
-Türkiyede en çok yetiştirilen tahıl ürünü nedir|||ENTITY|PLANT
-Çay hangi toprakta daha iyi yetişir|||DESCRIPTION|DEFINITION
-Maki ve çalılıkların yaygın olduğu bölgelerde yapılan hayvancılıkta hangi hayvan daha yaygındır|||DESCRIPTION|DEFINITION
-Bozkırların daha yoğun olduğu yörelerde hangi hayvan yetiştiriciliği fazladır|||DESCRIPTION|DEFINITION
-Çayırların daha fazla görüldüğü bölgelerde hangi hayvan daha çok yetiştirilir|||DESCRIPTION|DEFINITION
-Dut ağaçlarının yaygın olduğu bölgelerde hangi hayvandan daha çok faydalanılır|||DESCRIPTION|DEFINITION
-Çam ormanlarının daha fazla olduğu yörelerde görülen hayvancılık çeşidi nedir|||DESCRIPTION|DEFINITION
-Seramik, porselen, çömlek, tuğla ve kiremit yapımında ham madde olarak hangi toprak çeşidi kullanılır|||DESCRIPTION|DEFINITION
-Türkiyede yaklaşık kaç farklı bitki türü bulunmaktadır|||NUMERIC|COUNT
-Türkiyedeki bitki çeşitlilğinin fazla olmasının en önemli sebebi nedir|||DESCRIPTION|REASON
-Sadece türkiyede bulunan ve dünyanın başka hiç bir yerinde görülmeyen bitkilere ne ad verilir|||DESCRIPTION|DEFINITION
-3. ve 4. Jeolojik zamanda oluşmuş, günümüzde yetişmesi imkansız bitkilere ne denir|||DESCRIPTION|DEFINITION
-Ülkemizin yüzde kaçı ormanlarla kaplıdır|||NUMERIC|PERCENTAGE
-Ağaçlar yapraklarının özelliklerine göre kaça ayrılırlar|||NUMERIC|COUNT
-Kızılçamın dünyada en geniş yayılış alanı nerededir|||LOCATION|REGION
-Sarıçam türkiyede daha çok nerede bulunur|||LOCATION|REGION.LOCAL
-Kızılağaç en fazla kaç metre yükseklikte görülür|||NUMERIC|SIZE.HEIGHT
-Ihlamur en fazla kaç metre yükseklikte görülür|||NUMERIC|SIZE.HEIGHT
-Karaçam ortalama hangi yüksekliklerde görülür|||NUMERIC|SIZE.HEIGHT
-Göknar ortalama hangi yükseklerde görülür|||NUMERIC|SIZE.HEIGHT
-Maki bitki örtüsünün ortalama boyu ne kadardır|||NUMERIC|SIZE.HEIGHT
-Maki hangi iklime uygun bir bitki örtüsüdür|||DESCRIPTION|DEFINITION
-Karadeniz kıyılarında ormanların tahrip edildiği bölgelerde rastlanan çalılara ne ad verilir|||DESCRIPTION|DEFINITION
-Kurak bölgelerde ilkbahar yağışıyla yeşeren ve yazın sararan ot topluluklarına ne denir|||DESCRIPTION|DEFINITION
-Türkiyenin iç kesimlerinde ormanların tahrip edilmesiyle oluşan ve doğal olmayan bozkır alanlarına ne denir|||DESCRIPTION|DEFINITION
-İlkbaharda yeşerip yaz boyu yeşil kalan ve bozkırdan daha gür olan bitki örtüsüne ne denir|||DESCRIPTION|DEFINITION
-Alpin çayırlarda ne çeşit hayvancılık yapılır|||DESCRIPTION|DEFINITION
-Akarsuların taşıdıkları malzeme ile kendi önlerini kapatmaları sonucu oluşan göllere ne ad verilir|||DESCRIPTION|DEFINITION
-Toprak çeşitlerinden hangisinin tarımsal verimliliği en fazladır|||DESCRIPTION|DEFINITION
-Türkiye ormanlarının yüzde kaçı Karadeniz bölgesinde bulunur|||NUMERIC|PERCENTAGE
-Türkiye ormanlarının yüzde kaçı ege bölgesinde bulunur|||NUMERIC|PERCENTAGE
-Can ve mal kayıplarına neden olan doğa olaylarına ne denir|||DESCRIPTION|DEFINITION
-Doğal afetler oluşum nedenlerine göre kaça ayrılırlar|||NUMERIC|COUNT
-Doğal afetler gelişim hızlarına göre kaça ayrılırlar|||NUMERIC|COUNT
-Yer kabuğunda meydana gelen ani ve kısa süreli sarsıntılara ne ad verilir|||DESCRIPTION|DEFINITION
-Depremler oluşumlarına göre kaça ayrılır|||NUMERIC|COUNT
-Dünyada en fazla deprem hangi deprem kuşağında meydana gelir|||DESCRIPTION|DEFINITION
-Büyük okyanus deprem kuşağında dünya depremlerinin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
-Alp-Himalaya kuşağında dünyadaki depremlerin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
-Ülkemizde şuan faal durumda olan kaç organize sanayi vardır|||NUMERIC|COUNT
-Bolu otoyol tüneli hangi projenin bir parçasıdır|||ENTITY|PROPER NOUN
-Kara Yolları Genel Müdürlüğü ne zaman kurulmuştur|||TEMPORAL|DATE
-KGM neyin kısaltmasıdır|||ABBREVIATION|ABBREVIATION
-Bir limanın iç bölgelerle olan ulaşım bağlantısı özelliğine ne denir|||DESCRIPTION|DEFINITION
-Hinterlant’ın diğer adı nedir|||DESCRIPTION|DEFINITION
-Ülkemizin en işlek limanı hangisidir|||ENTITY|PROPER NOUN
-BTC nedir|||ABBREVIATION|ABBREVIATION
-Mavi Akım Projesi hangi tarihte tamamlanmıştır|||TEMPORAL|DATE
-Hazar- Türkiye- Avrupa Doğal gaz hattı hangi proje kapsamında ilerlemektedir|||ENTITY|PROPER NOUN
-Üretilen mal ve hizmetlerin alınıp satılmasına ne denir|||DESCRIPTION|DEFINITION
-Milet Amfi Tiyatrosu hangi ildedir|||LOCATION|CITY
-Milet Amfi Tiyatrosu hangi ilçededir|||LOCATION|CITY
-Efes’i yılda ortalama kaç kişi ziyaret etmektedir|||NUMERIC|SIZE.POPULATION
-İstanbul ne zaman Osmanlı hakimiyetine geçmiştir|||TEMPORAL|DATE
-Ülkemizde kaç ilde kaplıca bulunmaktadır|||NUMERIC|COUNT
-Ülkemizdeki 2010 yılında toplam turist sayısı ne kadardır|||NUMERIC|SIZE.POPULATION
-Turizm teşvik kanunu ne zaman çıkmıştır|||TEMPORAL|DATE
-Türsab nedir|||ABBREVIATION|ABBREVIATION
-Avrupa endemik bitki sayısı toplamı ne kardır|||NUMERIC|COUNT
-Türkiye’nin endemik bitki sayısı kaç adettir|||NUMERIC|COUNT
-Her yıl Konya’da 1-17 Aralık tarihleri arasında kimi anma törenleri düzenlenir|||HUMAN|INDIVIDUAL
-Karain mağarası hangi ilin sınırları içerisindedir|||LOCATION|CITY
-Yere Batan Sarnıcı kim tarafından yaptırılmıştır|||HUMAN|INDIVIDUAL
-Yere Batan Sarnıcı hangi tarihler arasında yaptırılmıştır|||TEMPORAL|DATE
-Ayasofya kim tarafından camiye dönüştürülmüştür|||HUMAN|INDIVIDUAL
-Ayasofya günümüzde ne amaçla hizmet vermektedir|||DESCRIPTION|REASON
-TSE ne demektir|||ABBREVIATION|ABBREVIATION
-TSE ne zaman kurulmuştur|||TEMPORAL|DATE
-TSE bağımsız bir kamu kuruluşuna ne zaman dönüşmüştür|||TEMPORAL|DATE
-Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin kaç saate olması beklenmektedir|||HUMAN|COUNT
-2010 yılı verilerine göre ülkemizdeki otoyol uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
-Türkiye’de ilk şeker fabrikası hangi tarihte kurulmuştur|||TEMPORAL|DATE
-Ülkemizde hangi bölge dışında bütün bölgelerde şeker fabrikası vardır|||LOCATION|REGION.LOCAL
-Türkiye’de birinci beş yıllık sanayi alanı hangi tarihte yürürlüğe konmuştur|||TEMPORAL|DATE
-Sanayi’nin diğer adı nedir|||DESCRIPTION|DEFINITION
-Oltu taşı hangi ilimizde çıkarılmaktadır|||LOCATION|CITY
-Kütahya’nın hangi ilçesinde feldispat yatakları mevcuttur|||LOCATION|CITY
-Hızla akan suyun, elektrik üreten türbinleri çalıştırması ile oluşan enerji ne enerjisidir|||DESCRIPTION|DEFINITION
-İzmir İktisat kongresi kimin teşviki ile olmuştur|||HUMAN|INDIVIDUAL
-Türkiye’deki kültür balıkçılığı hangi iki balık üzerine yoğunlaşmıştır|||ENTITY|TERM
-Türkiye Sanayi ve Madin Bankası hangi tarihte kurulmuştur|||TEMPORAL|DATE
-Tiftik keçisi ne olarak da bilinir|||DESCRIPTION|DEFINITION
-Koyun ve keçi gibi hayvanların genel adı nedir|||DESCRIPTION|DEFINITION
-İpek böceği yetiştirme ve ondan koza elde etme işine ne ad verilir|||DESCRIPTION|DEFINITION
-İpek böcekçiliği en çok hangi bölgemizde yapılmaktadır|||LOCATION|REGION.LOCAL
-İpek böceği daha çok hangi ağacın yaprakları ile beslenir|||ENTITY|PLANT
-Anzer balı hangi ilimize özgüdür|||LOCATION|CITY
-Denizlerden üretilen balık üretiminin yüzde kaçı Karadeniz bölgesinden karşılanır|||NUMERIC|PERCENTAGE
+Bir veya birden fazla özelliği benzer olan alanlar neyle adlandırılır|anlanlar neyle adlandırılır|Bir veya birden fazla özelliği benzer olan|DESCRIPTION|DEFINITION
+Sadabat Paktı ne zaman kurulmuştur|ne zaman kurulmuştur|Sadabat Paktı|TEMPORAL|DATE
+Sadabat Paktı ne zaman işlevini yitirmiştir|ne zaman işlevini yitimiştir|Sadabat Paktı|TEMPORAL|DATE
+Sadabat Paktı hangi ülkelerden oluşuyordu|hangi ülkelerden|Sadabat Paktı oluşuyordu|LOCATION|COUNTRY
+Dortmund hangi sanayi bölgesinde yer almaktadır|hangi sanayi bölgesinde|Dortmund yer almaktadır|LOCATION|REGION
+Aynı kentin içinde bulunup kentten soyutlanmış yerleşim alanlarına ne ad verilir|yerleşim alanlarına ad|Aynı kentin içinde bulunup kentten soyutlanmış|ENTITY|TERM
+Sanayi devrimi kaçıncı yüzyılda gerçekleşmiştir|kaçıncı yüzyılda|Sanayi devrimi gerçekleşmiştir|TEMPORAL|CENTURY
+1960 yılında Dünya üzerinde yaklaşık kaç kişi şehirlerde yaşıyordu|kaç kişi|1960 yılında Dünya üzerinde yaklaşık yaşıyordu|NUMERIC|SIZE.POPULATION
+OECD’nin açılımı nedir|açılımı|OECDnin|ABBREVIATION|ABBREVIATION
+1950 yılında Dünya genelinde kişi başına düşen milli gelir ne kadardır|milli gelir ne kadardır|1950 yılında Dünya genelinde kişi başına düşen|NUMERIC|COUNT
+Türkiye’deki sarp bölgelerin kapladığı alan ne kadardır|alan ne kadardır|Türkiyedeki sarp bölgelerin kapladığı alan|NUMERIC|SIZE.AREA
+Türkiye arazisinin yüzde kaçı düz ve hafif eğimlidir|Türkiye arazisinin yüzde kaçı|düz ve hafif eğilimlidir|NUMERIC|PERCENTAGE
+Türkiye hangi yarım kürede yer almaktadır|hangi yarım kürede|Türkiye yer almaktadır|ENTITY|SPHERE
+Aşar vergisi ne zaman kaldırılmıştır|ne zaman kaldırılmıştır|Aşar vergisi|ENTITY|SPHERE
+Teşvik-i Sanayi Kanunu ne zaman çıkarılmıştır|ne zaman çıkarılmıştır|Teşvik-i Sanayi Kanunu|TEMPORAL|DATE
+1. İzmir İktisat kongresi ne zaman yapılmıştır|ne zaman yapılmıştır|1 İzmir İktisat kongresi|TEMPORAL|DATE
+TCDD’nin açılımı nedir|açılımı|TCDDnin|ABBREVIATION|ABBREVIATION
+Türkiye’de ilk uçak ne zaman üretildi|ne zaman üretildi|Türkiyede ilk uçak|TEMPORAL|DATE
+Türkiyede üretilen ilk uçağa ne ad verilmiştir|uçağa ad|Türkiyede üretilen ilk|ENTITY|PROPER NOUN
+Türkiye’de üretilen ilk uçak hangi ilçede üretildi|hangi ilçede||LOCATION|CITY
+DPT neyi ifade eder|neyi ifade eder|DPT|ABBREVIATION|EXPRESSION
+DPT ne zaman kurulmuştur|ne zaman kurulmuştur|DPT|TEMPORAL|DATE
+Tarıma elverişli araziler ülkemiz topraklarının ne kadarını oluşturur|ne kadarını oluşturur|Tarıma elverişli araziler ülkemiz topraklarının|NUMERIC|SIZE.AREA
+Tarım sektöründe sulamadan sonra verimi artıran en önemli faktör nedir|faktör|Tarım sektöründe sulamadan sonra verimi artıran en önemli|DESCRIPTION|REASON
+TİGEM neyin kısaltmasıdır|neyin kısaltmasıdır|TİGEM|ABBREVIATION|ABBREVIATION
+Türkiye Zirai Donatım Kurumu’nun kısa adı nedir|Türkiye Zirai Donatım Kurumunun adı|kısa|ABBREVIATION|ABBREVIATION
+Devlet Su İşleri kısaca nasıl ifade edilir|nasıl ifade edilir|Devlet Su İşleri kısaca|ABBREVIATION|ABBREVIATION
+Toprak Mahsulleri Ofisi’nin kısaltması nasıldır|Toprak Mahsulleri Ofisinin kısalatması||ABBREVIATION|ABBREVIATION
+Buğday üretimi en yüksek olan 3 ilimiz hangileridir|3 ilimiz|Buğday üretimi en yüksek olan|LOCATION|CITY
+Pirinç hangi bitkinin kabuklarından ayrılmasıyla elde edilir|hangi bitkinin|Pirinç kabuklarından ayrılmasıyla elde edilir|DESCRIPTION|DEFINITION
+Fasulye kaç metreden yüksek yerlerde yetişmez|kaç metreden yüksek|Fasulye yerlerde yetişmez|NUMERIC|SIZE.HEIGHT
+Pamuk bitkisinin tohumuna ne ad verilir|tohumuna ad|Pamuk bitkisinin|ENTITY|TERM
+Çiğit nedir|Çiğit||DESCRIPTION|DEFINITION
+Türkiye şeker pancarı üretimine ne zaman başlamıştır|ne zaman başlamıştır|Türkiye şeker pancarı üretimine|TEMPORAL|DATE
+İlk şeker fabrikalarımız hangileridir|şeker fabrikalarımız|İlk|ENTITY|PROPER NOUN
+Ege bölgesi Türkiye’deki haşhaş üretiminin kaçta kaçını karşılar|haşhaş üretiminin kaçta kaçını|Ege bölgesi Türkiyedeki karşılar|NUMERIC|PERCENTAGE
+GAP’ın açılımı nedir|açılımı|GAPın|ABBREVIATION|ABBREVIATION
+Seralarda sürdürülen faaliyetlere ne ad verilir|faaliyetlere ad|Seralarda sürdürülen|DESCRIPTION|DESCRIPTION
+Rize çay üretimimizin yüzde kaçını karşılar|çay üretimimizin yüzde kaçını|Rize karşılar|NUMERIC|PERCENTAGE
+Maden cevheri içindeki metal oranına ne isim verilir|metal oranına isim|Maden cevheri içindeki|ENTITY|TERM
+Anadolu topraklarındaki madencilik ne zaman başlamıştır|ne zaman başlamıştır|Anadolu topraklarındaki madencilik|TEMPORAL|DATE
+MTA nedir|MTA||ABBREVIATION|ABBREVIATION
+MTA ne zaman kurulmuştur|ne zaman kurulmuştur|MTA|TEMPORAL|DATE
+Türkiye Petrolleri Anonim Ortaklığının kısa adı nedir|Türkiye Petrolleri Anonim Ortaklığının adı|kısa|ABBREVIATION|ABBREVIATION
+Dünyadaki bor rezervlerinin yüzde kaçı Türkiye’dedir|bor rezervlerinin yüzde kaçı|Dünyadaki Türkiyededir|NUMERIC|PERCENTAGE
+Doğada kaç çeşit bor minareli vardır|kaç çeşit bor minerali|Doğada vardır|NUMERIC|COUNT
+Lüle taşı hangi il çevresinde çıkarılır|hangi il çevresinde|Lüle taşı çıkarılır|LOCATION|CITY
+Aydın’ın hangi ilçesinde jeotermal elektrik santrali vardır|Aydının hangi ilçesinde|jeotermal elektrik santrali vardır|LOCATION|CITY
+Bitkilerden veya biyolojik atıklardan elde edilen enerjiye ne ad verirli|enerjiye ad|Bitkilerden veya biyolojik atıklardan elde edilen|DESCRIPTION|DEFINITION
+Petrol yataklarımızın büyük bir çoğunluğu hangi bölgemizde yer almaktadır|hangi bölgemizde|Petrol yataklarımızın büyük bir çoğunluğu yer almaktadır|LOCATION|REGION.LOCAL
+Terrarosa toprakları hangi bölgemizde daha sık görülür|hangi bölgemizde|Terrarosa toprakları daha sık görülür|LOCATION|REGION.LOCAL
+Yıllık yağış miktarının az olduğu kireçli topraklara ne ad verilir|kireçli topraklara ad|Yıllık yağış miktarının az olduğu|DESCRIPTION|DEFINITION
+Kestane renkli bozkır topraklarının olduğu bir yörede yıllık yağış miktarı ne kadardır|yağış miktarı ne kadardır|Kestane renkli bozkır topraklarının olduğu bir yörede|NUMERIC|SIZE.HEIGHT
+Çayır bitki örtüsü çevresinde oluşan topraklara ne ad verilir|topraklara ad|Çayır bitki örtüsü çevresinde oluşan|DESCRIPTION|DEFINITION
+Sürülmesi ve işlenmesi zor, kil oranı fazla olan topraklara ne isim verillir|topraklara isim|Sürülmesi ve işlenmesi zor kil oranı fazla olan|DESCRIPTION|DEFINITION
+Ege, iç anadolu ve doğu anadolunun çöküntülü kısımlarında yaygın olan üst kısmı kireçli topraklara ne denir|üst kısmı kireçli topraklara denir|Ege iç anadolu ve doğu anadolunun çöküntülü kısımlarında yaygın olan|DESCRIPTION|DEFINITION
+Akarsuların taşıyıp biriktirdiği malzemelerden oluşan toprağa ne denir|toprağa denir|Akarsuların taşıyıp biriktirdiği malzemelerden oluşan|DESCRIPTION|DEFINITION
+Dağlık alanlarda yamaçlar boyunca ufalanan çeşitli malzemelerin, dağların eteklerinde birikmesiyle oluşan topraklara ne ad verilir|topraklara ad |Dağlık alanlarda yamaçlar boyunca ufalanan çeşitli malzemelerin dağların eteklerinde birikmesiyle oluşan|DESCRIPTION|DEFINITION
+Volkanlardan çıkan kum boyutundaki malzemeler ile yamaç eteklerindeki kolüvyal depolar üzerinde oluşan topraklara ne denir|topraklara denir|Volkanlardan çıkan kum boyutundaki malzemeler ile yamaç eteklerindeki kolüvyal depolar üzerinde oluşan|DESCRIPTION|DEFINITION
+Türkiye arazisinin yüzde kaçında tarım yapılmaktadır|Türkiye arazisinin yüzde kaçında|tarım yapılmaktadır|NUMERIC|PERCENTAGE
+Türkiyede yetiştirilen tarım ürünlerinin çeşitliliği temelde neye bağlıdır|neye bağlıdır|Türkiyede yetiştirilen tarım ürünlerinin çeşitliliği temelde|DESCRIPTION|REASON
+Türkiyede en çok yetiştirilen tahıl ürünü nedir|tahıl ürünü|Türkiyede en çok yetiştirilen|ENTITY|PLANT
+Çay hangi toprakta daha iyi yetişir|hangi toprakta|Çay daha iyi yetişir|DESCRIPTION|DEFINITION
+Maki ve çalılıkların yaygın olduğu bölgelerde yapılan hayvancılıkta hangi hayvan daha yaygındır|hangi hayvan|Maki ve çalılıkların yaygın olduğu bölgelerde yapılan hayvancılıkta daha yaygındır|DESCRIPTION|DEFINITION
+Bozkırların daha yoğun olduğu yörelerde hangi hayvan yetiştiriciliği fazladır|hangi hayvan yetiştiriciliği|Bozkırların daha yoğun olduğu yörelerde fazladır|DESCRIPTION|DEFINITION
+Çayırların daha fazla görüldüğü bölgelerde hangi hayvan daha çok yetiştirilir|hangi hayvan|Çayırların daha fazla görüldüğü bölgelerde daha çok yetiştirilir|DESCRIPTION|DEFINITION
+Dut ağaçlarının yaygın olduğu bölgelerde hangi hayvandan daha çok faydalanılır|hangi hayvandan|Dut ağaçlarının yaygın olduğu bölgelerde daha çok faydalanılır|DESCRIPTION|DEFINITION
+Çam ormanlarının daha fazla olduğu yörelerde görülen hayvancılık çeşidi nedir|hayvancılık çeşidi|Çam ormanlarının daha fazla olduğu yörelerde görülen|DESCRIPTION|DEFINITION
+Seramik, porselen, çömlek, tuğla ve kiremit yapımında ham madde olarak hangi toprak çeşidi kullanılır|hangi toprak çeşidi|Seramik porselen çömlek tuğla ve kiremit yapımında ham madde olarak kullanılır|DESCRIPTION|DEFINITION
+Türkiyede yaklaşık kaç farklı bitki türü bulunmaktadır|kaç bitki türü|Türkiyede yaklaşık farklı bulunmaktadır|NUMERIC|COUNT
+Türkiyedeki bitki çeşitlilğinin fazla olmasının en önemli sebebi nedir|sebebi|Türkiyedeki bitki çeşitlilğinin fazla olmasının en önemli|DESCRIPTION|REASON
+Sadece türkiyede bulunan ve dünyanın başka hiç bir yerinde görülmeyen bitkilere ne ad verilir|bitkilere ad|Sadece türkiyede bulunan ve dünyanın başka hiç bir yerinde görülmeyen|DESCRIPTION|DEFINITION
+3. ve 4. Jeolojik zamanda oluşmuş, günümüzde yetişmesi imkansız bitkilere ne denir|bitkilere denir|3 ve 4 Jeolojik zamanda oluşmuş günümüzde yetişmesi imkansız|DESCRIPTION|DEFINITION
+Ülkemizin yüzde kaçı ormanlarla kaplıdır|Ülkemizin yüzde kaçı|ormanlarla kaplıdır|NUMERIC|PERCENTAGE
+Ağaçlar yapraklarının özelliklerine göre kaça ayrılırlar|Ağaçlar kaça ayrılırlar|yapraklarının özelliklerine göre|NUMERIC|COUNT
+Kızılçamın dünyada en geniş yayılış alanı nerededir|yayılış alanı neresidir|Kızılçamın dünyada en geniş|LOCATION|REGION
+Sarıçam türkiyede daha çok nerede bulunur|nerede bulunur|Sarıçam türkiyede daha çok|LOCATION|REGION.LOCAL
+Kızılağaç en fazla kaç metre yükseklikte görülür|kaç metre yükseklikte|Kızılağaç en fazla görülür|NUMERIC|SIZE.HEIGHT
+Ihlamur en fazla kaç metre yükseklikte görülür|kaç metre yükseklikte|Ihlamur en fazla görülür|NUMERIC|SIZE.HEIGHT
+Karaçam ortalama hangi yüksekliklerde görülür|hangi yüksekliklerde|Karaçam ortalama görülür|NUMERIC|SIZE.HEIGHT
+Göknar ortalama hangi yükseklerde görülür|hangi yükseklikte|Göknar ortalama görülür|NUMERIC|SIZE.HEIGHT
+Maki bitki örtüsünün ortalama boyu ne kadardır|boyu ne kadardır|Maki bitki örtüsünün ortalama|NUMERIC|SIZE.HEIGHT
+Maki hangi iklime uygun bir bitki örtüsüdür|hangi iklime|Maki uygun bir birki örtüsüdür|DESCRIPTION|DEFINITION
+Karadeniz kıyılarında ormanların tahrip edildiği bölgelerde rastlanan çalılara ne ad verilir|çalılara ad|Karadeniz kıyılarında ormanların tahrip edildiği bölgelerde rastlanan|DESCRIPTION|DEFINITION
+Kurak bölgelerde ilkbahar yağışıyla yeşeren ve yazın sararan ot topluluklarına ne denir|ot topluluklarına denir|Kurak bölgelerde ilkbahar yağışıyla yeşeren ve yazın sararan|DESCRIPTION|DEFINITION
+Türkiyenin iç kesimlerinde ormanların tahrip edilmesiyle oluşan ve doğal olmayan bozkır alanlarına ne denir|bozkır alanlarına denir|Türkiyenin iç kesimlerinde ormanların tahrip edilmesiyle oluşan ve doğal olmayan|DESCRIPTION|DEFINITION
+İlkbaharda yeşerip yaz boyu yeşil kalan ve bozkırdan daha gür olan bitki örtüsüne ne denir|bitki örtüsüne denir|İlkbaharda yeşerip yaz boyu yeşil kalan ve bozkırdan daha gür olan|DESCRIPTION|DEFINITION
+Alpin çayırlarda ne çeşit hayvancılık yapılır|ne çeşit hayvancılık|Alpin çayırlarda yapılır|DESCRIPTION|DEFINITION
+Akarsuların taşıdıkları malzeme ile kendi önlerini kapatmaları sonucu oluşan göllere ne ad verilir|göllere ad|Akarsuların taşıdıkları malzeme ile kendi önlerini kapatmaları sonucu oluşan|DESCRIPTION|DEFINITION
+Toprak çeşitlerinden hangisinin tarımsal verimliliği en fazladır|Toprak çeşitlerinden hangisinin|tarımsal verimliliği en fazladır|DESCRIPTION|DEFINITION
+Türkiye ormanlarının yüzde kaçı Karadeniz bölgesinde bulunur|Türkiye ormanlarının yüzde kaçı|Karadeniz bölgesinde bulunur|NUMERIC|PERCENTAGE
+Türkiye ormanlarının yüzde kaçı ege bölgesinde bulunur|Türkiye ormanlarının yüzde kaçı|ege bölgesinde bulunur|NUMERIC|PERCENTAGE
+Can ve mal kayıplarına neden olan doğa olaylarına ne denir|doğa olaylarına|Can ve mal kayıplarına neden olan|DESCRIPTION|DEFINITION
+Doğal afetler oluşum nedenlerine göre kaça ayrılırlar|Doğal afetler kaça ayrılırlar|oluşum nedenlerine göre|NUMERIC|COUNT
+Doğal afetler gelişim hızlarına göre kaça ayrılırlar|Doğal afetler kaça ayrılırlar|gelişim hızlarına göre|NUMERIC|COUNT
+Yer kabuğunda meydana gelen ani ve kısa süreli sarsıntılara ne ad verilir|sarsıntılara ad|Yer kabuğunda meydana gelen ani ve kısa süreli|DESCRIPTION|DEFINITION
+Depremler oluşumlarına göre kaça ayrılır|Depremler kaça ayrılır|oluşumlarına göre|NUMERIC|COUNT
+Dünyada en fazla deprem hangi deprem kuşağında meydana gelir|hangi deprem kuşağında|Dünyada en fazla deprem meydana gelir|DESCRIPTION|DEFINITION
+Büyük okyanus deprem kuşağında dünya depremlerinin yüzde kaçı meydana gelir|dünya depremlerinin yüzde kaçı|Büyük okyanus deprem kuşağında meydana gelir|NUMERIC|PERCENTAGE
+Alp-Himalaya kuşağında dünyadaki depremlerin yüzde kaçı meydana gelir|depremlerin yüzde kaçı|Alp-Himalaya kuşağında dünyadaki meydana gelir|NUMERIC|PERCENTAGE
+Ülkemizde şu an faal durumda olan kaç organize sanayi vardır|kaç organize sanayi|Ülkemizde şu an faal durumda vardır|NUMERIC|COUNT
+Bolu otoyol tüneli hangi projenin bir parçasıdır|hangi projenin|Bolu otoyol tüneli bir parçasıdır|ENTITY|PROPER NOUN
+Kara Yolları Genel Müdürlüğü ne zaman kurulmuştur|ne zaman kurulmuştur|Kara Yolları Genel Müdürlüğü|TEMPORAL|DATE
+KGM neyin kısaltmasıdır|neyin kısaltmasıdır|KGM|ABBREVIATION|ABBREVIATION
+Bir limanın iç bölgelerle olan ulaşım bağlantısı özelliğine ne denir|ulaşım bağlantısı özelliğine denir|Bir limanın iç bölgelerle olan|DESCRIPTION|DEFINITION
+Hinterlant’ın diğer adı nedir|Hinterlantın adı|diğer|DESCRIPTION|DEFINITION
+Ülkemizin en işlek limanı hangisidir|limanı|Ülkemizin en işlek|ENTITY|PROPER NOUN
+BTC nedir|BTC||ABBREVIATION|ABBREVIATION
+Mavi Akım Projesi hangi tarihte tamamlanmıştır|hangi tarihte|Mavi Akım Projesi tamamlanmıştır|TEMPORAL|DATE
+Hazar-Türkiye-Avrupa Doğal gaz hattı hangi proje kapsamında ilerlemektedir|hangi proje kapsamında|Hazar-Türkiye-Avrupa Doğal gaz hattı ilerlemektedir|ENTITY|PROPER NOUN
+Üretilen mal ve hizmetlerin alınıp satılmasına ne denir|alınıp satılmasına denir|Üretilen mal ve hizmetlerin|DESCRIPTION|DEFINITION
+Milet Amfi Tiyatrosu hangi ildedir|hangi ildedir|Milet Amfi Tiyatrosu|LOCATION|CITY
+Milet Amfi Tiyatrosu hangi ilçededir|hangi ilçededir|Milet Amfi Tiyatrosu|LOCATION|CITY
+Efes’i yılda ortalama kaç kişi ziyaret etmektedir|kaç kişi|Efes’i yılda ortalama ziyaret etmektedir|NUMERIC|SIZE.POPULATION
+İstanbul ne zaman Osmanlı hakimiyetine geçmiştir|SİL|SİL|TEMPORAL|DATE
+Ülkemizde kaç ilde kaplıca bulunmaktadır|kaç ilde|Ülkemizde kaplıca bulunmaktadır|NUMERIC|COUNT
+Ülkemizdeki 2010 yılında toplam turist sayısı ne kadardır|toplam turist sayısı ne kadardır|Ülkemizdeki 2010 yılında|NUMERIC|SIZE.POPULATION
+Turizm teşvik kanunu ne zaman çıkmıştır|ne zaman çıkmıştır|Turizm teşvik kanunu|TEMPORAL|DATE
+Türsab nedir|Türsab||ABBREVIATION|ABBREVIATION
+Avrupa'da endemik bitki sayısı toplamı ne kadardır|endemik bitki sayısı toplamı ne kadardır|Avrupada|NUMERIC|COUNT
+Türkiye’nin endemik bitki sayısı kaç adettir|endemik bitki sayısı kaç adettir|Türkiyenin|NUMERIC|COUNT
+Her yıl Konya’da 1-17 Aralık tarihleri arasında kimi anma törenleri düzenlenir|kimi anma törenleri|Her yıl Konya’da 1-17 Aralık tarihleri arasında düzenlenir|HUMAN|INDIVIDUAL
+Karain mağarası hangi ilin sınırları içerisindedir|hangi ilin|Karain mağarası sınırları içerisindedir|LOCATION|CITY
+Yere Batan Sarnıcı kim tarafından yaptırılmıştır|kim tarafından|Yere Batan Sarnıcı yaptırılmıştır|HUMAN|INDIVIDUAL
+Yere Batan Sarnıcı hangi tarihler arasında yaptırılmıştır|hangi tarihler arasında|Yere Batan Sarnıcı yaptırılmıştır|TEMPORAL|DATE
+Ayasofya kim tarafından camiye dönüştürülmüştür|kim tarafından|Ayasofya camiye dönüştürülmüştür|HUMAN|INDIVIDUAL
+Ayasofya günümüzde ne olarak hizmet vermektedir|ne olarak|Ayasofya günümüzde hizmet vermektedir|DESCRIPTION|REASON
+TSE ne demektir|TSE||ABBREVIATION|ABBREVIATION
+TSE ne zaman kurulmuştur|ne zaman kurulmuştur|TSE|TEMPORAL|DATE
+TSE bağımsız bir kamu kuruluşuna ne zaman dönüşmüştür|ne zaman dönüşmüştür|TSE bağımsız bir kamu kuruluşuna|TEMPORAL|DATE
+Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin kaç saat olması beklenmektedir|kaç saat|Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin olması beklenmektedir|HUMAN|COUNT
+2010 yılı verilerine göre ülkemizdeki otoyol uzunluğu ne kadardır|otoyol uzunluğu ne kadardır|2010 yılı verilerine göre ülkemizdeki|NUMERIC|SIZE.LENGTH
+Türkiye’de ilk şeker fabrikası hangi tarihte kurulmuştur|hangi tarihte|Türkiyede ilk şeker fabrikası kurulmuştur|TEMPORAL|DATE
+Ülkemizde hangi bölge dışında bütün bölgelerde şeker fabrikası vardır|hangi bölge dışında|Ülkemizde bütün bölgelerde şeker fabrikası vardır|LOCATION|REGION.LOCAL
+Türkiye’de birinci beş yıllık sanayi alanı hangi tarihte yürürlüğe konmuştur|hangi tarihte|Türkiyede birinci beş yıllık sanayi alanı yürürlüğe konmuştur|TEMPORAL|DATE
+Sanayi’nin diğer adı nedir|Sanayinin adı|diğer|DESCRIPTION|DEFINITION
+Oltu taşı hangi ilimizde çıkarılmaktadır|hangi ilimizde|Oltu taşı çıkarılmaktadır|LOCATION|CITY
+Kütahya’nın hangi ilçesinde feldispat yatakları mevcuttur|Kütahyanın hangi ilçesinde|feldispat yatakları mevcuttur|LOCATION|CITY
+Hızla akan suyun, elektrik üreten türbinleri çalıştırması ile oluşan enerji ne enerjisidir|ne enerjisidir|Hızla akan suyun, elektrik üreten türbinleri çalıştırması ile oluşan enerji|DESCRIPTION|DEFINITION
+İzmir İktisat kongresi kimin teşviki ile olmuştur|kimin teşviki ile|İzmir İktisat kongresi olmuştur|HUMAN|INDIVIDUAL
+Türkiye’deki kültür balıkçılığı hangi iki balık üzerine yoğunlaşmıştır|hangi iki balık|Türkiye’deki kültür balıkçılığı üzerine yoğunlaşmıştır|ENTITY|TERM
+Türkiye Sanayi ve Maden Bankası hangi tarihte kurulmuştur|hangi tarihte|Türkiye Sanayi ve Maden Bankası kurulmuştur|TEMPORAL|DATE
+Tiftik keçisi ne olarak da bilinir|ne olarak da|Tiftik keçisi bilinir|DESCRIPTION|DEFINITION
+Koyun ve keçi gibi hayvanların genel adı nedir|hayvanların genel adı|Koyun ve keçi gibi|DESCRIPTION|DEFINITION
+İpek böceği yetiştirme ve ondan koza elde etme işine ne ad verilir|işine ad|İpek böceği yetiştirme ve ondan koza elde etme|DESCRIPTION|DEFINITION
+İpek böcekçiliği en çok hangi bölgemizde yapılmaktadır|hangi bölgemizde|İpek böcekçiliği en çok yapılmaktadır|LOCATION|REGION.LOCAL
+İpek böceği daha çok hangi ağacın yaprakları ile beslenir|hangi ağacın|İpek böceği daha çok yaprakları ile beslenir|ENTITY|PLANT
+Anzer balı hangi ilimize özgüdür|hangi ilimize|Anzer balı özgüdür|LOCATION|CITY
+Denizlerden üretilen balık üretiminin yüzde kaçı Karadeniz bölgesinden karşılanır|balık üretiminin yüzde kaçı|Denizlerden üretilen Karadeniz bölgesinden karşılanır|NUMERIC|PERCENTAGE
 Tek sıvı maden hangisidir|||ENTITY|SUBSTANCE
 Türkiye hangi deprem kuşağında yer almaktadır|||DESCRIPTION|DEFINITION
 Türkiyede kaç tane deprem bölgesi vardır|||NUMERIC|COUNT
