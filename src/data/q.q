@@ -215,7 +215,7 @@ Volkanik kökenli adaların en fazla bulunduğu yer neresidir|yer neresidir|Volk
 Volkan tüfü kaç cm uzunluğundadır|cm|Volkan tüfü uzunluğundadır|NUMERIC|SIZE.LENGTH
 Volkan tüfünün uzunluğu kaç cm.dir|cm dir|Volkan tüfünün uzunluğu|NUMERIC|SIZE.LENGTH
 Ağrı Dağı hangi tür volkanlardandır|hangi tür volkanlardandır|Ağrı Dağı|ENTITY|TERM
-Yeryüzünde kaç tane etkin volkan vardır|kaç tane|Yeryüzünde etkin volkan|NUMERIC|COUNT
+Yeryüzünde kaç tane etkin volkan vardır|kaç tane etkin volkan|Yeryüzünde vardır|NUMERIC|COUNT
 Yeryüzündeki etkin volkanların yüzde kaçı Büyük Okyanus çevresindedir|volkanların yüzde kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir|NUMERIC|PERCENTAGE
 Yeryüzündeki etkin volkanların kaçı Büyük Okyanus çevresindedir|kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir|NUMERIC|COUNT
 Yeryüzündeki volkanik alanların ortak özelliği nedir|ortak özelliği|Yeryüzündeki volkanik alanların|DESCRIPTION|DESCRIPTION
@@ -359,7 +359,7 @@ UNESCO’nun açılımı nedir|açılımı|UNESCOnun|DESCRIPTION|DEFINITION
 UNESCO Türkiye’den kaç kültürel varlığı Dünya Miras Listesine eklemiştir|kaç kültürel varlığı|UNESCO Türkiyeden Dünya Miras Listesine eklemiştir|NUMERIC|COUNT
 Artemis Tapınağı nerede kurulmuştur|nerede kurulmuştur|Artemis Tapınağı|DESCRIPTION|DEFINITION
 Antik çağın en ünlü deniz feneri hangisidir|deniz feneri|Antik çağın en ünkü|DESCRIPTION|DEFINITION
-Keops Piramidi kaç adet taş bloktan yapılmıştır|kaç adet|Keops Piramidi taş bloktan yapılmıştır|NUMERIC|COUNT
+Keops Piramidi kaç adet taş bloktan yapılmıştır|kaç adet taş bloktan|Keops Piramidi yapılmıştır|NUMERIC|COUNT
 Japonya’nın yüz ölçümü ne kadardır|yüz ölçümü ne kadardır|Japonyanın|NUMERIC|SIZE.AREA
 Japonya’nın nüfusu ne kadardır|nüfusu ne kadardır|Japonyanın|NUMERIC|SIZE.POPULATION
 Japonya’nın başkenti neresidir|başkenti neresidir|Japonyanın|DESCRIPTION|DEFINITION
@@ -589,7 +589,7 @@ Lejant ne demektir|ne demektir|Lejant|DESCRIPTION|DEFINITION
 Fiziki haritalarda yeşil alanlar kaç metre aralıklarını ifade eder|kaç metre aralıkları|Fiziki haritalarda yeşil alanlar ifade eder|DESCRIPTION|SIZE.LENGTH
 Haritadaki uzunluk ile harita ölçeğinin çarpımı neyi verir|neyi verir|Haritadaki uzunluk ile harita ölçeğinin çarpımı|ENTITY|TERM
 Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen hayali çembere ne ad verilir|hayali çembere ad|Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen|ENTITY|TERM
-Kaç adet paralel vardır|Kaç adet|paralel vardır|NUMERIC|COUNT
+Kaç adet paralel vardır|Kaç adet paralel|vardır|NUMERIC|COUNT
 Paraleller hangi doğrultuda uzanır|hangi doğrultuda|Paraleller uzanır|DESCRIPTION|DEFINITION
 İki paralel arasındaki uzaklık ne kadardır|uzaklık ne kadardır|İki paralel arasındaki|NUMERIC|SIZE.LENGTH
 230-271 kuzey enleminin özel adı nedir|230-271 kuzey enleminin adı|özel|DESCRIPTION|DEFINITION
@@ -798,54 +798,54 @@ Koyun ve keçi gibi hayvanların genel adı nedir|hayvanların genel adı|Koyun 
 İpek böceği daha çok hangi ağacın yaprakları ile beslenir|hangi ağacın|İpek böceği daha çok yaprakları ile beslenir|ENTITY|PLANT
 Anzer balı hangi ilimize özgüdür|hangi ilimize|Anzer balı özgüdür|LOCATION|CITY
 Denizlerden üretilen balık üretiminin yüzde kaçı Karadeniz bölgesinden karşılanır|balık üretiminin yüzde kaçı|Denizlerden üretilen Karadeniz bölgesinden karşılanır|NUMERIC|PERCENTAGE
-Tek sıvı maden hangisidir|||ENTITY|SUBSTANCE
-Türkiye hangi deprem kuşağında yer almaktadır|||DESCRIPTION|DEFINITION
-Türkiyede kaç tane deprem bölgesi vardır|||NUMERIC|COUNT
-Toprağın belirli bir süre için tamamen veya kısmen aniden su altında kalmasına ne denir|||DESCRIPTION|DEFINITION
-Sel sularının akarsu yatağının dışına çıkarak tarım alanlarına taşmasına ne denir|||DESCRIPTION|DEFINITION
-Dünyada sel felaketleri en çok nerede yaşanır|||LOCATION|REGION
-Bangladeşte dünyada görülen sel felaketlerinin yüzde kaçı meydana gelir|||NUMERIC|PERCENTAGE
-Türkiyede yılda ortalama kaç adet sel felaketi olmaktadır|||NUMERIC|AVERAGE
-Uzun bir zaman içinde yağışın belirgin bir şekilde normal değerlerin altına düşmesine ne denir|||DESCRIPTION|DEFINITION
-Toprak yüzeyinin akarsular, sel suları ve rüzgar gibi dış kuvvetler tarafından aşındırılarak taşınmasına ne denir|||DESCRIPTION|DEFINITION
-Yamaç boyunca taş, kum ve toprak tabakalarının yer değiştirmesi olayına ne denir|||DESCRIPTION|DEFINITION
-Eğimli yamaçlarda fazla yağışlarla doygun hale gelen toprağın adeta bir hamur gibi yamaç boyunca kaymasına ne denir|||DESCRIPTION|DEFINITION
-Toprak kaymalarını harekete geçiren en önemli faktör nedir|||DESCRIPTION|REASON
-Karadeniz kıyılarının yüzde kaçı heyelan riski taşır|||NUMERIC|PERCENTAGE
-Türkiyede heyelan olayları en çok hangi mevsimde olur|||TEMPORAL|SEASON
-Kar örtüsünün hızlı bir şekilde eğim yönünde hareket etmesine ne denir|||DESCRIPTION|DEFINITION
-Rüzgarın hızı kaç kilometrenin üzerine çıkarsa fırtına denir|||NUMERIC|SPEED
-Kasırgaların saattaki ortalama hızları kaçtır|||NUMERIC|SPEED
-Hızlı bir şekilde dönen hava kolonlarınının buluduğu fırtın sistemine ne ad verilir|||ENTITY|TERM
-Yeryüzünde en şiddetli kasırgalar hani kuşakta görülür|||LOCATION|REGION
-Yeryüzüne yaklaşık olarak kaç adet aktif volkan vardır|||NUMERIC|COUNT
-Dünyadaki aktif volkanlar en fazla hangi bölgede konumlanmıştır|||LOCATION|REGION
-Depremler nedeniyle okyanus kıyılarında oluşan dev dalgalara ne ad verilir|||DESCRIPTION|DEFINITION
-Türkiyede en fazla can kaybına yol açan doğal afetin adı nedir|||DESCRIPTION|DEFINITION
-Kar yağışlarının fazla, arazinin engebeli olduğu bölgelerde hangi doğal afet daha fazla görülür|||DESCRIPTION|DEFINITION
-Türkiyenin en doğu ile en batı ucu arasınaki zaman farkı kaçtır|||NUMERIC|COUNT
-Türkiyenin ortalama yüz ölçümü ne kadardır|||NUMERIC|SIZE.AREA
-Ağrı dağının yüksekliği yaklaşık kaç metredir|||NUMERIC|SIZE.HEIGHT
-Kızılırmak nehrinin uzunluğu kaç metredir|||NUMERIC|SIZE.LENGTH
-Türkiyenin kara sınırlarının toplam uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
-Türkiyenin suriye ile olan sınırının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
-Türkiyenin iran ile olan sınırının uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
-Türkiyenin Irak ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
-Türkiyenin Ermenistan ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
-Türkiyenin Yunanistan ile olan sınırının uzunluğu kaç kilometredir|||NUMERIC|SIZE.LENGTH
-Türkiyenin en büyük adası hangisidir|||LOCATION|CITY
-Gökçeadanın yüz ölçümü kaç kilometre karedir|||NUMERIC|SIZE.AREA
-Türkiyenin en büyük baraj gölünün adı nedir|||ENTITY|PROPER NOUN
-Atatürk baraj gölünün büyüklüğü ne kadardır|||NUMERIC|SIZE.AREA
-Türkiyenin en doğu ucu ile en batı ucu arasındaki uzaklık ne kadardır|||NUMERIC|SIZE.LENGTH
-Türkiyenin yüzölçümü olarak en büyük bölgesi hangisidir|||LOCATION|REGION.LOCAL
-Doğu anadolu bölgesinin yüz ölçümü yaklaşık ne kadardır|||NUMERIC|SIZE.AREA
-Doğu anadolu bölgesinde kaç bölüm vardır|||NUMERIC|COUNT
-Doğu anadolu bölgesinin nüfusunu ortalama ne kadardır|||NUMERIC|SIZE.POPULATION
-Fırat sularını nereye döker|||LOCATION|REGION
-Dicle sularını nereye döker|||LOCATION|REGION
-Kura nehri sularını nereye döker|||LOCATION|REGION
-Doğu anadolu bölgesinde kaç il vardır|||NUMERIC|COUNT
-Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan ili hangisidir|||LOCATION|CITY
-Erzumunun nüfusu yaklaşık ne kadardır|||NUMERIC|SIZE.POPULATION
-Türkiyenin nüfus yoğunluğu en az olan bölgesi hangisidir|||LOCATION|REGION.LOCAL
+Tek sıvı maden hangisidir|Tek sıvı maden||ENTITY|SUBSTANCE
+Türkiye hangi deprem kuşağında yer almaktadır|hangi deprem kuşağında|Türkiye yer almaktadır|DESCRIPTION|DEFINITION
+Türkiyede kaç tane deprem bölgesi vardır|kaç tane deprem bölgesi|Türkiyede vardır|NUMERIC|COUNT
+Toprağın belirli bir süre için tamamen veya kısmen aniden su altında kalmasına ne denir|su altında kalmasına denir|Toprağın belirli bir süre için tamamen veya kısmen aniden|DESCRIPTION|DEFINITION
+Sel sularının akarsu yatağının dışına çıkarak tarım alanlarına taşmasına ne denir|taşmasına denir|Sel sularının akarsu yatağının dışına çıkarak tarım alanlarına|DESCRIPTION|DEFINITION
+Dünyada sel felaketleri en çok nerede yaşanır|nerede yaşanır|Dünyada sel felaketleri en çok|LOCATION|REGION
+Bangladeşte dünyada görülen sel felaketlerinin yüzde kaçı meydana gelir|sel felaketlerinin yüzde kaçı|Bangladeşte dünyada görülen meydana gelir|NUMERIC|PERCENTAGE
+Türkiyede yılda ortalama kaç adet sel felaketi olmaktadır|kaç adet sel felaketi|Türkiyede yılda ortalama olmaktadır|NUMERIC|AVERAGE
+Uzun bir zaman içinde yağışın belirgin bir şekilde normal değerlerin altına düşmesine ne denir|düşmesine denir|Uzun bir zaman içinde yağışın belirgin bir şekilde normal değerlerin altına|DESCRIPTION|DEFINITION
+Toprak yüzeyinin akarsular, sel suları ve rüzgar gibi dış kuvvetler tarafından aşındırılarak taşınmasına ne denir|taşınmasına denir|Toprak yüzeyinin akarsular sel suları ve rüzgar gibi dış kuvvetler tarafından aşındırılarak|DESCRIPTION|DEFINITION
+Yamaç boyunca taş, kum ve toprak tabakalarının yer değiştirmesi olayına ne denir|yer değiştirmesi olayına denir|Yamaç boyunca taş kum ve toprak tabakalarının|DESCRIPTION|DEFINITION
+Eğimli yamaçlarda fazla yağışlarla doygun hale gelen toprağın adeta bir hamur gibi yamaç boyunca kaymasına ne denir|kaymasına denir|Eğimli yamaçlarda fazla yağışlarla doygun hale gelen toprağın adeta bir hamur gibi yamaç boyunca|DESCRIPTION|DEFINITION
+Toprak kaymalarını harekete geçiren en önemli faktör nedir|faktör|Toprak kaymalarını harekete geçiren en önemli|DESCRIPTION|REASON
+Karadeniz kıyılarının yüzde kaçı heyelan riski taşır|Karadeniz kıyılarının yüzde kaçı|heyelan riski taşır|NUMERIC|PERCENTAGE
+Türkiyede heyelan olayları en çok hangi mevsimde olur|hangi mevsimde|Türkiyede heyelan olayları en çok olur|TEMPORAL|SEASON
+Kar örtüsünün hızlı bir şekilde eğim yönünde hareket etmesine ne denir|hareket etmesine denir|Kar örtüsünün hızlı bir şekilde eğim yönünde|DESCRIPTION|DEFINITION
+Rüzgarın hızı kaç kilometrenin üzerine çıkarsa fırtına denir|kaç kilometrenin üzerine|Rüzgarın hızı çıkarsa fırtına denir|NUMERIC|SPEED
+Kasırgaların saattaki ortalama hızları kaçtır|hızları kaçtır|Kasırgaların saatteki ortalama|NUMERIC|SPEED
+Hızlı bir şekilde dönen hava kolonlarınının buluduğu fırtına sistemine ne ad verilir|fırtına sistemine ad|Hızlı bir şekilde dönen hava kolonlarınının buluduğu|ENTITY|TERM
+Yeryüzünde en şiddetli kasırgalar hangi kuşakta görülür|hangi kuşakta|Yeryüzündeki en şiddetli kasırgalar görülür|LOCATION|REGION
+Yeryüzüne yaklaşık olarak kaç adet aktif volkan vardır|kaç adet aktif volkan|Yeryüzünde yaklaşık olarak vardır|NUMERIC|COUNT
+Dünyadaki aktif volkanlar en fazla hangi bölgede konumlanmıştır|hangi bölgede|Dünyadaki aktif volkanlar en fazla konumlanmıştır|LOCATION|REGION
+Depremler nedeniyle okyanus kıyılarında oluşan dev dalgalara ne ad verilir|dev dalgalara ad|Depremler nedeniyle okyanus kıyılarında oluşan|DESCRIPTION|DEFINITION
+Türkiyede en fazla can kaybına yol açan doğal afetin adı nedir|doğal afetin adı|Türkiyede en fazla can kaybına yol açan|DESCRIPTION|DEFINITION
+Kar yağışlarının fazla, arazinin engebeli olduğu bölgelerde hangi doğal afet daha fazla görülür|hangi doğal afet|Kar yağışlarının fazla arazinin engebeli olduğu bölgelerde daha fazla görülür|DESCRIPTION|DEFINITION
+Türkiyenin en doğu ile en batı ucu arasınaki zaman farkı kaçtır|zaman farkı kaçtır|Türkiyenin en doğu ile en batı ucu arasındaki|NUMERIC|COUNT
+Türkiyenin ortalama yüz ölçümü ne kadardır|yüz ölçümü ne kadardır|Türkiyenin ortalama|NUMERIC|SIZE.AREA
+Ağrı dağının yüksekliği yaklaşık kaç metredir|kaç metredir|Ağrı dağının yüksekliği yaklaşık|NUMERIC|SIZE.HEIGHT
+Kızılırmak nehrinin uzunluğu kaç metredir|kaç metredir|Kızılırmak nehrinin uzunluğu|NUMERIC|SIZE.LENGTH
+Türkiyenin kara sınırlarının toplam uzunluğu ne kadardır|toplam uzunluğu ne kadardır|Türkiyenin kara sınırlarının|NUMERIC|SIZE.LENGTH
+Türkiyenin suriye ile olan sınırının uzunluğu ne kadardır|uzunluğu ne kadardır|Türkiyenin suriye ile olan sınırının|NUMERIC|SIZE.LENGTH
+Türkiyenin iran ile olan sınırının uzunluğu ne kadardır|uzunluğu ne kadardır|Türkiyenin iran ile olan sınırının|NUMERIC|SIZE.LENGTH
+Türkiyenin Irak ile olan sınırının uzunluğu kaç kilometredir|kaç kilometredir|Türkiyenin Irak ile olan sınırının uzunluğu|NUMERIC|SIZE.LENGTH
+Türkiyenin Ermenistan ile olan sınırının uzunluğu kaç kilometredir|kaç kilometredir|Türkiyenin Ermenistan ile olan sınırının uzunluğu|NUMERIC|SIZE.LENGTH
+Türkiyenin Yunanistan ile olan sınırının uzunluğu kaç kilometredir|kaç kilometredir|Türkiyenin Yunanistan ile olan sınırının uzunluğu|NUMERIC|SIZE.LENGTH
+Türkiyenin en büyük adası hangisidir|adası|Türkiyenin en büyük|LOCATION|CITY
+Gökçeadanın yüz ölçümü kaç kilometre karedir|kaç kilometre karedir|Gökçeadanın yüz ölçümü|NUMERIC|SIZE.AREA
+Türkiyenin en büyük baraj gölünün adı nedir|baraj gölünün adı|Türkiyenin en büyük|ENTITY|PROPER NOUN
+Atatürk baraj gölünün büyüklüğü ne kadardır|büyüklüğü ne kadardır|Atatürk baraj gölünün|NUMERIC|SIZE.AREA
+Türkiyenin en doğu ucu ile en batı ucu arasındaki uzaklık ne kadardır|uzaklık ne kadardır|Türkiyenin en doğu ucu ile en batı ucu arasındaki|NUMERIC|SIZE.LENGTH
+Türkiyenin yüzölçümü olarak en büyük bölgesi hangisidir|bölgesi|Türkiyenin yüzölçümü olarak en büyük|LOCATION|REGION.LOCAL
+Doğu anadolu bölgesinin yüz ölçümü yaklaşık ne kadardır|yüz ölçümü yaklaşık ne kadardır|Doğu anadolu bölgesinin|NUMERIC|SIZE.AREA
+Doğu anadolu bölgesinde kaç bölüm vardır|kaç bölüm|Doğu anadolu bölgesinde vardır|NUMERIC|COUNT
+Doğu anadolu bölgesinin nüfusu ortalama ne kadardır|nüfusu ne kadardır|Doğu anadolu bölgesinin ortalama|NUMERIC|SIZE.POPULATION
+Fırat sularını nereye döker|nereye döker|Fırat sularını|LOCATION|REGION
+Dicle sularını nereye döker|nereye döker|Dicle sularını|LOCATION|REGION
+Kura nehri sularını nereye döker|nereye döker|Kura nehri sularını|LOCATION|REGION
+Doğu anadolu bölgesinde kaç il vardır|kaç il|Doğu anadolu bölgesinde vardır|NUMERIC|COUNT
+Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan ili hangisidir|ili|Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan|LOCATION|CITY
+Erzurumun nüfusu yaklaşık ne kadardır|nüfusu ne kadardır|Erzurumun yaklaşık|NUMERIC|SIZE.POPULATION
+Türkiyenin nüfus yoğunluğu en az olan bölgesi hangisidir|bölgesi|Türkiyenin nüfus yoğunluğu en az olan|LOCATION|REGION.LOCAL
