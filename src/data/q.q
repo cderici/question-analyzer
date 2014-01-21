@@ -219,7 +219,7 @@ Yeryüzünde kaç tane etkin volkan vardır|kaç tane etkin volkan|Yeryüzünde 
 Yeryüzündeki etkin volkanların yüzde kaçı Büyük Okyanus çevresindedir|volkanların yüzde kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir|NUMERIC|PERCENTAGE
 Yeryüzündeki etkin volkanların kaçı Büyük Okyanus çevresindedir|kaçı|Yeryüzündeki etkin volkanların Büyük Okyanus çevresindedir|NUMERIC|COUNT
 Yeryüzündeki volkanik alanların ortak özelliği nedir|ortak özelliği|Yeryüzündeki volkanik alanların|DESCRIPTION|DESCRIPTION
-Kaç çeşit deprem dalgası vardır|çeşit|deprem dalgası|NUMERIC|COUNT
+Kaç çeşit deprem dalgası vardır|kaç çeşit|deprem dalgası|NUMERIC|COUNT
 Deprem dalgaları içinde en hızlı dalgalar hangileridir|dalgalar|Deprem dalgaları içinde en hızlı|ENTITY|TERM
 Deprem sırasında yer kabuğuna ilk ulaşan dalgalar hangileridir|dalgalar|Deprem sırasında yer kabuğuna ilk ulaşan|ENTITY|TERM
 Tsunami denen dev dalgalara ne sebep olur|sebep olur|Tsunami denen dev dalgalara|DESCRIPTION|REASON
@@ -724,7 +724,7 @@ Sadece türkiyede bulunan ve dünyanın başka hiç bir yerinde görülmeyen bit
 3. ve 4. Jeolojik zamanda oluşmuş, günümüzde yetişmesi imkansız bitkilere ne denir|bitkilere denir|3 ve 4 Jeolojik zamanda oluşmuş günümüzde yetişmesi imkansız|DESCRIPTION|DEFINITION
 Ülkemizin yüzde kaçı ormanlarla kaplıdır|Ülkemizin yüzde kaçı|ormanlarla kaplıdır|NUMERIC|PERCENTAGE
 Ağaçlar yapraklarının özelliklerine göre kaça ayrılırlar|Ağaçlar kaça ayrılırlar|yapraklarının özelliklerine göre|NUMERIC|COUNT
-Kızılçamın dünyada en geniş yayılış alanı nerededir|yayılış alanı neresidir|Kızılçamın dünyada en geniş|LOCATION|REGION
+Kızılçamın dünyada en geniş yayılış alanı nerededir|yayılış alanı nerededir|Kızılçamın dünyada en geniş|LOCATION|REGION
 Sarıçam türkiyede daha çok nerede bulunur|nerede bulunur|Sarıçam türkiyede daha çok|LOCATION|REGION.LOCAL
 Kızılağaç en fazla kaç metre yükseklikte görülür|kaç metre yükseklikte|Kızılağaç en fazla görülür|NUMERIC|SIZE.HEIGHT
 Ihlamur en fazla kaç metre yükseklikte görülür|kaç metre yükseklikte|Ihlamur en fazla görülür|NUMERIC|SIZE.HEIGHT
