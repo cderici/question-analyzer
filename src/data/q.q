@@ -7,11 +7,11 @@ Atmosferin en alt katmanında hangi tabaka vardır|hangi tabaka|Atmosferin en al
 Bakteriler ilk olarak hangi jeolojik zamanda ortaya çıkmıştır|hangi jeolojik zamanda|Bakteriler ilk olarak ortaya çıkmıştır|TEMPORAL|ERA
 Bir akarsuyun kolları ile birlikte oluşturduğu sisteme ne denir|sisteme denir|Bir akarsuyun kolları ile birlikte oluşturduğu|DESCRIPTION|DEFINITION
 Bir akarsuyun kolları ile birlikte sularının toplandığı ve ya boşaltıldığı alana ne denir|alana denir|Bir akarsuyun kolları ile birlikte sularının toplandığı veya boşaltıldığı|DESCRIPTION|DEFINITION
-Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir|Birleşmiş Milletler Nüfus Vakfının adı|kısa|ABBREVIATION|ABBREVIATION
+Birleşmiş Milletler Nüfus Vakfı’nın kısa adı nedir|Nüfus Vakfının adı|kısa|ABBREVIATION|ABBREVIATION
 Bitki ve hayvan topluluklarını inceleyen bilim dalı nedir|bilim dalı|Bitki ve hayvan topluluklarını inceleyen|DESCRIPTION|DEFINITION
-Biyosfer ’in diğer adı nedir|Biyosferin adı|diğer|DESCRIPTION|DEFINITION
+Biyosfer’in diğer adı nedir|Biyosferin adı|diğer|DESCRIPTION|DEFINITION
 Biyosferi, ultraviyole ışınlarının zararlarından koruyan gaz hangisidir|gaz|Biyosferi ultraviyole ışınlarının zararlarından koruyan|DESCRIPTION|DEFINITION
-Bofor ölçeği neyin şiddetinin ölçülmesinde kullanılır|neyin|Bofor ölçeği şiddetinin ölçülmesinde kullanılır|DESCRIPTION|DEFINITION
+Bofor ölçeği neyin şiddetinin ölçülmesinde kullanılır|neyin şiddetinin|Bofor ölçeği ölçülmesinde kullanılır|DESCRIPTION|DEFINITION
 Canlıların üzerinde yaşadığı katman hangisidir|katman|Canlıların üzerinde yaşadığı|DESCRIPTION|DEFINITION
 Çarşamba deltasını oluşturan akarsu hangisidir|akarsu|Çarşamba deltasını oluşturan|ENTITY|RIVER
 Çayır ve otlakların en fazla olduğu bölgemiz hangisidir|bölgemiz|Çayır ve otlakların en fazla oluğu|LOCATION|REGION.LOCAL
@@ -161,7 +161,7 @@ Karalarda güneş ışınlarının etkili olduğu derinlik ne kadardır|derinlik
 Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın ortalama sıcaklığı ne kadardır|ortalama sıcaklığı ne kadardır|Yeryüzünde soğuk kuşak olarak adlandırılan iklim kuşağında en sıcak ayın|NUMERIC|AVERAGE
 Muson ikliminde yıllık sıcaklık farkı ne kadardır|sıcaklık farkı ne kadardır|Muson ikliminde yıllık|NUMERIC|DEGREE
 Ekvatoral iklimde yıllık yağış miktarı ne kadardır|yağış miktarı ne kadardır|Ekvatoral iklimde yıllık|NUMERIC|SIZE.VOLUME
-Karasal iklimde yıllık yağış miktarı kaç mm'dir|kaç mm'dir|Karasal iklimde yıllık yağış miktarı|NUMERIC|SIZE.VOLUME
+Karasal iklimde yıllık yağış miktarı kaç mm'dir|kaç mmdir|Karasal iklimde yıllık yağış miktarı|NUMERIC|SIZE.VOLUME
 Çöl ikliminde günlük sıcaklık farkı kaç dereceyi bulur|kaç dereceyi|Çöl ikliminde günlük sıcaklık farkı bulur|NUMERIC|DEGREE
 Yükselti arttıkça neye bağlı olarak bitki örtüsü değişir|neye bağlı olarak|Yükselti arttıkça bitki örtüsü değişir|DESCRIPTION|REASON
 Yüksek bulutlara ne denir|bulutlara denir|Yüksek|ENTITY|CLOUD
@@ -228,7 +228,7 @@ Depremin aletle ölçülen büyüklüğüne ne denir|büyüklüğüne denir|Depr
 Yeryüzünde depremlerin çoğunluğu nerede olur|nerede olur|Yeryüzünde depremlerin çoğunluğu|LOCATION|REGION
 Yeryüzünde kendine özgü bir iklimi, bitki örtüsü ve hayvan topluluğu bulunduran bölgelere ne ad verilir|bölgelere ad|Yeryüzünde kendine özgü bir iklimi bitki örtüsü ve hayvan topluluğu bulunduran|DESCRIPTION|DEFINITION
 Canlıların çevreyle birlikte oluşturdukları yaşam birlikteliklerine ne denir|yaşam birlikteliklerine denir|Canlıların çevreyle birlikte oluşturdukları|DESCRIPTION|DEFINITION
-Biyomlar neyin en büyük birimleridir|neyin|Biyomlar en büyük birimleridir|ENTITY|TERM
+Biyomlar neyin en büyük birimleridir|neyin birimleridir|Biyomlar en büyük|ENTITY|TERM
 Ekosistemin en büyük birimi nedir|Ekosistemin birimi|en büyük|ENTITY|TERM
 Biyomların yeryüzüne dağılışındaki en büyük etken koşul hangisidir|etken koşul|Biyomların yeryüzüne dağılışındaki en büyük|DESCRIPTION|REASON
 Atmosferdeki Azot toplam gaz miktarının yüzde kaçını oluşturur|toplam gaz miktarının yüzde kaçını|Atmosferdeki Azot toplam gaz miktarının oluşturur|NUMERIC|PERCENTAGE
@@ -244,8 +244,8 @@ IV. Jeolojik zamanın başlarında Dünya genelinde buzul alanları kaçıncı e
 Aztek uygarlığı hangi yüzyıllar arasında hüküm sürmüştür|hangi yüzyıllar arasında|Aztek uygarlığı hüküm sürmüştür|TEMPORAL|CENTURY
 Çin uygarlığı tarihi kaç yıla dayanır|kaç yıla|Çin uygarlığı tarihi dayanır|TEMPORAL|DATE
 Barut, pusula, mürekkep, kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık hangisidir|uygarlık|Barut pusula mürekkep kağıt ve matbaayı icat ederek Dünya medeniyetine önemli katkıda bulunan uygarlık|HUMAN|GROUP
-Dağıtım neyin tüketiciye ulaştırılmasıdır|neyin|Dağıtım tüketiciye ulaştırılmasıdır|DESCRIPTION|DEFINITION
-Tüketim neyin kullanılmasıdır|neyin|Tüketim kullanılmasıdır|DESCRIPTION|DEFINITION
+Dağıtım neyin tüketiciye ulaştırılmasıdır|neyin ulaştırılmasıdır|Dağıtım tüketiciye|DESCRIPTION|DEFINITION
+Tüketim neyin kullanılmasıdır|neyin kullanılmasıdır|Tüketim|DESCRIPTION|DEFINITION
 Yer yuvarlağındaki iç içe kürelere ne ad verilir|kürelere ad|Yer yuvarlağındaki iç içe|ENTITY|SPHERE
 Yer kabuğunun karalardaki ortalama kalınlığı ne kadardır|ortalama kalınlığı ne kadardır|Yer kabuğunun karalardaki|NUMERIC|SIZE.DEPTH
 Yer kabuğunun okyanuslardaki ortalama kalınlığı ne kadardır|ortalama kalınlığı ne kadardır|Yer kabuğunun okyanuslardaki|NUMERIC|SIZE.DEPTH
@@ -262,7 +262,7 @@ Dayk, batolit ve sill gibi şekiller nerede magmanın katılaşarak oluşturduğ
 Volkanlardan çıkan volkan tüfü, lapilli ve volkan bombası isimlerini neye göre alırlar|neye göre|Volkanlardan çıkan volkan tüfü lapilli ve volkan bombası isimlerini alırlar|DESCRIPTION|DESCRIPTION
 Rihter ölçeği ne amaçla kullanılır|ne amaçla|Rihter ölçeği kullanılır|DESCRIPTION|REASON
 Hiposantr depremin nerede oluşturduğu kısımdır|nerede oluşturduğu kısımdır|Hiposantr depremin oluşturduğu kısımdır|DESCRIPTION|DEFINITION
-Levha hareketleri sonucunda ortaya çıkan gerilimler neyin kırılmasına neden olur|neyin|Levha hareketleri sonucunda ortaya çıkan gerilimler kırılmasına neden olur|DESCRIPTION|DEFINITION
+Levha hareketleri sonucunda ortaya çıkan gerilimler neyin kırılmasına neden olur|neyin kırılmasına|Levha hareketleri sonucunda ortaya çıkan gerilimler neden olur|DESCRIPTION|DEFINITION
 Kaç çeşit deprem dalgası vardır|Kaç çeşit|deprem dalgası vardır|NUMERIC|COUNT
 Boyuna dalgaların yer kabuğundaki hızları ne kadardır|hızları ne kadardır|Boyuna dalgaların yer kabuğundaki|NUMERIC|SPEED
 P dalgalarının manto ile çekirdek arasındaki hızları ne kadardır|hızları ne kadardır|P dalgalarının manto ile çekirdek arasındaki|NUMERIC|SPEED
@@ -297,7 +297,7 @@ Türkiye’de nüfusun çoğunlukta olduğu yaş grubu hangisidir|yaş grubu|Tü
 Türkiye’de ilk periyodik nüfus sayımı ne zaman yapılmıştır|ne zaman|Türkiyede ilk periyodik nüfus sayımı yapılmıştır|TEMPORAL|DATE
 Türkiye’de ikinci nüfus sayımı hangi tarihte yapılmıştır|hangi tarihte|Türkiyede ikinci nüfus sayımı yapılmıştır|TEMPORAL|DATE
 2000 yılına kadar yapılan nüfus sayımlarında hangi yasak uygulanmıştır|hangi yasak|2000 yılına kadar yapılan nüfus sayımlarında uygulanmıştır|DESCRIPTION|DEFINITION
-TÜİK neyin kısaltmasıdır|neyin|TÜİK kısaltmasıdır|ABBREVIATION|EXPRESSION
+TÜİK neyin kısaltmasıdır|neyin kısaltmasıdır|TÜİK|ABBREVIATION|EXPRESSION
 Türkiye İstatistik Kurumunun kısa adı nedir|kısa adı|Türkiye İstatistik Kurumunun|ABBREVIATION|ABBREVIATION
 Cumhuriyetimizin ilk nüfus sayımına göre nüfus ne kadardı|ne kadardı|Cumhuriyetimizin ilk nüfus sayımına göre nüfus|NUMERIC|SIZE.POPULATION
 İç göçler hangi iki ana başlıkla ele alınır|hangi iki ana başlıkta|İç göçler ele alınır|DESCRIPTION|DEFINITION
