@@ -10,6 +10,7 @@ import codecs
 class Distiller():
 
     question = None
+    genericEnable = None
 
     # focus is a list of ordered parts
     qFocus = []
@@ -18,8 +19,9 @@ class Distiller():
     qMods = []
     qModsConfidence = 0
 
-    def __init__(self, question = None):
+    def __init__(self, question, genericEnable):
         self.question = question
+        self.genericEnable = genericEnable
         self.qFocus = []
         self.qMods = []
 
@@ -32,6 +34,7 @@ class Distiller():
 
         if not SEN:
             # raise RuntimeError("Something's REALLY wrong! Here's the question: " + self.question.questionText)
+            #print("ATTENTION: A question *without* a sentence has just been detected! -> " + self.question.questionText)
             return [], [], 0, 0
 
         SENtext = QPart.getPartField(SEN, 'text')
@@ -66,7 +69,10 @@ class Distiller():
             return neKadardirExpert(self.question, qParts)
 
         else:
-            return [], [], 0, 0
+            if self.genericEnable:
+                return genericExpert(self.question, qParts)
+            else:
+                return [],[],0,0
 
 
         # neresidir/nerede
@@ -75,6 +81,7 @@ class Distiller():
 
         # kac/kaci/kacini/ne kadar
         
+        # dummy return, should never reach here
         return [], [], 0, 0
 
 

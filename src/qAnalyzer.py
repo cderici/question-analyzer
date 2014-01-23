@@ -95,8 +95,8 @@ class QuestionAnalysis:
         return focusCombined, focusConfidences
         
 
-    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False, onlyForward=True):
-        dist = Distiller(self.question)
+    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False, onlyForward=True, genericEnable=False):
+        dist = Distiller(self.question, genericEnable)
 
         ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
         #print(ruleFocus)

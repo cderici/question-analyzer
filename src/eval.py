@@ -87,7 +87,7 @@ def displayResults(modelName, results, fullInfo):
 # only evaluates the distiller, 
 # produces 1) Proper model name 2) results
 #
-def evaluateDistiller(questionSet):
+def evaluateDistiller(questionSet, genericEnable=False):
 
     results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
 
@@ -96,12 +96,17 @@ def evaluateDistiller(questionSet):
         results['totalFParts'] += len(question.trueFocus)
 
         # actual focus detection starts to work
-        ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True)
+        ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True, False, genericEnable)
 
         # computing tp, fp and fn
         results = computePerClassCounts(question.trueFocus, ruleFocus, results)
 
-    return 'FM-Distiller Alone', results
+    genStatus = "Disabled"
+    if genericEnable:
+        genStatus = "Enabled"
+    
+    mName = 'FM-Distiller Alone - generic expert ' + genStatus 
+    return mName, results
 
 # evaluateGlasses
 # only evaluates the HMM-Glasses, 
@@ -149,11 +154,11 @@ def evaluateGlasses(questionSet, reverse, twoDirections=False):
         revStr = "Forward & Backward"
     return 'HMM-Glasses Alone ('+revStr+' mode)', results
 
-# evaluateBoth
+# evaluateFull
 # given the question set, it evaluates the combination of 
 # both the FM-Distiller and HMM-Glasses
 #
-def evaluateBoth(questionSet, onlyForward=True):
+def evaluateFull(questionSet, onlyForward=True, genericEnable=False):
     forwGlass = Glass(questionSet, reverse=False)
     backGlass = Glass(questionSet, reverse=True)
 
@@ -163,7 +168,7 @@ def evaluateBoth(questionSet, onlyForward=True):
 
         results['totalFParts'] += len(question.trueFocus)
 
-        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False, onlyForward)
+        rF, hR, focusCombined, confidences = QuestionAnalysis(question).extractFocusMod(backGlass, forwGlass, False, onlyForward, genericEnable)
 
         # computing tp, fp and fn
         results = computePerClassCounts(question.trueFocus, focusCombined, results)
@@ -172,7 +177,13 @@ def evaluateBoth(questionSet, onlyForward=True):
     if not onlyForward:
         backStatus = 'Enabled'
 
-    modelName = '******** Final Results (Full Model, Backward Sweep ' + backStatus + ') ******** '
+    genStat = 'Disabled'
+    if genericEnable:
+        genStat = 'Enabled'
+
+    modelName = '******** Final Results  (Full Model)  ********\n'
+    modelName += ' - Distiller : generic expert ' + genStat + '\n'
+    modelName += ' - HMM : Backward Sweep ' + backStatus + '\n'
     return modelName, results
 
 # evaluate:
@@ -184,9 +195,13 @@ def evaluate(questions, model, fullInfo=True):
         print("\n\n ==== Evaluation BEGIN ==== \n")
 
     if model=='distiller':
-        modelName, results = evaluateDistiller(questions)
+        # GE : generic expert enabled & GD : generic expert disabled
+        mNameGE, resultsGE = evaluateDistiller(questions, genericEnable=True)
+        mNameGD, resultsGD = evaluateDistiller(questions, genericEnable=False)
+        
 
-        displayResults(modelName, results, fullInfo)
+        displayResults(mNameGE, resultsGE, fullInfo)
+        displayResults(mNameGD, resultsGD, fullInfo)
 
     elif model=="glasses":
         bModelName, backResults = evaluateGlasses(questions, reverse=True)
@@ -198,11 +213,19 @@ def evaluate(questions, model, fullInfo=True):
         displayResults(twoMN, twoResults, fullInfo)
 
     elif model=="combined":
-        modelDisplayFB, combinedResultsFB = evaluateBoth(questions, False)
-        modelDisplayF, combinedResultsF = evaluateBoth(questions, True)
+        # FB : forward backward
+        # GE : generic expert enabled
+        modelDisplayFBGE, combinedResultsFBGE = evaluateFull(questions, False, True)
+        modelDisplayFGE, combinedResultsFGE = evaluateFull(questions, True, True)
 
-        displayResults(modelDisplayFB, combinedResultsFB, fullInfo)
-        displayResults(modelDisplayF, combinedResultsF, fullInfo)
+        modelDisplayFBGD, combinedResultsFBGD = evaluateFull(questions, False, False)
+        modelDisplayFGD, combinedResultsFGD = evaluateFull(questions, True, False)
+
+
+        displayResults(modelDisplayFBGE, combinedResultsFBGE, fullInfo)
+        displayResults(modelDisplayFGE, combinedResultsFGE, fullInfo)
+        displayResults(modelDisplayFBGD, combinedResultsFBGD, fullInfo)
+        displayResults(modelDisplayFGD, combinedResultsFGD, fullInfo)
 
     if fullInfo:
         print("\n\n ==== Evaluation END ==== \n\n")

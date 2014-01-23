@@ -3,12 +3,14 @@
 import re
 from question import *
 
+# initial confidence scores
 nedirFC = 0
 verilirFC = 0
 denirFC = 0
 hangisidirFC = 0
 hangiBtwFC = 0
 neKadardirFC = 0
+genericFC = 0
 
 nedirMC = 0
 verilirMC = 0
@@ -16,6 +18,7 @@ denirMC = 0
 hangisidirMC = 0
 hangiBtwMC = 0
 neKadardirMC = 0
+genericMC = 0
 
 def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
@@ -408,3 +411,22 @@ def neKadardirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
     qFocus.reverse()
     qMods.reverse()
     return qFocus, qMods, neKadardirFC, neKadardirMC
+
+def genericExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
+    
+    # just grab the sentence and look for the subject, traceback with
+    # possessor and classifier chain
+
+
+
+    SEN = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    qFocus = [SEN]
+
+    subjChildren = question.findChildrenDepenTag(SEN, 'SUBJECT')
+
+    for subjChild in subjChildren:
+        qFocus.append(subjChild)
+        qFocus.extend(question.tracebackFromFoldTamlama(subjChild, True, True, False, False, False))
+
+    return qFocus, [], genericFC, genericMC
