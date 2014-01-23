@@ -18,25 +18,6 @@ mass = MassAnalyzer(ourQuestions)
 normalGlass = Glass(ourQuestions, backwards=False)
 reverseGlass = Glass(ourQuestions, backwards=True)
 
-#########################################################################
-""" partial questions """
-filteredNedir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'nedir')
-
-filteredVerilir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'verilir')
-
-filteredHangisidir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangisidir')
-
-filteredHangisidir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'hangileridir'))
-
-filteredHangiBetween = mass.filterByPartValue('depenTag', '*', 'text', 'hangi')
-
-filteredNeKadardir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'kadardır')
-
-filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
-
-filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
-filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
-#########################################################################
 
 # computePerClassCounts:
 # given the gold standard parts and computed parts, 
@@ -437,7 +418,7 @@ def evaluateClass(questions):
     
 
 
-fullInfo = False
+fullInfo = True
 
 all = 'all' in sys.argv
 

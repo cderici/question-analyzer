@@ -158,6 +158,8 @@ class Question:
         return [part for part in self.questionParts if (part[6] == node[0] and part[7] == tag)];
 
     def findParent(self, node):
+        # everyone has a single parent, so this doesn't need to return a list
+        # REFACTOR
         temp = [part for part in self.questionParts if part[0] == node[6]];
 
         if(len(temp) == 1):

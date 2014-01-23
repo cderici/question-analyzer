@@ -3,7 +3,7 @@
 import re
 from question import *
 
-# initial confidence scores
+# init conf scores
 nedirFC = 0
 verilirFC = 0
 denirFC = 0
@@ -11,6 +11,7 @@ hangisidirFC = 0
 hangiBtwFC = 0
 neKadardirFC = 0
 genericFC = 0
+kacFC = 0
 
 nedirMC = 0
 verilirMC = 0
@@ -19,6 +20,82 @@ hangisidirMC = 0
 hangiBtwMC = 0
 neKadardirMC = 0
 genericMC = 0
+kacMC = 0
+
+def kacExpert(question, qParts):
+
+    qFocus = []
+    KAC = None
+    for part in question.questionParts:
+        if QPart.getPartField(part, 'text').lower() == 'kaç'.decode('utf-8'):
+            KAC = part
+            break
+
+    if KAC == None:
+        return [], [], kacFC, kacMC
+
+    
+    parents = question.findParent(KAC)
+    parentPart = None
+    if parents != []:
+        parentPart = parents[0]
+
+    SENTENCE = QPart.getQPartWithField(qParts, 'depenTag', 'SENTENCE')
+
+    # 1) if parent is a DERIV of a SENTENCE, take KAC and SENTENCE
+    isOne = False
+    if parentPart != None and QPart.getPartField(parentPart,'depenTag') == 'DERIV':
+        if QPart.getPartField(question.findParent(parentPart)[0], 'depenTag') == 'SENTENCE':
+            isOne = True
+
+    if isOne:
+        qFocus = [SENTENCE, KAC]
+    # 2) if the parent is a SUBJET, take KAC and SUBJECT and LOCATIVE.ADJUNCT of SENTENCE
+    elif parentPart != None and QPart.getPartField(parentPart, 'depenTag') == 'SUBJECT':
+        senChildren = question.findChildrenDepenTag(SENTENCE, 'LOCATIVE.ADJUNCT')
+        if senChildren != []:
+            qFocus = [senChildren[len(senChildren)-1]]
+        qFocus.extend([parentPart, KAC])
+    # 3) else, look for a subject on the branch
+    else:
+        branch = question.traceForwardFrom(KAC)
+
+        hasSubject = False
+        untilSubject = [KAC]
+        for part in branch:
+            
+            if QPart.getPartField(part, 'depenTag') == 'SUBJECT':
+                hasSubject = True
+
+                tamChildren = question.findChildrenDepenTag(part, 'CLASSIFIER')
+                tamChildren.extend(question.findChildrenDepenTag(part, 'POSSESSOR'))
+
+                untilSubject.extend([prt for prt in tamChildren if (prt not in branch and QPart.getPartField(prt, 'depenTag') != 'DERIV')])
+                untilSubject.append(part)
+
+                break
+            else:
+                untilSubject.append(part)
+
+        if hasSubject:
+            return untilSubject, [], kacFC, kacMC
+            #print(QPart.getPartField(part, 'depenTag'))
+
+    if qFocus == []:
+        # if we get here, then we have nothing to do with SUBJECT
+        # grab the whole part from kac to sentence
+        forwTrace = question.traceForwardFrom(KAC)
+        for part in reversed(forwTrace):
+            tag = QPart.getPartField(part, 'depenTag')
+            if  tag != 'DERIV' and tag != 'COORDINATION':
+                qFocus.append(part)
+        qFocus.append(KAC)
+        
+                
+
+
+    qFocus.reverse()
+    return qFocus, [], kacFC, kacMC
 
 def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 

@@ -68,6 +68,10 @@ class Distiller():
             
             return neKadardirExpert(self.question, qParts)
 
+        # kaç
+        elif self.checkForKac(qParts):
+            return kacExpert(self.question, qParts)
+
         else:
             if self.genericEnable:
                 return genericExpert(self.question, qParts)
@@ -84,6 +88,12 @@ class Distiller():
         # dummy return, should never reach here
         return [], [], 0, 0
 
+    def checkForKac(self, qParts):
+        for part in self.question.questionParts:
+            if QPart.getPartField(part, 'text').lower() == 'kaç'.decode('utf-8'):
+                return True
+
+        return False
 
     def checkForBetweenHangi(self, qParts):
         hangiParts = QPart.getAllPartsWithField(qParts, 'text', 'hangi')

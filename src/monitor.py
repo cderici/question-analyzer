@@ -37,6 +37,9 @@ filteredNeKadardir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', "kad
 #print(len(filteredNeKadardir))
 filteredDenir = mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denir')
 
+filteredKac = mass.filterByPartValue('depenTag', '*', 'text', 'kaç')
+filteredKac.extend(mass.filterByPartValue('depenTag', '*', 'text', 'Kaç'))
+
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilir'))
 filteredDenir.extend(mass.filterByPartValue('depenTag', 'SENTENCE', 'text', 'denilmektedir'))
 
@@ -52,31 +55,71 @@ def getAllExpertResults():
         print("\n\n -- ne kadardır -- \n\n")
         mass.massShowFocusMod(filteredNeKadardir, onlyDistiller=True)
    
+        print("ne kadardır # : " + str(len(filteredNeKadardir)))
+
+    if 'all' in sys.argv or 'kaç' in sys.argv:
+        print("\n\n -- kaç -- \n\n")
+        mass.massShowFocusMod(filteredKac, onlyDistiller=True)
+   
+        print("kaç # : " + str(len(filteredKac)))
+
     if 'all' in sys.argv or 'nedir' in sys.argv:
         print("\n\n -- nedir -- \n\n")
         mass.massShowFocusMod(filteredNedir, onlyDistiller=True)
+
+        print("nedir # : " + str(len(filteredNedir)))
 
     if 'all' in sys.argv or 'verilir' in sys.argv:
         print("\n\n -- verilir -- \n\n")
     
         mass.massShowFocusMod(filteredVerilir, onlyDistiller=True)
     
+        print("verilir # : " + str(len(filteredVerilir)))
+
     if 'all' in sys.argv or 'hangisidir' in sys.argv:
         print("\n\n -- hangisidir/hangileridir -- \n\n")
     
         mass.massShowFocusMod(filteredHangisidir, onlyDistiller=True)
     
+        print("hangisidir # : " + str(len(filteredHangisidr)))
+
     if 'all' in sys.argv or 'hangi' in sys.argv:
         print("\n\n -- .... hangi .... -- \n\n")
     
         mass.massShowFocusMod(filteredHangiBetween, onlyDistiller=True)
     
+        print("hangi # : " + str(len(filteredHangiBetween)))
+
     if 'all' in sys.argv or 'denir' in sys.argv:
         print("\n\n -- denir -- \n\n")
     
         mass.massShowFocusMod(filteredDenir, onlyDistiller=True)
 
-    print(len(filteredNedir) + len(filteredVerilir) + len(filteredHangisidir) + len(filteredHangiBetween) + len(filteredDenir))
+        print("denir # : " + str(len(filteredDenir)))
+
+    if 'stats' in sys.argv:
+
+        lenQ = len(ourQuestions)
+        lenKadar = len(filteredNeKadardir)
+        lenNedir = len(filteredNedir)
+        lenVerilir = len(filteredVerilir)
+        lenHangisidir = len(filteredHangisidir)
+        lenHangi = len(filteredHangiBetween)
+        lenDenir = len(filteredDenir)
+
+        print("Total Questions # : " + str(lenQ))
+        print("ne kadardır # : " + str(lenKadar) + " ----> % " + str(int(lenKadar*100.0/lenQ)))
+        print("nedir # : " + str(lenNedir) + " ---------> % " + str(int(lenNedir*100.0/lenQ)))
+        print("verilir # : " + str(lenVerilir) + " --------> % " + str(int(lenVerilir*100.0/lenQ)))
+        print("hangisidir # : " + str(lenHangisidir) + " -----> % " + str(int(lenHangisidir*100.0/lenQ)))
+        print("hangi # : " + str(lenHangi) + " ---------> % " + str(int(lenHangi*100.0/lenQ)))
+        print("denir # : " + str(lenDenir) + " ----------> % " + str(int(lenDenir*100.0/lenQ)))
+
+        lenOther = lenQ-(lenNedir + lenVerilir + lenHangisidir + lenHangi + lenDenir + lenKadar)
+
+        print("\Others # : " + str(lenOther) + " -------> % " + str(int(lenOther*100.0/lenQ)))
+
+        
 
 if 'experts' in sys.argv:
     getAllExpertResults()
@@ -90,6 +133,7 @@ if 'others' in sys.argv:
     allExperts.extend(filteredHangisidir)
     allExperts.extend(filteredHangiBetween)
     allExperts.extend(filteredDenir)
+    allExperts.extend(filteredNeKadardir)
 
     MassAnalyzer.massShowFocusMod(mass.filterOthers(allExperts))
 

@@ -151,7 +151,7 @@ class MassAnalyzer:
                 for part in q.questionParts:
                     isDeriv = (QPart.getPartField(part, 'depenTag') != 'DERIV')
 
-                    if isDeriv and QPart.getPartField(part, partType) == partValue:
+                    if isDeriv and QPart.getPartField(part, partType) == partValue.decode('utf-8'):
                         filtered.append(q)
                     else:
                         #print(q.questionText)
