@@ -11,7 +11,7 @@ class Glass:
     reverse = True
     # probs. that a depen tag being a FOC, MOD or NON
     tagProbs = None
-
+    tagCounts = None
     wordProbs = None
 
     # initial probs. of tags being FOC, MOD or NON
@@ -20,10 +20,11 @@ class Glass:
     # transition probs btw FOC, MOD and NON
     transitionProbs = None
 
-    def __init__(self, questions, reverse=True):
-        tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions, reverse)
-        self.reverse = reverse
+    def __init__(self, questions, backwards):
+        tagCounts, initFmnCounts, FmnCounts, wordCounts = hmmLearn(questions, backwards)
+        self.reverse = backwards
 
+        self.tagCounts = tagCounts
         self.tagProbs = copy.deepcopy(tagCounts)
         self.wordProbs = copy.deepcopy(wordCounts)
         self.initFmnProbs = copy.deepcopy(initFmnCounts)
@@ -36,7 +37,8 @@ class Glass:
         # computing tagProbs from tagCounts
         for tag in tagCounts.keys():
             for fmn in tagCounts[tag].keys():
-                self.tagProbs[tag][fmn] = tagCounts[tag][fmn]/(tagCounts[tag]['total']*1.0)
+                #self.tagProbs[tag][fmn] = tagCounts[tag][fmn]/(tagCounts[tag]['total']*1.0)
+                x = 4
 
         # computing tagProbs from tagCounts
         for word in wordCounts.keys():
@@ -91,19 +93,32 @@ class Glass:
     def computeFocusProbs(self, newQuestion):
         serialParts = serializeDepTree(newQuestion.questionParts, self.reverse)
 
-        # HACK
+        # REFACTOR
         self.tagProbs = self.wordProbs
 
         mostProbableSequence = []
         
+        totalFocus = 0
+        totalNon = 0
+        totalFN = 0
+        for tagCount in self.tagCounts.values():
+            totalFocus += tagCount['focus']
+            totalNon += tagCount['non'] + tagCount['mod']
+            totalFN += tagCount['focus'] + tagCount['non'] + tagCount['mod']
+
         for partIndex in range(0, len(serialParts)):
             part = serialParts[partIndex]
             #tag = QPart.getPartField(part, 'depenTag')
             tag = extractWord(newQuestion, part)
             
             if partIndex == 0: # start?
+                if tag not in self.tagProbs:
+                    focusZeroProb = totalFocus / (totalFN*1.0)
+                    nonZeroProb = totalNon / (totalFN*1.0)
+                    self.tagProbs[tag] = {'total':0, 'focus':focusZeroProb, 'mod':1, 'non':nonZeroProb}
+
                 focProb = self.initFmnProbs['FOC']*self.tagProbs[tag]['focus']
-                modProb = self.initFmnProbs['MOD']*self.tagProbs[tag]['mod']
+                modProb = self.initFmnProbs['NON']*self.tagProbs[tag]['non']
                 nonProb = self.initFmnProbs['NON']*self.tagProbs[tag]['non']
 
                 #print("\nS FOCPROB: " + str(focProb))
@@ -114,7 +129,7 @@ class Glass:
                 if highestState == focProb:
                     mostProbableSequence.append(['FOC',focProb, part])
                 elif highestState == modProb:
-                    mostProbableSequence.append(['MOD',modProb, part])
+                    mostProbableSequence.append(['NON',modProb, part])
                 elif highestState == nonProb:
                     mostProbableSequence.append(['NON',nonProb, part])
                 else:
@@ -124,11 +139,16 @@ class Glass:
                 # beware, nasty hack ahead
                 prevState = mostProbableSequence[partIndex-1][0]
                 prevProb = mostProbableSequence[partIndex-1][1]
-                
+
+                if tag not in self.tagProbs:
+                    focusZeroProb = totalFocus / (totalFN*1.0)
+                    nonZeroProb = totalNon / (totalFN*1.0)
+                    self.tagProbs[tag] = {'total':0, 'focus':focusZeroProb, 'mod':1, 'non':nonZeroProb}
+
                 currentFocusProb = prevProb*self.tagProbs[tag]['focus']*self.transitionProbs[prevState]['FOC']
 
                 #print("\nFOCPROB: " + str(currentFocusProb))
-                currentModProb = prevProb*self.tagProbs[tag]['mod']*self.transitionProbs[prevState]['MOD']
+                currentModProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
                 #print("MODPROB: " + str(currentModProb))
                 currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
                 #print("NONPROB: " + str(currentNonProb))
@@ -138,7 +158,7 @@ class Glass:
                     currentState = 'FOC'
                     currentProb = currentFocusProb
                 elif highestState == currentModProb:
-                    currentState = 'MOD'
+                    currentState = 'NON'
                     currentProb = currentModProb
                 elif highestState == currentNonProb:
                     currentState = 'NON'

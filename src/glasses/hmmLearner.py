@@ -55,7 +55,7 @@ def hmmLearn(questions, reverse=True):
 
 
     FmnCounts = {'FOC':0,
-                 'MOD':0,
+                 #'MOD':0,
                  'NON':0
                  }
 
@@ -85,8 +85,8 @@ def hmmLearn(questions, reverse=True):
                 tagCounts[tag]['focus'] += 1
                 wordCounts[word]['focus'] += 1
             elif part in question.trueMod:
-                tagCounts[tag]['mod'] += 1
-                wordCounts[word]['mod'] += 1
+                tagCounts[tag]['non'] += 1
+                wordCounts[word]['non'] += 1
             else:                
                 tagCounts[tag]['non'] += 1
                 wordCounts[word]['non'] +=1 
@@ -100,7 +100,7 @@ def hmmLearn(questions, reverse=True):
         if initPart in question.trueFocus:
             initFmnCounts['FOC'] += 1
         elif initPart in question.trueMod:
-            initFmnCounts['MOD'] += 1
+            initFmnCounts['NON'] += 1
         else:
             initFmnCounts['NON'] += 1
 
@@ -112,7 +112,7 @@ def hmmLearn(questions, reverse=True):
             if part in question.trueFocus:
                 partProp = 'FOC'
             elif part in question.trueMod:
-                partProp = 'MOD'
+                partProp = 'NON'
             else:
                 partProp = 'NON'
 
@@ -121,7 +121,7 @@ def hmmLearn(questions, reverse=True):
             if nextPart in question.trueFocus:
                 nPartProp = 'FOC'
             elif nextPart in question.trueMod:
-                nPartProp = 'MOD'
+                nPartProp = 'NON'
             else:
                 nPartProp = 'NON'
 

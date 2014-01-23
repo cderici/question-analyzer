@@ -139,8 +139,8 @@ class MassAnalyzer:
 
     def __init__(self, questions = None):
         self.questionSet = questions
-        self.normalGlass = Glass(questions, reverse=False)
-        self.reverseGlass = Glass(questions, reverse=True)
+        self.normalGlass = Glass(questions, backwards=False)
+        self.reverseGlass = Glass(questions, backwards=True)
 
     # filterByTagValue('depenTag', 'SENTENCE', 'text', 'nedir')
     def filterByPartValue(self, tagType, tagName, partType, partValue):
