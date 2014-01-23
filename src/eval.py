@@ -237,15 +237,41 @@ def evaluateClass(questions):
 
 fullInfo = False
 
-if 'distiller' in sys.argv:
+all = 'all' in sys.argv
+
+if all or 'distiller' in sys.argv:
     evaluate(ourQuestions, 'distiller', fullInfo)
 
-if 'glass' in sys.argv:
+if all or 'glass' in sys.argv:
     evaluate(ourQuestions, 'glasses', fullInfo)
 
-if 'combined' in sys.argv:
+if all or 'combined' in sys.argv:
     evaluate(ourQuestions, 'combined', fullInfo)
     
-if 'class' in sys.argv:
+if all or 'class' in sys.argv:
     evaluateClass(ourQuestions)
 
+if all or 'cross' in sys.argv:
+    print("\n ==== Preparing 10-fold Cross-Validation ==== \n\n")
+
+    print("Shuffling the question set...")
+    from random import shuffle
+    from evalUtils import *
+    import pickle, os, copy
+    if not os.path.isfile('shuffled.questions'):
+        
+        shuffledQuestions = copy.deepcopy(ourQuestions)
+
+        shuffle(shuffledQuestions)
+
+        pickle.dump(shuffledQuestions, open('shuffled.questions', 'w'))
+
+    else:
+        shuffledQuestions = pickle.load(open('shuffled.questions', 'r'))
+
+
+    indexes = prepareTenFoldIndexes(shuffledQuestions)
+
+    print("Fold Indexes : " + str(indexes))
+
+    
