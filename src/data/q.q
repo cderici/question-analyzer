@@ -763,7 +763,6 @@ Hazar-Türkiye-Avrupa Doğal gaz hattı hangi proje kapsamında ilerlemektedir|h
 Milet Amfi Tiyatrosu hangi ildedir|hangi ildedir|Milet Amfi Tiyatrosu|LOCATION|CITY
 Milet Amfi Tiyatrosu hangi ilçededir|hangi ilçededir|Milet Amfi Tiyatrosu|LOCATION|CITY
 Efes’i yılda ortalama kaç kişi ziyaret etmektedir|kaç kişi|Efes’i yılda ortalama ziyaret etmektedir|NUMERIC|SIZE.POPULATION
-İstanbul ne zaman Osmanlı hakimiyetine geçmiştir|SİL|SİL|TEMPORAL|DATE
 Ülkemizde kaç ilde kaplıca bulunmaktadır|kaç ilde|Ülkemizde kaplıca bulunmaktadır|NUMERIC|COUNT
 Ülkemizdeki 2010 yılında toplam turist sayısı ne kadardır|toplam turist sayısı ne kadardır|Ülkemizdeki 2010 yılında|NUMERIC|SIZE.POPULATION
 Turizm teşvik kanunu ne zaman çıkmıştır|ne zaman çıkmıştır|Turizm teşvik kanunu|TEMPORAL|DATE
@@ -849,3 +848,103 @@ Doğu anadolu bölgesinde kaç il vardır|kaç il|Doğu anadolu bölgesinde vard
 Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan ili hangisidir|ili|Doğu anadolu bölgesinin en kalabalık nüfusa sahip olan|LOCATION|CITY
 Erzurumun nüfusu yaklaşık ne kadardır|nüfusu ne kadardır|Erzurumun yaklaşık|NUMERIC|SIZE.POPULATION
 Türkiyenin nüfus yoğunluğu en az olan bölgesi hangisidir|bölgesi|Türkiyenin nüfus yoğunluğu en az olan|LOCATION|REGION.LOCAL
+Birleşmiş milletler hangi tarihte kurulmuştur|||TEMPORAL|DATE
+Birleşmiş milletler teşkilatının kaç üyesi bulunmaktadır|||NUMERIC|COUNT
+Birleşmiş milletler bünyesinde tartışma ve karar organı olan yapının adı nedir|||DESCRIPTION|DEFINITION
+Birleşmiş milletler genel kurulu yılda kaç kez olağan toplanır|||NUMERIC|COUNT
+Birleşmiş milletler güvenlik konseyi kaç üyeden oluşur|||NUMERIC|COUNT
+Birleşmiş milletler güvenlik konseyi ne sıklıkta toplanır|||NUMERIC|PERCENTAGE
+Birleşmiş milletler uluslararası adalet divanı kaç üyeden oluşmaktadır|||NUMERIC|COUNT
+Birleşmiş milletler uluslararası adalet divanının merkezi hangi ülkededir|||LOCATION|COUNTRY
+Birleşmiş milletler bünyesinde sömürge topraklarıyla ilgilenen alt kurulun adı nedir|||ENTITY|PROPER NOUN
+Birleşmiş milletler ekonomik ve sosyal konseyi kaç üyeden oluşur|||NUMERIC|COUNT
+Birleşmiş milletler teşkilatının en üst organı olan yapının adı nedir|||DESCRIPTION|DEFINITION
+UNESCO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+FAO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+WHO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+ILO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+IMF nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+OPEC in türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+NATO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+NATOnun kurucu üye sayısı kaçtır|||NUMERIC|COUNT
+NATO kaç yılında kurulmuştur|||TEMPORAL|DATE
+NATOnun en büyük sivil organı nedir|||DESCRIPTION|DEFINITION
+NATOnun en yüksek askeri organı nedir|||DESCRIPTION|DEFINITION
+OECD nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+OECD ne zaman kurulmuştur|||TEMPORAL|DATE
+Türkiye OECDye ne zaman üye olmuştur|||TEMPORAL|DATE
+OPEC ne zaman kurulmuştur|||TEMPORAL|DATE
+IMF ne zaman kurulmuştur|||TEMPORAL|DATE
+IMF nin kaç tane kurucu üyesi vardır|||NUMERIC|COUNT
+IMFde en fazla oy hakkı olan ülke hangisidir|||LOCATION|COUNTRY
+Dünya bankası kaç yılında kurulmuştur|||TEMPORAL|DATE
+G-8 ülkeleri hangi yıldan beri faaliyet göstermektedirler|||TEMPORAL|DATE
+G-20 ülkeleri ne zaman kurulmuştur|||TEMPORAL|DATE
+Greenpeace örgütü ne zaman kurulmuştur|||TEMPORAL|DATE
+Greenpeace türkiyede ilk ofisini ne zaman açmıştır|||TEMPORAL|DATE
+Avrupa birliği ne zaman kurulmuştur|||TEMPORAL|DATE
+Türkiye hangi yıl avrupa birliğine aday ülke olarak açıklanmıştır|||TEMPORAL|DATE
+Türkiye AB müzakerelerine ne zaman başlamıştır|||TEMPORAL|DATE
+KEİ nin açılımı nedir|||DESCRIPTION|DEFINITION
+KEİ ne zaman kurulmuştur|||TEMPORAL|DATE
+NAFTA nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+AGİT in açılımı nedir|||ABBREVIATION|ABBREVIATION
+AGİT hangi yıl çalışmalarına başlamıştır|||TEMPORAL|DATE
+Türkiye AGİT e kaç yılında üye olmuştur|||TEMPORAL|DATE
+Dünydaki enerji kaynaklarının yüzde kaçını fosil yakıtlar oluştumaktadır|||NUMERIC|PERCENTAGE
+Dünya üzerinde kaç adet çalışır durumda nükleer santral bulunmaktadır|||NUMERIC|COUNT
+Dünya kullanılan enerji kaynaklarının yüzde kaçı yenilenebilir kaynaklardır|||NUMERIC|PERCENTAGE
+Biyolojik her türlü atıktan elde edilebilecek olan enerjiye ne isim verilir|||DESCRIPTION|DEFINITION
+Dünya üzerinde ilk rüzgar türbini ne zaman kullanılmıştır|||TEMPORAL|DATE
+Dünya üzerinde üretilen elektriğin yüzde kaçı hidroelektrik santrallerden üretilmektedir|||NUMERIC|PERCENTAGE
+Çin toplam dünya kömür üretiminin yüzde kaçını gerçekleştirmektedir|||NUMERIC|PERCENTAGE
+Rüzgar enerjisi hangi ülke tarafından keşfedilmiştir|||LOCATION|COUNTRY
+Yerin derinliklerindeki sıcaklıkla ilgili olan ve bu güçle ısınarak oluşan enerjiye ne denir|||DESCRIPTION|DEFINITION
+Dalgaların kabarma ve çekilme hareketlerinden yararlanılarak üretilen enerjiye ne denir|||DESCRIPTION|DEFINITION
+Dünyanın kıyı şeritlerindeki dalga enerjisi potansiyeli ortalama ne kadardır|||NUMERIC|AVERAGE
+Gelgitin oluşturduğu okyanus veya deniz suyunun yükselme ve geri çekilme hareketlerinin kıyılara kurulan türbinler sayesinde elektrik enerjisine çevrilmesine ne denir|||DESCRIPTION|DEFINITION
+Su gücünden elde edilen elektrik enerjisine ne denir|||DESCRIPTION|DEFINITION
+Dünya üzerinde üretilen enerjinin yüzde kaçı hidroelektrik enerjisidir|||NUMERIC|PERCENTAGE
+Ormanlar günümüzde yeryüzünün yüzde kaçını kaplamaktadır|||NUMERIC|PERCENTAGE
+Amazon ormanlarının yayılım alanı ne kadardır|||NUMERIC|SIZE.AREA
+Petrol ürünlerinin kullanılması sonucu havaya en çok yayılan gazın adı nedir|||DESCRIPTION|DEFINITION
+Çernobil nükleer kazası ne zaman gerçekleşmiştir|||TEMPORAL|DATE
+Batmanın günümüzde nüfusu kaçtır|||NUMERIC|SIZE.POPULATION
+Deprem, tsunami gibi doğal afetleri önceden haber veren sistemlere ne denir|||DESCRIPTION|DEFINITION
+AKOM un açılımı nedir|||ABBREVIATION|ABBREVIATION
+LIFE nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+Ramsar sözleşmesi ilk ne zaman imzalanmıştır|||TEMPORAL|DATE
+Türkiye ramsar sözleşmesini ne zaman imzalamıştır|||TEMPORAL|DATE
+Milli parklar kanunu kaç yılında çıkarılmıştır|||TEMPORAL|DATE
+Türkiyede kaç adet milli park vardır|||NUMERIC|COUNT
+Türkiyede kaç adet koruma alanı vardır|||NUMERIC|COUNT
+Türkiyede kaç adet tabiat anıtı bulunmaktadır|||NUMERIC|COUNT
+Türkiyede kaç adet tabiatı koruma alanı vardır|||NUMERIC|COUNT
+ÇED in açılımı nedir|||ABBREVIATION|ABBREVIATION
+ÇED  türkiyede ne zamandan beri uygulanmaktadır|||TEMPORAL|DATE
+EEA nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+EEA kaç yılında kurulmuştur|||TEMPORAL|DATE
+EEA nın kaç üyesi vardır|||NUMERIC|COUNT
+Türkiye EEAya kaç yılında üye olmuştur|||TEMPORAL|DATE
+UNEPin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+UNEP ne zaman kurulmuştur|||TEMPORAL|DATE
+UNEPin merkezi hangi ülkededir|||LOCATION|COUNTRY
+WWF nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+WWF ne zaman kurulmuştur|||TEMPORAL|DATE
+WWF nin kaç ülkede şubesi vardır|||NUMERIC|COUNT
+WCS nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+FFI nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+FFI ne zaman kurulmuştur|||TEMPORAL|DATE
+Biyolojik çeşitlilik sözleşmesini türkiye kaç yılında imzalamıştır|||TEMPORAL|DATE
+Türkiyede kullanılabilir suyun yüzde kaçı içilebilir su olarak kullanılmaktadır|||NUMERIC|PERCENTAGE
+Biyolojik çeşitlilik sözleşmesi ilk nerede imzalanmıştır|||LOCATION|CITY
+Konya kapalı havzasının akılcı kullanımına doğru projesi hangi yıl başlamıştır|||TEMPORAL|DATE
+Estetik, kültürel, bilimsel, ekonomik unsurlarla zenginleşen doğal güzelliklerin ve biyolojik çeşitliliğin oluşturduğu değerlere ne denir|||DESCRIPTION|DEFINITION
+Galapagos takım adalarının toplam yüzölçümü yaklaşık ne kadardır|||NUMERIC|SIZE.AREA
+İgaçu şelalerinin yüksekliği ne kadardır|||NUMERIC|SIZE.LENGTH
+İgaçu çağlayanları hangi yıl dünya mirası kabul edilmiştir|||TEMPORAL|DATE
+Mercanların yığılmasıyla ortaya çıkan kaya zincirlerine ne ad verilir|||DESCRIPTION|DEFINITION
+Avustralya mercan resiflerinin uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
+Nil nehri üzerine kurulmuş en büyük barajın adı nedir|||ENTITY|PROPER NOUN
+Filipinlerin başkenti neresidir|||LOCATION|CITY
+Genellikle ekinler biçildikten sonra buğday ve diğer tahılların tarlada kalan sap kısımlarına ne denir|||DESCRIPTION|DEFINITION
