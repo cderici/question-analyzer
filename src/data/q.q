@@ -511,7 +511,7 @@ SSCB'nin açılımı nedir|açılımı|SSCBnin|ABBREVIATION|ABBREVIATION
 Bartelmi Diaz nerelidir|nerelidir|Bartelmi Diaz|LOCATION|COUNTRY
 Dünyayı dolaşan ilk denizci kimdir|denizci kimdir|Dünyayı dolaşan ilk|HUMAN|INDIVIDUAL
 Kristof Kolomb Amerika’ya ilk kez ne zaman ulaşmıştır|ne zaman ulaşmıştır|Kristof Kolomb Amerikaya ilk kez|TEMPORAL|DATE
-Akdeniz ile Hint okyanusu arasındaki ticaret yollarını kısaltmayı sağlayan kanal hangisidir|kanal|Akdeniz ile Hint okyanusu arasındaki ticaret yollarını kısaltmayı sağlayan|LOCATION|RIVER
+Akdeniz ile Hint okyanusu arasındaki ticaret yollarını kısaltmayı sağlayan kanal hangisidir|kanal|Akdeniz ile Hint okyanusu arasındaki ticaret yollarını kısaltmayı sağlayan|ENTITY|RIVER
 Dünyada ilk telgraf hattı ne zaman kurulmuştur|ne zaman kurulmuştur|Dünyada ilk telgraf hattı|TEMPORAL|DATE
 Matbaa ne zaman icat edildi|ne zaman icat edildi|Matbaa|TEMPORAL|DATE
 İlk fotoğraf makinası ne zaman yapıldı|ne zaman yapıldı|İlk fotoğraf makinası|TEMPORAL|DATE
@@ -524,17 +524,17 @@ Dünyada ilk olarak halkına televizyon yayını yapan ülke hangisidir|ülke|D�
 Panama kanalından bir yılda yaklaşık kaç gemi geçmektedir|kaç gemi|Panama kanalından bir yılda yaklaşık geçmektedir|NUMERIC|AVERAGE
 Dünya ticaretinin yüzde kaçı Panama kanalı üzerinden yapılmaktadır|Dünya ticaretinin yüzde kaçı|Panama kanalı üzerinden yapılmaktadır|NUMERIC|PERCENTAGE
 Süveyş Kanalının uzunluğu ne kadardır|uzunluğu ne kadardır|Süveyş Kanalının|NUMERIC|SIZE.LENGTH
-Dünyada kapakları olmayan en uzun kanal hangisidir|kanal|Dünyada kapakları olmayan en uzun|LOCATION|RIVER
+Dünyada kapakları olmayan en uzun kanal hangisidir|kanal|Dünyada kapakları olmayan en uzun|ENTITY|RIVER
 Kiel Kanalı hangi tarihte deniz trafiğine açılmıştır|hangi tarihte|Kiel Kanalı deniz trafiğine açılmıştır|TEMPORAL|DATE
-Yunanistan ve Mora yarımadasını birbirine bağlayan kanalın adı nedir|kanalın adı|Yunanistan ve Mora yarımadasını birbirine bağlayan|LOCATION|RIVER
+Yunanistan ve Mora yarımadasını birbirine bağlayan kanalın adı nedir|kanalın adı|Yunanistan ve Mora yarımadasını birbirine bağlayan|ENTITY|RIVER
 Cebelitarik boğazının en sığ yeri ne kadardır|yeri ne kadardır|Cebelitarık boğazının en sığ|NUMERIC|SIZE.LENGTH
 Cebelitarık boğazındaki yüzeysel akıntı nereden nereye doğrudur|yüzeysel akıntı nereden nereye doğrudur|Cebelitarık boğazındaki|DESCRIPTION|DEFINITION
 Bering Boğazını kim keşfetmiştir|kim keşfetmiştir|Bering Boğazını|HUMAN|INDIVIDUAL
 Bering boğazı ne zaman keşfedilmiştir|ne zaman kaşfedilmiştir|Bering boğazı|TEMPORAL|DATE
 Bering boğazının kâşifi nerelidir|kaşifi nerelidir|Bering boğazının|LOCATION|COUNTRY
-Babülmendep boğazı hangi savaşa kadar Osmanlı hakimiyetindeydi|hangi savaşa kadar|Babülmendep boğazı Osmanlı hakimiyetindeydi|TEMPORAL|
-Karadeniz’in Akdeniz’e açılmasını sağlayan boğazlar hangileridir|boğazlar|Karadenizin Akdenize açılmasını sağlayan|LOCATION|
-Tarihte ilk kara yolu hangi krallık tarafından yapılmıştır|hangi krallık tarafından|Tarihte ilk kara yolu yapılmıştır|TEMPORAL|
+Babülmendep boğazı hangi savaşa kadar Osmanlı hakimiyetindeydi|hangi savaşa kadar|Babülmendep boğazı Osmanlı hakimiyetindeydi|TEMPORAL|DATE
+Karadeniz’in Akdeniz’e açılmasını sağlayan boğazlar hangileridir|boğazlar|Karadenizin Akdenize açılmasını sağlayan|LOCATION|CITY
+Tarihte ilk kara yolu hangi krallık tarafından yapılmıştır|hangi krallık tarafından|Tarihte ilk kara yolu yapılmıştır|TEMPORAL|PERIOD
 İlk kara yolu ne zaman yapılmıştır|ne zaman yapılmıştır|İlk kara yolu|TEMPORAL|DATE
 Türkiye’de 100 Km2’ye düşen yol ne kadardır|yol ne kadardır|Türkiyede 100 Km2ye düşen|NUMERIC|SIZE.DENSITY
 Türkiye’de 100 Km2’ye düşen yol kaç Km’dir|yol kaç Kmdir|Türkiyede 100 Km2ye düşen|NUMERIC|SIZE.DENSITY
@@ -553,7 +553,7 @@ Hürmüz boğazının en dar yeri ne kadardır|yeri ne kadardır|Hürmüz boğaz
 Baltık denizini Kuzey denize bağlayan kanalın uzunluğu ne kadardır|uzunluğu ne kadardır|Baltık denizini Kuzey denize bağlayan kanalın|NUMERIC|SIZE.LENGTH
 Kiel kanalının uzunluğu ne kadardır|uzunluğu ne kadardır|Kiel kanalının|NUMERIC|SIZE.LENGTH
 Babülmendep Kanalı hangi ülkelerin kıyıları arasındadır|hangi ülkelerin|Babülmendep Kanalı kıyıları arasındadır|LOCATION|COUNTRY
-Bering boğazı hangi denizleri birbirine bağlar|hangi denizleri|Bering boğazı birbirine bağlar|LOCATION|SEA
+Bering boğazı hangi denizleri birbirine bağlar|hangi denizleri|Bering boğazı birbirine bağlar|ENTITY|SEA
 Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı kaç derecedir|kaç derecedir|Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı|NUMERIC|DEGREE
 Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı nerede ölçülmüştür|nerede ölçülmüştür|Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı|NUMERIC|DEGREE
 Bugüne kadar Dünya üzerindeki ölçülen en düşük hava sıcaklığı kaç derecedir|kaç dereecedir|Bugüne kadar Dünya üzerindeki ölçülen en yüksek hava sıcaklığı|NUMERIC|DEGREE
@@ -561,7 +561,7 @@ Bugüne kadar Dünya üzerindeki ölçülen en düşük hava sıcaklığı nered
 İke kasırgası ne zaman gerçekleşmiştir|ne zaman gerçekleşmiştir|İke kasırgası|TEMPORAL|DATE
 İke kasırgasının hızı ne kadar hıza ulaşmıştır|ne kadar hıza|İke kasırgasının hızı ulaşmıştır|NUMERIC|SPEED
 Töhoku depremi ne zaman gerçekleşmiştir|ne zaman gerçekleşmiştir|Töhoku depremi|TEMPORAL|DATE
-Marmara depremi kaç şiddetinde olmuştur|kaç şiddetinde|Marmara depremi olmuştur|NUMERIC|
+Marmara depremi kaç şiddetinde olmuştur|kaç şiddetinde|Marmara depremi olmuştur|NUMERIC|COUNT
 Marmara depremi hangi tarihte meydana gelmiştir|hangi tarihte|Marmara depremi meydana gelmiştir|TEMPORAL|DATE
 Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaydın olarak görülen kütle hareketlerine ne denir|kütle hareketlerine denir|Yeryüzünde özellikle aşırı yağış alan eğimli bölgelerde yaygın olarak görülen|DESCRIPTION|DEFINITION
 Bir bölgede nem miktarındaki geçici dengesizliğin o bölgedeki su kıtlığı ile ilişkisine ne ad verilir|ilişkisine ad|Bir bölgede nem miktarındaki geçici dengesizliğin o bölgedeki su kıtlığı ile|DESCRIPTION|DEFINITION
@@ -575,7 +575,7 @@ Mal ve hizmetlerin tüketiciye ulaştırılmasına ne ad verilir|ulaştırılmas
 Mal ve hizmetlerin kullanılması ne ile ifade edilir|ne ile ifade edilir|Mal ve hizmetlerin kullanılması|DESCRIPTION|DEFINITION
 Ekonomik faaliyetlerin ilk zincirini ne oluşturur|ne oluşturur|Ekonomik faaliyetlerin ilk zincirini|ENTITY|TERM
 Ekonomik faaliyetlerin son zincirini ne oluşturur|ne oluşturur|Ekonomik faaliyetlerin son zincirini|ENTITY|TERM
-Türkiye’de çay üretimi hangi bölgede olur|hangi bölgede|Türkiyede çay üretimi olur|TEMPORAL|REGION.LOCAL
+Türkiye’de çay üretimi hangi bölgede olur|hangi bölgede|Türkiyede çay üretimi olur|LOCATION|REGION.LOCAL
 Bir çizimin harita özelliği taşıması için kaç temel ilkeye uyma zorunluluğu vardır|kaç temel ilkeye|Bir çizimin harita özelliği taşıması için uyma zorunluluğu vardır|NUMERIC|COUNT
 Yeryüzündeki ayrıntıları en az hata ile bir düzlem üzerinde gösterebilmek için geliştirilen metotlara ne ad verilir|metotlara ad|Yeryüzündeki ayrıntıları en az hata ile bir düzlem üzerinde gösterebilmek için geliştirilen|DESCRIPTION|DEFINITION
 Harita çizimi ile uğraşan bilim dalına ne ad verilir|bilim dalına ad|Harita çizimi ile uğraşan|ENTITY|TERM
@@ -586,7 +586,7 @@ Eş derinlik eğrilerinin diğer adı nedir|Eş derinlik eğrilerinin adı|diğe
 Kıyıdan 200 metre derinliğe kadar olan saha neyle ifade edilir|saha neyle ifade edilir|Kıyıdan 200 metre derinliğe kadar olan|DESCRIPTION|DEFINITION
 Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden kaç derecelik bir açıyla ışık geldiği varsayılır|kaç derecelik bir açıyla|Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden ışık geldiği varsayılır|NUMERIC|COUNT
 Lejant ne demektir|ne demektir|Lejant|DESCRIPTION|DEFINITION
-Fiziki haritalarda yeşil alanlar kaç metre aralıklarını ifade eder|kaç metre aralıkları|Fiziki haritalarda yeşil alanlar ifade eder|DESCRIPTION|SIZE.LENGTH
+Fiziki haritalarda yeşil alanlar kaç metre aralıklarını ifade eder|kaç metre aralıkları|Fiziki haritalarda yeşil alanlar ifade eder|NUMERIC|SIZE.LENGTH
 Haritadaki uzunluk ile harita ölçeğinin çarpımı neyi verir|neyi verir|Haritadaki uzunluk ile harita ölçeğinin çarpımı|ENTITY|TERM
 Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen hayali çembere ne ad verilir|hayali çembere ad|Kutuplara eşit uzaklıktaki noktaların birleştirilmesiyle elde edilen|ENTITY|TERM
 Kaç adet paralel vardır|Kaç adet paralel|vardır|NUMERIC|COUNT
@@ -859,24 +859,24 @@ Birleşmiş milletler uluslararası adalet divanının merkezi hangi ülkededir|
 Birleşmiş milletler bünyesinde sömürge topraklarıyla ilgilenen alt kurulun adı nedir|||ENTITY|PROPER NOUN
 Birleşmiş milletler ekonomik ve sosyal konseyi kaç üyeden oluşur|||NUMERIC|COUNT
 Birleşmiş milletler teşkilatının en üst organı olan yapının adı nedir|||DESCRIPTION|DEFINITION
-UNESCO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-FAO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-WHO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-ILO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-IMF nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-OPEC in türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-NATO nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-NATOnun kurucu üye sayısı kaçtır|||NUMERIC|COUNT
+UNESCO'nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+FAO'nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+WHO'nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+ILO'nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+IMF'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+OPEC'in türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+NATO'nun türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+NATO'nun kurucu üye sayısı kaçtır|||NUMERIC|COUNT
 NATO kaç yılında kurulmuştur|||TEMPORAL|DATE
-NATOnun en büyük sivil organı nedir|||DESCRIPTION|DEFINITION
-NATOnun en yüksek askeri organı nedir|||DESCRIPTION|DEFINITION
-OECD nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+NATO'nun en büyük sivil organı nedir|||DESCRIPTION|DEFINITION
+NATO'nun en yüksek askeri organı nedir|||DESCRIPTION|DEFINITION
+OECD'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 OECD ne zaman kurulmuştur|||TEMPORAL|DATE
-Türkiye OECDye ne zaman üye olmuştur|||TEMPORAL|DATE
+Türkiye OECD'ye ne zaman üye olmuştur|||TEMPORAL|DATE
 OPEC ne zaman kurulmuştur|||TEMPORAL|DATE
 IMF ne zaman kurulmuştur|||TEMPORAL|DATE
-IMF nin kaç tane kurucu üyesi vardır|||NUMERIC|COUNT
-IMFde en fazla oy hakkı olan ülke hangisidir|||LOCATION|COUNTRY
+IMF'nin kaç tane kurucu üyesi vardır|||NUMERIC|COUNT
+IMF'de en fazla oy hakkı olan ülke hangisidir|||LOCATION|COUNTRY
 Dünya bankası kaç yılında kurulmuştur|||TEMPORAL|DATE
 G-8 ülkeleri hangi yıldan beri faaliyet göstermektedirler|||TEMPORAL|DATE
 G-20 ülkeleri ne zaman kurulmuştur|||TEMPORAL|DATE
@@ -885,12 +885,12 @@ Greenpeace türkiyede ilk ofisini ne zaman açmıştır|||TEMPORAL|DATE
 Avrupa birliği ne zaman kurulmuştur|||TEMPORAL|DATE
 Türkiye hangi yıl avrupa birliğine aday ülke olarak açıklanmıştır|||TEMPORAL|DATE
 Türkiye AB müzakerelerine ne zaman başlamıştır|||TEMPORAL|DATE
-KEİ nin açılımı nedir|||DESCRIPTION|DEFINITION
+KEİ'nin açılımı nedir|||ABBREVIATION|ABBREVIATION
 KEİ ne zaman kurulmuştur|||TEMPORAL|DATE
-NAFTA nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-AGİT in açılımı nedir|||ABBREVIATION|ABBREVIATION
+NAFTA'nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+AGİT'in açılımı nedir|||ABBREVIATION|ABBREVIATION
 AGİT hangi yıl çalışmalarına başlamıştır|||TEMPORAL|DATE
-Türkiye AGİT e kaç yılında üye olmuştur|||TEMPORAL|DATE
+Türkiye AGİT'e kaç yılında üye olmuştur|||TEMPORAL|DATE
 Dünydaki enerji kaynaklarının yüzde kaçını fosil yakıtlar oluştumaktadır|||NUMERIC|PERCENTAGE
 Dünya üzerinde kaç adet çalışır durumda nükleer santral bulunmaktadır|||NUMERIC|COUNT
 Dünya kullanılan enerji kaynaklarının yüzde kaçı yenilenebilir kaynaklardır|||NUMERIC|PERCENTAGE
@@ -911,8 +911,8 @@ Petrol ürünlerinin kullanılması sonucu havaya en çok yayılan gazın adı n
 Çernobil nükleer kazası ne zaman gerçekleşmiştir|||TEMPORAL|DATE
 Batmanın günümüzde nüfusu kaçtır|||NUMERIC|SIZE.POPULATION
 Deprem, tsunami gibi doğal afetleri önceden haber veren sistemlere ne denir|||DESCRIPTION|DEFINITION
-AKOM un açılımı nedir|||ABBREVIATION|ABBREVIATION
-LIFE nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+AKOM'un açılımı nedir|||ABBREVIATION|ABBREVIATION
+LIFE'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 Ramsar sözleşmesi ilk ne zaman imzalanmıştır|||TEMPORAL|DATE
 Türkiye ramsar sözleşmesini ne zaman imzalamıştır|||TEMPORAL|DATE
 Milli parklar kanunu kaç yılında çıkarılmıştır|||TEMPORAL|DATE
@@ -920,20 +920,20 @@ Türkiyede kaç adet milli park vardır|||NUMERIC|COUNT
 Türkiyede kaç adet koruma alanı vardır|||NUMERIC|COUNT
 Türkiyede kaç adet tabiat anıtı bulunmaktadır|||NUMERIC|COUNT
 Türkiyede kaç adet tabiatı koruma alanı vardır|||NUMERIC|COUNT
-ÇED in açılımı nedir|||ABBREVIATION|ABBREVIATION
+ÇED'in açılımı nedir|||ABBREVIATION|ABBREVIATION
 ÇED  türkiyede ne zamandan beri uygulanmaktadır|||TEMPORAL|DATE
-EEA nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+EEA'nın türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 EEA kaç yılında kurulmuştur|||TEMPORAL|DATE
 EEA nın kaç üyesi vardır|||NUMERIC|COUNT
-Türkiye EEAya kaç yılında üye olmuştur|||TEMPORAL|DATE
-UNEPin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+Türkiye EEA'ya kaç yılında üye olmuştur|||TEMPORAL|DATE
+UNEP'in türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 UNEP ne zaman kurulmuştur|||TEMPORAL|DATE
-UNEPin merkezi hangi ülkededir|||LOCATION|COUNTRY
-WWF nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+UNEP'in merkezi hangi ülkededir|||LOCATION|COUNTRY
+WWF'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 WWF ne zaman kurulmuştur|||TEMPORAL|DATE
 WWF nin kaç ülkede şubesi vardır|||NUMERIC|COUNT
-WCS nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
-FFI nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+WCS'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
+FFI'nin türkçe açılımı nedir|||ABBREVIATION|ABBREVIATION
 FFI ne zaman kurulmuştur|||TEMPORAL|DATE
 Biyolojik çeşitlilik sözleşmesini türkiye kaç yılında imzalamıştır|||TEMPORAL|DATE
 Türkiyede kullanılabilir suyun yüzde kaçı içilebilir su olarak kullanılmaktadır|||NUMERIC|PERCENTAGE
@@ -948,3 +948,53 @@ Avustralya mercan resiflerinin uzunluğu ne kadardır|||NUMERIC|SIZE.LENGTH
 Nil nehri üzerine kurulmuş en büyük barajın adı nedir|||ENTITY|PROPER NOUN
 Filipinlerin başkenti neresidir|||LOCATION|CITY
 Genellikle ekinler biçildikten sonra buğday ve diğer tahılların tarlada kalan sap kısımlarına ne denir|||DESCRIPTION|DEFINITION
+Türkiyenin en kalabalık şehrinin adı nedir|||LOCATION|CITY
+İstanbul'un nüfusu yaklaşık kaçtır|||NUMERIC|SIZE.POPULATION
+Türkiyenin ikinci büyük şehri nedir|||LOCATION|CITY
+Ankaranın yaklaşık nüfusu kaçtır|||NUMERIC|SIZE.POPULATION
+Türkiyenin üçüncü büyük şehri hangisidir|||LOCATION|CITY
+İzmirin nüfusu yaklaşık kaçtır|||NUMERIC|SIZE.POPULATION
+Bursanın nüfusu yaklaşık ne kadardır|||NUMERIC|SIZE.POPULATION
+Türkiyenin en büyük yüz ölçümüne sahip ilinin adı nedir|||LOCATION|CITY
+Konyanın yüzölçümü yaklaşık ne kadardır|||NUMERIC|SIZE.AREA
+Konyanın nüfusu yaklaşık kaçtır|||NUMERIC|SIZE.POPULATION
+Ardahan hangi yıl il yapılmıştır|||TEMPORAL|DATE
+Artvin hangi yıl il yapılmıştır|||TEMPORAL|DATE
+Kars hangi yıl il yapılmıştır|||TEMPORAL|DATE
+Doğubeyazıt hangi yıl ağrıya bağlanmıştır|||TEMPORAL|DATE
+Tuncelinin önceki adı nedir|||ENTITY|PROPER NOUN
+Hatay hangi yıl türkiyeye bağlandı|||TEMPORAL|DATE
+Uşak hangi yıl il haline getirildi|||TEMPORAL|DATE
+Osmaniye hangi yıl il olarak kabul edildi|||TEMPORAL|DATE
+En son il haline getirilen ilçe hangisidir|||LOCATION|CITY
+Düzce hangi yıl il olarak kabul edildi|||TEMPORAL|DATE
+Türkiyenin en az nüfusa sahip ilinin adı nedir|||LOCATION|CITY
+Adananın kaç ilçesi vardır|||NUMERIC|COUNT
+Adana sınırları içinde bulunan dağ geçidinin adı nedir|||ENTITY|PROPER NOUN
+Türk coğrafyasının en doğusundaki ülkenin adı nedir|||LOCATION|COUNTRY
+Türk coğrafyasının en batısında hangi ülke yer alır|||LOCATION|COUNTRY
+Azerbaycanın kuruluş yılı nedir|||TEMPORAL|DATE
+Kazakistanın kuruşuş yılı nedir|||TEMPORAL|DATE
+Özbekistanın kuruluş yılı nedir|||TEMPORAL|DATE
+Türkmeninstanın kuruluş yılı nedir|||TEMPORAL|DATE
+Dünyanın yaşı yaklaşık kaçtır|||NUMERIC|COUNT
+Sudaki tek hücreli canlıların ortaya çıkışı hangi jeolojik zamana rastlar|||TEMPORAL|ERA
+Kömür yatakları hangi jeolojik zamanda oluşmuştur|||TEMPORAL|ERA
+Deniz seviyesinin altında kıyı çizgisinden 200 metre derine kadar inen bölüme ne denir|||DESCRIPTION|DEFINITION
+Kıta sahanlığı ile derin deniz platformunu birbirine bağlayan bölüme ne denir|||DESCRIPTION|DEFINITION
+Dünyadaki denizlerin ortalama derinliği ne kadardır|||NUMERIC|SIZE.DEPTH
+Mariana deniz çukuru kaç kilometre derinliktedir|||NUMERIC|SIZE.DEPTH
+Buzulların taşıyıp biriktirdiği materyallerin, buzulun alt kısmındaki erimeler sonucu meydana gelen dereler tarafından işlenmesiyle oluşan birikintilere ne denir|||DESCRIPTION|DEFINITION
+Geniş yerkabuğu parçalarının yükselmesi ya da çökmesi şeklindeki yer hareketlerine ne denir|||DESCRIPTION|DEFINITION
+Deniz gerilemesine ne denir|||DESCRIPTION|DEFINITION
+Katı haldeki yer kabuğunun sıvı haldeki manto üzerinde batmadan kalabilmesine ne denir|||DESCRIPTION|DEFINITION
+Türkiyede kaç tane büyük fay hattı bulunur|||NUMERIC|COUNT
+Yerin derinliklerinde bulunan magmanın, yerkabuğunun zayıf kısımlarından yeryüzüne çıkmasına ne denir|||DESCRIPTION|DEFINITION
+Katı sıvı ya da gaz halindeki maddelerin yeryüzüne çıktığı yere ne denir|||DESCRIPTION|DEFINITION
+Volkanlardan çıkan akışkan maddeye ne ad verilir|||DESCRIPTION|DEFINITION
+Lavların yeryüzüne çıkmak için izledikleri yola ne denir|||DESCRIPTION|DEFINITION
+Yüzeye çıkan lav ve tüfün oluşturduğu yer şekline ne denir|||DESCRIPTION|DEFINITION
+Volkan konisinin tepe kısmındaki çukurluğa ne denir|||DESCRIPTION|DEFINITION
+Kraterlerin patlama ya da çökmelerle genişlemiş şekillerine ne denir|||DESCRIPTION|DEFINITION
+Volkanik püskürtmeler sırasında görülen etki alanları dar olan depremlere ne denir|||DESCRIPTION|DEFINITION
+Yer kabuğunun derinliklerinde basınç ve gerilimler sonucu, katmanların yer değiştirme, oynama ve kırılma gibi hareketlerinin ortaya çıkardığı sarsıntılara ne denir|||DESCRIPTION|DEFINITION
