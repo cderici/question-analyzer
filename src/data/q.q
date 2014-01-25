@@ -778,7 +778,7 @@ Ayasofya günümüzde ne olarak hizmet vermektedir|ne olarak|Ayasofya günümüz
 TSE ne demektir|TSE||ABBREVIATION|ABBREVIATION
 TSE ne zaman kurulmuştur|ne zaman kurulmuştur|TSE|TEMPORAL|DATE
 TSE bağımsız bir kamu kuruluşuna ne zaman dönüşmüştür|ne zaman dönüşmüştür|TSE bağımsız bir kamu kuruluşuna|TEMPORAL|DATE
-Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin kaç saat olması beklenmektedir|kaç saat|Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin olması beklenmektedir|HUMAN|COUNT
+Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin kaç saat olması beklenmektedir|kaç saat|Hızlı Tren projesi kapsamında Ankara-İstanbul arası yolculuk süresinin olması beklenmektedir|NUMERIC|COUNT
 2010 yılı verilerine göre ülkemizdeki otoyol uzunluğu ne kadardır|otoyol uzunluğu ne kadardır|2010 yılı verilerine göre ülkemizdeki|NUMERIC|SIZE.LENGTH
 Türkiye’de ilk şeker fabrikası hangi tarihte kurulmuştur|hangi tarihte|Türkiyede ilk şeker fabrikası kurulmuştur|TEMPORAL|DATE
 Ülkemizde hangi bölge dışında bütün bölgelerde şeker fabrikası vardır|hangi bölge dışında|Ülkemizde bütün bölgelerde şeker fabrikası vardır|LOCATION|REGION.LOCAL
