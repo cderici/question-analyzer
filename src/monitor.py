@@ -108,7 +108,7 @@ def getAllExpertResults():
 
     if 'stats' in sys.argv:
 
-        print("Total Questions # : " + str(lenQ))
+        print("Total Questions # : " + str(lenQ) + "\n")
         print("ne kadardır # : " + str(lenKadar) + " ----> % " + str(int(lenKadar*100.0/lenQ)))
         print("nedir # : " + str(lenNedir) + " ---------> % " + str(int(lenNedir*100.0/lenQ)))
         print("verilir # : " + str(lenVerilir) + " --------> % " + str(int(lenVerilir*100.0/lenQ)))
@@ -119,9 +119,12 @@ def getAllExpertResults():
 
         lenOther = lenQ-(lenNedir + lenVerilir + lenHangisidir + lenHangi + lenDenir + lenKadar)
 
-        print("\Others # : " + str(lenOther) + " -------> % " + str(int(lenOther*100.0/lenQ)))
+        print("\nOthers # : " + str(lenOther) + " -------> % " + str(int(lenOther*100.0/lenQ)))
 
-        
+        checkSum = lenKadar+lenNedir+lenVerilir+lenHangisidir+lenHangi+lenDenir+lenKac+lenOther
+        print("\nChecksum Status : " + str(checkSum == lenQ))
+        if checkSum != lenQ:
+            print("Diff : " + str(lenQ-checkSum))
 
 if 'experts' in sys.argv:
     getAllExpertResults()
