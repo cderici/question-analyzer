@@ -288,7 +288,7 @@ class RuleBasedQuestionClassification:
                     FN += 1.0;
                     total_FN += 1.0;
             
-            if (TP + FP) != 0.0:
+            if (TP + FP) != 0.0:##
                 Precision = TP / (TP + FP);
             if (TP + FN) != 0.0:
                 Recall = TP / (TP + FN);
@@ -378,10 +378,14 @@ class RuleBasedQuestionClassification:
                 FMeasure = 2 * Precision * Recall / (Precision + Recall);
             
             total_FMeasure += FMeasure;
-            coarseClassResults.append([self.coarseRuleClasses[i].category, Precision, Recall, FMeasure]);
-            ##print('Coarse Class: ' + self.coarseRuleClasses[i].category + '\tTP: ' + str(TP) + '\tTN: ' + str(TN) + '\tFP: ' + str(FP) + '\tFN: ' + str(FN));
-            ##print('Coarse Class: ' + self.coarseRuleClasses[i].category + '\tPrecision: ' + str(Precision) + '\tRecall: ' + str(Recall)+ '\tFMeasure: ' + str(FMeasure));
             
+            coarseClassResults.append([self.coarseRuleClasses[i].category, Precision, Recall, FMeasure]);
+            
+            print('Coarse Class: ' + self.coarseRuleClasses[i].category + '\tTP: ' + str(TP) + '\tTN: ' + str(TN) + '\tFP: ' + str(FP) + '\tFN: ' + str(FN));
+            print('Coarse Class: ' + self.coarseRuleClasses[i].category + '\tPrecision: ' + str(Precision) + '\tRecall: ' + str(Recall)+ '\tFMeasure: ' + str(FMeasure));
+        
+        print('TP: '+str(total_TP)+'\tTN: '+str(total_TN)+'\tFP: '+str(total_FP)+'\tFN: '+str(total_FN));
+        
         Precision = 0.0;
         Recall = 0.0;
         Micro_F = 0.0;
