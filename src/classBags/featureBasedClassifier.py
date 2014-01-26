@@ -1,5 +1,6 @@
 
 import codecs;
+import collections;
 import math;
 
 from maltImporter import MaltImporter;
@@ -8,7 +9,8 @@ class RuleClass:
     category = '';
 
     words = [];
-    wordScores = [];
+    wordTfs = [];
+    wordIdfs = [];
     
     parts = [];
 
@@ -16,7 +18,8 @@ class RuleClass:
         self.category = cat;
 
         self.words = [];
-        self.wordScores = [];
+        self.wordTfs = [];
+        self.wordIdfs = [];
         
         self.parts = [];
 
@@ -26,16 +29,26 @@ class RuleClass:
     def getWordScore(self, word, method):
         for i in range(0, len(self.words)):
             if(self.words[i] == word and method == 'e'):
-                return self.wordScores[i];
+                return self.wordTfs[i] * self.wordIdfs[i];
             if(self.words[i].startswith(word) and method == 'c1'):
-                return self.wordScores[i];
+                return self.wordTfs[i] * self.wordIdfs[i];
             if(word.startswith(self.words[i]) and method == 'c2'):
-                return self.wordScores[i];
+                return self.wordTfs[i] * self.wordIdfs[i];
         return 0.0;
     
-    def removeDuplicates(self):
-        self.words = list(set(self.words));
-
+    def buildClass(self):
+    
+        wordDict = collections.defaultdict(lambda : 0);
+        
+        for word in self.words:
+            wordDict[word] += 1.0;
+        
+        self.words = [];
+        self.wordTfs = [];
+        
+        for key in wordDict.keys():
+            self.words.append(key);
+            self.wordTfs.append(math.log(wordDict[key]));
 
 class QuestionClass:
     
@@ -89,14 +102,14 @@ class RuleBasedQuestionClassification:
         [[allWords.append(word) for word in ruleClass.words] for ruleClass in self.fineRuleClasses];
         
         for ruleClass in self.fineRuleClasses:
-            ruleClass.wordScores = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
+            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
     
     def calculateCoarseFeatureScores(self):
         allWords = [];
         [[allWords.append(word) for word in ruleClass.words] for ruleClass in self.coarseRuleClasses];
 
         for ruleClass in self.coarseRuleClasses:
-            ruleClass.wordScores = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
+            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
 
     def trainModels(self):
             
@@ -114,8 +127,8 @@ class RuleBasedQuestionClassification:
             [fineClass.addToWords(part[2]) for part in question.questionParts if part[2] != '_' and part[2] != '.'];
             [coarseClass.addToWords(part[2]) for part in question.questionParts if part[2] != '_' and part[2] != '.'];
         
-        [ruleClass.removeDuplicates() for ruleClass in self.fineRuleClasses];
-        [ruleClass.removeDuplicates() for ruleClass in self.coarseRuleClasses];
+        [ruleClass.buildClass() for ruleClass in self.fineRuleClasses];
+        [ruleClass.buildClass() for ruleClass in self.coarseRuleClasses];
         
         self.calculateFineFeatureScores();
         self.calculateCoarseFeatureScores();
