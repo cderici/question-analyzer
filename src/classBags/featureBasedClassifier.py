@@ -275,18 +275,20 @@ class RuleBasedQuestionClassification:
             FMeasure = 0.0;
             
             for j in range(0, len(self.fineFinalCategory)):          
-                if(self.testQuestions[j].fineClass == self.fineRuleClasses[i].category and self.fineFinalCategory[j].category == self.fineRuleClasses[i].category):
-                    TP += 1.0;
-                    total_TP += 1.0;
-                if(self.testQuestions[j].fineClass != self.fineRuleClasses[i].category and self.fineFinalCategory[j].category != self.fineRuleClasses[i].category):
-                    TN += 1.0;
-                    total_TN += 1.0;
-                if(self.testQuestions[j].fineClass != self.fineRuleClasses[i].category and self.fineFinalCategory[j].category == self.fineRuleClasses[i].category):
-                    FP += 1.0;
-                    total_FP += 1.0;
-                if(self.testQuestions[j].fineClass == self.fineRuleClasses[i].category and self.fineFinalCategory[j].category != self.fineRuleClasses[i].category):
-                    FN += 1.0;
-                    total_FN += 1.0;
+                if(self.testQuestions[j].coarseClass == self.fineRuleClasses[i].category):
+                    if(self.fineFinalCategory[j].category == self.fineRuleClasses[i].category):
+                        TP += 1.0;
+                        total_TP += 1.0;
+                    else:
+                        FN += 1.0;
+                        total_FN += 1.0;
+                else:
+                    if(self.fineFinalCategory[j].category == self.fineRuleClasses[i].category):
+                        FP += 1.0;
+                        total_FP += 1.0;
+                    else:
+                        TN += 1.0;
+                        total_TN += 1.0;
             
             if (TP + FP) != 0.0:##
                 Precision = TP / (TP + FP);
@@ -357,18 +359,20 @@ class RuleBasedQuestionClassification:
             FMeasure = 0.0;
             
             for j in range(0, len(self.coarseFinalCategory)):          
-                if(self.testQuestions[j].coarseClass == self.coarseRuleClasses[i].category and self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
-                    TP += 1.0;
-                    total_TP += 1.0;
-                if(self.testQuestions[j].coarseClass != self.coarseRuleClasses[i].category and self.coarseFinalCategory[j].category != self.coarseRuleClasses[i].category):
-                    TN += 1.0;
-                    total_TN += 1.0;
-                if(self.testQuestions[j].coarseClass != self.coarseRuleClasses[i].category and self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
-                    FP += 1.0;
-                    total_FP += 1.0;
-                if(self.testQuestions[j].coarseClass == self.coarseRuleClasses[i].category and self.coarseFinalCategory[j].category != self.coarseRuleClasses[i].category):
-                    FN += 1.0;
-                    total_FN += 1.0;
+                if(self.testQuestions[j].coarseClass == self.coarseRuleClasses[i].category):
+                    if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
+                        TP += 1.0;
+                        total_TP += 1.0;
+                    else:
+                        FN += 1.0;
+                        total_FN += 1.0;
+                else:
+                    if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
+                        FP += 1.0;
+                        total_FP += 1.0;
+                    else:
+                        TN += 1.0;
+                        total_TN += 1.0;
             
             if (TP + FP) != 0.0:
                 Precision = TP / (TP + FP);
