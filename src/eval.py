@@ -412,7 +412,7 @@ def evaluate(questions, model, fullInfo=True):
         print("\n\n ==== Evaluation END ==== \n\n")
 
 def evaluateClass(questions):
-    rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
+    rule = RuleBasedQuestionClassification(ourQuestions);
     rule.doClassification();
 # MAIN CONSOLE #
     

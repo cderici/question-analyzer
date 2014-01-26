@@ -168,7 +168,7 @@ if 'hmm' in sys.argv:
 
 
 if 'class' in sys.argv:
-    rule = RuleBasedQuestionClassification(ourQuestions, classPath, classQuestionWordsPath, classQuestionKeywordsPath);
+    rule = RuleBasedQuestionClassification(ourQuestions);
     rule.doClassification();
 
 if 'overall' in sys.argv:
