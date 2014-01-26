@@ -275,7 +275,9 @@ class RuleBasedQuestionClassification:
             FMeasure = 0.0;
             
             for j in range(0, len(self.fineFinalCategory)):          
+
                 if(self.testQuestions[j].coarseClass == self.fineRuleClasses[i].category):
+
                     if(self.fineFinalCategory[j].category == self.fineRuleClasses[i].category):
                         TP += 1.0;
                         total_TP += 1.0;
@@ -289,6 +291,7 @@ class RuleBasedQuestionClassification:
                     else:
                         TN += 1.0;
                         total_TN += 1.0;
+                print("-----------------------------------\n\n")
             
             if (TP + FP) != 0.0:##
                 Precision = TP / (TP + FP);
@@ -359,14 +362,26 @@ class RuleBasedQuestionClassification:
             FMeasure = 0.0;
             
             for j in range(0, len(self.coarseFinalCategory)):          
+                print("------------------------------")
                 if(self.testQuestions[j].coarseClass == self.coarseRuleClasses[i].category):
+                    print("sorudan : " + self.testQuestion[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category)
+                    print(" FP : " + FP)
+                    print(" FN : " + FN)
+                    print(" total_FP : " + total_FP)
+                    print(" total_FN : " + total_FN)
                     if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
+
                         TP += 1.0;
                         total_TP += 1.0;
                     else:
                         FN += 1.0;
                         total_FN += 1.0;
                 else:
+                    print("sorudan : " + self.testQuestion[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category) 
+                    print(" FP : " + FP)
+                    print(" FN : " + FN)
+                    print(" total_FP : " + total_FP)
+                    print(" total_FN : " + total_FN)
                     if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
                         FP += 1.0;
                         total_FP += 1.0;
