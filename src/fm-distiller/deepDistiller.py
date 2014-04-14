@@ -32,7 +32,7 @@ def kacExpert(question, qParts):
             break
 
     if KAC == None:
-        return [], [], kacFC, kacMC
+        return [], [], kacFC, kacMC, "kac"
 
     
     parents = question.findParent(KAC)
@@ -78,7 +78,7 @@ def kacExpert(question, qParts):
                 untilSubject.append(part)
 
         if hasSubject:
-            return untilSubject, [], kacFC, kacMC
+            return untilSubject, [], kacFC, kacMC, "kac"
             #print(QPart.getPartField(part, 'depenTag'))
 
     if qFocus == []:
@@ -95,7 +95,7 @@ def kacExpert(question, qParts):
 
 
     qFocus.reverse()
-    return qFocus, [], kacFC, kacMC
+    return qFocus, [], kacFC, kacMC, "kac"
 
 def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
@@ -108,7 +108,7 @@ def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     but nevertheless
     """
     if not SUBJ:
-        return [], [], nedirFC, nedirMC
+        return [], [], nedirFC, nedirMC, "nedir"
     else:
         
         """ FOCUS EXTRACTION """
@@ -154,7 +154,7 @@ def nedirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
         qFocus.reverse()
         qMods.reverse()
-        return qFocus, qMods, nedirFC, nedirMC
+        return qFocus, qMods, nedirFC, nedirMC, "nedir"
 
 
 def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -180,7 +180,7 @@ def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     DativeADJ = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')[0]
 
     if DativeADJ == []:
-        return [], [], verilirFC, verilirMC
+        return [], [], verilirFC, verilirMC, "verilir"
 
     qFocus.extend([SUBJ, DativeADJ])
 
@@ -232,7 +232,7 @@ def verilirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus.reverse()
     qMods.reverse()
-    return qFocus, qMods, verilirFC, verilirMC
+    return qFocus, qMods, verilirFC, verilirMC, "verilir"
 
 
 def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -249,7 +249,7 @@ def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     DativeADJchildren = question.findChildrenDepenTag(SEN, 'DATIVE.ADJUNCT')
 
     if DativeADJchildren == []:
-        return [], [], denirFC, denirMC
+        return [], [], denirFC, denirMC, "denir"
 
     """ Assumption: if it has more than one dative.adjunct, the last one (the closests to the SENTENCE) is most likely the correct one"""
 
@@ -278,7 +278,7 @@ def denirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
 
     qFocus.reverse()
     qMods.reverse()
-    return qFocus, qMods, denirFC, denirMC
+    return qFocus, qMods, denirFC, denirMC, "denir"
 
 
 def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -294,7 +294,7 @@ def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
         """ this will get the subject which is nearest to the sentence """
         SUBJ = QPart.getQPartWithField(qParts, 'depenTag', 'SUBJECT')
         if not SUBJ:
-            return [], [], hangisidirFC, hangisidirMC
+            return [], [], hangisidirFC, hangisidirMC, "hangisidir"
     else:
         SUBJ = subjChildren[len(subjChildren)-1]
 
@@ -332,7 +332,7 @@ def hangisidirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
 
     qFocus.reverse()
     qMods.reverse()
-    return qFocus, qMods, hangisidirFC, hangisidirMC
+    return qFocus, qMods, hangisidirFC, hangisidirMC, "hangisidir"
 
 
 
@@ -438,7 +438,7 @@ def hangiBtwExpert(question, qParts, trainMode = False, rFocus = [], rMods = [])
     if QPart.getPartField(qFocus[len(qFocus)-1], 'depenTag') != 'SENTENCE':
         qMods.append(SEN)
     
-    return qFocus, qMods, hangiBtwFC, hangiBtwMC
+    return qFocus, qMods, hangiBtwFC, hangiBtwMC, "hangi"
 
 
 def neKadardirExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
@@ -483,11 +483,11 @@ def neKadardirExpert(question, qParts, trainMode = False, rFocus = [], rMods = [
             qFocus.extend(question.tracebackFromFoldTamlama(SUBJ, False, True, False, False, False))
 
         else:
-            return [], [], neKadardirFC, neKadardirMC
+            return [], [], neKadardirFC, neKadardirMC, "kadar"
 
     qFocus.reverse()
     qMods.reverse()
-    return qFocus, qMods, neKadardirFC, neKadardirMC
+    return qFocus, qMods, neKadardirFC, neKadardirMC, "kadar"
 
 def genericExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
     
@@ -506,4 +506,4 @@ def genericExpert(question, qParts, trainMode = False, rFocus = [], rMods = []):
         qFocus.append(subjChild)
         qFocus.extend(question.tracebackFromFoldTamlama(subjChild, True, True, False, False, False))
 
-    return qFocus, [], genericFC, genericMC
+    return qFocus, [], genericFC, genericMC, "generic"

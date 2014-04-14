@@ -50,6 +50,8 @@ class RuleClass:
             self.words.append(key);
             self.wordTfs.append(math.log(wordDict[key]));
 
+        print(self.category + " : " + str(len(self.words)))
+
 class QuestionClass:
     
     coarse = '';
@@ -102,18 +104,20 @@ class RuleBasedQuestionClassification:
         [[allWords.append(word) for word in ruleClass.words] for ruleClass in self.fineRuleClasses];
         
         for ruleClass in self.fineRuleClasses:
-            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
-    
+            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if (w == word or w in word or word in w)])) for word in ruleClass.words];
+
     def calculateCoarseFeatureScores(self):
         allWords = [];
         [[allWords.append(word) for word in ruleClass.words] for ruleClass in self.coarseRuleClasses];
 
         for ruleClass in self.coarseRuleClasses:
-            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if w == word])) for word in ruleClass.words];
+            ruleClass.wordIdfs = [math.log(len(allWords) / len([w for w in allWords if (w == word or w in word or word in w)])) for word in ruleClass.words];
+            # below shows the counts for the words occus once in allWords
+            #print(ruleClass.category + " : " + str(len([hede for hede in ruleClass.wordIdfs if hede == math.log(len(allWords))])))
 
     def trainModels(self):
             
-        fineClassNames = list(set([question.fineClass for question in self.trainQuestions]));    
+        fineClassNames = list(set([question.fineClass for question in self.trainQuestions]));
         self.fineRuleClasses = [RuleClass(fineClassName) for fineClassName in fineClassNames];
 
         coarseClassNames = list(set([question.coarseClass for question in self.trainQuestions]));
@@ -121,6 +125,7 @@ class RuleBasedQuestionClassification:
         
         for question in self.trainQuestions:
             
+            # these are rule class instances
             fineClass = self.getFineRuleClass(question.fineClass);
             coarseClass = self.getCoarseRuleClass(question.coarseClass);
             
@@ -132,18 +137,33 @@ class RuleBasedQuestionClassification:
         
         self.calculateFineFeatureScores();
         self.calculateCoarseFeatureScores();
+
+        #print(self.coarseRuleClasses[1].wordIdfs)
     
     def doClassification(self):
         
-        noOfChunk = 4;
+        noOfChunk = 10;
         
         classNames = list(set([question.coarseClass + '|' + question.fineClass for question in self.questions]));
         
         questionClasses = [QuestionClass(className.split('|')[0], className.split('|')[1]) for className in classNames];
+
+        #print("CLASSES : " + str(len(questionClasses)))
         
         for questionClass in questionClasses:
             questionClass.questions = [question for question in self.questions if question.coarseClass == questionClass.coarse and question.fineClass == questionClass.fine];
             questionClass.setLength();
+
+
+        """
+        total = 0
+        for cls in questionClasses:
+            print(cls.coarse + "." + cls.fine + " : " + str(cls.length))
+            total += cls.length
+
+        print("OHOYYY " + str(total))
+        """
+
             
         listOfTrainQs = [];
         listOfTestQs = [];
@@ -153,23 +173,30 @@ class RuleBasedQuestionClassification:
             testQs = [];
             
             for questionClass in questionClasses:
-                testQs.extend(questionClass.questions[0:questionClass.length/noOfChunk]);
-                ##print(questionClass.coarse+'.'+questionClass.fine+'> '+str(len(questionClass.questions[0:questionClass.length/noOfChunk])));
-                questionClass.questions[0:questionClass.length/noOfChunk] = [];
-                trainQs.extend([question for question in questionClass.originalQuestions if question not in testQs]);
-            ##print('Train Questions: '+str(len(trainQs))+'\tTest Questions: '+str(len(testQs)));
+                if questionClass.length > 70:
+                    testQs.extend(questionClass.questions[0:questionClass.length/noOfChunk]);
+                #print(questionClass.coarse+'.'+questionClass.fine+'> '+str(len(questionClass.questions[0:questionClass.length/noOfChunk])));
+                    questionClass.questions[0:questionClass.length/noOfChunk] = [];
+                    trainQs.extend([question for question in questionClass.originalQuestions if question not in testQs]);
+
+            #print('Train Questions: '+str(len(trainQs))+'\tTest Questions: '+str(len(testQs)));
             listOfTrainQs.append(trainQs);
             listOfTestQs.append(testQs);
+
         
         Precision_Fine_Total = 0.0;
         Recall_Fine_Total = 0.0;
         F_Micro_Fine_Total = 0.0;
         F_Macro_Fine_Total = 0.0;
-        
+        P_Macro_Fine_Total = 0.0
+        R_Macro_Fine_Total = 0.0
+
         Precision_Coarse_Total = 0.0;
         Recall_Coarse_Total = 0.0;
         F_Micro_Coarse_Total = 0.0;
         F_Macro_Coarse_Total = 0.0;
+        P_Macro_Coarse_Total = 0.0
+        R_Macro_Coarse_Total = 0.0
         
         Individual_Coarse_Class_Results = [];
         
@@ -184,28 +211,40 @@ class RuleBasedQuestionClassification:
             Recall_Fine_Total += res[1];
             F_Micro_Fine_Total += res[2];
             F_Macro_Fine_Total += res[3];
+
+            P_Macro_Fine_Total += res[4];
+            R_Macro_Fine_Total += res[5];
+
             print('================================================================');
             print('\n\n>>Fold '+str(i+1) + ' Results:');
             print('\n>Fine Class Results:');
-            print('Micro Average Precision: ' + str(res[0]));
-            print('Micro Average Recall: ' + str(res[1]));
+            #print('Micro Average Precision: ' + str(res[0]));
+            #print('Micro Average Recall: ' + str(res[1]));
             print('Micro Average F-Measure: ' + str(res[2]));
             print('Macro Average F-Measure: ' + str(res[3]));
+            print('Macro Average Precision: ' + str(res[4]));
+            print('Macro Average Recall: ' + str(res[5]));
             
-            res = self.doCoarseClassification();
-            Precision_Coarse_Total += res[0];
-            Recall_Coarse_Total += res[1];
-            F_Micro_Coarse_Total += res[2];
-            F_Macro_Coarse_Total += res[3];
+            res2 = self.doCoarseClassification();
+            Precision_Coarse_Total += res2[0];
+            Recall_Coarse_Total += res2[1];
+            F_Micro_Coarse_Total += res2[2];
+            F_Macro_Coarse_Total += res2[3];
+
+            P_Macro_Coarse_Total += res2[5]
+            R_Macro_Coarse_Total += res2[6]
             
             print('\n>Coarse Class Results:');
-            print('Micro Average Precision: ' + str(res[0]));
-            print('Micro Average Recall: ' + str(res[1]));
-            print('Micro Average F-Measure: ' + str(res[2]));
-            print('Macro Average F-Measure: ' + str(res[3]));
+            #print('Micro Average Precision: ' + str(res2[0]));
+            #print('Micro Average Recall: ' + str(res2[1]));
+            print('Micro Average F-Measure: ' + str(res2[2]));
+            print('Macro Average F-Measure: ' + str(res2[3]));
+            print('Macro Average Precision: ' + str(res2[5]));
+            print('Macro Average Recall: ' + str(res2[6]));
+            
             
             print('\n>Individual Coarse Class Results');
-            for result in res[4]:
+            for result in res2[4]:
                 found = False;
                 for item in Individual_Coarse_Class_Results:
                     if(item[0] == result[0]):
@@ -220,19 +259,24 @@ class RuleBasedQuestionClassification:
                 print(result[0] + '\tPrecision: ' + str(result[1]) + '\tRecall: ' + str(result[2]) + '\tFMeasure: ' + str(result[3]));
         
         print('================================================================');
+        print('================================================================');
         
         print('\n\n====Overall Results=====')
         print('\n>Fine Class Results:');
-        print('Micro Average Precision: ' + str(Precision_Fine_Total/(noOfChunk*1.0)));
-        print('Micro Average Recall: ' + str(Recall_Fine_Total/(noOfChunk*1.0)));
+        #print('Micro Average Precision: ' + str(Precision_Fine_Total/(noOfChunk*1.0)));
+        #print('Micro Average Recall: ' + str(Recall_Fine_Total/(noOfChunk*1.0)));
         print('Micro Average F-Measure: ' + str(F_Micro_Fine_Total/(noOfChunk*1.0)));
         print('Macro Average F-Measure: ' + str(F_Macro_Fine_Total/(noOfChunk*1.0)));
+        print('Macro Average Precision: ' + str(P_Macro_Fine_Total/(noOfChunk*1.0)));
+        print('Macro Average Recall: ' + str(R_Macro_Fine_Total/(noOfChunk*1.0)));
         
         print('\n>Coarse Class Results:');
-        print('Micro Average Precision: ' + str(Precision_Coarse_Total/(noOfChunk*1.0)));
-        print('Micro Average Recall: ' + str(Recall_Coarse_Total/(noOfChunk*1.0)));
+        #print('Micro Average Precision: ' + str(Precision_Coarse_Total/(noOfChunk*1.0)));
+        #print('Micro Average Recall: ' + str(Recall_Coarse_Total/(noOfChunk*1.0)));
         print('Micro Average F-Measure: ' + str(F_Micro_Coarse_Total/(noOfChunk*1.0)));
         print('Macro Average F-Measure: ' + str(F_Macro_Coarse_Total/(noOfChunk*1.0)));
+        print('Macro Average Precision: ' + str(P_Macro_Coarse_Total/(noOfChunk*1.0)));
+        print('Macro Average Recall: ' + str(R_Macro_Coarse_Total/(noOfChunk*1.0)));
         
         print('\n>Individual Coarse Class Results');
         for result in Individual_Coarse_Class_Results:
@@ -242,8 +286,13 @@ class RuleBasedQuestionClassification:
 
         self.fineFinalCategory = [];
         
-        noOfCategoryInTest = len(list(set([question.fineClass for question in self.testQuestions])));
-        
+        hede = list(set([question.fineClass for question in self.testQuestions]))
+
+        noOfCategoryInTest = len(hede)
+
+        print(noOfCategoryInTest)
+        print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+        print(hede)
         for question in self.testQuestions:
             scores1 = [sum([ruleClass.getWordScore(item[1], 'e') for item in question.questionParts]) * 2 for ruleClass in self.fineRuleClasses];
             scores2 = [sum([ruleClass.getWordScore(item[1], 'c1') for item in question.questionParts]) * 1 for ruleClass in self.fineRuleClasses];
@@ -263,6 +312,8 @@ class RuleBasedQuestionClassification:
         total_FN = 0.0;
         
         total_FMeasure = 0.0;
+        total_Precision = 0.0;
+        total_Recall = 0.0;
         
         for i in range(0, len(self.fineRuleClasses)):
             TP = 0.0;
@@ -291,7 +342,6 @@ class RuleBasedQuestionClassification:
                     else:
                         TN += 1.0;
                         total_TN += 1.0;
-                print("-----------------------------------\n\n")
             
             if (TP + FP) != 0.0:##
                 Precision = TP / (TP + FP);
@@ -301,9 +351,12 @@ class RuleBasedQuestionClassification:
                 FMeasure = 2 * Precision * Recall / (Precision + Recall);
             
             total_FMeasure += FMeasure;
+
+            total_Precision += Precision;
+            total_Recall += Recall;
             
-            ##print('Fine Class: ' + self.fineRuleClasses[i].category + '\tTP: ' + str(TP) + '\tTN: ' + str(TN) + '\tFP: ' + str(FP) + '\tFN: ' + str(FN));
-            ##print('Fine Class: ' + self.fineRuleClasses[i].category + '\tPrecision: ' + str(Precision) + '\tRecall: ' + str(Recall)+ '\tFMeasure: ' + str(FMeasure));
+            print('Fine Class: ' + self.fineRuleClasses[i].category + '\tTP: ' + str(TP) + '\tTN: ' + str(TN) + '\tFP: ' + str(FP) + '\tFN: ' + str(FN));
+            print('Fine Class: ' + self.fineRuleClasses[i].category + '\tPrecision: ' + str(Precision) + '\tRecall: ' + str(Recall)+ '\tFMeasure: ' + str(FMeasure));
             
         Precision = 0.0;
         Recall = 0.0;
@@ -320,8 +373,11 @@ class RuleBasedQuestionClassification:
             Micro_F = 2 * Precision * Recall / (Precision + Recall);
 
         Macro_F = total_FMeasure / noOfCategoryInTest;
+
+        Macro_P = total_Precision / noOfCategoryInTest;
+        Macro_R = total_Recall / noOfCategoryInTest;
         
-        return [Precision, Recall, Micro_F, Macro_F];
+        return [Precision, Recall, Micro_F, Macro_F, Macro_P, Macro_R];
     
     def doCoarseClassification(self):
         
@@ -329,6 +385,7 @@ class RuleBasedQuestionClassification:
         
         self.coarseFinalCategory = [];
         
+        # interesting
         noOfCategoryInTest = len(list(set([question.coarseClass for question in self.testQuestions])));
         
         for question in self.testQuestions:
@@ -336,9 +393,11 @@ class RuleBasedQuestionClassification:
             scores2 = [sum([ruleClass.getWordScore(item[1], 'c1') for item in question.questionParts]) * 1 for ruleClass in self.coarseRuleClasses];
             scores3 = [sum([ruleClass.getWordScore(item[1], 'c2') for item in question.questionParts]) * 1 for ruleClass in self.coarseRuleClasses];
 
+            #print(scores2)
             totalScores = [scores1[i] + scores2[i] + scores3[i] for i in range(len(scores1))];
-
+            #print(totalScores)
             indexOfBestScore = totalScores.index(max(totalScores));
+            
 
             self.coarseFinalCategory.append(self.coarseRuleClasses[indexOfBestScore]);
             
@@ -350,6 +409,8 @@ class RuleBasedQuestionClassification:
         total_FN = 0.0;
         
         total_FMeasure = 0.0;
+        total_Precision = 0.0
+        total_Recall = 0.0
         
         for i in range(0, len(self.coarseRuleClasses)):
             TP = 0.0;
@@ -360,29 +421,40 @@ class RuleBasedQuestionClassification:
             Precision = 0.0;
             Recall = 0.0;
             FMeasure = 0.0;
-            
+            #print("HAYDE BAKALIM -> " + self.coarseRuleClasses[i].category)
             for j in range(0, len(self.coarseFinalCategory)):          
-                print("------------------------------")
-                if(self.testQuestions[j].coarseClass == self.coarseRuleClasses[i].category):
-                    print("sorudan : " + self.testQuestion[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category)
-                    print(" FP : " + FP)
-                    print(" FN : " + FN)
-                    print(" total_FP : " + total_FP)
-                    print(" total_FN : " + total_FN)
-                    if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
+                #print("------------------------------")
+                sorununClass = self.testQuestions[j].coarseClass
+                
+                ilgilendigim = self.coarseRuleClasses[i].category
+
+                makinaCevap = self.coarseFinalCategory[j].category
+
+                if(sorununClass == ilgilendigim):
+                    """
+                    print("sorudan : " + self.testQuestions[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category)
+                    print(" FP : " + str(FP))
+                    print(" FN : " + str(FN))
+                    print(" total_FP : " + str(total_FP))
+                    print(" total_FN : " + str(total_FN))
+                    """
+                    if(makinaCevap == ilgilendigim):
 
                         TP += 1.0;
                         total_TP += 1.0;
                     else:
                         FN += 1.0;
                         total_FN += 1.0;
+
                 else:
-                    print("sorudan : " + self.testQuestion[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category) 
-                    print(" FP : " + FP)
-                    print(" FN : " + FN)
-                    print(" total_FP : " + total_FP)
-                    print(" total_FN : " + total_FN)
-                    if(self.coarseFinalCategory[j].category == self.coarseRuleClasses[i].category):
+                    """
+                    print("sorudan : " + self.testQuestions[j].coarseClass + " - ruleClasses " + self.fineRuleClasses[i].category) 
+                    print(" FP : " + str(FP))
+                    print(" FN : " + str(FN))
+                    print(" total_FP : " + str(total_FP))
+                    print(" total_FN : " + str(total_FN))
+                    """
+                    if(makinaCevap == ilgilendigim):
                         FP += 1.0;
                         total_FP += 1.0;
                     else:
@@ -397,6 +469,8 @@ class RuleBasedQuestionClassification:
                 FMeasure = 2 * Precision * Recall / (Precision + Recall);
             
             total_FMeasure += FMeasure;
+            total_Precision += Precision
+            total_Recall += Recall
             
             coarseClassResults.append([self.coarseRuleClasses[i].category, Precision, Recall, FMeasure]);
             
@@ -420,5 +494,7 @@ class RuleBasedQuestionClassification:
             Micro_F = 2 * Precision * Recall / (Precision + Recall);
 
         Macro_F = total_FMeasure / noOfCategoryInTest;
+        Macro_P = total_Precision / noOfCategoryInTest
+        Macro_R = total_Recall / noOfCategoryInTest
         
-        return [Precision, Recall, Micro_F, Macro_F, coarseClassResults];
+        return [Precision, Recall, Micro_F, Macro_F, coarseClassResults, Macro_P, Macro_R];

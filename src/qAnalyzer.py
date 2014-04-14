@@ -95,10 +95,10 @@ class QuestionAnalysis:
         return focusCombined, focusConfidences
         
 
-    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False, onlyForward=True, genericEnable=False):
+    def extractFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False, onlyForward=True, genericEnable=False, whichDistEnable=False):
         dist = Distiller(self.question, genericEnable)
 
-        ruleFocus, ruleMod, fRuleConf, mRuleConf = dist.FM_Distiller()
+        ruleFocus, ruleMod, fRuleConf, mRuleConf, whichDist = dist.FM_Distiller()
         #print(ruleFocus)
         if onlyDistiller:
             focusCombined = ruleFocus
@@ -121,7 +121,10 @@ class QuestionAnalysis:
         self.question.mod = ruleMod # out of question at this point
         self.question.focusConfidence = mRuleConf # out of question at this point
 
-        return ruleFocus, hmmResults, focusCombined, focusConfidences
+        if whichDistEnable:
+            return ruleFocus, hmmResults, focusCombined, focusConfidences, whichDist
+        else:
+            return ruleFocus, hmmResults, focusCombined, focusConfidences
 
     def showFocusMod(self, reverseGlass, normalGlass, onlyDistiller=False):
         ruleFocus, hmmResults, focusCombined, focusConfidences = self.extractFocusMod(reverseGlass, normalGlass, onlyDistiller)

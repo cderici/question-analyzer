@@ -145,12 +145,22 @@ class Glass:
                     nonZeroProb = totalNon / (totalFN*1.0)
                     self.tagProbs[tag] = {'total':0, 'focus':focusZeroProb, 'mod':1, 'non':nonZeroProb}
 
-                currentFocusProb = prevProb*self.tagProbs[tag]['focus']*self.transitionProbs[prevState]['FOC']
+                tersProb = 0.0
+                totalFoc = 0.0
+                totalNon = 0.0
+                for word in self.tagProbs.keys():
+                    totalFoc += self.tagProbs[word]['focus']
+                    totalNon += self.tagProbs[word]['non']
 
+                tersFocProb = self.tagProbs[tag]['focus']/totalFoc
+                tersNonProb = self.tagProbs[tag]['non']/totalNon
+                
+                currentFocusProb = prevProb*tersFocProb*self.transitionProbs[prevState]['FOC']
+                
                 #print("\nFOCPROB: " + str(currentFocusProb))
-                currentModProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
+                currentModProb = prevProb * tersNonProb * self.transitionProbs[prevState]['NON']
                 #print("MODPROB: " + str(currentModProb))
-                currentNonProb = prevProb*self.tagProbs[tag]['non']*self.transitionProbs[prevState]['NON']
+                currentNonProb = prevProb * tersNonProb * self.transitionProbs[prevState]['NON']
                 #print("NONPROB: " + str(currentNonProb))
                 highestState = max(currentFocusProb, currentModProb, currentNonProb)
 

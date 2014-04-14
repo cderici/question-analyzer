@@ -41,16 +41,18 @@ def computePerClassCounts(goldParts, resultParts, resultsDict):
 # displayResults: 
 # just creates the display and prints it to stdout
 #
-def displayResults(modelName, results, fullInfo):
+def displayResults(modelName, results, fullInfo, individual=False):
     print("\nResults for : " + modelName + "\n\n")
         
-    total = str(results['totalFParts'])
+    if not individual:
+        total = str(results['totalFParts'])
     tp = results['TP']*1.0
     fn = results['FN']*1.0
     fp = results['FP']*1.0
     
     if fullInfo:
-        print("Total Focus # : " + total)
+        if not individual:
+            print("Total Focus # : " + total)
     
         print("-- TP : " + str(int(tp)))
         print("-- FN : " + str(int(fn)))
@@ -98,23 +100,49 @@ def prepareTenFoldIndexes(questions):
 def evaluateDistiller(questionSet, genericEnable=False):
 
     results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+    counts = {'nodist':0,
+              'nosen':0,
+              'nogen':0,
+              'kac':0,
+              'nedir':0,
+              'verilir':0,
+              'denir':0,
+              'hangisidir':0,
+              'hangi':0,
+              'kadar':0,
+              'generic':0}
+
+    indResults = {'nedir': {'TP':0, 'FP':0, 'FN':0},
+                  'verilir': {'TP':0, 'FP':0, 'FN':0},
+                  'denir': {'TP':0, 'FP':0, 'FN':0}}
 
     for question in questionSet:
 
         results['totalFParts'] += len(question.trueFocus)
 
         # actual focus detection starts to work
-        ruleFocus, hmmResults, focusCombined, focusConfidences = QuestionAnalysis(question).extractFocusMod(None, None, True, False, genericEnable)
+        ruleFocus, hmmResults, focusCombined, focusConfidences, whichDist = QuestionAnalysis(question).extractFocusMod(None, None, True, False, genericEnable, whichDistEnable=True)
+
+        counts[whichDist] += 1
+
+        oldRes = results.copy()
 
         # computing tp, fp and fn
         results = computePerClassCounts(question.trueFocus, ruleFocus, results)
+
+        # HACK
+        if whichDist == 'nedir' or whichDist == 'denir' or whichDist == 'verilir':
+            indResults[whichDist]['TP'] += (results['TP']-oldRes['TP'])
+            indResults[whichDist]['FP'] += (results['FP']-oldRes['FP'])
+            indResults[whichDist]['FN'] += (results['FN']-oldRes['FN'])
+            
 
     genStatus = "Disabled"
     if genericEnable:
         genStatus = "Enabled"
     
     mName = 'FM-Distiller Alone - generic expert ' + genStatus 
-    return mName, results
+    return mName, results, counts, indResults
 
 # evaluateGlasses
 # only evaluates the HMM-Glasses, 
@@ -377,12 +405,35 @@ def evaluate(questions, model, fullInfo=True):
 
     if model=='distiller':
         # GE : generic expert enabled & GD : generic expert disabled
-        mNameGE, resultsGE = evaluateDistiller(questions, genericEnable=True)
-        mNameGD, resultsGD = evaluateDistiller(questions, genericEnable=False)
+        mNameGE, resultsGE, counts, indCounts = evaluateDistiller(questions, genericEnable=True)
+        mNameGD, resultsGD, counts, indCounts = evaluateDistiller(questions, genericEnable=False)
         
 
         displayResults(mNameGE, resultsGE, fullInfo)
         displayResults(mNameGD, resultsGD, fullInfo)
+
+        # HACK
+        print("\n-- Individual Class Scores --\n")
+
+        displayResults("nedir", indCounts['nedir'], fullInfo, True)
+        displayResults("verilir", indCounts['verilir'], fullInfo, True)
+        displayResults("denir", indCounts['denir'], fullInfo, True)
+
+
+        print(counts)
+
+        total = sum(counts.values())
+        print(total)
+        print(total==len(questions))
+
+        totalPercent = 0
+
+        for countKey in counts:
+            print(countKey + " - " + str(counts[countKey]) + " - % " + str(counts[countKey]*100.0/total))
+            totalPercent += counts[countKey]*100.0/total
+
+        print("total percent check : " + str(totalPercent))
+        
 
     elif model=="glasses":
         bModelName, backResults = evaluateGlasses(questions, questions, backwards=True)
@@ -418,7 +469,7 @@ def evaluateClass(questions):
     
 
 
-fullInfo = True
+fullInfo = False
 
 all = 'all' in sys.argv
 
@@ -436,3 +487,18 @@ if all or 'class' in sys.argv:
 
 if all or 'cross' in sys.argv:
     crossValidate(ourQuestions, True)
+
+if 'pick' in sys.argv:
+    sq = copy.deepcopy(ourQuestions)
+
+    shuffle(sq)
+
+    sq = sq[0:10]
+
+    terms = []
+
+    for q in sq:
+        terms.append(q.questionText.split())
+
+    for t in terms:
+        print(t)

@@ -35,7 +35,7 @@ class Distiller():
         if not SEN:
             # raise RuntimeError("Something's REALLY wrong! Here's the question: " + self.question.questionText)
             #print("ATTENTION: A question *without* a sentence has just been detected! -> " + self.question.questionText)
-            return [], [], 0, 0
+            return [], [], 0, 0, "nosen"
 
         SENtext = QPart.getPartField(SEN, 'text')
 
@@ -76,7 +76,7 @@ class Distiller():
             if self.genericEnable:
                 return genericExpert(self.question, qParts)
             else:
-                return [],[],0,0
+                return [],[],0,0, "nogen"
 
 
         # neresidir/nerede
@@ -86,7 +86,7 @@ class Distiller():
         # kac/kaci/kacini/ne kadar
         
         # dummy return, should never reach here
-        return [], [], 0, 0
+        return [], [], 0, 0, "nodist"
 
     def checkForKac(self, qParts):
         for part in self.question.questionParts:
