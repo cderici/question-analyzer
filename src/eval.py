@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import sys
+
+sys.path.append('querier')
+
 from qAnalyzer import *
 from maltImporter import MaltImporter
 from hmmGlasses import *
@@ -9,6 +13,8 @@ from random import shuffle
 
 import pickle, os, copy
 
+from indriHandler import *
+from indriDocFetch import *
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
@@ -502,3 +508,43 @@ if 'pick' in sys.argv:
 
     for t in terms:
         print(t)
+
+
+if 'IR' in sys.argv:
+    
+    totalFound = 0
+
+    for i in range(len(ourQuestions)):
+        #sys.stdout.write('|')
+        queryID = i+1
+
+        docs = singleIndriQuery(queryID)
+
+        docsContainAnswer = 0
+
+        found=False
+
+        for docID in docs:
+            doc = getDoc(docID)
+            answerText = ourQuestions[i].answer.encode('utf8')
+
+            answers = answerText.split('/')
+
+            for answer in answers:
+                if (answer in doc) or (answer.lower() in doc) or (answer.upper() in doc):
+                    docsContainAnswer += 1
+                    print(answer)
+                    found=True
+                    break
+
+            if found:
+                break
+
+        if docsContainAnswer != 0:
+            totalFound += 1
+
+    print("IR Take I Results : ")
+    print("Indri (first 5 guess)")
+    print(str(totalFound) + " / 1000")
+
+    print("\nCorrectly found documents containing answers for " + str(totalFound/10.0) + "% questions... END")

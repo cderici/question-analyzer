@@ -9,7 +9,7 @@ paramDir = "/home/caner/question-analyzer/src/querier/queries/"
 
 def singleIndriQuery(paramFileName):
 
-    print("BEGIN: makeSingleQuery " + str(paramFileName))
+    #print("BEGIN: makeSingleQuery " + str(paramFileName))
 
     """ sample query:
     /home/.../runquery/IndriRunQuery -count=5 /home/.../queries/123

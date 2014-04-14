@@ -185,3 +185,19 @@ if 'query' in sys.argv:
             print("Indri relevant docs: ")
             print(docs)
             print("End.")
+
+if 'relatedDoc' in sys.argv:
+
+    from indriHandler import singleIndriQuery
+    from indriDocFetch import getDoc
+
+    docs = singleIndriQuery(1)
+
+    print(ourQuestions[0])
+    print(docs)
+
+    for dc in docs:
+        doc = getDoc(dc)
+        print(doc)
+        print(type(doc))
+        print("Sonbahar" in doc)
