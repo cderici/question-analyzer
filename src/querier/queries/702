@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Terrarosa toprakları hangi bölgemizde daha sık görülür)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(İnsanlar havayolu ulaşımından yeryüzünün hangi katmanında faydalanırlar)</text>
+</query>
+</parameters>

@@ -75,6 +75,8 @@ class Question:
     mod = [];
     modConfidence = 0
 
+    answer = '';
+
     ##Dependency parsed question parts
     questionParts = [];
 

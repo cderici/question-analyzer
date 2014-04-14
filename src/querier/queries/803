@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Toprağın belirli bir süre için tamamen veya kısmen aniden su altında kalmasına ne denir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Karasal iklimde yıllık yağış miktarı kaç mm'dir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Türkiye’de en fazla pirinç tarımının yapıldığı akarsu havzasının ismi nedir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Japonya’da yıllık ortalama deprem sayısı kaçtır)</text>
+</query>
+</parameters>

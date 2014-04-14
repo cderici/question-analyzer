@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Ülkemizdeki 2010 yılında toplam turist sayısı ne kadardır)</text>
+</query>
+</parameters>

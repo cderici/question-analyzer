@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Kutuplara yakın yerde kar ve buz kullanılarak yapılan meskenlere ne ad verilir)</text>
+</query>
+</parameters>

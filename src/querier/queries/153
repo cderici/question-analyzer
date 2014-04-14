@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Kuzey Amerika'nın doğu kıyılarının batı kıyılarına göre daha soğuk olmasına sebep olan nedir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(1972 yılındaki Dünya Doğal ve Kültürel Mirası Koruma Konvansiyonu kaç maddeden oluşur)</text>
+</query>
+</parameters>

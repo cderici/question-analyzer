@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Koyun ve keçi gibi hayvanların genel adı nedir)</text>
+</query>
+</parameters>

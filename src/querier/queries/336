@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Ağaç malzeme kullanılarak ya da ağaçların üst üste konulmasıyla yapılan meskenlere ne denir)</text>
+</query>
+</parameters>

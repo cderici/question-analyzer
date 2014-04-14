@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Gölgelendirme yöntemi ile çizim yapılırken haritanın sağ üst köşesinden kaç derecelik bir açıyla ışık geldiği varsayılır)</text>
+</query>
+</parameters>

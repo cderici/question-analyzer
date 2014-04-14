@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Dünya üzerindeki bir noktanın başlangıç meridyenine en yakin uzaklığının açı cinsinden değerine ne ad verilir)</text>
+</query>
+</parameters>

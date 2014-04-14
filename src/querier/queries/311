@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(İnsanların yaşamlarını sürdürdükleri ve çeşitli ekonomik faaliyetlerde bulundukları bölgeye ne denir)</text>
+</query>
+</parameters>

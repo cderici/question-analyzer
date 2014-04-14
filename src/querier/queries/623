@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Ülkeler arası beyin göçü hangi yıldan sonra hız kazanmıştır)</text>
+</query>
+</parameters>

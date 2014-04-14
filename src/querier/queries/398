@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Günümüzde doğadan yararlanmamızı artıran ve hızlandıran en önemli faktör nedir)</text>
+</query>
+</parameters>

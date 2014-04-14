@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Ölçeği 1/20 000 ile 1/200 000 arasında olan haritalar hangileridir)</text>
+</query>
+</parameters>

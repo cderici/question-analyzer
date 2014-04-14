@@ -49,6 +49,8 @@ class MaltImporter:
             question.coarseClass = qTexts[i][3];
             question.fineClass = qTexts[i][4];
             question.setMeta(qTexts[i][1], qTexts[i][2]);
+
+            question.answer = qTexts[i][5];
             
             self.questions.append(question);
             

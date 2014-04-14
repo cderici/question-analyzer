@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Fırat nehrinde bahar aylarında saniyede geçen ortalama su akımı ne kadardır)</text>
+</query>
+</parameters>

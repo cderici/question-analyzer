@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Bir ülke içinde bölge şehir ve köy gibi bir yerden diğerine yönelik nüfus hareketlerine ne denir)</text>
+</query>
+</parameters>

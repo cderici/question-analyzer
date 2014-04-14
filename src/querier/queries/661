@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(1950 yılında Dünya genelinde kişi başına düşen milli gelir ne kadardır)</text>
+</query>
+</parameters>

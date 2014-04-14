@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(IMF'de en fazla oy hakkı olan ülke hangisidir)</text>
+</query>
+</parameters>

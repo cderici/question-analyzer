@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(1907 yılında Çin’de meydana gelen kuraklık sonucu kaç kişi açlıktan etkilenmiştir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Su gücüyle çalışan iplik makinesi hangi tarihte icat edilmiştir)</text>
+</query>
+</parameters>

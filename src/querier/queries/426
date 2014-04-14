@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Osmanlı devletinde ilk nüfus sayımı hangi padişah zamanında yapılmıştır)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Türkiye’nin en geniş yüz ölçümüne sahip şehri neresidir)</text>
+</query>
+</parameters>

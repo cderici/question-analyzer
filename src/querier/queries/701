@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Petrol yataklarımızın büyük bir çoğunluğu hangi bölgemizde yer almaktadır)</text>
+</query>
+</parameters>

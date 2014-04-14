@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Türkiyenin iç kesimlerinde ormanların tahrip edilmesiyle oluşan ve doğal olmayan bozkır alanlarına ne denir)</text>
+</query>
+</parameters>

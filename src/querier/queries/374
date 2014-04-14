@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(1955 yılında 5500 kişinin öldüğü deprem nerede gerçekleşmiştir)</text>
+</query>
+</parameters>

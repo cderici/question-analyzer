@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Volkanik alanlardaki çukurların suyla dolması sonucu oluşan göllere ne isim verilir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Karadeniz kıyılarında ormanların tahrip edildiği bölgelerde rastlanan çalılara ne ad verilir)</text>
+</query>
+</parameters>

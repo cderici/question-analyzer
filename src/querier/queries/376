@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Bir ülkenin hemen her bölgesinde aynı kültürel özelliklerin görülmesi ne olarak nitelendirilir)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Kömür yatakları hangi jeolojik zamanda oluşmuştur)</text>
+</query>
+</parameters>

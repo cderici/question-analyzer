@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(1950-2010 yılları arasında nüfus en fazla hangi kıtalarda toplanmıştır)</text>
+</query>
+</parameters>

@@ -1,0 +1,9 @@
+ 
+<parameters>
+<index>/home/caner/clean/indri-5.0/vikiIndex/</index>
+
+<query>
+<number>0</number>
+<text>#combine(Deprem tsunami gibi doğal afetleri önceden haber veren sistemlere ne denir)</text>
+</query>
+</parameters>
