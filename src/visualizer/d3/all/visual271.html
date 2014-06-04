@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2890, {label: "Sismoloji",nodeclass: "type-TK"});g.addNode(2891, {label: "neyle",nodeclass: "type-TK"});g.addNode(2892, {label: "ilgili",nodeclass: "type-TK"});g.addNode(2893, {label: "araştır",nodeclass: "type-TK"});g.addNode(2894, {label: "araştırmaları",nodeclass: "type-TK"});g.addNode(2895, {label: "yapar",nodeclass: "type-TK"});g.addNode(2896, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2890,2894,{label: "CLASSIFIER"});g.addEdge(null,2891,2892,{label: "OBJECT"});g.addEdge(null,2892,2894,{label: "MODIFIER"});g.addEdge(null,2893,2894,{label: "DERIV"});g.addEdge(null,2894,2895,{label: "OBJECT"});g.addEdge(null,2895,2896,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(2889, {label: "Sismoloji",nodeclass: "type-TK"});
+ g.addNode(2890, {label: "neyle",nodeclass: "type-TK"});
+ g.addNode(2891, {label: "ilgili",nodeclass: "type-TK"});
+ g.addNode(2892, {label: "araştır",nodeclass: "type-TK"});
+ g.addNode(2893, {label: "araştırmaları",nodeclass: "type-TK"});
+ g.addNode(2894, {label: "yapar",nodeclass: "type-TK"});
+ g.addNode(2895, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,2889,2893,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2890,2891,{label: "NESNE"});
+ g.addEdge(null,2891,2893,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2892,2893,{label: "TÜREME"});
+ g.addEdge(null,2893,2894,{label: "NESNE"});
+ g.addEdge(null,2894,2895,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

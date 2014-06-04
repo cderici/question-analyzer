@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(950, {label: "Ülkemize",nodeclass: "type-TK"});g.addNode(951, {label: "çölden",nodeclass: "type-TK"});g.addNode(952, {label: "esen",nodeclass: "type-TK"});g.addNode(953, {label: "rüzgâr",nodeclass: "type-TK"});g.addNode(954, {label: "hangi",nodeclass: "type-TK"});g.addNode(955, {label: "hangisidir",nodeclass: "type-TK"});g.addNode(956, {label: ".",nodeclass: "type-TK"});g.addEdge(null,950,955,{label: "DATIVE.ADJUNCT"});g.addEdge(null,951,955,{label: "MODIFIER"});g.addEdge(null,952,953,{label: "MODIFIER"});g.addEdge(null,953,955,{label: "SUBJECT"});g.addEdge(null,954,955,{label: "DERIV"});g.addEdge(null,955,956,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(949, {label: "Ülkemize",nodeclass: "type-TK"});
+ g.addNode(950, {label: "çölden",nodeclass: "type-TK"});
+ g.addNode(951, {label: "esen",nodeclass: "type-TK"});
+ g.addNode(952, {label: "rüzgâr",nodeclass: "type-TK"});
+ g.addNode(953, {label: "hangi",nodeclass: "type-TK"});
+ g.addNode(954, {label: "hangisidir",nodeclass: "type-TK"});
+ g.addNode(955, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,949,954,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,950,954,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,951,952,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,952,954,{label: "ÖZNE"});
+ g.addEdge(null,953,954,{label: "TÜREME"});
+ g.addEdge(null,954,955,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

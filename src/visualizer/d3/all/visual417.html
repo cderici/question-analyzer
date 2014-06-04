@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,40 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4646, {label: "Toprağın",nodeclass: "type-TK"});g.addNode(4647, {label: "yağ",nodeclass: "type-TK"});g.addNode(4648, {label: "yağış",nodeclass: "type-TK"});g.addNode(4649, {label: "suları",nodeclass: "type-TK"});g.addNode(4650, {label: "ve",nodeclass: "type-TK"});g.addNode(4651, {label: "rüzgarlar",nodeclass: "type-TK"});g.addNode(4652, {label: "tarafından",nodeclass: "type-TK"});g.addNode(4653, {label: "aşın",nodeclass: "type-TK"});g.addNode(4654, {label: "_",nodeclass: "type-TK"});g.addNode(4655, {label: "_",nodeclass: "type-TK"});g.addNode(4656, {label: "aşındırılıp",nodeclass: "type-TK"});g.addNode(4657, {label: "taşın",nodeclass: "type-TK"});g.addNode(4658, {label: "taşınmasına",nodeclass: "type-TK"});g.addNode(4659, {label: "ne",nodeclass: "type-TK"});g.addNode(4660, {label: "de",nodeclass: "type-TK"});g.addNode(4661, {label: "denir",nodeclass: "type-TK"});g.addNode(4662, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4646,4647,{label: "SUBJECT"});g.addEdge(null,4647,4648,{label: "DERIV"});g.addEdge(null,4648,4649,{label: "CLASSIFIER"});g.addEdge(null,4649,4650,{label: "SUBJECT"});g.addEdge(null,4650,4651,{label: "COORDINATION"});g.addEdge(null,4651,4652,{label: "OBJECT"});g.addEdge(null,4652,4661,{label: "MODIFIER"});g.addEdge(null,4653,4654,{label: "DERIV"});g.addEdge(null,4654,4655,{label: "DERIV"});g.addEdge(null,4655,4656,{label: "DERIV"});g.addEdge(null,4656,4657,{label: "MODIFIER"});g.addEdge(null,4657,4658,{label: "DERIV"});g.addEdge(null,4658,4661,{label: "DATIVE.ADJUNCT"});g.addEdge(null,4659,4661,{label: "MODIFIER"});g.addEdge(null,4660,4661,{label: "DERIV"});g.addEdge(null,4661,4662,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(4645, {label: "Toprağın",nodeclass: "type-TK"});
+ g.addNode(4646, {label: "yağ",nodeclass: "type-TK"});
+ g.addNode(4647, {label: "yağış",nodeclass: "type-TK"});
+ g.addNode(4648, {label: "suları",nodeclass: "type-TK"});
+ g.addNode(4649, {label: "ve",nodeclass: "type-TK"});
+ g.addNode(4650, {label: "rüzgarlar",nodeclass: "type-TK"});
+ g.addNode(4651, {label: "tarafından",nodeclass: "type-TK"});
+ g.addNode(4652, {label: "aşın",nodeclass: "type-TK"});
+ g.addNode(4653, {label: "_",nodeclass: "type-TK"});
+ g.addNode(4654, {label: "_",nodeclass: "type-TK"});
+ g.addNode(4655, {label: "aşındırılıp",nodeclass: "type-TK"});
+ g.addNode(4656, {label: "taşın",nodeclass: "type-TK"});
+ g.addNode(4657, {label: "taşınmasına",nodeclass: "type-TK"});
+ g.addNode(4658, {label: "ne",nodeclass: "type-TK"});
+ g.addNode(4659, {label: "de",nodeclass: "type-TK"});
+ g.addNode(4660, {label: "denir",nodeclass: "type-TK"});
+ g.addNode(4661, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,4645,4646,{label: "ÖZNE"});
+ g.addEdge(null,4646,4647,{label: "TÜREME"});
+ g.addEdge(null,4647,4648,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,4648,4649,{label: "ÖZNE"});
+ g.addEdge(null,4649,4650,{label: "BAĞLANTI"});
+ g.addEdge(null,4650,4651,{label: "NESNE"});
+ g.addEdge(null,4651,4660,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,4652,4653,{label: "TÜREME"});
+ g.addEdge(null,4653,4654,{label: "TÜREME"});
+ g.addEdge(null,4654,4655,{label: "TÜREME"});
+ g.addEdge(null,4655,4656,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,4656,4657,{label: "TÜREME"});
+ g.addEdge(null,4657,4660,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,4658,4660,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,4659,4660,{label: "TÜREME"});
+ g.addEdge(null,4660,4661,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

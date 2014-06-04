@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,22 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5334, {label: "Hollandanın",nodeclass: "type-TK"});g.addNode(5335, {label: "en",nodeclass: "type-TK"});g.addNode(5336, {label: "yüksek",nodeclass: "type-TK"});g.addNode(5337, {label: "noktası",nodeclass: "type-TK"});g.addNode(5338, {label: "kaç",nodeclass: "type-TK"});g.addNode(5339, {label: "metre",nodeclass: "type-TK"});g.addNode(5340, {label: "metredir",nodeclass: "type-TK"});g.addNode(5341, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5334,5340,{label: "SUBJECT"});g.addEdge(null,5335,5336,{label: "MODIFIER"});g.addEdge(null,5336,5337,{label: "MODIFIER"});g.addEdge(null,5337,5340,{label: "SUBJECT"});g.addEdge(null,5338,5339,{label: "MODIFIER"});g.addEdge(null,5339,5340,{label: "DERIV"});g.addEdge(null,5340,5341,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(5333, {label: "Hollandanın",nodeclass: "type-TK"});
+ g.addNode(5334, {label: "en",nodeclass: "type-TK"});
+ g.addNode(5335, {label: "yüksek",nodeclass: "type-TK"});
+ g.addNode(5336, {label: "noktası",nodeclass: "type-TK"});
+ g.addNode(5337, {label: "kaç",nodeclass: "type-TK"});
+ g.addNode(5338, {label: "metre",nodeclass: "type-TK"});
+ g.addNode(5339, {label: "metredir",nodeclass: "type-TK"});
+ g.addNode(5340, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,5333,5339,{label: "ÖZNE"});
+ g.addEdge(null,5334,5335,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,5335,5336,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,5336,5339,{label: "ÖZNE"});
+ g.addEdge(null,5337,5338,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,5338,5339,{label: "TÜREME"});
+ g.addEdge(null,5339,5340,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

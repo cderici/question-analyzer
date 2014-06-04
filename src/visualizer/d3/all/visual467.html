@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(5284, {label: "Hindistan",nodeclass: "type-TK"});g.addNode(5285, {label: "bağımsız",nodeclass: "type-TK"});g.addNode(5286, {label: "bağımsızlığını",nodeclass: "type-TK"});g.addNode(5287, {label: "hangi",nodeclass: "type-TK"});g.addNode(5288, {label: "tarihte",nodeclass: "type-TK"});g.addNode(5289, {label: "kazanmıştır",nodeclass: "type-TK"});g.addNode(5290, {label: ".",nodeclass: "type-TK"});g.addEdge(null,5284,5289,{label: "SUBJECT"});g.addEdge(null,5285,5286,{label: "DERIV"});g.addEdge(null,5286,5289,{label: "OBJECT"});g.addEdge(null,5287,5288,{label: "MODIFIER"});g.addEdge(null,5288,5289,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,5289,5290,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(5283, {label: "Hindistan",nodeclass: "type-TK"});
+ g.addNode(5284, {label: "bağımsız",nodeclass: "type-TK"});
+ g.addNode(5285, {label: "bağımsızlığını",nodeclass: "type-TK"});
+ g.addNode(5286, {label: "hangi",nodeclass: "type-TK"});
+ g.addNode(5287, {label: "tarihte",nodeclass: "type-TK"});
+ g.addNode(5288, {label: "kazanmıştır",nodeclass: "type-TK"});
+ g.addNode(5289, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,5283,5288,{label: "ÖZNE"});
+ g.addEdge(null,5284,5285,{label: "TÜREME"});
+ g.addEdge(null,5285,5288,{label: "NESNE"});
+ g.addEdge(null,5286,5287,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,5287,5288,{label: "DE HALİ"});
+ g.addEdge(null,5288,5289,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

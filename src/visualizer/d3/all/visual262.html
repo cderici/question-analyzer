@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,34 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2798, {label: "Volkanlardan",nodeclass: "type-TK"});g.addNode(2799, {label: "çık",nodeclass: "type-TK"});g.addNode(2800, {label: "çıkan",nodeclass: "type-TK"});g.addNode(2801, {label: "volkan",nodeclass: "type-TK"});g.addNode(2802, {label: "tüfü",nodeclass: "type-TK"});g.addNode(2803, {label: "lapilli",nodeclass: "type-TK"});g.addNode(2804, {label: "ve",nodeclass: "type-TK"});g.addNode(2805, {label: "volkan",nodeclass: "type-TK"});g.addNode(2806, {label: "bombası",nodeclass: "type-TK"});g.addNode(2807, {label: "isimlerini",nodeclass: "type-TK"});g.addNode(2808, {label: "neye",nodeclass: "type-TK"});g.addNode(2809, {label: "göre",nodeclass: "type-TK"});g.addNode(2810, {label: "alırlar",nodeclass: "type-TK"});g.addNode(2811, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2798,2799,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,2799,2800,{label: "DERIV"});g.addEdge(null,2800,2802,{label: "MODIFIER"});g.addEdge(null,2801,2802,{label: "CLASSIFIER"});g.addEdge(null,2802,2810,{label: "SUBJECT"});g.addEdge(null,2803,2804,{label: "OBJECT"});g.addEdge(null,2804,2805,{label: "COORDINATION"});g.addEdge(null,2805,2806,{label: "CLASSIFIER"});g.addEdge(null,2806,2807,{label: "CLASSIFIER"});g.addEdge(null,2807,2810,{label: "OBJECT"});g.addEdge(null,2808,2809,{label: "OBJECT"});g.addEdge(null,2809,2810,{label: "MODIFIER"});g.addEdge(null,2810,2811,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(2797, {label: "Volkanlardan",nodeclass: "type-TK"});
+ g.addNode(2798, {label: "çık",nodeclass: "type-TK"});
+ g.addNode(2799, {label: "çıkan",nodeclass: "type-TK"});
+ g.addNode(2800, {label: "volkan",nodeclass: "type-TK"});
+ g.addNode(2801, {label: "tüfü",nodeclass: "type-TK"});
+ g.addNode(2802, {label: "lapilli",nodeclass: "type-TK"});
+ g.addNode(2803, {label: "ve",nodeclass: "type-TK"});
+ g.addNode(2804, {label: "volkan",nodeclass: "type-TK"});
+ g.addNode(2805, {label: "bombası",nodeclass: "type-TK"});
+ g.addNode(2806, {label: "isimlerini",nodeclass: "type-TK"});
+ g.addNode(2807, {label: "neye",nodeclass: "type-TK"});
+ g.addNode(2808, {label: "göre",nodeclass: "type-TK"});
+ g.addNode(2809, {label: "alırlar",nodeclass: "type-TK"});
+ g.addNode(2810, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,2797,2798,{label: "DEN HALİ"});
+ g.addEdge(null,2798,2799,{label: "TÜREME"});
+ g.addEdge(null,2799,2801,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2800,2801,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2801,2809,{label: "ÖZNE"});
+ g.addEdge(null,2802,2803,{label: "NESNE"});
+ g.addEdge(null,2803,2804,{label: "BAĞLANTI"});
+ g.addEdge(null,2804,2805,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2805,2806,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2806,2809,{label: "NESNE"});
+ g.addEdge(null,2807,2808,{label: "NESNE"});
+ g.addEdge(null,2808,2809,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2809,2810,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

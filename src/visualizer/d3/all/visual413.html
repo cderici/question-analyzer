@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,30 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(4570, {label: "Hava",nodeclass: "type-TK"});g.addNode(4571, {label: "kir",nodeclass: "type-TK"});g.addNode(4572, {label: "_",nodeclass: "type-TK"});g.addNode(4573, {label: "kirliliğinin",nodeclass: "type-TK"});g.addNode(4574, {label: "oluş",nodeclass: "type-TK"});g.addNode(4575, {label: "_",nodeclass: "type-TK"});g.addNode(4576, {label: "oluşmasındaki",nodeclass: "type-TK"});g.addNode(4577, {label: "başlıca",nodeclass: "type-TK"});g.addNode(4578, {label: "etken",nodeclass: "type-TK"});g.addNode(4579, {label: "ne",nodeclass: "type-TK"});g.addNode(4580, {label: "nedir",nodeclass: "type-TK"});g.addNode(4581, {label: ".",nodeclass: "type-TK"});g.addEdge(null,4570,4573,{label: "CLASSIFIER"});g.addEdge(null,4571,4572,{label: "DERIV"});g.addEdge(null,4572,4573,{label: "DERIV"});g.addEdge(null,4573,4574,{label: "SUBJECT"});g.addEdge(null,4574,4575,{label: "DERIV"});g.addEdge(null,4575,4576,{label: "DERIV"});g.addEdge(null,4576,4578,{label: "MODIFIER"});g.addEdge(null,4577,4578,{label: "MODIFIER"});g.addEdge(null,4578,4580,{label: "SUBJECT"});g.addEdge(null,4579,4580,{label: "DERIV"});g.addEdge(null,4580,4581,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(4569, {label: "Hava",nodeclass: "type-TK"});
+ g.addNode(4570, {label: "kir",nodeclass: "type-TK"});
+ g.addNode(4571, {label: "_",nodeclass: "type-TK"});
+ g.addNode(4572, {label: "kirliliğinin",nodeclass: "type-TK"});
+ g.addNode(4573, {label: "oluş",nodeclass: "type-TK"});
+ g.addNode(4574, {label: "_",nodeclass: "type-TK"});
+ g.addNode(4575, {label: "oluşmasındaki",nodeclass: "type-TK"});
+ g.addNode(4576, {label: "başlıca",nodeclass: "type-TK"});
+ g.addNode(4577, {label: "etken",nodeclass: "type-TK"});
+ g.addNode(4578, {label: "ne",nodeclass: "type-TK"});
+ g.addNode(4579, {label: "nedir",nodeclass: "type-TK"});
+ g.addNode(4580, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,4569,4572,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,4570,4571,{label: "TÜREME"});
+ g.addEdge(null,4571,4572,{label: "TÜREME"});
+ g.addEdge(null,4572,4573,{label: "ÖZNE"});
+ g.addEdge(null,4573,4574,{label: "TÜREME"});
+ g.addEdge(null,4574,4575,{label: "TÜREME"});
+ g.addEdge(null,4575,4577,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,4576,4577,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,4577,4579,{label: "ÖZNE"});
+ g.addEdge(null,4578,4579,{label: "TÜREME"});
+ g.addEdge(null,4579,4580,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

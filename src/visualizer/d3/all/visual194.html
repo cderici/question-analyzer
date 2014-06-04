@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2083, {label: "Granitik",nodeclass: "type-TK"});g.addNode(2084, {label: "kabuk",nodeclass: "type-TK"});g.addNode(2085, {label: "hangi",nodeclass: "type-TK"});g.addNode(2086, {label: "taşlardan",nodeclass: "type-TK"});g.addNode(2087, {label: "meydana",nodeclass: "type-TK"});g.addNode(2088, {label: "gelir",nodeclass: "type-TK"});g.addNode(2089, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2083,2088,{label: "SUBJECT"});g.addEdge(null,2084,2088,{label: "SUBJECT"});g.addEdge(null,2085,2086,{label: "MODIFIER"});g.addEdge(null,2086,2088,{label: "ABLATIVE.ADJUNCT"});g.addEdge(null,2087,2088,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2088,2089,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(2082, {label: "Granitik",nodeclass: "type-TK"});
+ g.addNode(2083, {label: "kabuk",nodeclass: "type-TK"});
+ g.addNode(2084, {label: "hangi",nodeclass: "type-TK"});
+ g.addNode(2085, {label: "taşlardan",nodeclass: "type-TK"});
+ g.addNode(2086, {label: "meydana",nodeclass: "type-TK"});
+ g.addNode(2087, {label: "gelir",nodeclass: "type-TK"});
+ g.addNode(2088, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,2082,2087,{label: "ÖZNE"});
+ g.addEdge(null,2083,2087,{label: "ÖZNE"});
+ g.addEdge(null,2084,2085,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2085,2087,{label: "DEN HALİ"});
+ g.addEdge(null,2086,2087,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,2087,2088,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

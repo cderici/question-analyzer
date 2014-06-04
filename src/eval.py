@@ -8,6 +8,7 @@ from qAnalyzer import *
 from maltImporter import MaltImporter
 from hmmGlasses import *
 from featureBasedClassifier import *
+from hybridClassifier import *
 
 from random import shuffle
 
@@ -509,6 +510,110 @@ if 'pick' in sys.argv:
     for t in terms:
         print(t)
 
+if 'newclass' in sys.argv:
+
+    classes = ['DESCRIPTION', 'TEMPORAL', 'NUMERIC', 'ENTITY', 
+               'ABBREVIATION', 'LOCATION', 'HUMAN']
+
+    clsResults = {'DESCRIPTION': {'P':0, 'R':0, 'F':0},
+                  'TEMPORAL': {'P':0, 'R':0, 'F':0},
+                  'NUMERIC': {'P':0, 'R':0, 'F':0},
+                  'ENTITY': {'P':0, 'R':0, 'F':0},
+                  'ABBREVIATION': {'P':0, 'R':0, 'F':0},
+                  'LOCATION': {'P':0, 'R':0, 'F':0},
+                  'HUMAN': {'P':0, 'R':0, 'F':0}}
+
+    for cls in classes:
+
+        print("\n === " + cls + " === \n")
+
+        results = {'TP':0, 'FP':0, 'TN':0, 'FN':0}
+
+        for q in ourQuestions:
+
+            foundCls = coarseFinder(q)
+
+            qCls = q.coarseClass
+
+            if foundCls != cls and qCls == cls:
+                results['FN'] += 1
+            elif foundCls == cls and qCls != cls:
+                results['FP'] += 1
+            elif foundCls != cls and qCls != cls:
+                results['TN'] += 1
+            elif foundCls == cls and qCls == cls:
+                results['TP'] += 1
+            else:
+                raise RuntimeError("BIG SHIT!")
+
+        tp = results['TP']
+        fp = results['FP']
+        fn = results['FN']
+
+        if (tp+fp) == 0:
+            P = 0
+        else:
+            P = (tp*1.0)/(tp+fp)
+
+        if (tp+fn) == 0:
+            R = 0
+        else:
+            R = (tp*1.0)/(tp+fn)
+
+        if (P+R) == 0:
+            F = 0
+        else:
+            F = (2*P*R)/(P+R)
+
+        clsResults[cls]['P'] = P
+        clsResults[cls]['R'] = R
+        clsResults[cls]['F'] = F
+
+        print("Precision : " + str(P))
+        print("Recall : " + str(R))
+        print("F-Score : " + str(F))
+
+    k = len(classes)
+
+    precTotal = 0
+    recTotal = 0
+    fTotal = 0
+
+    for cls in classes:
+        precTotal += clsResults[cls]['P']
+        recTotal += clsResults[cls]['R']
+        fTotal += clsResults[cls]['F']
+
+    print("\n\n ======= OVERALL ======= \n")
+    print("Precision : " + str((precTotal/k)))
+    print("Recall : " + str((recTotal/k)))
+    print("F-Score : " + str((fTotal/k)))
+                
+
+if 'baseline' in sys.argv:
+
+
+    results = {'TP':0, 'FP':0, 'TN':0, 'FN':0, 'totalFParts':0}
+
+    for question in ourQuestions:
+
+        try:
+            baseFocus = QuestionAnalysis.baselineFocusExtract(question, 4)
+        except:
+            print(question.questionText)
+            raise
+
+        goldResults = question.trueFocus
+        goldFocus = []
+        for resultPart in goldResults:
+            goldFocus.append(resultPart[1])
+        
+        results = computePerClassCounts(goldFocus, baseFocus, results)
+        results['totalFParts'] += len(goldFocus)
+
+    displayResults("Baseline ", results, True)
+
+        
 
 if 'IR' in sys.argv:
     

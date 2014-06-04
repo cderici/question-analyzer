@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,22 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1545, {label: "Gulf",nodeclass: "type-TK"});g.addNode(1546, {label: "Stream",nodeclass: "type-TK"});g.addNode(1547, {label: "sıcak",nodeclass: "type-TK"});g.addNode(1548, {label: "su",nodeclass: "type-TK"});g.addNode(1549, {label: "akıntısı",nodeclass: "type-TK"});g.addNode(1550, {label: "nereleri",nodeclass: "type-TK"});g.addNode(1551, {label: "etkiler",nodeclass: "type-TK"});g.addNode(1552, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1545,1551,{label: "SUBJECT"});g.addEdge(null,1546,1551,{label: "SUBJECT"});g.addEdge(null,1547,1548,{label: "MODIFIER"});g.addEdge(null,1548,1549,{label: "CLASSIFIER"});g.addEdge(null,1549,1550,{label: "CLASSIFIER"});g.addEdge(null,1550,1551,{label: "MODIFIER"});g.addEdge(null,1551,1564,{label: "SUBJECT"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(1544, {label: "Gulf",nodeclass: "type-TK"});
+ g.addNode(1545, {label: "Stream",nodeclass: "type-TK"});
+ g.addNode(1546, {label: "sıcak",nodeclass: "type-TK"});
+ g.addNode(1547, {label: "su",nodeclass: "type-TK"});
+ g.addNode(1548, {label: "akıntısı",nodeclass: "type-TK"});
+ g.addNode(1549, {label: "nereleri",nodeclass: "type-TK"});
+ g.addNode(1550, {label: "etkiler",nodeclass: "type-TK"});
+ g.addNode(1551, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,1544,1550,{label: "ÖZNE"});
+ g.addEdge(null,1545,1550,{label: "ÖZNE"});
+ g.addEdge(null,1546,1547,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1547,1548,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,1548,1549,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,1549,1550,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1550,1563,{label: "ÖZNE"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

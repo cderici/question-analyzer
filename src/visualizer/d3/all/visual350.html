@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(3897, {label: "Türk",nodeclass: "type-TK"});g.addNode(3898, {label: "kültürü",nodeclass: "type-TK"});g.addNode(3899, {label: "hangi",nodeclass: "type-TK"});g.addNode(3900, {label: "kültürlere",nodeclass: "type-TK"});g.addNode(3901, {label: "komşu",nodeclass: "type-TK"});g.addNode(3902, {label: "komşudur",nodeclass: "type-TK"});g.addNode(3903, {label: ".",nodeclass: "type-TK"});g.addEdge(null,3897,3898,{label: "CLASSIFIER"});g.addEdge(null,3898,3902,{label: "SUBJECT"});g.addEdge(null,3899,3900,{label: "MODIFIER"});g.addEdge(null,3900,3902,{label: "DATIVE.ADJUNCT"});g.addEdge(null,3901,3902,{label: "DERIV"});g.addEdge(null,3902,3903,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(3896, {label: "Türk",nodeclass: "type-TK"});
+ g.addNode(3897, {label: "kültürü",nodeclass: "type-TK"});
+ g.addNode(3898, {label: "hangi",nodeclass: "type-TK"});
+ g.addNode(3899, {label: "kültürlere",nodeclass: "type-TK"});
+ g.addNode(3900, {label: "komşu",nodeclass: "type-TK"});
+ g.addNode(3901, {label: "komşudur",nodeclass: "type-TK"});
+ g.addNode(3902, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,3896,3897,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,3897,3901,{label: "ÖZNE"});
+ g.addEdge(null,3898,3899,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,3899,3901,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,3900,3901,{label: "TÜREME"});
+ g.addEdge(null,3901,3902,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

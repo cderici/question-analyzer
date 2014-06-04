@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1789, {label: "Kümülüs",nodeclass: "type-TK"});g.addNode(1790, {label: "bulutları",nodeclass: "type-TK"});g.addNode(1791, {label: "kaç",nodeclass: "type-TK"});g.addNode(1792, {label: "metre",nodeclass: "type-TK"});g.addNode(1793, {label: "aralığında",nodeclass: "type-TK"});g.addNode(1794, {label: "bulunur",nodeclass: "type-TK"});g.addNode(1795, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1789,1790,{label: "CLASSIFIER"});g.addEdge(null,1790,1794,{label: "SUBJECT"});g.addEdge(null,1791,1792,{label: "MODIFIER"});g.addEdge(null,1792,1793,{label: "OBJECT"});g.addEdge(null,1793,1794,{label: "OBJECT"});g.addEdge(null,1794,1795,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(1788, {label: "Kümülüs",nodeclass: "type-TK"});
+ g.addNode(1789, {label: "bulutları",nodeclass: "type-TK"});
+ g.addNode(1790, {label: "kaç",nodeclass: "type-TK"});
+ g.addNode(1791, {label: "metre",nodeclass: "type-TK"});
+ g.addNode(1792, {label: "aralığında",nodeclass: "type-TK"});
+ g.addNode(1793, {label: "bulunur",nodeclass: "type-TK"});
+ g.addNode(1794, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,1788,1789,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,1789,1793,{label: "ÖZNE"});
+ g.addEdge(null,1790,1791,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1791,1792,{label: "NESNE"});
+ g.addEdge(null,1792,1793,{label: "NESNE"});
+ g.addEdge(null,1793,1794,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

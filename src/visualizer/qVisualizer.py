@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 import codecs, os
 
 
 def visualizeAllQuestions(questions):
 
-    htmlStr = '<html><body><ul>'
+    htmlStr = '<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></head><body><ul>'
 
     qNumber = 1
     for question in questions:
@@ -50,7 +51,7 @@ def scriptTextSingleQuestion(parts):
         if partText == "_":
             partText = part[2]
 
-        scriptStr += "g.addNode(" + partID + ", {label: \"" + partText + "\",nodeclass: \"type-TK\"});"
+        scriptStr += "\n g.addNode(" + partID + ", {label: \"" + partText + "\",nodeclass: \"type-TK\"});"
 
 
     # adding edges
@@ -63,7 +64,43 @@ def scriptTextSingleQuestion(parts):
         if part[1] == ".":
             continue
 
-        scriptStr += "g.addEdge(null," + partID + "," + partRoot + "," + "{label: \"" + partDepTag + "\"});"
+        """
+        TÜRKÇE HACK BEGIN
+        """
+
+        if partDepTag == 'CLASSIFIER':
+            turkTag = 'B.SİZ İSİM TAM.'.decode('utf8')
+        elif partDepTag == 'SUBJECT':
+            turkTag = 'ÖZNE'.decode('utf8')
+        elif partDepTag == 'DETERMINER':
+            turkTag = 'BELİRTEÇ'.decode('utf8')
+        elif partDepTag == 'MODIFIER':
+            turkTag = 'SIFAT/ZARF TAM.'.decode('utf8')
+        elif partDepTag == 'SENTENCE':
+            turkTag = 'YÜKLEM'.decode('utf8')
+        elif partDepTag == 'DERIV':
+            turkTag = 'TÜREME'.decode('utf8')
+        elif partDepTag == 'POSSESSOR':
+            turkTag = 'B.Lİ İSİM TAM.'.decode('utf8')
+        elif partDepTag == 'DATIVE.ADJUNCT':
+            turkTag = 'E HALİ YÖNELME'.decode('utf8')
+        elif partDepTag == 'ABLATIVE.ADJUNCT':
+            turkTag = 'DEN HALİ'.decode('utf8')
+        elif partDepTag == 'LOCATIVE.ADJUNCT':
+            turkTag = 'DE HALİ'.decode('utf8')
+        elif partDepTag == 'COORDINATION':
+            turkTag = 'BAĞLANTI'.decode('utf8')
+        elif partDepTag == 'OBJECT':
+            turkTag = 'NESNE'.decode('utf8')
+        else:
+            turkTag = partDepTag
+        #scriptStr += "\n g.addEdge(null," + partID + "," + partRoot + "," + "{label: \"" + partDepTag + "\"});"
+
+        scriptStr += "\n g.addEdge(null," + partID + "," + partRoot + "," + "{label: \"" + turkTag + "\"});"
+
+        """
+        TÜRKÇE HACK END
+        """
 
     scriptStr += """
   var renderer = new dagreD3.Renderer();
@@ -91,7 +128,7 @@ def scriptTextSingleQuestion(parts):
 
 
 def htmlTextSingleQuestion(parts, qText, qAll):
-    htmlStr = """<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>\n"""
+    htmlStr = """<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>\n"""
 
     htmlStr += "<script type=\"text/javascript\" src=\""
     if qAll:

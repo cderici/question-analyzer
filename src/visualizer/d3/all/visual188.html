@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,34 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2020, {label: "Yer",nodeclass: "type-TK"});g.addNode(2021, {label: "Yuvarlağını",nodeclass: "type-TK"});g.addNode(2022, {label: "meydana",nodeclass: "type-TK"});g.addNode(2023, {label: "getir",nodeclass: "type-TK"});g.addNode(2024, {label: "getiren",nodeclass: "type-TK"});g.addNode(2025, {label: "iç",nodeclass: "type-TK"});g.addNode(2026, {label: "içe",nodeclass: "type-TK"});g.addNode(2027, {label: "geçmiş",nodeclass: "type-TK"});g.addNode(2028, {label: "kürelere",nodeclass: "type-TK"});g.addNode(2029, {label: "ne",nodeclass: "type-TK"});g.addNode(2030, {label: "isim",nodeclass: "type-TK"});g.addNode(2031, {label: "ver",nodeclass: "type-TK"});g.addNode(2032, {label: "verilir",nodeclass: "type-TK"});g.addNode(2033, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2020,2021,{label: "CLASSIFIER"});g.addEdge(null,2021,2023,{label: "OBJECT"});g.addEdge(null,2022,2023,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2023,2024,{label: "DERIV"});g.addEdge(null,2024,2032,{label: "SUBJECT"});g.addEdge(null,2025,2026,{label: "CLASSIFIER"});g.addEdge(null,2026,2032,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2027,2028,{label: "MODIFIER"});g.addEdge(null,2028,2032,{label: "DATIVE.ADJUNCT"});g.addEdge(null,2029,2030,{label: "MODIFIER"});g.addEdge(null,2030,2032,{label: "SUBJECT"});g.addEdge(null,2031,2032,{label: "DERIV"});g.addEdge(null,2032,2033,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(2019, {label: "Yer",nodeclass: "type-TK"});
+ g.addNode(2020, {label: "Yuvarlağını",nodeclass: "type-TK"});
+ g.addNode(2021, {label: "meydana",nodeclass: "type-TK"});
+ g.addNode(2022, {label: "getir",nodeclass: "type-TK"});
+ g.addNode(2023, {label: "getiren",nodeclass: "type-TK"});
+ g.addNode(2024, {label: "iç",nodeclass: "type-TK"});
+ g.addNode(2025, {label: "içe",nodeclass: "type-TK"});
+ g.addNode(2026, {label: "geçmiş",nodeclass: "type-TK"});
+ g.addNode(2027, {label: "kürelere",nodeclass: "type-TK"});
+ g.addNode(2028, {label: "ne",nodeclass: "type-TK"});
+ g.addNode(2029, {label: "isim",nodeclass: "type-TK"});
+ g.addNode(2030, {label: "ver",nodeclass: "type-TK"});
+ g.addNode(2031, {label: "verilir",nodeclass: "type-TK"});
+ g.addNode(2032, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,2019,2020,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2020,2022,{label: "NESNE"});
+ g.addEdge(null,2021,2022,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,2022,2023,{label: "TÜREME"});
+ g.addEdge(null,2023,2031,{label: "ÖZNE"});
+ g.addEdge(null,2024,2025,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,2025,2031,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,2026,2027,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2027,2031,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,2028,2029,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2029,2031,{label: "ÖZNE"});
+ g.addEdge(null,2030,2031,{label: "TÜREME"});
+ g.addEdge(null,2031,2032,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

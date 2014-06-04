@@ -9,6 +9,8 @@ from qAnalyzer import *
 from maltImporter import MaltImporter
 from hmmGlasses import *
 from featureBasedClassifier import *
+from hybridClassifier import *
+
 
 ourQuestions = MaltImporter().importMaltOutputs(qFilePath, qParsedFilePath)
 
@@ -151,6 +153,59 @@ if 'class' in sys.argv:
     rule = RuleBasedQuestionClassification(ourQuestions);
     rule.doClassification();
 
+if 'newclass' in sys.argv:
+
+    #experiment(ourQuestions)
+    phrases = ['ne denir', 
+               'ne ad verilir', 
+               'ne isim verilir',
+               'sonucu nedir', 
+               'sonuç nedir', 
+               'faktör', 
+               'sebebi nedir', 
+               'temel nedeni', 
+               'neye',
+               'neyi verir', 
+               'ne elde edilir']
+
+    cls = 'DESCRIPTION'
+
+
+    TP = 0
+    FP = 0
+    FN = 0
+
+    for q in ourQuestions:
+        if q.coarseClass == cls:
+            t = q.questionText
+
+            phraseDetected = False
+            for phrase in phrases:
+                if phrase.decode('utf-8') in t:
+                    phraseDetected = True
+                    TP += 1
+
+            if not phraseDetected:
+                FN += 1
+                print(t)
+        else: #class is NOT cls
+            for phrase in phrases:
+                if phrase.decode('utf-8') in q.questionText:
+                    print(q.questionText + " - " + q.coarseClass)
+                    FP += 1
+
+    print("\n\n")
+    print("TP : " + str(TP))
+    print("FP : " + str(FP))
+    print("FN : " + str(FN))
+
+    print("\n\n")
+    prec = (TP*1.0)/(TP+FP)
+    recall = (TP*1.0)/(TP+FN)
+    print("Precision : " + str(prec))
+    print("Recall : " + str(recall))
+    print("F-Score : " + str((2*prec*recall)/(prec+recall)))
+
 if 'overall' in sys.argv:
     mass.massAnalyze()
 
@@ -193,7 +248,7 @@ if 'relatedDoc' in sys.argv:
 
     docs = singleIndriQuery(1)
 
-    print(ourQuestions[0])
+    print(ourQuestions[0].questionText)
     print(docs)
 
     for dc in docs:
@@ -201,3 +256,50 @@ if 'relatedDoc' in sys.argv:
         print(doc)
         print(type(doc))
         print("Sonbahar" in doc)
+
+
+if 'classFreqs' in sys.argv:
+
+    coarse = {}
+    fine = {}
+
+    cCheck = {}
+    fCheck = {}
+
+    total = 0
+
+    for q in ourQuestions:
+        c = q.coarseClass
+        f = q.fineClass
+
+        if c not in coarse:
+            coarse[c] = 1
+        else:
+            coarse[c] += 1
+
+        if f not in fine:
+            fine[f] = 1
+        else:
+            fine[f] += 1
+
+        total += 1
+
+    print("COARSE\n\n")
+
+    for cls,count in coarse.iteritems():
+        fr = (coarse[cls]*100.0)/total
+        cCheck[cls] = fr
+        print(cls + " - " + str(coarse[cls]) + " - " + str(fr))
+    
+    print("Check : " + str(sum(cCheck.values())))
+    
+
+    print("FINE\n\n")
+
+    for cls,count in fine.iteritems():
+        fr = (fine[cls]*100.0)/total
+        fCheck[cls] = fr
+        print(cls + " - " + str(fine[cls]) + " - " + str(fr))
+    
+    print("Check : " + str(sum(fCheck.values())))
+    print("Total # of fine classes : " + str(len(fine.keys())))

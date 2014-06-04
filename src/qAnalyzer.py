@@ -58,6 +58,164 @@ class QuestionAnalysis:
 
         return result
 
+
+    @staticmethod
+    def baselineFocusExtract(question, proximity=1):
+        includeQstnWords = ['hangi ', 
+                            'kaç ', 
+                            'Kaç ',
+                            ' kim ',
+                            'kimin ',
+                            'ne zaman',
+                            'nereye',
+                            'nereden',
+                            'nerede ',
+                            'yüzde kaç', 
+                            'ne denir',
+                            'kaçtır',
+                            'neresidir']
+                            
+        excludeQstnWords = ['nedir',
+                            'hangisidir',
+                            'hangileridir',
+                            'verilir',
+                            'ne kadardır',
+                            'nerelerdir',
+                            'neye']
+
+        unknownQstnWord = ['ne zamandır', 'ne zamandan', 'nerededir']
+
+        qstnWords = question.questionText.split(' ')
+
+        focusParts = []
+        
+        #print(question.questionText)
+
+
+        """
+        CAUTION: TERRIBLE CODING
+
+        DESPARATELY NEEDS A REFEACTOR
+        """
+
+        for qstnWord in unknownQstnWord:
+            if qstnWord.decode('utf-8') in question.questionText:
+                return []
+
+        for inQword in includeQstnWords:
+            if inQword.decode('utf-8') in question.questionText:
+                qWordParts = inQword.split(' ')
+                if qWordParts[0] == '':
+                    qWordParts = qWordParts[1:len(qWordParts)]
+                # space cleaning
+                if len(qWordParts) >= 2 and qWordParts[len(qWordParts)-1] == '':
+                    qWordParts = qWordParts[0:len(qWordParts)-1]
+
+                if qWordParts[0].decode('utf-8') == 'yüzde'.decode('utf-8'):
+                    yIndex = qstnWords.index('yüzde'.decode('utf-8'))
+                    if yIndex-proximity < 0:
+                        focusParts.extend([qstnWords[yIndex-1], qstnWords[yIndex], qstnWords[yIndex+1]])
+                    else:
+                        proximityWords = []
+                        for i in range(yIndex-proximity, yIndex):
+                            proximityWords.append(qstnWords[i])
+
+                        focusParts.extend(proximityWords)
+                        focusParts.extend([qstnWords[yIndex], qstnWords[yIndex+1]])
+                    break
+                elif (len(qWordParts) > 1) and qWordParts[1] == 'denir':
+                    nIndex = qstnWords.index('ne')
+                    if nIndex-proximity < 0:
+                        focusParts.extend([qstnWords[nIndex-1], qstnWords[nIndex+1]])
+                    else:
+                        proximityWords = []
+                        for i in range(nIndex-proximity, nIndex):
+                            proximityWords.append(qstnWords[i])
+
+                        focusParts.extend(proximityWords)
+                        focusParts.extend([qstnWords[nIndex+1]]) 
+                    break
+                elif qWordParts[0].decode('utf-8') == 'kaçtır'.decode('utf-8'):
+                    kIndex = qstnWords.index('kaçtır'.decode('utf-8'))
+
+                    if kIndex-proximity < 0:
+                        focusParts.extend([qstnWords[kIndex-1], qstnWords[kIndex+1]])
+                    else:
+                        proximityWords = []
+                        for i in range(kIndex-proximity, kIndex):
+                            proximityWords.append(qstnWords[i])
+
+                        focusParts.extend(proximityWords)
+                        focusParts.extend([qWordParts[0]])
+
+                    break
+                elif qWordParts[0].decode('utf-8') == 'neresidir'.decode('utf-8'):
+                    kIndex = qstnWords.index('neresidir'.decode('utf-8'))
+
+                    if kIndex-proximity < 0:
+                        focusParts.extend([qstnWords[kIndex-1], qstnWords[kIndex+1]])
+                    else:
+                        proximityWords = []
+                        for i in range(kIndex-proximity, kIndex):
+                            proximityWords.append(qstnWords[i])
+
+                        focusParts.extend(proximityWords)
+                        focusParts.extend([qWordParts[0]])
+                    break
+                else:
+                    element = qWordParts[len(qWordParts)-1].decode('utf-8')
+                    eIndex = qstnWords.index(element)
+                    if eIndex + proximity >= len(qstnWords):
+                        focusParts = qWordParts + [qstnWords[eIndex+1]]
+                    else:
+                        proximityWords = []
+                        for i in range(1,proximity+1):
+                            proximityWords.append(qstnWords[eIndex+i])
+
+                        focusParts = qWordParts + proximityWords
+                    break
+                    
+            return focusParts
+            
+
+        for outQword in excludeQstnWords:
+            if outQword.decode('utf-8') in question.questionText:
+                qWordParts = outQword.split(' ')
+                # space cleaning
+                if len(qWordParts) >= 2 and qWordParts[len(qWordParts)-1] == '':
+                    qWordParts = qWordParts[0:len(qWordParts)-1]
+                
+
+                if qWordParts[0] == 'neye':
+                    nIndex = qstnWords.index('neye')
+
+                    if nIndex + proximity >= len(qstnWords):
+                        focusParts = qWordParts + [qstnWords[nIndex+1]]
+                    else:
+                        proximityWords = []
+                        for i in range(1,proximity+1):
+                            proximityWords.append(qstnWords[nIndex+i])
+
+                        focusParts = qWordParts + proximityWords
+                    break
+                else:
+                    element = qWordParts[0].encode('utf-8')
+                    eIndex = qstnWords.index(element.encode('utf-8'))
+
+                    if eIndex-proximity < 0:
+                        focusParts = [qstnWords[eIndex-1]]
+                    else:
+                        proximityWords = []
+                        for i in range(eIndex-proximity, eIndex):
+                            proximityWords.append(qstnWords[i])
+
+                        focusParts.extend(proximityWords)
+
+                    break
+
+        return focusParts
+
+
     def combineDistillerGlasses(self, ruleFocus, fRuleConf, hmmResults):
 
         """ Combining Focus Parts of both distiller and hmm-glasses"""
@@ -131,7 +289,7 @@ class QuestionAnalysis:
 
         focusText, modText = self.question.extract_FM_Text()
 
-        print(u"Q: {} || Focus: {}".format(self.question.questionText, focusText))
+        print(u"Q: {} || Focus: {} || ActualClass: {} || Answer: {}".format(self.question.questionText, focusText, self.question.coarseClass + " - " + self.question.fineClass, self.question.answer))
 
 
 class MassAnalyzer:

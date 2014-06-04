@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(2472, {label: "Biyomlar",nodeclass: "type-TK"});g.addNode(2473, {label: "neyin",nodeclass: "type-TK"});g.addNode(2474, {label: "en",nodeclass: "type-TK"});g.addNode(2475, {label: "büyük",nodeclass: "type-TK"});g.addNode(2476, {label: "birim",nodeclass: "type-TK"});g.addNode(2477, {label: "birimleridir",nodeclass: "type-TK"});g.addNode(2478, {label: ".",nodeclass: "type-TK"});g.addEdge(null,2472,2476,{label: "SUBJECT"});g.addEdge(null,2473,2476,{label: "POSSESSOR"});g.addEdge(null,2474,2475,{label: "MODIFIER"});g.addEdge(null,2475,2476,{label: "MODIFIER"});g.addEdge(null,2476,2477,{label: "DERIV"});g.addEdge(null,2477,2478,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(2471, {label: "Biyomlar",nodeclass: "type-TK"});
+ g.addNode(2472, {label: "neyin",nodeclass: "type-TK"});
+ g.addNode(2473, {label: "en",nodeclass: "type-TK"});
+ g.addNode(2474, {label: "büyük",nodeclass: "type-TK"});
+ g.addNode(2475, {label: "birim",nodeclass: "type-TK"});
+ g.addNode(2476, {label: "birimleridir",nodeclass: "type-TK"});
+ g.addNode(2477, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,2471,2475,{label: "ÖZNE"});
+ g.addEdge(null,2472,2475,{label: "B.Lİ İSİM TAM."});
+ g.addEdge(null,2473,2474,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2474,2475,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,2475,2476,{label: "TÜREME"});
+ g.addEdge(null,2476,2477,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

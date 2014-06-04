@@ -1,0 +1,304 @@
+
+ ===== DESCRIPTION ===== 
+ne  - 168
+ne denir - 90
+nedir - 82
+verilir - 52
+hangi  - 47
+hangisidir - 12
+neye - 8
+nerede  - 5
+neyle  - 5
+hangileridir - 4
+neyin - 4
+nereden - 2
+ne kadardır - 2
+ kim  - 2
+kaç  - 2
+neyi  - 2
+kaçtır - 2
+neresidir - 2
+nereye - 1
+kimdir - 1
+nerelerdir - 1
+
+
+ Most Used Focus Words: 
+
+topraklara - 18
+adı - 18
+sebebi - 17
+isim - 15
+şehirlere - 13
+yer - 11
+göllere - 10
+faktör - 10
+temel - 10
+yere - 8
+enerjiye - 8
+çeşidi - 8
+hareketlerine - 8
+meskenlere - 6
+değerine - 6
+olayına - 6
+maddelere - 6
+edilir - 5
+yaş - 5
+olur - 5
+sebep - 5
+cinsinden - 5
+dalı - 5
+alt - 4
+verilerin - 4
+katı - 4
+akışkan - 4
+yeryüzünün - 4
+düzlüklere - 4
+bitkilere - 4
+kısmına - 4
+nüfus - 4
+enerjisine - 4
+akarsulara - 4
+çevreye - 4
+göçlere - 4
+sarsıntılara - 4
+göre - 4
+taşınmasına - 4
+hayvancılık - 4
+elektrik - 4
+yola - 4
+bölüme - 4
+yükselmesi - 4
+ifade - 4
+sistemlere - 4
+kireçli - 4
+faktörlere - 4
+fay - 3
+deprem - 3
+katmanında - 3
+hayvan - 3
+ulaşım - 3
+nedeni - 3
+coğrafyanın - 3
+kuşağında - 3
+iklim - 3
+etken - 3
+olarak - 3
+yerleşim - 3
+doğrudur - 3
+ilgili - 3
+yolu - 3
+bilim - 3
+miktarı - 3
+
+ ========================== 
+
+ ===== TEMPORAL ===== 
+hangi  - 64
+ne  - 51
+ne zaman - 47
+kaç  - 9
+nedir - 6
+kaçıncı  - 3
+hangisidir - 1
+ne zamandan - 1
+ne zamandır - 1
+
+
+ Most Used Focus Words: 
+
+kurulmuştur - 33
+yıl - 15
+tarihte - 14
+yapılmıştır - 12
+jeolojik - 9
+yılında - 8
+gerçekleşmiştir - 7
+başlamıştır - 6
+arasında - 5
+yüzyılda - 5
+yapıldı - 4
+çağda - 4
+yıllar - 4
+beri - 4
+imzalanmıştır - 4
+yılı - 4
+kuruluş - 3
+yıldan - 3
+tarihten - 3
+icat - 3
+sonra - 3
+
+ ========================== 
+
+ ===== NUMERIC ===== 
+kaç  - 87
+ne  - 85
+ne kadardır - 61
+yüzde kaç - 32
+kaçtır - 13
+kaça  - 6
+nedir - 4
+kaçıncı  - 3
+Kaç  - 3
+hangi  - 3
+nerede  - 2
+nereye - 1
+neyi  - 1
+
+
+ Most Used Focus Words: 
+
+nüfusu - 21
+uzunluğu - 20
+ortalama - 14
+adet - 11
+sayısı - 11
+tane - 10
+kaçını - 9
+uzaklık - 7
+metre - 7
+milli - 7
+toplam - 6
+ölçümü - 6
+arazisinin - 6
+yüzölçümü - 6
+gelir - 6
+ayrılırlar - 6
+kalınlığı - 6
+miktarı - 6
+yağış - 6
+yoğunluğu - 6
+Türkiye - 5
+hızları - 5
+yaş - 4
+kişi - 4
+metredir - 4
+alanı - 4
+derinliği - 4
+yeri - 4
+insan - 4
+yüksekliği - 4
+bitki - 4
+ölçülmüştür - 4
+yol - 4
+volkan - 4
+kilometredir - 4
+üyesi - 4
+büyük - 3
+temel - 3
+Doğal - 3
+grubu - 3
+kurucu - 3
+nüfus - 3
+yükseklikte - 3
+turist - 3
+farkı - 3
+endemik - 3
+deprem - 3
+afetler - 3
+alan - 3
+üyeden - 3
+dünya - 3
+çeşit - 3
+km - 3
+
+ ========================== 
+
+ ===== ENTITY ===== 
+ne  - 39
+hangi  - 36
+nedir - 25
+hangisidir - 23
+verilir - 22
+hangileridir - 6
+ne denir - 4
+neyi  - 2
+ne zaman - 1
+kimdir - 1
+neyin - 1
+neyle  - 1
+
+
+ Most Used Focus Words: 
+
+adı - 18
+isim - 10
+kürelere - 6
+küre - 6
+parçasına - 4
+rüzgâr - 4
+coğrafya - 4
+rüzgâra - 4
+iklim - 4
+kara - 4
+renkle - 3
+okyanus - 3
+akarsu - 3
+deniz - 3
+dalgalar - 3
+Yerkürenin - 3
+
+ ========================== 
+
+ ===== ABBREVIATION ===== 
+nedir - 30
+neyin - 3
+neyi  - 1
+ne  - 1
+
+
+ Most Used Focus Words: 
+
+açılımı - 23
+adı - 4
+kısaltmasıdır - 3
+
+ ========================== 
+
+ ===== LOCATION ===== 
+hangi  - 50
+hangisidir - 21
+neresidir - 10
+nerede  - 7
+nedir - 5
+hangileridir - 3
+nereye - 3
+ne  - 3
+nereden - 1
+nerededir - 1
+nerelerdir - 1
+
+
+ Most Used Focus Words: 
+
+bölge - 9
+ülke - 8
+adı - 5
+şehri - 5
+bölgede - 4
+ülkenin - 4
+bölgemizde - 4
+bölgesinde - 3
+ülkededir - 3
+döker - 3
+ilinin - 3
+bölgesi - 3
+
+ ========================== 
+
+ ===== HUMAN ===== 
+ kim  - 5
+kimin  - 3
+kimdir - 2
+hangisidir - 1
+kaç  - 1
+ne  - 1
+hangi  - 1
+
+
+ Most Used Focus Words: 
+
+tarafından - 3
+
+ ========================== 

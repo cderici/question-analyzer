@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,20 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1247, {label: "Haritada",nodeclass: "type-TK"});g.addNode(1248, {label: "ovalar",nodeclass: "type-TK"});g.addNode(1249, {label: "hangi",nodeclass: "type-TK"});g.addNode(1250, {label: "renkte",nodeclass: "type-TK"});g.addNode(1251, {label: "göster",nodeclass: "type-TK"});g.addNode(1252, {label: "gösterilir",nodeclass: "type-TK"});g.addNode(1253, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1247,1252,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1248,1252,{label: "SUBJECT"});g.addEdge(null,1249,1250,{label: "MODIFIER"});g.addEdge(null,1250,1252,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1251,1252,{label: "DERIV"});g.addEdge(null,1252,1253,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(1246, {label: "Haritada",nodeclass: "type-TK"});
+ g.addNode(1247, {label: "ovalar",nodeclass: "type-TK"});
+ g.addNode(1248, {label: "hangi",nodeclass: "type-TK"});
+ g.addNode(1249, {label: "renkte",nodeclass: "type-TK"});
+ g.addNode(1250, {label: "göster",nodeclass: "type-TK"});
+ g.addNode(1251, {label: "gösterilir",nodeclass: "type-TK"});
+ g.addNode(1252, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,1246,1251,{label: "DE HALİ"});
+ g.addEdge(null,1247,1251,{label: "ÖZNE"});
+ g.addEdge(null,1248,1249,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1249,1251,{label: "DE HALİ"});
+ g.addEdge(null,1250,1251,{label: "TÜREME"});
+ g.addEdge(null,1251,1252,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {

@@ -1,4 +1,4 @@
-<html><head><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../resources/dagre-d3.min.js"></script>
 
 <style>
@@ -52,7 +52,40 @@ rect {
 </div>
 
 <script>                                                             
-                     var g = new dagreD3.Digraph();g.addNode(1507, {label: "Yeryüzünde",nodeclass: "type-TK"});g.addNode(1508, {label: "en",nodeclass: "type-TK"});g.addNode(1509, {label: "soğuk",nodeclass: "type-TK"});g.addNode(1510, {label: "ay",nodeclass: "type-TK"});g.addNode(1511, {label: "ortalaması",nodeclass: "type-TK"});g.addNode(1512, {label: "10",nodeclass: "type-TK"});g.addNode(1513, {label: "Cnin",nodeclass: "type-TK"});g.addNode(1514, {label: "üzerine",nodeclass: "type-TK"});g.addNode(1515, {label: "ol",nodeclass: "type-TK"});g.addNode(1516, {label: "olan",nodeclass: "type-TK"});g.addNode(1517, {label: "iklim",nodeclass: "type-TK"});g.addNode(1518, {label: "kuşağına",nodeclass: "type-TK"});g.addNode(1519, {label: "ne",nodeclass: "type-TK"});g.addNode(1520, {label: "isim",nodeclass: "type-TK"});g.addNode(1521, {label: "ver",nodeclass: "type-TK"});g.addNode(1522, {label: "verilir",nodeclass: "type-TK"});g.addNode(1523, {label: ".",nodeclass: "type-TK"});g.addEdge(null,1507,1522,{label: "LOCATIVE.ADJUNCT"});g.addEdge(null,1508,1509,{label: "MODIFIER"});g.addEdge(null,1509,1510,{label: "MODIFIER"});g.addEdge(null,1510,1511,{label: "CLASSIFIER"});g.addEdge(null,1511,1522,{label: "SUBJECT"});g.addEdge(null,1512,1513,{label: "MODIFIER"});g.addEdge(null,1513,1514,{label: "POSSESSOR"});g.addEdge(null,1514,1515,{label: "OBJECT"});g.addEdge(null,1515,1516,{label: "DERIV"});g.addEdge(null,1516,1518,{label: "MODIFIER"});g.addEdge(null,1517,1518,{label: "CLASSIFIER"});g.addEdge(null,1518,1522,{label: "DATIVE.ADJUNCT"});g.addEdge(null,1519,1520,{label: "MODIFIER"});g.addEdge(null,1520,1522,{label: "SUBJECT"});g.addEdge(null,1521,1522,{label: "DERIV"});g.addEdge(null,1522,1523,{label: "SENTENCE"});
+                     var g = new dagreD3.Digraph();
+ g.addNode(1506, {label: "Yeryüzünde",nodeclass: "type-TK"});
+ g.addNode(1507, {label: "en",nodeclass: "type-TK"});
+ g.addNode(1508, {label: "soğuk",nodeclass: "type-TK"});
+ g.addNode(1509, {label: "ay",nodeclass: "type-TK"});
+ g.addNode(1510, {label: "ortalaması",nodeclass: "type-TK"});
+ g.addNode(1511, {label: "10",nodeclass: "type-TK"});
+ g.addNode(1512, {label: "Cnin",nodeclass: "type-TK"});
+ g.addNode(1513, {label: "üzerine",nodeclass: "type-TK"});
+ g.addNode(1514, {label: "ol",nodeclass: "type-TK"});
+ g.addNode(1515, {label: "olan",nodeclass: "type-TK"});
+ g.addNode(1516, {label: "iklim",nodeclass: "type-TK"});
+ g.addNode(1517, {label: "kuşağına",nodeclass: "type-TK"});
+ g.addNode(1518, {label: "ne",nodeclass: "type-TK"});
+ g.addNode(1519, {label: "isim",nodeclass: "type-TK"});
+ g.addNode(1520, {label: "ver",nodeclass: "type-TK"});
+ g.addNode(1521, {label: "verilir",nodeclass: "type-TK"});
+ g.addNode(1522, {label: ".",nodeclass: "type-TK"});
+ g.addEdge(null,1506,1521,{label: "DE HALİ"});
+ g.addEdge(null,1507,1508,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1508,1509,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1509,1510,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,1510,1521,{label: "ÖZNE"});
+ g.addEdge(null,1511,1512,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1512,1513,{label: "B.Lİ İSİM TAM."});
+ g.addEdge(null,1513,1514,{label: "NESNE"});
+ g.addEdge(null,1514,1515,{label: "TÜREME"});
+ g.addEdge(null,1515,1517,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1516,1517,{label: "B.SİZ İSİM TAM."});
+ g.addEdge(null,1517,1521,{label: "E HALİ YÖNELME"});
+ g.addEdge(null,1518,1519,{label: "SIFAT/ZARF TAM."});
+ g.addEdge(null,1519,1521,{label: "ÖZNE"});
+ g.addEdge(null,1520,1521,{label: "TÜREME"});
+ g.addEdge(null,1521,1522,{label: "YÜKLEM"});
   var renderer = new dagreD3.Renderer();
   var oldDrawNode = renderer.drawNode();
   renderer.drawNode(function(graph, u, svg) {
